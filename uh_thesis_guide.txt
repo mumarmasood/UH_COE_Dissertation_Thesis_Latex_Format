@@ -1,0 +1,973 @@
+1  
+ 
+ 
+ 
+ 
+ 
+ 
+CULLEN COLLEGE OF ENGINEERING 
+University of Houston 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+THESIS AND DISSERTATION GUIDE 
+ 
+ 
+ 
+ 
+ 
+ 
+DEAN'S OFFICE 
+ 
+Associate Dean: Dr. Suresh K. Khator 
+skhator@uh.edu 
+ 
+ 
+Director of Graduate 
+Student Affairs: 
+Miranda Vernon-Harrison 
+mavernon-harrison@uh.edu 
+ 
+ 
+ 
+ 
+Last updated – October 2022 
+
+2  
+TABLE OF CONTENTS 
+A. Format Review ................................................................................................ 3 
+B. BS Honors Thesis Submission and Binding Requirements ............................. 3 
+C. MS Thesis and Dissertation Two Step Submission Process ........................... 3 
+Step One: Electronic Submission.............................................................. .3 
+Step Two: Traditional Binding Submission ................................................ .4 
+D. Margins ........................................................................................................... 4 
+E. Style and Language Content ........................................................................... 4 
+F. References ...................................................................................................... 4 
+G. Research Committee Appointment .................................................................. 4 
+Committee Appointment Form (sample). ................................................. 5 
+H. Title Page ........................................................................................................ 6 
+I. Preparing the Abstract ..................................................................................... 6 
+J. Proper Placement of Pages ............................................................................. 6 
+K. Organization of the Thesis… ........................................................................... 6 
+L. Numbering the Pages ...................................................................................... 7 
+M. Copyright ......................................................................................................... 7 
+N. Thesis approval ............................................................................................... 7 
+O. Deadline for Submission ................................................................................. 7 
+P. Fees ................................................................................................................ 7 
+Q. Helpful Writing and Style Hints ........................................................................ .8 
+R. Equations ........................................................................................................ .8 
+S. Numbers and Numerals .................................................................................. .9 
+T. Units ..................................................................................................................9 
+REMINDERS .................................................................................................... 10 
+COMMON MISTAKES ..................................................................................... 11 
+Updates ............................................................................................................ 12 
+Approval Form .................................................................................................. 13 
+Front Matter: Title Page (sample) ..................................................................... 14 
+Front Matter: Copyright Page (sample). ........................................................... 15 
+Front Matter: Dedication/Epigraph (sample)..................................................... 16 
+Front Matter: Acknowledgements (sample) ...................................................... 17 
+Front Matter: Abstract (sample)........................................................................ 18 
+Front Matter: Table of Contents (sample) ........................................................ 19 
+Front Matter: List of Tables (sample) ............................................................... 20 
+Front Matter: List of Figures (sample) .............................................................. 21 
+ 
+ 
+ 
+
+ 
+CULLEN COLLEGE OF ENGINEERING (CCOE) 
+GUIDE FOR PREPARATION OF THESES/DISSERTATIONS 
+ 
+SPECIAL NOTE - ALL STUDENTS MUST APPLY FOR GRADUATION BY THE DEADLINE 
+DATE OF THE SEMESTER IN WHICH THE DEGREE IS POSTED! 
+ 
+Students must be enrolled in the semester in which they graduate. 
+ 
+This thesis/dissertation guide can also be found online at the CCOE website at the following link, 
+https://www.egr.uh.edu/academics/graduate-programs-policies/guide-preparation- 
+thesesdissertations, under the “Guide for Preparation of Theses/Dissertations.” The Dean’s 
+Office does not provide a LaTex template for typing one’s work, since a variety of software can 
+be used. 
+ 
+*Hereafter, the thesis/dissertation shall be referred to only as thesis. 
+ 
+A. Format Review. Submit a draft on ordinary printer paper to the CCOE Graduate Coordinator 
+in the Dean’s Office in E421 of Engineering Bldg 2, D3. Figures and tables can be printed 
+in black-and white for this draft. The Coordinator will review and make in- text corrections in 
+red ink along with attaching a submission checklist. 
+ 
+B. BS Honors Thesis Submission and Binding Requirements. Graduating BS Honors thesis 
+students are required to follow the procedures in the online guide for preparing and 
+writing their theses. They will submit the amount of copies designated by their advisor, 
+typically ranging from 2-3 copies. They will need to turn in their manuscripts and signature 
+pages in to the College Graduate Coordinator for review and final approval. These 
+students need to follow the instructions for paper requirements and submission deadlines 
+for Traditional Binding only. Graduating BS Honors Thesis students are not required to do 
+an electronic submission at this time. 
+ 
+C. MS Thesis and Dissertation Two Step Submission Process: 
+Step One: Electronic Submission (ETD) - 
+From Summer 2012 onward, the college requires these students to submit an Electronic 
+Thesis or Dissertation (ETD). Additional information on submitting the ETD is available 
+online at the Graduate and Professional Studies (GPS) website, which also includes 
+steps on how to submit an ETD at the following link: 
+ https://uh-etd.tdl.org/. 
+ 
+In order to submit an ETD, students must turn in a hard copy draft for format review. 
+Once a manuscript has successfully passed the review and has received approval, by 
+the coordinator, students can then begin the ETD submission process. 
+ 
+First, students will need to convert their documents into a PDF. Students will then 
+upload their PDF to the Vireo system at the following link: https://uh- etd.tdl.org/. 
+Students will log in using their cougarnet 
+access to create an account . After the initial upload, it is a college requirement to 
+select the minimum of 2 years as an embargo or journal hold. More information 
+about the embargo is available at the Vireo site when the manuscript is 
+uploaded. Consult with your advisor if you will need an extension. 
+ 
+ 
+3 
+
+4  
+Once approved, your document will go into a “pending publication” status. For 
+assistance with using the Vireo site, review the video available at the following link, 
+https://uh-etd.tdl.org/. 
+ 
+It is mandatory for graduating doctoral students to complete the Survey of Earned 
+Doctorates (SED) by visiting the SED website at   SED (sed-ncses.org). Email 
+confirmation sent to the coordinator that the survey has been completed is required for 
+graduation. 
+ 
+Step Two: Traditional Binding Submission - 
+Both BS Honors and Graduate MS Thesis and PhD students are required to submit hard 
+copies for traditional Binding. For graduate students, the college requires one bound 
+copy for the department. The student will verify with their advisor if a bound copy is 
+required for the advisor. The minimum requirement for graduate students is 1-2 copies 
+and 4-5 copies for BS Honors Thesis. Students are welcome to purchase additional 
+personal copies for themselves. Microfilming is no longer required for dissertations.. 
+Color images used in figures and tables are permitted. Hard copies need to be 
+submitted by the binding deadline listed online. Paper requirement s are 20-pound 
+weight, 81/2" x 11" white bond paper (with a minimum of 25% cotton  fiber  content), this 
+applies to BS, MS, and PhD students. 
+ 
+Writing Center 
+Any graduate student can visit 234 Classroom and Business Building to make a one on 
+one appointment with a Graduate Writing Consultant to get help on their thesis and 
+dissertation writing skills.  Please go to: https://uh.mywconline.com/  to register and 
+select “Graduate Writing Consultant” in the drop down menu to schedule an appointment. 
+There is no cost to students for this service. 
+D. Margins. Left – 1.5 inches, and 1 inch for right, top, and bottom. 
+ 
+E. Style and Language Content. The thesis should be double-spaced. Figure legends and 
+Table captions should be single -spaced. The font size should be 10 –12 point. Figures 
+and tables should be placed in the text at their point of mention. They should not be grouped 
+at the end of a chapter nor in an appendix. In the event that the student refers to his/her own 
+previously published work, it should be addressed in a logical sequence so that it does not 
+represent a stand-alone entity. 
+ 
+F. References. If the student's major department has a preferred style, the student can follow 
+their guidelines. If the student is uncertain as to which reference form to use, some 
+examples are APA, Turabian and Chicago Manual of Style. The references list should be 
+placed at the end of the thesis, before appendices. Do not include “et al.” In the references, 
+this is only acceptable in the body of the text. List all authors’ names in the reference section 
+at the end of the work. 
+ 
+G. Research Committee Appointment Form: MS and PhD students must submit their form to 
+the Dean's Office by ORD- the official reporting date or 12th day of class of the semester of 
+their defense, which is their graduating semester . For PhD students who have a proposal 
+defense within their department , the form should be submitted two weeks prior to the 
+proposal defense. The student must obtain this form from his/her major department . A 
+sample committee form is available on the following page. 
+
+5  
+COMMITTEE APPOINTMENT PAGE (sample) – Student must obtain this form from their major department. 
+ 
+UNIVERSITY OF HOUSTON 
+ 
+CULLEN COLLEGE OF ENGINEERING 
+ 
+Department   
+ 
+APPOINTMENT OF (Doctoral) Dissertation Committee 
+(Master's) Thesis Committee 
+ 
+for     Last, first, middle 
+Student number Date passed Dept/Qual/Comp Exam 
+Anticipated field of research     
+Tentative title of thesis or dissertation    
+ 
+ 
+ 
+It is requested that the following Graduate Faculty members be appointed to 
+constitute the Doctoral/Master's Committee for the student named above. By initialing 
+below, they have agreed to serve if appointed. 
+ 
+COMMITTEE MEMBERS AFFILIATION Accepted 
+(initial) 
+ 
+1.       
+(Chair) 
+ 
+         
+ 
+         
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Approved      
+Graduate Advisor   Date 
+ 
+ 
+Approved      
+Department Chair or   Date 
+Interdisciplinary Chair 
+ 
+ 
+Approved      
+Associate Dean for Graduate Studies   Date 
+Cullen College of Engineering 
+2. 
+ 
+3. 
+ 
+
+6  
+H. Title Pages. Please see the Sample Title page (see Front Matter) for an example of 
+correct format. The thesis and dissertation committee members will no longer sign a 
+signature page when they approve the thesis or dissertation. Instead, committee 
+members will sign an approval form, stating that they have read and examined the 
+manuscript. The committee members will certify that it is adequate in scope and 
+quality as a thesis/dissertation for a graduate degree and indicate their approval or 
+disapproval of the content prior to being submitted to the college/department for 
+processing and acceptance. 
+ 
+I. Preparing the Abstract. An abstract contains the following information: 
+(1) Concise statement of the problem; (2) Procedure or methods; (3) Results; 
+(4) Conclusions. The abstract is not to exceed 350 words. 
+ 
+ 
+J. Proper Placement of Pages. 
+ 
+1. Title Page - Must show end-of-semester date (month year) of the semester 
+in which you finish, e.g., for Spring use May, Summer use Au gust, and Fall use 
+December 2022. It should appear as December 2020 . See sample in Appendix 
+I. 
+2. Copyright Page - (if manuscript is to be copyrighted). Must be included in each 
+copy, not necessary for BS Honors thesis. 
+3. Dedication- Optional  
+4. Acknowledgements- Optional  
+5. Abstract 
+6. Table of Contents- include preliminaries first, i.e., Acknowledgements, Abstracts, etc. as 
+Roman numerals before Chapter and Section lists.  
+7. List of Tables 
+8. List of Figures 
+9. Nomenclature- Optional 
+10. Text- body of work/research 
+11. References 
+12. Appendices 
+13. Blank sheet of paper at the end of each copy submitted. 
+ 
+ 
+ 
+K. Organization of the Thesis. Example of a typical chapter outline: 
+1. Introduction 
+2. Review of Previous Work 
+3. Analysis of the Problem (or description of the experimental apparatus, etc.) 
+4. Results and Discussion 
+5. Summary and Conclusions 
+ 
+[The above outline is not mandatory and variations are acceptable]. 
+
+7  
+L. Numbering th e Pages . Each page, including all blank pages, should be assigned a 
+number. The following plan of page numbering generally is accepted. 
+ 
+1. For the preliminary pages, use small Roman numerals (i, ii, iii, iv, etc.). The first 
+visible numbering begins on the Dedication/Epigraph/Acknowledgements, if 
+included, or abstract. 
+ 
+2. For the remainder of the manuscript—including the text, illustrations, references, 
+and appendices —use Arabic numerals (1, 2, 3, 4, etc.). Each page must be 
+numbered within the one -inch margin at the bottom center of the page. Avoid 
+use of letter suffixes such as 10a, 10b. The numbering begins with 1 on the first 
+page of Chapter 1 and runs consecutively to the end of the manuscript, including 
+the appendices which should not have a separate numbering system. 
+ 
+M. Copyright is optional and free of charge due to the new ETD submission policy. If a 
+student wants a copyright page, s/he should include a sheet of paper with the 
+following: © Copyright by "Student’s Name" and year of graduation (see Appendix 
+II). Insert one copyright page per copy in between the first blank page and the title 
+page. Copyright is not required for graduating BS Honors Thesis students. 
+ 
+ 
+N. Thesis Approval. The thesis needs to be format checked and approved by the review 
+deadline. The latest a student can defend a thesis is by the review deadline. Thesis 
+must be approved prior to electronic submission and binding. 
+ 
+ 
+O. Deadline for Submission of Copies for Binding . To graduate in a given semester, the 
+student must upload their ETD to the Vireo website and submit the approved hard copy 
+thesis (with approval form ) for binding to the Associate Dean's Office, Room E421. 
+Check the college’s website for deadline dates by clicking on Academics, then scroll 
+down to Graduate Academic Policies and click on “Thesis and Dissertation Deadlines.” 
+All documents and payment must be turned in at the time of submission. Any student 
+missing this deadline must enroll and reapply for graduation in the next semester. No 
+extensions will be made. 
+ 
+ 
+P. Fees. 
+ 
+1. The charge for binding is $50.00 per copy for BS and graduate students for up to 
+150 pages. The price for binding increases by $10 for every 75 pages. 
+-This is a per copy charge. 
+2. Copyrighting is now free of charge. Microfilming is no longer required. 
+ 
+The method of payment is online via debit/credit card at your myUH account. 
+Checks and money orders are no longer accepted. Anominal processing fee will be 
+charged. 
+
+8  
+Q. Helpful Writing and Style Hints . The thesis should be written in correct Amer ican 
+English; this includes grammar, punctuation, and spelling. You must write using 
+complete sentences. When different spellings exist, the American -English spelling is 
+required over the British -English spelling. For example, behavior is required over 
+behavior, discretization over discretization, nonlinear over non-linear, etc. You may use 
+first, second, or third person in your writing. Either active or passive voice is acceptable. 
+Choose your style and be consistent. 
+ 
+All decimal fractions should be preceded by a leading zero, e.g., 0.05 second (note that 
+seconds was not used because the amount is less than one). If you prefer to use an 
+abbreviation for units, e.g., 0.05s, do so, but be consistent in your usage. 
+ 
+Do not begin a sentence with a numeral, a symbol, or an abbreviation. 
+ 
+Do not use a one -sentence paragraph.  One sentence cannot stand alone as a 
+paragraph; this is commonly attempted in the Acknowledgements and in the 
+introduction or summary of a chapter. Do not do it. 
+ 
+In the References section, when titles of articles are listed, these should be enclosed in 
+quotation marks, titles of books should be underlined and names of journals should be 
+italicized. 
+ 
+R. Equations. Equations frequently present a challenge to the technical writer. A helpful 
+hint concerning equations is to consider them as a part of the sentence where they are 
+used. Equations do not represent stand-alone entities. Several simple examples follow. 
+ 
+Newton's second law is 
+ 
+F = ma, (1) 
+where F is force (or F = force), m is mass, and a is acceleration. 
+Newton's second law can be expressed as 
+ 
+F = ma. (2) 
+ 
+ 
+Newton's second law is given by 
+ 
+F = ma. (3) 
+ 
+ 
+Note that there is no punctuation before the equation in any of the three examples. Also 
+note the spaces on either side of the equal sign  and the double spacing above and 
+below the equation. In the first two examples, the equation is the object of the predicate 
+(verb); in the last example, the equation is the object of the preposition. 
+
+9  
+Punctuation should be used with an equation when the equation is the complement of 
+the preceding word(s). 
+An example follows. 
+ 
+The governing equation is Newton's second law, 
+ 
+ 
+F = ma. (4) 
+ 
+ 
+Engineers frequently misuse the colon. The presence of a colon implies a list. The 
+correct use of a colon appears in the next example. 
+ 
+ 
+The boundary conditions for equation (7) are as follows: 
+ 
+ 
+u = 0 at x = 0,  (8-a) 
+ 
+u = U at x = h,  (8-b) 
+ 
+v = 0 at y = 0,   (8-c) 
+           and 
+v = 0 at y = d.   (8-d) 
+ 
+ 
+ 
+An incorrect usage would be to put the colon after "are" with "as follows" deleted. The 
+reasoning is that the thought isn't complete in this example unless "as follows" is 
+included. Another example involves a word list in the sentence. 
+ 
+The list of variables describing the pressure drop of the flow of a fluid in 
+a pipe is the following: average velocity, density, viscosity, pipe diameter 
+and length, and surface roughness. 
+ 
+Note that the above equations are centered on the page as much as is possible and 
+that the equation numbers are right-justified. 
+ 
+S. Numbers and Numerals. Always use a numeral (symbol for the number) when 
+expressing the number of units of a dimension, e.g., 7 feet, 12 cm, 100 watts, 105 kg. 
+When expressing a quantity of something, use the word when the quantity is ten or 
+less, e.g., the last three figures; use the numeral when the quantity is ten or more, 
+e.g., the 12 variables. 
+ 
+T. Units. Adopt a consistent style to express units. Abbreviations are acceptable, e.g., 
+ft (or ft.) for either foot or feet. Avoid using symbols like " for inch to express units. 
+
+10  
+REMINDERS 
+ 
+1. Title Page –must show end of semester date. 
+ 
+2. Approval Form- The thesis committee members will no longer sign a signature page when they 
+approve the thesis. Instead, committee members will sign an approval form, stating that they 
+have read and examined the manuscript. The committee members will certify that it is 
+adequate in scope and quality as a thesis/dissertation for a graduate degree and indicate their 
+approval or disapproval of the content prior to being submitted to the college/department for 
+processing and acceptance. 
+ 
+3. ALL MANUSCRIPTS WILL BE BOUND AS SUBMITTED BY THE STUDENT. 
+ 
+4. Your research committee should not be formed right before your thesis defense. The 
+appointment of the research committee requires approval of the Dean's Office. The 
+committee should be appointed at least two weeks (the very minimum time) before your 
+defense. Your committee should be given at least two weeks to read your thesis prior 
+to the defense. 
+ 
+5. Choose a style of presentation and stay with it. For example, if you adopt the style of 
+using an abbreviation, for example, eqn., for the word equation, use it exclusively. The 
+only time you would not use the abbreviation (or whatever your choice of style is) is at 
+the beginning of a sentence where the full word would be used. The first line of every 
+paragraph should be indented (5 spaces). 
+ 
+6. Equations should be numbered. The equation number should be at the right hand  
+margin and it should be placed in parentheses. Do not use letters in numbering 
+equations unless they are defining parts of the equation. 
+ 
+7. The choice of style in numbering equations, figures, tables, etc., is yours. You may 
+number these consecutively (eqn. (1), eqn. (2), Fig. 7, etc.), or you may number them 
+chapter by chapter (Fig. 1-1, Fig. 1-2, Fig. 4-1, eqn. (3-2), etc.). Be consistent. 
+ 
+8. Read all of these guidelines and suggestions carefully. If you have questions, ask before 
+you submit the thesis. Don' t wait until you turn in the thesis to find out that you did 
+something wrong. 
+
+11  
+COMMON MISTAKES 
+ 
+The following are common (but not necessarily all) mistakes which have occurred in 
+theses submitted to the Dean's Office. 
+ 
+1. Incorrect margins. Use 1.5 inch left margin and 1 inch for right, top, and bottom margins 
+only. 
+ 
+2. Photocopy mistakes . Such effects as gray tones, mottling, variations in darkness of 
+copy (on a page or from page to page) and improper orientation of page (slanting, 
+transportation across a margin) are not acceptable. 
+ 
+3. Incorrect or inconsistent references. Use of et al. for referencing articles with more than 
+two authors is acceptable within the body of the text; however, use of et al.  in listing 
+authors in your References is not acceptable. 
+ 
+4. Abstracts are too long. There is a limitation of 350 words for an abstract. 
+ 
+5. Wrong page numbering. Page numbers are in the wrong place. Page numbers should 
+be centered in the bottom margin of the page. Wrong type of numeral used; i.e., Roman 
+versus Arabic. 
+ 
+6. Table of Contents, List of Tables, and List of Figures . Title and page numbers do not 
+match with the text. Tab le of Contents must begin with Dedication/Epigraph  (if 
+available), Abstract, Table of Contents, List of Tables and List of Figures. 
+ 
+7. Wrong date on title page. The date on the title page is the month and year in which the 
+degree is to be conferred. The date is not the date of your defense. 
+ 
+8. Freehand drawings and hand lettering. Do not submit freehand drawings. Do not submit 
+drawings with freehand lettering. 
+ 
+9. Numerous mistakes resulting from following an old thesis . Changes in requirements 
+and upgrading of standards make this procedure perilous. Even if the thesis is very 
+recent and approved by the same committee, there is a chance tha t they might have 
+overlooked something which does not meet these standards, but likely will not be 
+overlooked again. 
+ 
+10. Inconsistency. Everything should be uniform including spacing (before and after titles), 
+selection of subtitle styles, paragraph indention, top margins, placement of page 
+numbers, etc. 
+ 
+11. Incomplete sentences. An equation is not a sentence; it must be a part of a sentence. 
+The equal sign in an equation does not serve as the predicate in a sentence. 
+
+12  
+12. Figures and tables. Figure captions go beneath a figure. Table headings go at the top 
+of a table. Tables must have headings. Figures must have captions. Figures and tables 
+go right after their mention in the text. They are not collected at the end of a section or 
+chapter. 
+ 
+13. Line spacing. Entire thesis/dissertation must be double-spaced, except figure 
+captions and table headings within the body of the thesis. 
+ 
+14. Indenting. Be consistent with indentation of paragraphs. If you have questions, ask. 
+ 
+15. Orphan/widow lines or paragraphs. Watch the spacing of your text so you do not 
+leave a single line or very short paragraph by itself on a page. 
+ 
+ 
+UPDATES 
+ 
+ 
+Starting in Fall 2019, graduate students should use the new UHGS Written Thesis/Dissertation 
+Approval Form. 
+ 
+Graduate students should use the new UHGS template for the front matter (Title page, 
+Acknowledgements, Table of Contents, etc.) 
+ 
+http://www.uh.edu/graduate-school/academics/thesis/
+
+  13 
+ 
+WRITTEN THESIS/DISSERTATION 
+(DOCTORAL, MASTERS) APPROVAL FORM 
+ 
+Student’s Name: 
+(Name must match UH student records) 
+Student Email: UH PeopleSoft ID: 
+ 
+Degree (check one): 
+ 
+☐ Doctoral 
+☐ Masters 
+ 
+ 
+Program: Defense Date: 
+Anticipated Date of Graduation (Month/Year): 
+Thesis/Dissertation Title: 
+ 
+ 
+We, the undersigned committee members have read and examined this manuscript. We certify that it is 
+adequate in scope and quality as a thesis/dissertation for this graduate degree and indicate our approval 
+of the content of the document to be submitted to the college/department for processing and acceptance, 
+OR we indicate our dissent below. Approve Disapprove 
+ 
+Chair:       
+Printed Name Signature 
+ 
+Member:      
+Printed Name Signature 
+ 
+Member:      
+Printed Name Signature 
+ 
+Member:      
+Printed Name Signature 
+ 
+Member:      
+Printed Name Signature 
+ 
+Member:      
+Printed Name Signature 
+ 
+Member:      
+Printed Name Signature 
+Collegiate Dean or Associate Dean (as required by program) 
+ 
+Once approval has been received from the college, students must submit the college-approved thesis 
+or dissertation. Students will submit the work and faculty will approve it using Vireo, following the 
+instructions found at the following link: http://www.uh.edu/graduate-school/thesis/. Students must 
+submit their documents in Portable Document Format (PDF) per the guidelines on the web site, 
+following all program, department, and/or college-specific requirements. This form should be 
+submitted as “image only” to the Graduate School via IRIS by the Graduate Coordinator/Advisor. 
+ 
+ 
+
+
+  14 
+ 
+ 
+Thesis/Dissertation Approval Form UHGS-V1:1082019 
+
+  14  
+{Replace text in “< >” with your text; remove all blue text before finalizing} 
+ 
+<Title of Work, Centered, Capitalize Each Word> 
+by 
+<First Name Middle Name Last Name> 
+ 
+ 
+ 
+ 
+ 
+ 
+A <thesis/dissertation> submitted to the <Department>, 
+<College> 
+in partial fulfillment of the requirements for the degree of 
+ 
+ 
+<Degree > 
+{MASTER OF ARTS, MASTER OF SCIENCES, DOCTOR OF PHILOSOPHY, DOCTOR OF EDUCATION, etc} 
+ 
+in <Major> 
+ 
+ 
+ 
+ 
+ 
+ 
+Chair of Committee: <Name> 
+ 
+Co-Chair of Committee: <Name> (Optional) 
+Committee Member: <Name> 
+Committee Member: <Name> 
+Committee Member: <Name> 
+Committee Member: <Name> 
+ 
+University of Houston 
+Month Year 
+
+ 
+  15  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Copyright <Year>, First Name Middle Name Last Name 
+ 
+(Optional) 
+
+ 
+  16  
+DEDICATION/EPIGRAPH 
+Students may optionally include a dedication or epigraph and if included, each should 
+be denoted with a separate page. 
+(Optional) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+iii 
+
+ 
+  17  
+ 
+ACKNOWLEDGEMENTS 
+The purpose of this page is to recognize scholarly and professional assistance, support 
+and advice; the inclusion of references to persons who provided clerical help, help 
+with field studies, financial assistance, and permission to use copyrighted materials is 
+also acceptable. Acknowledgments should be brief, in a professional style, and should 
+not exceed two pages. 
+(Optional) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                        iv 
+ 
+
+ 
+  18  
+ 
+ 
+ABSTRACT 
+ 
+The abstract should be a concise description of your thesis/dissertation. Typically, the 
+abstract should be no more than 350 words in length. The text of the abstract should 
+be double-spaced. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+v 
+
+ 
+  19 
+ 
+TABLE OF CONTENTS 
+DEDICATION/EPIGRAPH ................................................................................ ii 
+ACKNOWLEDGEMENTS ................................................................................. iii 
+ABSTRACT .......................................................................................................... iv 
+LIST OF TABLES (HEADING 1) ...................................................................... vi 
+LIST OF FIGURES (HEADING 1) ................................................................... vii 
+I. CHAPTER TITLE (HEADING 1) ................................................................... 1 
+Second level subheading (Heading 2) ............................................................... 4 
+Third-level subheading (Heading 3) ........................................................... 8 
+II. CHAPTER TITLE (HEADING 1) ............................................................... 10 
+Second level subheading (Heading 2) ............................................................. 15 
+Third-level subheading (Heading 3) ......................................................... 15 
+III. CHAPTER TITLE (HEADING 1) .............................................................. 20 
+Second level subheading (Heading 2) ............................................................. 25 
+Third-level subheading (Heading 3) .......................................................... 29 
+IV. CHAPTER TITLE (HEADING 1) .............................................................. 30 
+Second level subheading (Heading 2) ............................................................. 35 
+Third-level subheading (Heading 3) ......................................................... 39 
+IV. CHAPTER TITLE (HEADING 1) .............................................................. 40 
+Second level subheading (Heading 2) ............................................................. 45 
+Third-level subheading (Heading 3) ......................................................... 59 
+REFERENCES ................................................................................................... 60 
+APPENDICES 
+A. APPENDIX TITLE ....................................................................................... 89 
+B. APPENDIX TITLE ........................................................................................ 99 
+{This is an automatically generated Table of Contents made with Microsoft Word as an example} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                                     vi 
+                  
+
+20 
+ 
+ 
+LIST OF TABLES 
+2.1 This is the Title for the First Table ............................................................ 20 
+2.2 This is the Title for the Second Table ....................................................... 21 
+2.3 This is the Title for the Third Table .......................................................... 23 
+3.1 This is the Title for the Forth Table .......................................................... 29 
+4.1 This is the Title for the Fifth Table ........................................................... 35 
+ 
+ 
+ 
+ 
+{This is an automatically generated List of Tables made with Microsoft Word for an example only}  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                                               vii
+
+ 
+21 
+ 
+ 
+LIST OF FIGURES 
+1.1 This is the Title for the First Figure .......................................................... 50 
+3.1 This is the Title for the Second Figure ...................................................... 51 
+4.1 This is the Title for the Third Figure ......................................................... 52 
+{This is an automatically generated List of Figures made with Microsoft Word for an example only}  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                               
+ 
+ 
+                                                                                  viii     
+ 
+ 
+               
+ 

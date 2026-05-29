@@ -1,0 +1,92 @@
+\documentclass{uhthesis}
+
+\title{A Sample University of Houston Dissertation Template}
+\author{First M. Last}
+\department{Department of Electrical and Computer Engineering}
+\degree{Doctor of Philosophy}
+\major{Electrical Engineering}
+\degreedate{May 2026}
+\submissiontype{dissertation}
+\chair{Professor Jane Advisor}
+\committeemember{Professor John Member}
+\committeemember{Professor Alice Member}
+\committeemember{Professor Robert Member}
+
+\begin{document}
+
+\frontmatter
+\maketitlepage
+% Uncomment if you need the optional copyright page.
+% \makecopyrightpage
+
+\begin{dedication}
+To everyone who made this work possible.
+\end{dedication}
+
+\begin{acknowledgements}
+This page is optional. The guide recommends keeping acknowledgements brief and professional.
+\end{acknowledgements}
+
+\begin{abstractpage}
+This template encodes the October 2022 Cullen College of Engineering thesis and dissertation guide into a reusable LaTeX workflow. It uses the required page geometry, double spacing for body text, single-spaced figure and table captions, bottom-centered page numbers, Roman numerals for front matter, and Arabic numerals beginning with Chapter~1. Replace this paragraph with an abstract of no more than 350 words that states the problem, methods, results, and conclusions.
+\end{abstractpage}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+\mainmatter
+
+\chapter{Introduction}
+This file is a starting point rather than a complete dissertation. The main body is double-spaced, with a 1.5 inch left margin and 1 inch margins on the other sides, matching the guide.
+
+The front matter order implemented here is title page, optional copyright page, optional dedication, optional acknowledgements, abstract, table of contents, list of tables, and list of figures. References appear before appendices.
+
+\section{Example Figure and Table Placement}
+The guide requires figures and tables to appear near the point of mention instead of being grouped at the end of a chapter or appendix.
+
+\begin{figure}[htbp]
+  \centering
+  \rule{0.75\textwidth}{2in}
+  \caption{Example figure caption. Captions are single-spaced by class default.}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Example table caption.}
+  \begin{tabular}{ll}
+    \hline
+    Item & Value \\
+    \hline
+    Example & 1 \\
+    Sample & 2 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\chapter{Review of Previous Work}
+Use the normal chapter structure for your literature review, methodology, results, and conclusions. If your department requires a specific citation style, update the references accordingly.
+
+\section{Equation Numbering}
+Equations are numbered by chapter.
+
+\begin{equation}
+E = mc^2
+\end{equation}
+
+\chapter{Results and Discussion}
+Populate the remaining chapters with your actual content. Keep formatting consistent across headings, paragraph indentation, captions, and pagination.
+
+\backmatter
+
+\addcontentsline{toc}{chapter}{REFERENCES}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{references}
+
+\appendix
+
+\chapter{Appendix Title}
+Appendices continue the main Arabic page numbering sequence.
+
+\end{document}

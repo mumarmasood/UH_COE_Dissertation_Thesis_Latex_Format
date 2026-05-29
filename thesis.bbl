@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{example-book}
+A.~B. Author and C.~D. Author.
+\newblock {\em Example Reference Title}.
+\newblock Example Press, 2025.
+
+\bibitem{example-article}
+E.~F. Researcher, G.~H. Researcher, and I.~J. Researcher.
+\newblock Example article title.
+\newblock {\em Journal of Examples}, 10(2):100--120, 2024.
+
+\end{thebibliography}
