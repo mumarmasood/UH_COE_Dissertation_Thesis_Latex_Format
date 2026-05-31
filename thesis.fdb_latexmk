@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex thesis"] 1780087489.76409 "thesis.aux" "thesis.bbl" "thesis" 1780087491.94954 0
+["bibtex thesis"] 1780088152.63599 "thesis.aux" "thesis.bbl" "thesis" 1780238010.12127 0
   "./references.bib" 1780087483 434 d5f37978371ea7d59bbfe38325b6ca3f ""
   "c:/texlive/2023/texmf-dist/bibtex/bst/base/plain.bst" 1708749906 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "thesis.aux" 1780087491 1939 ece52f071f8cdf379ecbb7cdce4da9b2 "pdflatex"
+  "thesis.aux" 1780238009 2007 58bcd59799a03a3654c2be4233c178fe "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1780087490.16631 "c:/Users/mumar/OneDrive - University Of Houston/UoH/Dr Chen/PhD Stuff/Dissertation_Thesis/thesis.tex" "thesis.pdf" "thesis" 1780087491.95004 0
-  "c:/Users/mumar/OneDrive - University Of Houston/UoH/Dr Chen/PhD Stuff/Dissertation_Thesis/thesis.tex" 1780087484 3175 5fe9c7aa573acb38006f07d79d10783d ""
+["pdflatex"] 1780238007.90114 "c:/Users/mumar/OneDrive - University Of Houston/UoH/Dr Chen/PhD Stuff/UH_COE_Dissertation_Thesis_Latex_Format/thesis.tex" "thesis.pdf" "thesis" 1780238010.12199 0
+  "c:/Users/mumar/OneDrive - University Of Houston/UoH/Dr Chen/PhD Stuff/UH_COE_Dissertation_Thesis_Latex_Format/thesis.tex" 1780238006 3188 1a89e6ee1ab1d6a5e9c5ade8c59ceb54 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1708751533 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1708748576 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1708748576 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -24,10 +24,12 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1708750334 1124 6c73e740cf17375f03eec0ee63599741 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1708750334 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1708750334 1120 8b7d695260f3cff42e636090a8002094 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1708750334 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1708748576 32080 340ef9bf63678554ee606688e7b5339d ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1708748576 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1708748576 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1708748576 32726 39f0f9e62e84beb801509898a605dbd5 ""
+  "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1708748576 36118 fad905eba93cff5bce1e185fe980a177 ""
   "c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1708753708 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2023/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1708749342 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "c:/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1708749927 40635 c40361e206be584d448876bba8a64a3b ""
@@ -84,14 +86,14 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1708756725 5518052 de2a91c664d75f3971de4662dc6b5a65 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1708756868 8220692 75244fd6a67ab46cc02613258ab49920 ""
   "c:/texlive/2023/texmf.cnf" 1708756709 713 e69b156964470283e0530f5060668171 ""
-  "thesis.aux" 1780087491 1939 ece52f071f8cdf379ecbb7cdce4da9b2 "pdflatex"
-  "thesis.bbl" 1780087490 49 0eba253fc001332e731e8aba3f23127b "bibtex thesis"
-  "thesis.lof" 1780087491 228 ae38e4dcf989a9024d0bfb749a383dde "pdflatex"
-  "thesis.lot" 1780087491 180 fe2fc6fc7849778ea90e5ec6e7def3b0 "pdflatex"
-  "thesis.out" 1780087491 1369 d5aa86c49512eaf203f15bafab84c84e "pdflatex"
-  "thesis.tex" 1780087484 3175 5fe9c7aa573acb38006f07d79d10783d ""
-  "thesis.toc" 1780087491 694 cfff0e8785b38ed8904e1f330dd0d330 "pdflatex"
-  "uhthesis.cls" 1780087405 4494 9ce8fd1dc8f7d8b7d5a0849c0114c50b ""
+  "thesis.aux" 1780238009 2007 58bcd59799a03a3654c2be4233c178fe "pdflatex"
+  "thesis.bbl" 1780088153 354 6f10baf98d43b13ef545b46b15ec0813 "bibtex thesis"
+  "thesis.lof" 1780238009 228 ae38e4dcf989a9024d0bfb749a383dde "pdflatex"
+  "thesis.lot" 1780238009 180 fe2fc6fc7849778ea90e5ec6e7def3b0 "pdflatex"
+  "thesis.out" 1780238009 1369 d5aa86c49512eaf203f15bafab84c84e "pdflatex"
+  "thesis.tex" 1780238006 3188 1a89e6ee1ab1d6a5e9c5ade8c59ceb54 ""
+  "thesis.toc" 1780238009 694 cfff0e8785b38ed8904e1f330dd0d330 "pdflatex"
+  "uhcoethesis.cls" 1780087405 4494 9ce8fd1dc8f7d8b7d5a0849c0114c50b ""
   (generated)
   "thesis.aux"
   "thesis.lof"

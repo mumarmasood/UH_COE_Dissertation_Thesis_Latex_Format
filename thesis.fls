@@ -1,11 +1,11 @@
-PWD c:/Users/mumar/OneDrive - University Of Houston/UoH/Dr Chen/PhD Stuff/Dissertation_Thesis
+PWD c:/Users/mumar/OneDrive - University Of Houston/UoH/Dr Chen/PhD Stuff/UH_COE_Dissertation_Thesis_Latex_Format
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/mumar/OneDrive - University Of Houston/UoH/Dr Chen/PhD Stuff/Dissertation_Thesis/thesis.tex
+INPUT c:/Users/mumar/OneDrive - University Of Houston/UoH/Dr Chen/PhD Stuff/UH_COE_Dissertation_Thesis_Latex_Format/thesis.tex
 OUTPUT thesis.log
-INPUT ./uhthesis.cls
-INPUT uhthesis.cls
+INPUT ./uhcoethesis.cls
+INPUT uhcoethesis.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/report.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/report.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/size12.clo
@@ -162,6 +162,7 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./thesis.bbl
 INPUT ./thesis.bbl
 INPUT thesis.bbl
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT thesis.aux
 INPUT ./thesis.out
 INPUT ./thesis.out
@@ -169,3 +170,4 @@ INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
