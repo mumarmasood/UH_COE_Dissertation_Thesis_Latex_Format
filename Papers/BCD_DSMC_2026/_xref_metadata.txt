@@ -1,0 +1,189 @@
+TITLE: Experimental Validation of Underwater Depth and Orientation Control Using Reversible Fuel Cell Electrolysis
+MATCH: Experimental Validation of Underwater Depth and Orientation Control Using Reversible Fuel Cell Electrolysis
+YEAR: 2025
+CONTAINER: IEEE/ASME Transactions on Mechatronics
+VOLUME: 30
+ISSUE: 6
+PAGE: 7649-7658
+DOI: 10.1109/tmech.2025.3579654
+----
+TITLE: Buoyancy control device enabled by reversible proton exchange membrane fuel cells for fine depth control
+MATCH: Buoyancy Control Device Enabled by Reversible Proton Exchange Membrane Fuel Cells for Fine Depth Control
+YEAR: 2020
+CONTAINER: Journal of Dynamic Systems, Measurement, and Control
+VOLUME: 143
+ISSUE: 3
+PAGE: 
+DOI: 10.1115/1.4048778
+----
+TITLE: Automated buoyancy control system for a remotely operated underwater crawler
+MATCH: Automated buoyancy control system for a remotely operated underwater crawler
+YEAR: 2015
+CONTAINER: OCEANS 2015 - Genova
+VOLUME: 
+ISSUE: 
+PAGE: 1-10
+DOI: 10.1109/oceans-genova.2015.7271238
+----
+TITLE: A Manta Ray Robot with Soft Material Based Flapping Wing
+MATCH: A Manta Ray Robot with Soft Material Based Flapping Wing
+YEAR: 2022
+CONTAINER: Journal of Marine Science and Engineering
+VOLUME: 10
+ISSUE: 7
+PAGE: 962
+DOI: 10.3390/jmse10070962
+----
+TITLE: Designs of the Biomimetic Robotic Fishes Performing Body and/or Caudal Fin (BCF) Swimming Locomotion: A Review
+MATCH: Designs of the Biomimetic Robotic Fishes Performing Body and/or Caudal Fin (BCF) Swimming Locomotion: A Review
+YEAR: 2021
+CONTAINER: Journal of Intelligent &amp; Robotic Systems
+VOLUME: 102
+ISSUE: 1
+PAGE: 
+DOI: 10.1007/s10846-021-01379-1
+----
+TITLE: Depth and Altitude Control of an AUV Using Buoyancy Control Device
+MATCH: Depth and Altitude Control of an AUV Using Buoyancy Control Device
+YEAR: 2016
+CONTAINER: J. of Electrical Engineering
+VOLUME: 4
+ISSUE: 3
+PAGE: 
+DOI: 10.17265/2328-2223/2016.03.004
+----
+TITLE: Analysis and development of a buoyancy-pitch based depth control algorithm for a hybrid underwater glider
+MATCH: Analysis and development of a buoyancy-pitch based depth control algorithm for a hybrid underwater glider
+YEAR: 2012
+CONTAINER: 2012 IEEE/OES Autonomous Underwater Vehicles (AUV)
+VOLUME: 
+ISSUE: 
+PAGE: 1-6
+DOI: 10.1109/auv.2012.6380742
+----
+TITLE: Stability of extremum seeking feedback for general nonlinear dynamic systems
+MATCH: Stability of extremum seeking feedback for general nonlinear dynamic systems
+YEAR: 2000
+CONTAINER: Automatica
+VOLUME: 36
+ISSUE: 4
+PAGE: 595-601
+DOI: 10.1016/s0005-1098(99)00183-1
+----
+TITLE: 100 years of extremum seeking: A survey
+MATCH: 100 years of extremum seeking: A survey
+YEAR: 2024
+CONTAINER: Automatica
+VOLUME: 161
+ISSUE: 
+PAGE: 111481
+DOI: 10.1016/j.automatica.2023.111481
+----
+TITLE: Extremum seeking for moderately unstable systems and for autonomous vehicle target tracking without position measurements
+MATCH: Extremum seeking for moderately unstable systems and for autonomous vehicle target tracking without position measurements
+YEAR: 2006
+CONTAINER: 2006 American Control Conference
+VOLUME: 
+ISSUE: 
+PAGE: 6 pp.
+DOI: 10.1109/acc.2006.1657503
+----
+TITLE: Extremum seeking-based perfect adaptive tracking of non-PE references despite nonvanishing variance of perturbation
+MATCH: Extremum seeking-based perfect adaptive tracking of non-PE references despite nonvanishing variance of perturbation
+YEAR: 2018
+CONTAINER: Automatica
+VOLUME: 93
+ISSUE: 
+PAGE: 189-196
+DOI: 10.1016/j.automatica.2018.03.068
+----
+TITLE: Semiglobal Safety-Filtered Extremum Seeking With Unknown CBFs
+MATCH: Semiglobal Safety-Filtered Extremum Seeking With Unknown CBFs
+YEAR: 2025
+CONTAINER: IEEE Transactions on Automatic Control
+VOLUME: 70
+ISSUE: 3
+PAGE: 1698-1713
+DOI: 10.1109/tac.2024.3469785
+----
+TITLE: A Variable Buoyancy Control System for a Large AUV
+MATCH: A Variable Buoyancy Control System for a Large AUV
+YEAR: 2007
+CONTAINER: IEEE Journal of Oceanic Engineering
+VOLUME: 32
+ISSUE: 4
+PAGE: 762-771
+DOI: 10.1109/joe.2007.911596
+----
+TITLE: Development and depth control of biomimetic robotic fish
+MATCH: Development and depth control of biomimetic robotic fish
+YEAR: 2007
+CONTAINER: 2007 IEEE/RSJ International Conference on Intelligent Robots and Systems
+VOLUME: 
+ISSUE: 
+PAGE: 3560-3565
+DOI: 10.1109/iros.2007.4398997
+----
+TITLE: Exploration of Underwater Life with an Acoustically Controlled Soft Robotic Fish
+MATCH: Exploration of underwater life with an acoustically controlled soft robotic fish
+YEAR: 2018
+CONTAINER: Science Robotics
+VOLUME: 3
+ISSUE: 16
+PAGE: 
+DOI: 10.1126/scirobotics.aar3449
+----
+TITLE: Design of a Depth Control Mechanism for an Anguilliform Swimming Robot
+MATCH: Design of a Depth Control Mechanism for an Anguilliform Swimming Robot
+YEAR: 2021
+CONTAINER: Biomimetics
+VOLUME: 6
+ISSUE: 2
+PAGE: 39
+DOI: 10.3390/biomimetics6020039
+----
+TITLE: Reversible fuel cell enabled underwater buoyancy control
+MATCH: Reversible fuel cell enabled underwater buoyancy control
+YEAR: 2022
+CONTAINER: Mechatronics
+VOLUME: 86
+ISSUE: 
+PAGE: 102865
+DOI: 10.1016/j.mechatronics.2022.102865
+----
+TITLE: Design and Analysis of a Variable Buoyancy System for Efficient Hovering Control of Underwater Vehicles with State Feedback Controller
+MATCH: Design and Analysis of a Variable Buoyancy System for Efficient Hovering Control of Underwater Vehicles with State Feedback Controller
+YEAR: 2020
+CONTAINER: Journal of Marine Science and Engineering
+VOLUME: 8
+ISSUE: 4
+PAGE: 263
+DOI: 10.3390/jmse8040263
+----
+TITLE: Energy optimal depth control for multimodal underwater vehicles with a high accuracy buoyancy actuated system
+MATCH: Energy optimal depth control for multimodal underwater vehicles with a high accuracy buoyancy actuated system
+YEAR: 2023
+CONTAINER: Ocean Engineering
+VOLUME: 286
+ISSUE: 
+PAGE: 115516
+DOI: 10.1016/j.oceaneng.2023.115516
+----
+TITLE: Depth control of an over-actuated, hover-capable autonomous underwater vehicle with experimental verification
+MATCH: Depth control for an over-actuated, hover-capable autonomous underwater vehicle with experimental verification
+YEAR: 2017
+CONTAINER: Mechatronics
+VOLUME: 41
+ISSUE: 
+PAGE: 67-81
+DOI: 10.1016/j.mechatronics.2016.11.006
+----
+TITLE: Improving the performance of an AUV hovering system by introducing low-cost flow rate control into water hydraulic variable ballast system
+MATCH: Improving the performance of an AUV hovering system by introducing low-cost flow rate control into water hydraulic variable ballast system
+YEAR: 2016
+CONTAINER: Ocean Engineering
+VOLUME: 125
+ISSUE: 
+PAGE: 155-169
+DOI: 10.1016/j.oceaneng.2016.08.001
+----

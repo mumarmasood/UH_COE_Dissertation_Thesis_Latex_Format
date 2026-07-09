@@ -1,0 +1,11 @@
+\babel@toc {english}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Concept configuration of the proposed framework for underwater swarm robots. The dotted lines represent the communication links.}}{2}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Overview of the proposed RF--IMU relative localization pipeline.}}{4}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Localization device with four flat dipole RF antennas and integrated 9-axes IMU.}}{5}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces The localization device mounted on BlueROV.}}{6}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Analysis of heading angle $\psi $ estimation from IMU data: (a) unwrapped heading angle over time, and (b) absolute error compared to ground truth.}}{9}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Comparison of RSSI-based bearing angle \(\theta \) estimation with and without Kalman correction.}}{9}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Position error analysis for the combined model (train--test split).}}{10}{figure.7}%
+\contentsline {subfigure}{\numberline {(\textit {a})}{\ignorespaces Histogram of the Euclidean position error magnitude.}}{10}{subfigure.7.1}%
+\contentsline {subfigure}{\numberline {(\textit {b})}{\ignorespaces Scatter plot of Cartesian position errors \((e_x,e_y)\).}}{10}{subfigure.7.2}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Histogram of the Euclidean position error magnitude for the dataset with distance range up to 6 m .}}{10}{figure.8}%

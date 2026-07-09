@@ -1,10 +1,46 @@
-\contentsline {chapter}{DEDICATION/EPIGRAPH}{i}{chapter*.1}%
-\contentsline {chapter}{ACKNOWLEDGEMENTS}{ii}{chapter*.2}%
-\contentsline {chapter}{ABSTRACT}{iii}{chapter*.3}%
+\contentsline {chapter}{DEDICATION/EPIGRAPH}{ii}{chapter*.1}%
+\contentsline {chapter}{ACKNOWLEDGEMENTS}{iii}{chapter*.2}%
+\contentsline {chapter}{ABSTRACT}{iv}{chapter*.3}%
 \contentsline {chapter}{\numberline {I}Introduction}{1}{chapter.4}%
-\contentsline {section}{\numberline {I.1}Example Figure and Table Placement}{1}{section.5}%
-\contentsline {chapter}{\numberline {II}Review of Previous Work}{3}{chapter.8}%
-\contentsline {section}{\numberline {II.1}Equation Numbering}{3}{section.9}%
-\contentsline {chapter}{\numberline {III}Results and Discussion}{4}{chapter.11}%
-\contentsline {chapter}{REFERENCES}{5}{chapter.11}%
-\contentsline {chapter}{\numberline {A}Appendix Title}{6}{appendix.13}%
+\contentsline {section}{\numberline {I.1}Underwater Infrastructure Monitoring}{3}{section.5}%
+\contentsline {section}{\numberline {I.2}Limitations of Conventional Platforms}{4}{section.6}%
+\contentsline {section}{\numberline {I.3}Bio-Inspired Robotic Fish}{6}{section.7}%
+\contentsline {section}{\numberline {I.4}3D Motion and Buoyancy Control}{8}{section.8}%
+\contentsline {section}{\numberline {I.5}Perception and Environmental Sensing}{9}{section.9}%
+\contentsline {subsection}{\numberline {I.5.1}Vision-Based Pipeline Tracking}{10}{subsection.10}%
+\contentsline {subsection}{\numberline {I.5.2}CO2 Leak-Source Localization}{11}{subsection.11}%
+\contentsline {subsection}{\numberline {I.5.3}Oil-Spill Detection}{12}{subsection.12}%
+\contentsline {section}{\numberline {I.6}Cooperative Inspection and Relative Localization}{14}{section.13}%
+\contentsline {section}{\numberline {I.7}Research Objectives}{15}{section.14}%
+\contentsline {section}{\numberline {I.8}Summary of Contributions}{16}{section.20}%
+\contentsline {section}{\numberline {I.9}Dissertation Organization}{17}{section.21}%
+\contentsline {chapter}{\numberline {II}Design and Modeling of the Buoyancy Control Device and Robotic Fish}{19}{chapter.22}%
+\contentsline {section}{\numberline {II.1}Design of the Buoyancy Control Device}{19}{section.23}%
+\contentsline {section}{\numberline {II.2}Design of AquaNavigator}{21}{section.25}%
+\contentsline {subsection}{\numberline {II.2.1}Tail Propulsion and Steering}{21}{subsection.26}%
+\contentsline {subsection}{\numberline {II.2.2}Electronics, Sensing, and Enclosure Integration}{23}{subsection.31}%
+\contentsline {section}{\numberline {II.3}Modeling of the BCD and Robotic Fish}{25}{section.34}%
+\contentsline {subsection}{\numberline {II.3.1}Buoyancy-Device Force Balance}{25}{subsection.35}%
+\contentsline {subsection}{\numberline {II.3.2}Pressure-Coupled Actuator Model}{27}{subsection.44}%
+\contentsline {subsection}{\numberline {II.3.3}AquaNavigator Dynamic Model}{30}{subsection.54}%
+\contentsline {subsubsection}{Tail Kinematics and Thrust Estimation}{31}{subsubsection*.61}%
+\contentsline {subsubsection}{Planar Rigid-Body Dynamics}{33}{subsubsection*.69}%
+\contentsline {section}{\numberline {II.4}Fabrication of the BCD and AquaNavigator}{37}{section.82}%
+\contentsline {chapter}{\numberline {III}Model Validation and Control Design}{39}{chapter.85}%
+\contentsline {section}{\numberline {III.1}Model Validation of the BCD}{39}{section.86}%
+\contentsline {section}{\numberline {III.2}MPC-Based BCD Control Design}{40}{section.87}%
+\contentsline {section}{\numberline {III.3}Extremum Seeking Control of the BCD}{42}{section.92}%
+\contentsline {section}{\numberline {III.4}Pipeline Tracking Control of AquaNavigator}{44}{section.100}%
+\contentsline {section}{\numberline {III.5}Robotic Fish Simulator}{46}{section.104}%
+\contentsline {section}{\numberline {III.6}Results and Discussion}{48}{section.105}%
+\contentsline {subsection}{\numberline {III.6.1}BCD Open-Loop Model Validation}{48}{subsection.106}%
+\contentsline {subsection}{\numberline {III.6.2}MPC Depth-Control Results}{48}{subsection.108}%
+\contentsline {subsection}{\numberline {III.6.3}ESC Depth-Control Results}{49}{subsection.111}%
+\contentsline {subsection}{\numberline {III.6.4}Simulator Results}{51}{subsection.116}%
+\contentsline {subsection}{\numberline {III.6.5}Pipeline Tracking Results}{52}{subsection.118}%
+\contentsline {section}{\numberline {III.7}Conclusion}{54}{section.121}%
+\contentsline {chapter}{\numberline {IV}Safety, Inspection, and Monitoring of Underwater Infrastructure}{57}{chapter.122}%
+\contentsline {chapter}{\numberline {V}Cooperative Inspection: Relative Localization Framework}{58}{chapter.123}%
+\contentsline {chapter}{\numberline {VI}Conclusions and Future Work}{59}{chapter.124}%
+\contentsline {chapter}{REFERENCES}{60}{chapter.124}%
+\contentsline {chapter}{\numberline {A}Appendix Title}{72}{appendix.126}%

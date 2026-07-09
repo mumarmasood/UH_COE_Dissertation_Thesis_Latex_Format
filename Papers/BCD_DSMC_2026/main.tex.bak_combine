@@ -1,0 +1,1187 @@
+﻿\documentclass[a4paper,subscriptcorrection,upint,varvw,barcolor=Goldenrod3,mathalfa=cal=euler,balance,nolists]{asmejour}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+
+\usetikzlibrary{arrows.meta,calc,positioning}
+
+
+\JourName{Dynamic Systems, Measurement, and Control}
+
+\begin{document}
+
+\SetAuthorBlock{Muhammad Umar Masood}
+{Department of Mechanical and Aerospace Engineering,\\
+University of Houston,\\
+Houston, TX 77204, USA\\
+email: mmasood8@uh.edu}
+
+\SetAuthorBlock{Zheng Chen}
+{Department of Mechanical and Aerospace Engineering,\\
+University of Houston,\\
+Houston, TX 77204, USA\\
+email: zchen43@uh.edu}
+
+\title{Extremum Seeking Control for Hard-Bound Unstable Systems}
+
+\keywords{Extremum seeking control, nonlinear systems, unstable systems, adaptive control, bounded inputs.}
+
+\begin{abstract}
+This paper introduces a constraint-aware extremum seeking control (ESC) framework for a compact buoyancy control device with a linear actuator, designed for underwater robotic applications. The system features inherent instability and strict physical limits on actuator stroke and voltage, posing significant challenges for traditional control methods. The proposed ESC approach optimizes depth regulation performance online while ensuring safe operation within hardware constraints, without requiring an exact plant model. Simulation and experimental results demonstrate that the ESC framework improves input utilization and depth control, maintaining stability and respecting actuator limits in the presence of nonlinearities and uncertainties.
+\end{abstract}
+
+\date{Version \versionno, \today}
+
+\maketitle
+
+\section{Introduction}
+
+Oceans cover more than 70\% of the Earth's surface \cite{ocean_ngs,noaa_ocean_exploration} and support climate regulation, marine transportation, offshore energy systems, subsea infrastructure, and scientific monitoring. Even so, persistent underwater operation is still difficult. Missions are expensive, access is limited, and the environment introduces poor visibility, uncertain hydrodynamic disturbances, pressure variation, corrosion, and communication constraints. These practical difficulties continue to motivate autonomous and semi-autonomous underwater robotic systems that can operate with less direct human intervention.
+
+Underwater robotic platforms range from large autonomous underwater vehicles (AUVs) built for long-duration missions to compact bio-inspired robotic fish \cite{masood2025visual} intended for agile motion and operation in tighter spaces. Across that range, depth regulation remains one of the basic control problems. Reliable vertical motion is needed for station keeping, terrain following, inspection, adaptive sampling, and energy-efficient maneuvering. The challenge is that the depth dynamics are influenced by buoyancy, hydrodynamic drag, added mass, pressure-dependent volume changes, actuator limits, and disturbances from the surrounding flow or the vehicle motion itself.
+
+Depth can be regulated through propulsive thrust \cite{tanakitkorn2017depth}, control surfaces \cite{silvestre2007infante}, or body attitude control \cite{hong2010starfish}. These approaches are effective in many vehicles, especially when there is enough forward speed \cite{tanakitkorn2017depth}. For hovering, low-speed operation, or compact bio-inspired platforms \cite{katzschmann2018sofi}, however, continuous thrust-based depth control can consume unnecessary energy and disturb the local flow field \cite{zhao2016hovering}. Variable buoyancy systems (VBSs), also referred to as buoyancy control devices (BCDs), provide another route \cite{tangirala2007vbs}: they change the net buoyant force directly by modifying displaced volume or internal mass distribution \cite{tiwari2020vbs}. That makes them especially attractive for missions where low-speed efficiency matters \cite{carneiro2024depth}.
+
+There is no single preferred VBS architecture. Pump-based systems move fluid between chambers, gas-generation systems create or remove gas volume \cite{koc2025bcd}, thermal or phase-change systems exploit material expansion \cite{hou2020electrothermal}, and mechanical bladder, bellows, or piston-cylinder devices adjust displaced volume using compact actuators. The tradeoff is usually among response speed, energy use, packaging complexity, pressure tolerance, repeatability, and robustness to hydrostatic loading. Those tradeoffs become sharper for small robotic fish and compact underwater platforms, where the actuator, power electronics, pressure boundary, and control hardware all compete for limited space.
+
+Earlier work has established both the usefulness and the difficulty of buoyancy-driven depth regulation. Tangirala and Dzielski \cite{tangirala2007vbs} studied a variable buoyancy control system for a large AUV and emphasized its nonlinear and delayed behavior. Zhang et al. \cite{zhang2007fish} demonstrated depth control of a biomimetic robotic fish using fin-based actuation. Other robotic-fish and bio-inspired studies considered thrust redirection, fins, artificial swim bladders, and buoyancy-regulation units \cite{islam2021anguilliform,le2011bladder}. Katzschmann et al. \cite{katzschmann2018sofi} presented a soft robotic fish with onboard buoyancy adjustment, and Keow et al. \cite{keow2022fuelcell} developed a reversible-fuel-cell-based buoyancy system with feedback depth control. More recent VBS studies have explored state-feedback hovering control, switching depth control, modular VBS design, and energy-optimal depth regulation \cite{tiwari2020vbs,xia2024vbs,cao2023energy}. Most of these studies, however, stay within PID/PDA, state-feedback, switching, trajectory-planning, energy-optimization, or other model-based control structures rather than online performance optimization.
+
+Table~\ref{tab:literature_gap} places this work relative to those efforts and to the ESC literature. The underwater-control studies show that buoyancy-based depth regulation is practical, but they do not directly address compact cylinder-piston hardware with simultaneous stroke and voltage limits. ESC theory, on the other hand, already contains tools for real-time optimization, unstable systems, and constrained seeking, but usually in more general dynamical-system settings than the device studied here.
+
+\begin{table*}[t]
+\centering
+\caption{Representative literature related to variable buoyancy control, robotic-fish depth regulation, and extremum seeking control.}
+\label{tab:literature_gap}
+\begin{tabular}{p{0.18\textwidth} p{0.25\textwidth} p{0.25\textwidth} p{0.25\textwidth}}
+\hline
+\textbf{Research area} & \textbf{Representative works} & \textbf{Main focus} & \textbf{Relevance and limitation with respect to this work} \\
+\hline
+Variable buoyancy systems for AUVs &
+Tangirala and Dzielski~\cite{tangirala2007vbs}; Tiwari and Sharma~\cite{tiwari2020vbs}; Xia et al.~\cite{xia2024vbs}; Cao et al.~\cite{cao2023energy} &
+Pump-based, modular, state-feedback, switching, or energy-optimal buoyancy regulation for underwater vehicles &
+These studies establish the value of VBSs for depth regulation and energy-efficient operation, but their control structures are mainly model-based, state-feedback, switching, or optimization-planning approaches rather than ESC-based online adaptation under hard actuator constraints. \\
+\hline
+Robotic fish and bio-inspired underwater depth control &
+Zhang et al.~\cite{zhang2007fish}; Katzschmann et al.~\cite{katzschmann2018sofi}; Islam and Taravella~\cite{islam2021anguilliform}; Le et al.~\cite{le2011bladder}; Keow et al.~\cite{keow2022fuelcell} &
+Depth control for robotic fish using fins, thrust redirection, buoyancy units, or fuel-cell-enabled buoyancy regulation &
+These works are closely related to compact underwater platforms and bio-inspired robots, but they generally do not address ESC-based control of a compact cylinder-piston BCD with unstable vertical dynamics, practical actuator nonlinearities, and simultaneous stroke/voltage limits. \\
+\hline
+Foundational ESC for nonlinear dynamic systems &
+KrstiÄ‡ and Wang~\cite{krstic2000stability}; Scheinker~\cite{scheinker2024survey} &
+Stability foundations, averaging analysis, and modern survey of perturbation-based ESC for optimization and control &
+These works provide the theoretical basis for ESC as a model-free or model-light online optimization method, but they do not by themselves solve the implementation problem of applying ESC to a hard-bound underwater buoyancy device. \\
+\hline
+ESC for unstable systems &
+Zhang et al.~\cite{zhang2007unstable}; RadenkoviÄ‡ and KrstiÄ‡~\cite{radenkovic2018adaptive} &
+ESC and perturbation-based adaptation for marginally stable, moderately unstable, or adaptive stabilization problems &
+These works support extending ESC beyond stable static maps. Practical implementation on compact underwater hardware with actuator stroke limits, voltage saturation, backlash, hysteresis, and direction-dependent friction still remains application-specific. \\
+\hline
+ESC with constraints and safety considerations &
+DeHaan and Guay~\cite{dehaan2005state}; Tan et al.~\cite{tan2013constrained}; Guay et al.~\cite{guay2015constrained}; Labar et al.~\cite{labar2019barrier}; Williams et al.~\cite{williams2024safe} &
+State-constrained ESC, constrained inputs, barrier-function-based constrained seeking, and safety-filtered ESC &
+These works demonstrate that constraints can be incorporated into ESC, but they do not focus on variable-buoyancy depth control, where instability, hydrostatic loading, piston dynamics, and physical hard bounds appear together. \\
+\hline
+\end{tabular}
+\end{table*}
+
+For a compact piston-cylinder buoyancy device, the actuator and the vehicle dynamics cannot be treated independently. Piston displacement changes the displaced volume, which changes net buoyancy and directly affects vertical acceleration. At the same time, the actuator is shaped by electrical, mechanical, and transmission effects. Lead-screw or geared mechanisms can introduce backlash, hysteresis, dead-zone behavior, direction-dependent friction, rate limits, and self-locking effects. These details are difficult to model accurately and can vary with load, pressure, operating direction, wear, and manufacturing tolerances.
+
+The coupling becomes especially important near the hardware limits. A small buoyancy bias can produce persistent upward or downward motion, while stroke and voltage limits reduce the available control authority near the operating boundaries. Model predictive control can handle constraints explicitly \cite{mayne2000constrained}, and our previous work used that property as a baseline for this device class \cite{masood2023constrained}. The drawback is that performance depends strongly on how well the model captures effects such as friction, backlash, dead-zone behavior, and direction-dependent dynamics.
+
+Extremum seeking control (ESC) is attractive in this setting because it optimizes a measured performance signal online without requiring an exact plant model. Classical ESC uses periodic perturbation, demodulation, and filtering to estimate the local performance gradient and update the decision variable toward an improved operating point \cite{krstic2000stability,scheinker2024survey}. That model-light structure is useful for compact underwater hardware whose behavior changes with load, pressure, direction of motion, and device tolerances.
+
+At the same time, ESC is not a plug-in replacement for a conventional controller. Classical interpretations are cleaner when the plant remains stable for fixed parameter values and when the perturbation stays inside a physically meaningful input range. A compact cylinder-piston BCD challenges both assumptions: its depth dynamics may be weakly damped or unstable, while voltage saturation, stroke limits, actuator dead zones, and friction can distort both the nominal command and the injected dither. Prior ESC work has addressed unstable systems \cite{zhang2007unstable,radenkovic2018adaptive} and constrained seeking \cite{dehaan2005state,tan2013constrained,guay2015constrained,labar2019barrier}, but those results do not directly settle the implementation problem for compact underwater buoyancy hardware.
+
+This paper focuses on that practical gap. The target is not ESC theory in the abstract, and not buoyancy control in general, but ESC-based depth regulation for a compact cylinder-piston BCD with coupled depth-actuator dynamics, hard stroke and voltage limits, and actuator nonlinearities that matter in practice.
+
+We approach the problem by treating ESC as an online performance layer shaped by the physical limits of the device rather than as an unconstrained black-box optimizer. The performance signal reflects both depth-regulation quality and control-input utilization, while the adaptation structure is designed to maintain feasible actuator commands near stroke and voltage limits.
+
+The paper makes three contributions. First, it presents an updated compact cylinder-piston buoyancy-control device for robotic-fish and small underwater-platform applications. Second, it develops a physics-based dynamic model that couples piston-actuator motion with vertical depth dynamics, including buoyancy variation, hydrostatic loading, and practical actuator bounds. Third, it develops and evaluates a constraint-aware ESC-based depth-control framework for the resulting unstable hard-bound system.
+
+\section{Design and Dynamic Modeling}
+The depth control device uses the buoyancy control principle, which relies on adjusting the volume of the device to control its buoyancy. The device uses a piston-cylinder assembly which is actuated by a linear actuator to change the effective volume of the device, or in other words, the linear actuator pushes the water out of the cylinder to increase the volume of the device, and pulls the water into the cylinder to decrease the volume of the device. The system architecture is shown in Fig. \ref{fig:system_architecture}.
+
+\begin{figure}[t]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}[x=0.01cm, y=-0.01cm, line cap=round, line join=round]
+    % Colors sampled/approximated from the uploaded image
+    \definecolor{WaterTop}{RGB}{201,224,245}
+    \definecolor{WaterBottom}{RGB}{39,164,226}
+    \definecolor{AirFill}{RGB}{248,248,248}
+    \definecolor{BodyFill}{RGB}{212,196,168}
+    \definecolor{OutlineRed}{RGB}{195,20,35}
+    \definecolor{PillarGray}{RGB}{137,134,132}
+    \definecolor{PillarShadow}{RGB}{96,96,96}
+    \definecolor{RodLeft}{RGB}{116,96,82}
+    \definecolor{RodRightA}{RGB}{92,58,32}
+    \definecolor{RodRightB}{RGB}{61,37,20}
+
+    % Canvas bounds
+    \clip (0,0) rectangle (1581,995);
+
+    % Water background
+    \shade[top color=WaterTop,bottom color=WaterBottom] (0,50) rectangle (1581,995);
+
+    % Air region above the wavy water surface
+    \path[fill=AirFill]
+        (0,62)
+        .. controls (55,48) and (115,38) .. (182,49)
+        .. controls (236,59) and (271,90) .. (346,77)
+        .. controls (418,64) and (472,49) .. (560,60)
+        .. controls (650,71) and (748,83) .. (860,71)
+        .. controls (945,62) and (1007,52) .. (1107,66)
+        .. controls (1180,76) and (1240,92) .. (1320,81)
+        .. controls (1410,69) and (1495,53) .. (1581,55)
+        -- (1581,0) -- (0,0) -- cycle;
+
+    % Main beige body (L-shape)
+    \fill[BodyFill]
+        (193,307) -- (1297,307) -- (1297,709) -- (912,709) -- (912,563) -- (193,563) -- cycle;
+
+    % Left support block
+    \fill[PillarShadow] (266,563) rectangle (273,709);
+    \fill[PillarGray]   (273,563) rectangle (349,709);
+
+    % Left horizontal rod
+    \fill[RodLeft] (349,620) rectangle (707,651);
+
+    % Black center block
+    \fill[black] (828,563) rectangle (912,709);
+
+    % Right horizontal rod
+    \shade[left color=RodRightA,right color=RodRightB] (912,620) rectangle (1270,651);
+
+    % Red outline
+    \draw[OutlineRed,line width=1.3pt]
+        (193,307) -- (1297,307) -- (1297,709) -- (912,709) -- (912,563) -- (193,563) -- cycle;
+    \draw[OutlineRed,line width=1.3pt] (193,709) -- (912,709);
+
+    % Upward arrows
+    \draw[-{Triangle[length=13pt,width=11pt]},line width=1.2pt]
+        (554,316) -- (554,136);
+    \draw[-{Triangle[length=13pt,width=11pt]},line width=1.2pt]
+        (811,316) -- (811,136);
+
+    % Right downward arrow
+    \draw[-{Triangle[length=16pt,width=14pt]},line width=1.3pt]
+        (1426,58) -- (1426,418);
+
+    % Bottom downward arrow
+    \draw[-{Triangle[length=14pt,width=12pt]},line width=1.2pt]
+        (692,710) -- (692,885);
+
+    % Dashed double-headed horizontal arrow
+    \draw[{Triangle[length=9pt,width=8pt]}-{Triangle[length=9pt,width=8pt]},
+          line width=1.1pt,
+          dash pattern=on 11pt off 8pt]
+        (928,593) -- (1261,593);
+
+    % === Text Annotations ===
+    % Buoyancy force label (left of left upward arrow)
+    \node[anchor=east, font=\Large] at (530,215) {$\rho_w Vg$};
+
+    % Drag force label (left of right upward arrow)
+    \node[anchor=west, font=\Large] at (825,215) {$c\dot{x}$};
+
+    % Depth variable label (right of right-side vertical arrow)
+    \node[anchor=west, font=\huge] at (1460,240) {$x$};
+
+    % Weight label (below bottom downward arrow)
+    \node[anchor=north, font=\Large] at (692,890) {$mg$};
+
+    % Fixed volume label (centered inside upper body)
+    \node[anchor=center, align=center, font=\Large\itshape] at (745,435)
+        {Fixed Volume of the Device~--~$V_s$};
+
+    % Dynamic volume labels (inside lower-left body section)
+    \node[anchor=center, align=center, font=\small\itshape] at (540,640)
+        {Dynamically Changing\\\\Volume of the Device~--~$V_d$};
+
+    % Controlled piston movement label (above dashed double-headed arrow)
+    \node[anchor=south, align=center, font=\small] at (1095,583)
+        {Controlled Movement \\of Piston~--~$u$};
+
+\end{tikzpicture}%
+}% end \resizebox
+\caption{System architecture of the buoyancy control device.}
+\label{fig:system_architecture}
+\end{figure}
+
+\subsection{Dynamic Modeling}
+The vertical motion of the buoyancy control device is modeled using Newton's second law along the depth axis. Let $z$ denote depth relative to the neutral reference level, with $z=0$ at the equilibrium position used in the free-body diagram (Fig. \ref{fig:system_architecture}). The device mass $m$ is constant, while buoyancy varies due to piston-induced volume change.
+
+The total displaced volume is separated into a fixed part $V_s$ and a controllable part $V_d$, so the buoyant force is $F_b = -\rho_w(V_s+V_d)g$, where $\rho_w$ is water density and $g$ is gravitational acceleration. Neutral buoyancy at $z=0$ requires $m/V_s = \rho_w$. Applying Newton's second law with linear hydrodynamic drag $c_d\dot{z}$ and substituting the neutral-buoyancy condition yields
+\[
+    \ddot{z} + \frac{c_d}{m}\dot{z} = \frac{g}{V_s}V_d.
+\]
+
+The controllable volume is related to piston displacement $x$ and piston radius $r_p$ by $V_d = -\pi r_p^2 x$, which gives the depth dynamics in input-output form:
+\begin{equation}
+    \ddot{z} + \frac{c_d}{m}\dot{z} = -\frac{g\pi r_p^2}{V_s}x.
+    \label{eqn:depth_dynamics}
+\end{equation}
+
+Therefore, the buoyancy control device can be represented as a second-order system with piston position $x$ as the control input and depth $z$ as the output.
+
+\subsection{Dynamics of the Piston-Cylinder Assembly}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig/piston-cylinder.png}
+\caption{Cross-sectional schematic of the piston-cylinder assembly.}
+\label{fig:piston_cylinder}
+\end{figure}
+
+The piston-cylinder assembly is driven by a DC linear actuator. Using the standard armature equation, the electrical dynamics of the actuator are written as
+\begin{equation}
+    R_a i_a + L_a \frac{d i_a}{dt} + V_b = u,
+    \label{eqn:armature_full}
+\end{equation}
+where $i_a$ is the armature current, $R_a$ is the armature resistance, $L_a$ is the armature inductance, $V_b$ is the back-emf voltage, and $u$ is the applied input voltage. For the present actuator, the armature inductance is small relative to the dominant mechanical time scale, so $L_a\approx 0$, and the back-emf is proportional to piston velocity, $V_b = K_b'\dot{x}$. Substituting both simplifications into \eqref{eqn:armature_full} gives
+\begin{equation}
+    R_a i_a + K_b'\dot{x} = u,
+    \label{eqn:armature_reduced}
+\end{equation}
+from which the armature current is immediately obtained as
+\begin{equation}
+    i_a = \frac{u - K_b'\dot{x}}{R_a}.
+    \label{eqn:armature_current}
+\end{equation}
+
+For the basic mechanical model of the actuator, the piston-force balance is written as
+\[
+    m_l \ddot{x} = -f_l\dot{x} + K_f i_a,
+\]
+where $m_l$ is the equivalent moving mass, $f_l$ is the equivalent viscous damping coefficient, and $K_f$ is the actuator force constant. Substituting \eqref{eqn:armature_current} and rearranging,
+\[
+    R_a m_l\ddot{x} = -\left(R_a f_l + K_f K_b'\right)\dot{x} + K_f u.
+\]
+Therefore, the reduced actuator model becomes
+\begin{equation}
+    \ddot{x} = -\frac{R_a f_l + K_f K_b'}{m_l R_a}\dot{x} + \frac{K_f}{m_l R_a}u.
+    \label{eqn:actuator_reduced_raw}
+\end{equation}
+Introducing the time constant and static gain
+\begin{equation}
+    \tau = \frac{m_l R_a}{R_a f_l + K_f K_b'},
+    \qquad
+    K_l = \frac{K_f}{R_a f_l + K_f K_b'},
+    \label{eqn:actuator_tau_gain}
+\end{equation}
+allows \eqref{eqn:actuator_reduced_raw} to be expressed in the compact form $\tau\ddot{x} + \dot{x} = K_l u$, or equivalently,
+\begin{equation}
+    \ddot{x} = -\frac{1}{\tau}\dot{x} + \frac{K_l}{\tau}u.
+    \label{eqn:actuator_reduced}
+\end{equation}
+
+To couple the actuator with the buoyancy dynamics, the hydrostatic loading and enclosed-pressure restoring force must also be included. With piston area $A_p = \pi r_p^2$, the extended mechanical model is
+\[
+    m_l\ddot{x} = -f_l\dot{x} + K_f i_a + A_p\rho_w g z - \frac{A_p^2P_s}{V_{se}}x,
+\]
+where $P_s$ is the equilibrium internal pressure and $V_{se}$ is the equilibrium enclosed volume. Substituting \eqref{eqn:armature_current} and applying the definitions in \eqref{eqn:actuator_tau_gain} yields $\tau\ddot{x} + \dot{x} = K_l u + (\tau/m_l)A_p\rho_w g z - (\tau/m_l)(A_p^2P_s/V_{se})x$, or, equivalently,
+\begin{equation}
+    \ddot{x} = -\frac{1}{\tau}\dot{x} + \frac{K_l}{\tau}u - \frac{A_p\rho_w g}{m_l}z - \frac{A_p^2P_s}{m_lV_{se}}x.
+    \label{eqn:actuator_extended}
+\end{equation}
+
+Combining \eqref{eqn:actuator_extended} with the depth model \eqref{eqn:depth_dynamics} gives a coupled fourth-order system with states $[z,\dot{z},x,\dot{x}]^T$, where depth is driven by piston motion and the piston dynamics are influenced by actuator input, hydrostatic loading, and internal pressure feedback. The state-space representation is
+\begin{equation}
+    \label{eqn:state_space}
+    \begin{bmatrix}\dot{z} \\ \ddot{z} \\ \dot{x} \\ \ddot{x}\end{bmatrix} =
+    \begin{bmatrix}0 & 1 & 0 & 0 \\
+0 & -\frac{c_d}{m} & -\frac{g\pi r_p^2}{V_s} & 0 \\
+0 & 0 & 0 & 1 \\
+0 & -\frac{A_p\rho_w g}{m_l} & -\frac{A_p^2P_s}{m_lV_{se}} & -\frac{1}{\tau}\end{bmatrix}
+    \begin{bmatrix}z \\ \dot{z} \\ x \\ \dot{x}\end{bmatrix} +
+    \begin{bmatrix}0 \\ 0 \\ 0 \\ \frac{K_l}{\tau}\end{bmatrix}u.
+\end{equation}
+
+Table~\ref{tab:model_parameters} summarizes the geometric, hydraulic, and actuator parameters used in the model. The device mass is taken as $m=m_d=\rho_w V_s$ from the neutral-buoyancy condition, the drag coefficient is denoted by $c_d$, and the equilibrium chamber pressure is approximated as $P_s=P_a$.
+
+% \subsection{Decoupled Model}
+% The full coupled model in \eqref{eqn:state_space} is a result of when the internal and external pressures are considered in the actuator dynamics. In this case, the linear actuator is self-locking because most actuators are based on a lead-screw mechanism, which means that the actuator will not move when the input voltage is zero, up to a specified load. Under that assumption, these terms vanish from the complete model. The model still remains fourth order, but it is mainly a cascade of a second-order actuator subsystem and a second-order depth subsystem, with the actuator output $x$ driving the depth dynamics. The decoupled model is
+% \begin{equation}
+%     \label{eqn:decoupled_state_space}
+%     \begin{bmatrix}\dot{z} \\ \ddot{z} \\ \dot{x} \\ \ddot{x}\end{bmatrix} =
+%     \begin{bmatrix}0 & 1 & 0 & 0 \\
+% 0 & -\frac{c_d}{m} & \frac{g\pi r_p^2}{V_s} & 0 \\
+% 0 & 0 & 0 & 1 \\
+% 0 & 0 & 0 & -\frac{1}{\tau}\end{bmatrix}
+%     \begin{bmatrix}z \\ \dot{z} \\ x \\ \dot{x}\end{bmatrix} +
+%     \begin{bmatrix}0 \\ 0 \\ 0 \\ \frac{K_l}{\tau}\end{bmatrix}u.
+% \end{equation}
+
+% For shallow water operation, the hydrostatic loading is smaller than the self-locking threshold, so the decoupled model represents the system behavior. The authors still consider it worthy to mention the complete coupled model because it is more accurate and can be used for deeper water operation, where the hydrostatic loading is larger than the self-locking threshold, and the coupling effects become significant. In the simulations, the results will be shown for both the complete coupled model and the decoupled model, and the results will be compared to show the effect of the coupling terms on the system behavior.
+
+\subsection{Physical Modeling Considerations and Finalized Model}
+
+The complete coupled model in \eqref{eqn:state_space} assumes that the external hydrostatic pressure and internal chamber pressure are directly transmitted to the actuator dynamics. This represents the fully coupled pressure-loaded case. However, the actual hardware contains two important physical effects that must be considered before finalizing the model: neutral-buoyancy offset and actuator self-locking.
+
+Let the piston area be
+\[
+    A_p=\pi r_p^2,
+\]
+and define the state vector as
+\[
+    \boldsymbol{\xi}=\begin{bmatrix} z & \dot{z} & x & \dot{x} \end{bmatrix}^T,
+\]
+
+where \(z\) is the depth displacement and \(x\) is the piston displacement.
+
+\subsubsection{Buoyancy Offset and Affine Term}
+
+The nominal model assumes that the device is neutrally buoyant when the piston displacement is zero. In practice, the physical piston zero may not coincide with the neutral-buoyancy point. The neutral point can shift due to payload variation, trapped air, manufacturing tolerance, water absorption, or leakage.
+
+Let \(x_0\) denote the piston offset required for neutral buoyancy. Then the effective piston displacement contributing to buoyancy is
+\[
+    x_{\mathrm{eff}}=x-x_0.
+\]
+
+Using this definition in \eqref{eqn:depth_dynamics}, the depth dynamics become
+\[
+    \ddot{z}=-\frac{c_d}{m}\dot{z}-\frac{gA_p}{V_s}(x-x_0).
+\]
+
+Expanding gives
+\[
+    \ddot{z}=-\frac{c_d}{m}\dot{z}-\frac{gA_p}{V_s}x+\frac{gA_p}{V_s}x_0.
+\]
+
+The last term is a constant offset. Therefore, the system becomes affine rather than purely linear when \(x_0\neq 0\). If \(x_0\) is constant during an experiment, the model is affine time-invariant. If \(x_0\) changes slowly with time, the model can be treated as an LTI plant with a slowly varying disturbance.
+
+\subsubsection{Self-Locking and Piecewise Pressure Coupling}
+
+The linear actuator is based on a lead-screw mechanism and therefore has a finite backdrive threshold. This means that pressure loads below the backdrive force do not move the actuator when the input voltage is zero. Therefore, the pressure terms in the actuator dynamics should not always be active.
+
+The pressure-induced load on the actuator can be written as
+\begin{equation}
+    F_p(z,x)=-A_p\rho_wgz-\frac{A_p^2P_s}{V_{se}}x.
+    \label{eqn:pressure_load}
+\end{equation}
+
+Let \(F_{\mathrm{bd}}\) denote the actuator backdrive force. Then the pressure coupling is active only when
+\[
+    |F_p(z,x)|>F_{\mathrm{bd}}.
+\]
+
+This produces a piecewise model. Define the switching variable
+\begin{equation}
+    \sigma(z,x)=
+    \begin{cases}
+        0, & |F_p(z,x)|\leq F_{\mathrm{bd}},\\
+        1, & |F_p(z,x)|>F_{\mathrm{bd}}.
+    \end{cases}
+    \label{eqn:switching_sigma}
+\end{equation}
+
+When \(\sigma=0\), the actuator is self-locked against the pressure load and the actuator dynamics are decoupled from the depth pressure terms. When \(\sigma=1\), the pressure load exceeds the self-locking threshold and the full coupled dynamics are active.
+
+The finalized state-space model is therefore
+\begin{equation}
+    \dot{\boldsymbol{\xi}}=A_{\sigma}\boldsymbol{\xi}+Bu+d_0,
+    \label{eqn:finalized_hybrid_model}
+\end{equation}
+where
+\begin{equation}
+    A_{\sigma}=\begin{bmatrix}
+        0 & 1 & 0 & 0 \\
+        0 & -\dfrac{c_d}{m} & -\dfrac{gA_p}{V_s} & 0 \\
+        0 & 0 & 0 & 1 \\
+        -\sigma\dfrac{A_p\rho_wg}{m_l} & 0 & -\sigma\dfrac{A_p^2P_s}{m_lV_{se}} & -\dfrac{1}{\tau}
+    \end{bmatrix},
+    \label{eqn:Asigma}
+\end{equation}
+\[
+    B=\begin{bmatrix}0 & 0 & 0 & \dfrac{K_l}{\tau}\end{bmatrix}^T,
+\]
+and
+\[
+    d_0=\begin{bmatrix}0 & -\dfrac{gA_p}{V_s}x_0 & 0 & 0\end{bmatrix}^T.
+\]
+
+For shallow-water operation, where the pressure-induced load is below the actuator backdrive threshold, \(\sigma=0\), and \eqref{eqn:Asigma} reduces to the decoupled form
+\begin{equation}
+    A_{0}=\begin{bmatrix}
+        0 & 1 & 0 & 0 \\
+        0 & -\dfrac{c_d}{m} & -\dfrac{gA_p}{V_s} & 0 \\
+        0 & 0 & 0 & 1 \\
+        0 & 0 & 0 & -\dfrac{1}{\tau}
+    \end{bmatrix}.
+    \label{eqn:A0_decoupled}
+\end{equation}
+
+For deeper operation, where the pressure-induced load exceeds the backdrive threshold, \(\sigma=1\), and \eqref{eqn:Asigma} becomes the complete coupled pressure-loaded model
+\[
+    A_{1}=\begin{bmatrix}
+        0 & 1 & 0 & 0 \\
+        0 & -\dfrac{c_d}{m} & -\dfrac{gA_p}{V_s} & 0 \\
+        0 & 0 & 0 & 1 \\
+        -\dfrac{A_p\rho_wg}{m_l} & 0 & -\dfrac{A_p^2P_s}{m_lV_{se}} & -\dfrac{1}{\tau}
+    \end{bmatrix}.
+\]
+
+Thus, the final model is a piecewise-affine (hybrid) state-space model in \eqref{eqn:finalized_hybrid_model}. It is affine because of the constant offset term $d_0$, and piecewise nonlinear because the actuator pressure coupling switches according to \eqref{eqn:switching_sigma}.
+
+\subsection{System Analysis}
+Both representative linear modes, the coupled model in \eqref{eqn:state_space} and the decoupled mode in \eqref{eqn:A0_decoupled}, are unstable, as the eigenvalues of their system matrices have positive real parts. The system is also non-minimum phase, as the zero dynamics are unstable. The system has hard input constraints, since the piston travel and actuator voltage are both bounded. These constraints must be incorporated in controller design, because violating them can lead to instability and hardware risk.
+
+\begin{table*}[t]
+    \caption{Model parameters used in the dynamic model.}
+    \label{tab:model_parameters}
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        Parameter & Description & Value \\
+        \hline
+        $D_o$ & Outer diameter of the device & $70\times10^{-3}\ \mathrm{m}$ \\
+        $L$ & Device length & $166\times10^{-3}\ \mathrm{m}$ \\
+        $V_s$ & Fixed displaced volume & $6.39\times10^{-4}\ \mathrm{m}^3$ \\
+        $V_{se}$ & Effective enclosed equilibrium volume & $4.47\times10^{-4}\ \mathrm{m}^3$ \\
+        $\rho_w$ & Water density & $1000\ \mathrm{kg/m^3}$ \\
+        $g$ & Gravitational acceleration & $9.8\ \mathrm{m/s^2}$ \\
+        $m$ & Device mass & $0.639\ \mathrm{kg}$ \\
+        $c_d$ & Linearized drag coefficient & $2.25$ \\
+        $m_l$ & Equivalent moving mass of actuator-piston assembly & $0.50\ \mathrm{kg}$ \\
+        $R_a$ & Armature resistance & $12.4\ \Omega$ \\
+        $P_s$ & Equilibrium internal pressure & $1.013\times10^5\ \mathrm{Pa}$ \\
+        $r_p$ & Piston radius & $7.5\times10^{-3}\ \mathrm{m}$ \\
+        $\tau$ & Actuator time constant & $0.06\ \mathrm{s}$ \\
+        $K_l$ & Reduced actuator gain & $2.08\times10^{-3}\ \mathrm{m/(s\,V)}$ \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+\section{Control Design}
+The depth control device has four states, of which two are directly measurable (depth and piston position), and two are not directly measurable (depth velocity and piston velocity). The control input is the voltage applied to the actuator, which is subject to hard constraints. The control objective is to regulate the depth to a desired setpoint while maximizing the utilization of the control input, ensuring stability, and respecting the input constraints. Traditional control techniques, such as PID control is impractical because it only sees the depth error and does not have any information about the piston position, which has a hard bound, and may lead to instability if the piston position reaches its bound. Model-based control techniques, such as MPC, can handle the constraints, and has been demonstrated in our previous work. MPC does a good job but it relies on the accuracy of the model, and the performance degrades when there is a mismatch between the model and the actual system. Instead, Extremum Seeking Control (ESC) is essentially a model-free technique that can optimize the performance of the system online. Here, we will show multiple techniques to design the ESC for the system, and we will compare the performance of these techniques through simulations and then verify the best performing technique through experiments.
+
+\subsection{Extremum Seeking Control Design}
+Consider a state variable (or quantity of interest) denoted by $\theta$, and the plant system is represented by a mapping $y = f(\theta)$, where $y$ is the output of the system. The objective of extremum seeking control is to find the value of $\theta$ that maximizes (or minimizes) the output $y$. 
+Since the exact form of the map $f(\theta)$ is generally unknown, the analysis is usually carried out locally around the extremum point $\theta^\ast$. Near this point, the static map can be approximated by its Taylor expansion. Because $\theta^\ast$ is an extremum, the first derivative vanishes, i.e., $f'(\theta^\ast)=0$. Therefore, retaining the dominant second-order term gives
+
+\begin{equation}
+f(\theta)
+\approx
+f^\ast
++
+\frac{f''}{2}
+\left(\theta-\theta^\ast\right)^2,
+\label{eq:static_map_quadratic}
+\end{equation}
+
+where $f^\ast=f(\theta^\ast)$ is the output value at the extremum, and $f''=f''(\theta^\ast)$ denotes the local curvature of the map. If $f''<0$, the extremum is a local maximum, while if $f''>0$, it is a local minimum.
+A perturbation signal $a sin \omega t$ is added to the input $\theta$ to explore the map. When substituted into \ref{eq:static_map_quadratic}, 
+\begin{equation}
+f(\theta)
+=
+f^\ast
++
+\frac{f''}{2}\left(\theta - a sin \omega t\right)^2
+\end{equation}
+where $\tilde{\theta} = \theta^\ast - \hat{\theta}$ is the estimation error. Expanding the square term, and applying a high pass filter removes the $f^\ast$ and the $\tilde{\theta}^2$ terms, and it becomes
+\begin{equation}
+\frac{s}{s+\omega_h}f(\theta)
+\approx
+\frac{f''}{2}\tilde{\theta}^2
+-
+f''a\tilde{\theta}sin \omega t
++
+\frac{f''a^2}{4}cos 2\omega t
+\end{equation}
+where $\omega_h$ is the cutoff frequency of the high pass filter. Then demodulating the signal by multiplying it with $sin \omega t$ and applying a low pass filter, and simplifying the expression gives
+\begin{equation}
+    \dot{\tilde{\theta}} \approx 
+    - \frac{kaf''}{2}\tilde{\theta}.
+\end{equation}
+This is a stable first-order system if $kaf''>0$, which means that the estimation error $\tilde{\theta}$ will converge to zero, and the input $\theta$ will converge to the extremum point $\theta^\ast$.
+
+This is the mathematical proof that the extremum seeking control can find the extremum point of the static map. It works under following conditions:
+\begin{itemize}
+    \item \textbf{Static Map}: There must exist a static map with local extremum (minima or maxima). The map must be sufficiently smooth to allow for the Taylor expansion, and the extremum point must be well-defined.
+    \item \textbf{Local Curvature}: The local curvature of the map at the extremum point must be non-zero, i.e., $f''(\theta^\ast) \neq 0$.
+    \item \textbf{Perturbation Signal}: A sufficiently rich perturbation signal must be added to the input to explore the map, and the amplitude and frequency of the perturbation must be chosen appropriately.
+    \item \textbf{Filtering and Demodulation}: The high pass and low pass filters must be designed to effectively isolate the relevant frequency components and ensure convergence of the estimation error.
+\end{itemize}
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+    line cap=round,
+    line join=round,
+    >=Latex,
+    every node/.style={font=\large},
+    block/.style={
+        draw,
+        rectangle,
+        minimum width=2.45cm,
+        minimum height=1.30cm,
+        align=center,
+        font=\Large,
+        line width=1.0pt
+    },
+    smallblock/.style={
+        draw,
+        rectangle,
+        minimum width=1.50cm,
+        minimum height=1.30cm,
+        align=center,
+        font=\Large,
+        line width=1.0pt
+    },
+    sum/.style={
+        draw,
+        circle,
+        minimum size=0.95cm,
+        inner sep=0pt,
+        font=\Large,
+        line width=1.0pt
+    },
+    mult/.style={
+        draw,
+        circle,
+        minimum size=0.95cm,
+        inner sep=0pt,
+        font=\Large,
+        line width=1.0pt
+    },
+    signal/.style={
+        ->,
+        >=Latex,
+        line width=1.05pt
+    },
+    wire/.style={
+        line width=1.05pt
+    },
+    feedback/.style={
+        ->,
+        >=Latex,
+        densely dashed,
+        line width=0.85pt
+    }
+]
+
+% ------------------------------------------------
+% Main nodes with increased spacing
+% ------------------------------------------------
+\node[sum] (sum) at (0,0) {};
+\node[block] (plant) at (2.70,0) {BCD\\System};
+\node[circle, fill=black, inner sep=2.7pt] (branch) at (4.65,0) {};
+\node[block] (hpf) at (6.65,0) {HPF\\$H_h(s)$};
+\node[mult] (mult) at (8.75,0) {$\times$};
+\node[block] (lpf) at (10.85,0) {LPF\\$H_l(s)$};
+\node[smallblock] (int) at (13.35,0) {$k/s$};
+
+% ------------------------------------------------
+% Plus signs inside summing junction
+% ------------------------------------------------
+\node[font=\Large] at ($(sum.center)+(-0.15,0.08)$) {$+$};
+\node[font=\Large] at ($(sum.center)+(0.16,-0.19)$) {$+$};
+
+% ------------------------------------------------
+% Main signal path
+% ------------------------------------------------
+\draw[signal] (sum.east) -- node[above, font=\Large] {$u$} (plant.west);
+\draw[wire] (plant.east) -- (branch.west);
+\draw[signal] (branch.east) -- (hpf.west);
+\draw[signal] (hpf.east) -- (mult.west);
+\draw[signal] (mult.east) -- (lpf.west);
+\draw[signal] (lpf.east) -- (int.west);
+
+% ------------------------------------------------
+% Dither input to summing junction
+% ------------------------------------------------
+\draw[signal] ($(sum.north)+(0,1.55)$)
+    node[above, font=\Large] {$a\sin\omega t$}
+    -- (sum.north);
+
+% ------------------------------------------------
+% Demodulation signal to multiplier
+% ------------------------------------------------
+\draw[signal] ($(mult.north)+(0,1.55)$)
+    node[above, font=\Large] {$\sin\omega t$}
+    -- (mult.north);
+
+% ------------------------------------------------
+% Plant output branch z
+% ------------------------------------------------
+\draw[signal] (branch.south) -- ++(0,-1.35)
+    node[below, font=\LARGE] {$z$};
+
+% ------------------------------------------------
+% Feedback path theta_hat
+% ------------------------------------------------
+\coordinate (fbRight) at ($(int.east)+(0.85,0)$);
+\coordinate (fbBottomRight) at ($(fbRight)+(0,-2.55)$);
+\coordinate (fbBottomLeft) at ($(sum.west)+(-1.00,-2.55)$);
+\coordinate (fbLeft) at ($(sum.west)+(-1.00,0)$);
+
+\draw[feedback]
+    (int.east) -- (fbRight)
+    -- (fbBottomRight)
+    -- (fbBottomLeft)
+    -- (fbLeft)
+    -- (sum.west);
+
+\node[left, font=\Large] at ($(fbLeft)!0.55!(fbBottomLeft)$) {$\hat{u}$};
+
+\end{tikzpicture}
+
+\caption{Control Technique 1: Direct-Input ESC Baseline}}
+\label{fig:control_technique_1}
+\end{figure*}
+
+Before discussing the design of the controller for the buoyancy control device, the authors want to focus on following facts:
+\begin{itemize}
+    \item The system does not have a static map for optimization, as the system is dynamic and the output depends on the history of the input, neutral buoyancy bias, and other factors.
+    \item The system does not have a single extremum point, as the system can have multiple local minima and maxima depending on the operating conditions and the input trajectory.
+    \item The hard bounds on the input and the state variables can lead to instability and misguide the optimization process. All these must be handled correctly to make use of the extremum seeking control for the system.
+\end{itemize}
+
+\subsection{Control Technique 1: Direct-Input ESC Baseline}
+The first control technique considered in this work is the direct application of ESC to the complete coupled model in \eqref{eqn:state_space}. The actuator voltage is treated as the optimization variable, with input
+\[
+u(t)=\hat{u}(t)+b\sin(\omega t),
+\]
+where $\hat{u}(t)$ is the slowly varying estimate and $b\sin(\omega t)$ is the dither signal. The objective is selected from depth-tracking error,
+\[
+J(t)=-(z(t)-r(t))^2,
+\]
+and the demodulated/filtered ESC signal updates $\hat{u}(t)$ to improve $J$.
+
+This structure is used as a baseline because ESC acts directly on the physical input. However, for the coupled BCD model, voltage does not directly determine depth; it first drives piston dynamics, and depth then evolves through the full four-state dynamics. Using the state vector from \eqref{eqn:state_space},
+\[
+\mathbf{x}=\begin{bmatrix}z & \dot{z} & x & \dot{x}\end{bmatrix}^T,
+\]
+the dynamics can be written in affine form as
+\[
+\dot{\mathbf{x}}=A\mathbf{x}+Bu+f.
+\]
+Hence the measured objective is trajectory dependent,
+\[
+J=J(\mathbf{x}(t),u(t),r(t)),
+\]
+rather than a purely static map of $\hat{u}$. Consequently, direct-voltage ESC on the coupled model has an inherent limitation: the adaptation law modifies the input estimate, but it does not alter the unstable internal dynamics represented by $A$. The architecture in Fig.~\ref{fig:control_technique_1} is therefore best viewed as a conceptual baseline, which motivates introducing additional internal stabilization in the next technique.
+
+\subsection{Control Technique 2: ESC with Inner-Loop Actuator Stabilization}
+As a refinement of Technique~1, an inner PID loop is introduced to regulate piston position $x$ to a command generated by the outer ESC loop (Fig.~\ref{fig:control_technique_2}). This modification improves actuator-side behavior, but it does not close the depth loop. Under the decoupled mode in \eqref{eqn:A0_decoupled}, once the inner loop is sufficiently fast ($x\approx x_{\rm des}$), the depth channel is governed by
+\[
+\ddot{z}+\frac{c_d}{m}\dot{z}=-\frac{g\pi r_p^2}{V_s}x_{\rm des}.
+\]
+For constant $x_{\rm des}$, this dynamics does not define a finite steady depth; instead, it produces a nonzero asymptotic depth rate, so depth keeps drifting in uniform water. Consequently, the ESC objective remains trajectory dependent and cannot be represented by a well-defined static map in the optimization variable. In other words, adding an inner actuator loop alone is not sufficient; the depth state itself must be stabilized before ESC can provide meaningful optimization.
+
+\begin{figure}[t]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}[x=0.01cm, y=-0.01cm, line cap=round, line join=round]
+
+    \definecolor{BlockBlue}{RGB}{100,149,237}
+    \definecolor{AC}{RGB}{20,20,100}
+
+    % ---------------------------------------------------------------
+    % BLOCKS  (main rail at y=350)
+    % ---------------------------------------------------------------
+
+    % Outer summing junction: x_ref (+) and a*sin(wt) (+)
+    \draw[AC, line width=1.4pt] (200,350) circle [radius=34];
+    \node[font=\large, AC] at (200,330) {$+$};   % top input
+    \node[font=\large, AC] at (178,352) {$+$};   % left input
+
+    % Inner summing junction: x_des (+) and x (-)
+    \draw[AC, line width=1.4pt] (430,350) circle [radius=34];
+    \node[font=\large, AC] at (410,352) {$+$};   % left input
+    \node[font=\large, AC] at (432,370) {$-$};   % bottom input
+
+    % PID block
+    \draw[BlockBlue, fill=BlockBlue!20, line width=1.4pt, rounded corners=8pt]
+        (520,270) rectangle (720,430);
+    \node[font=\Large] at (620,350) {PID};
+
+    % BCD System block
+    \draw[BlockBlue, fill=BlockBlue!20, line width=1.4pt, rounded corners=8pt]
+        (810,270) rectangle (1060,430);
+    \node[align=center, font=\large] at (935,350) {BCD\\System};
+
+    % HPF block
+    \draw[BlockBlue, fill=BlockBlue!20, line width=1.4pt, rounded corners=8pt]
+        (1150,270) rectangle (1360,430);
+    \node[align=center, font=\large] at (1255,345) {HPF\\$\frac{s}{s+\omega_h}$};
+
+    % Multiplier (demodulator) circle
+    \draw[AC, line width=1.4pt] (1450,350) circle [radius=34];
+    \node[font=\Large] at (1450,350) {$\times$};
+
+    % LPF block
+    \draw[BlockBlue, fill=BlockBlue!20, line width=1.4pt, rounded corners=8pt]
+        (1540,270) rectangle (1730,430);
+    \node[align=center, font=\large] at (1635,345) {LPF\\$\frac{\omega_l}{s+\omega_l}$};
+
+    % Integrator / gain block
+    \draw[BlockBlue, fill=BlockBlue!20, line width=1.4pt, rounded corners=8pt]
+        (1820,270) rectangle (1990,430);
+    \node[font=\Large] at (1905,350) {$\frac{k}{s}$};
+
+    % ---------------------------------------------------------------
+    % FORWARD PATH ARROWS
+    % ---------------------------------------------------------------
+
+    % Outer Î£ -> inner Î£  (x_des)
+    \draw[-{Triangle[length=9pt,width=8pt]}, AC, line width=1.2pt]
+        (234,350) -- (396,350);
+    \node[anchor=south, font=\large] at (315,344) {$x_{\rm des}$};
+
+    % Inner Î£ -> PID  (e)
+    \draw[-{Triangle[length=9pt,width=8pt]}, AC, line width=1.2pt]
+        (464,350) -- (520,350);
+    \node[anchor=south, font=\large] at (492,344) {$e$};
+
+    % PID -> BCD  (u)
+    \draw[-{Triangle[length=9pt,width=8pt]}, AC, line width=1.2pt]
+        (720,350) -- (810,350);
+    \node[anchor=south, font=\large] at (765,344) {$u$};
+
+    % BCD -> z-branch dot  (z output going right to ESC chain)
+    \draw[AC, line width=1.2pt] (1060,350) -- (1100,350);
+    \fill[AC] (1100,350) circle [radius=8pt];
+
+    % z-branch dot -> HPF
+    \draw[-{Triangle[length=9pt,width=8pt]}, AC, line width=1.2pt]
+        (1100,350) -- (1150,350);
+
+    % HPF -> demod
+    \draw[-{Triangle[length=9pt,width=8pt]}, AC, line width=1.2pt]
+        (1360,350) -- (1416,350);
+
+    % Demod -> LPF
+    \draw[-{Triangle[length=9pt,width=8pt]}, AC, line width=1.2pt]
+        (1484,350) -- (1540,350);
+
+    % LPF -> integrator
+    \draw[-{Triangle[length=9pt,width=8pt]}, AC, line width=1.2pt]
+        (1730,350) -- (1820,350);
+
+    % ---------------------------------------------------------------
+    % VERTICAL INPUTS FROM ABOVE
+    % ---------------------------------------------------------------
+
+    % a*sin(wt) -> outer Î£
+    \draw[-{Triangle[length=9pt,width=8pt]}, AC, line width=1.2pt]
+        (200,165) -- (200,316);
+    \node[anchor=south, font=\large] at (200,165) {$a\sin\omega t$};
+
+    % sin(wt) -> demod
+    \draw[-{Triangle[length=9pt,width=8pt]}, AC, line width=1.2pt]
+        (1450,165) -- (1450,316);
+    \node[anchor=south, font=\large] at (1450,165) {$\sin\omega t$};
+
+    % ---------------------------------------------------------------
+    % z OUTPUT (branch down from branch dot)
+    % ---------------------------------------------------------------
+    \draw[-{Triangle[length=9pt,width=8pt]}, AC, line width=1.2pt]
+        (1100,350) -- (1100,540);
+    \node[anchor=north, font=\large] at (1100,545) {$z$};
+
+    % ---------------------------------------------------------------
+    % x INNER FEEDBACK (from BCD bottom -> left -> up into inner Î£)
+    % ---------------------------------------------------------------
+    \draw[-{Triangle[length=9pt,width=8pt]}, AC, line width=1.2pt]
+        (935,430) -- (935,510) -- (430,510) -- (430,384);
+    \node[anchor=north, font=\large] at (682,510) {$x$};
+
+    % ---------------------------------------------------------------
+    % OUTER FEEDBACK (integrator -> outer Î£)
+    % ---------------------------------------------------------------
+    \draw[AC, line width=1.2pt]
+        (1990,350) -- (2060,350)
+        -- (2060,640)
+        -- (100,640)
+        -- (100,350);
+    \draw[-{Triangle[length=9pt,width=8pt]}, AC, line width=1.2pt]
+        (100,350) -- (166,350);
+    \node[anchor=west, font=\large] at (105,500) {$x_{\rm ref}$};
+
+\end{tikzpicture}%
+}% end \resizebox
+\caption{ESC block diagram: Technique 2.}
+\label{fig:control_technique_2}
+\end{figure}
+
+\subsection{Control Technique 3: Proposed ESC-Tuned PD Depth Controller}
+The third technique uses ESC to tune the gains of a proportional-derivative (PD) depth controller online. The inner control law is a PD controller acting directly on depth:
+\begin{equation}
+    u = K_p\bigl(r - z\bigr) - K_d\,\dot{z},
+    \label{eqn:pd_law}
+\end{equation}
+where $r$ is the depth reference, $z$ is the measured depth, $\dot{z}$ is the depth rate, $K_p > 0$ is the proportional gain, and $K_d > 0$ is the derivative gain. The proportional term drives depth toward the reference, while the derivative term damps oscillations by penalising depth velocity. There is no integral term, so the inner loop is a pure PD controller.
+
+The ESC layer sits on top and tunes $K_p$ and $K_d$ online rather than fixing them a priori. A scalar cost function is defined as
+\begin{equation}
+    J = \dot{x}^{\,2},
+    \label{eqn:cost_esc3}
+\end{equation}
+which penalizes actuator motion and is minimized by the ESC adaptation.  An alternative cost that explicitly promotes stroke-limit avoidance replaces the velocity penalty with a deadzone penalty on piston position,
+\begin{equation}
+    J_2 = w_z\,\bigl[\max\!\bigl(0,\,|z_a - z_{a,\mathrm{eq}}| - \delta_z\bigr)\bigr]^{2},
+    \label{eqn:cost_esc3_deadzone}
+\end{equation}
+where $z_a$ is the piston position, $z_{a,\mathrm{eq}}$ is the nominal piston equilibrium, $\delta_z$ is the deadzone half-width, and $w_z > 0$ is a scalar weight.  When the piston remains within the deadzone $|z_a - z_{a,\mathrm{eq}}| \leq \delta_z$, the cost is identically zero, so ESC dithering produces no gradient estimate and the gains are held constant.  As soon as the piston strays outside this band---approaching the hard stroke limits---the cost rises quadratically and ESC pushes the gains in a direction that pulls the piston back toward center stroke.  Each gain is independently perturbed by a distinct sinusoidal dither signal ($a_p\sin\omega_p t$ for $K_p$ and $a_d\sin\omega_d t$ for $K_d$, with $\omega_p \neq \omega_d$ to avoid cross-channel interference). The standard ESC gradient-estimation chain (HPF $\to$ demodulation $\to$ LPF $\to$ integration) is applied separately to each channel, yielding online updates $\hat{K}_p(t)$ and $\hat{K}_d(t)$ that converge to a locally improving gain pair without requiring any plant model. The full architecture, an ESC-tuned PD depth controller applied to the fourth-order coupled BCD plant, is illustrated in Fig.~\ref{fig:control_technique_3}.
+
+\begin{figure}[t]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}[x=0.01cm, y=-0.01cm, line cap=round, line join=round]
+
+    \definecolor{BlockBlue}{RGB}{100,149,237}
+    \definecolor{ESCGreen}{RGB}{60,160,80}
+    \definecolor{AC}{RGB}{20,20,100}
+
+    % ---------------------------------------------------------------
+    % INNER PD LOOP  (main rail at y=350)
+    % ---------------------------------------------------------------
+
+    % Reference input label
+    \node[anchor=east, font=\LARGE] at (40,350) {$r$};
+
+    % Depth error summing junction
+    \draw[AC, line width=1.5pt] (120,350) circle [radius=38];
+    \node[font=\large, AC] at (120,328) {$+$};
+    \node[font=\large, AC] at (99,353)  {$-$};
+
+    % PD block
+    \draw[BlockBlue, fill=BlockBlue!20, line width=1.5pt, rounded corners=10pt]
+        (220,265) rectangle (530,435);
+    \node[align=center, font=\LARGE] at (375,345)
+        {$K_p(r-z)$\\$-\,K_d\dot{z}$};
+
+    % BCD System block
+    \draw[BlockBlue, fill=BlockBlue!20, line width=1.5pt, rounded corners=10pt]
+        (630,265) rectangle (920,435);
+    \node[align=center, font=\LARGE] at (775,350) {BCD\\System};
+
+    % ---------------------------------------------------------------
+    % INNER LOOP ARROWS
+    % ---------------------------------------------------------------
+
+    % r -> Î£
+    \draw[-{Triangle[length=10pt,width=9pt]}, AC, line width=1.3pt]
+        (40,350) -- (82,350);
+
+    % Î£ -> PD
+    \draw[-{Triangle[length=10pt,width=9pt]}, AC, line width=1.3pt]
+        (158,350) -- (220,350);
+
+    % PD -> BCD
+    \draw[-{Triangle[length=10pt,width=9pt]}, AC, line width=1.3pt]
+        (530,350) -- (630,350);
+    \node[anchor=south, font=\LARGE] at (580,344) {$u$};
+
+    % BCD -> branch dot
+    \draw[AC, line width=1.3pt] (920,350) -- (980,350);
+    \fill[AC] (980,350) circle [radius=9pt];
+
+    % z output arrow (downward from branch dot)
+    \draw[-{Triangle[length=10pt,width=9pt]}, AC, line width=1.3pt]
+        (980,350) -- (980,570);
+    \node[anchor=north, font=\LARGE] at (980,578) {$z$};
+
+    % z feedback to Î£ (bottom route)
+    \draw[AC, line width=1.3pt]
+        (980,350) -- (980,490)
+        -- (120,490)
+        -- (120,388);
+    \draw[-{Triangle[length=10pt,width=9pt]}, AC, line width=1.3pt]
+        (120,490) -- (120,388);
+    \node[anchor=north, font=\LARGE] at (550,490) {$z$};
+
+    % ---------------------------------------------------------------
+    % COST BLOCK
+    % ---------------------------------------------------------------
+    \draw[BlockBlue, fill=BlockBlue!20, line width=1.5pt, rounded corners=10pt]
+        (1080,265) rectangle (1340,435);
+    \node[align=center, font=\LARGE] at (1210,350)
+        {$J$};
+
+    % branch dot -> cost
+    \draw[-{Triangle[length=10pt,width=9pt]}, AC, line width=1.3pt]
+        (980,350) -- (1080,350);
+
+    % ---------------------------------------------------------------
+    % ESC CHANNEL FOR Kp  (upper rail at y=130)
+    % ---------------------------------------------------------------
+
+    % Dither a_p sin(w_p t) from top
+    \draw[-{Triangle[length=10pt,width=9pt]}, AC, line width=1.3pt]
+        (1210,50) -- (1210,265);
+    \node[anchor=south, font=\LARGE] at (1210,50) {$a_p\!\sin\omega_p t$};
+
+    % J output goes up to ESC-Kp chain via branch
+    \draw[AC, line width=1.3pt] (1340,350) -- (1400,350);
+    \fill[AC] (1400,350) circle [radius=9pt];
+
+    % upper branch: J -> ESC Kp
+    \draw[AC, line width=1.3pt] (1400,350) -- (1400,130);
+    \draw[-{Triangle[length=10pt,width=9pt]}, AC, line width=1.3pt]
+        (1400,130) -- (1450,130);
+
+    % ESC Kp block
+    \draw[ESCGreen, fill=ESCGreen!15, line width=1.5pt, rounded corners=10pt]
+        (1450,50) rectangle (1720,210);
+    \node[align=center, font=\LARGE] at (1585,130) {ESC\\($K_p$ channel)};
+
+    % Kp output -> PD block (top-left)
+    \draw[-{Triangle[length=10pt,width=9pt]}, AC, line width=1.3pt]
+        (1720,130) -- (1800,130) -- (1800,0) -- (375,0) -- (375,265);
+    \node[anchor=south, font=\LARGE] at (1090,0) {$\hat{K}_p$};
+
+    % ---------------------------------------------------------------
+    % ESC CHANNEL FOR Kd  (lower rail at y=570)
+    % ---------------------------------------------------------------
+
+    % Dither a_d sin(w_d t) from bottom
+    \draw[-{Triangle[length=10pt,width=9pt]}, AC, line width=1.3pt]
+        (1210,790) -- (1210,570);
+    \node[anchor=north, font=\LARGE] at (1210,793) {$a_d\!\sin\omega_d t$};
+
+    % lower branch: J -> ESC Kd
+    \draw[AC, line width=1.3pt] (1400,350) -- (1400,570);
+    \draw[-{Triangle[length=10pt,width=9pt]}, AC, line width=1.3pt]
+        (1400,570) -- (1450,570);
+
+    % ESC Kd block
+    \draw[ESCGreen, fill=ESCGreen!15, line width=1.5pt, rounded corners=10pt]
+        (1450,490) rectangle (1720,650);
+    \node[align=center, font=\LARGE] at (1585,570) {ESC\\($K_d$ channel)};
+
+    % Kd output -> PD block (bottom-left)
+    \draw[-{Triangle[length=10pt,width=9pt]}, AC, line width=1.3pt]
+        (1720,570) -- (1800,570) -- (1800,720) -- (375,720) -- (375,435);
+    \node[anchor=north, font=\LARGE] at (1090,720) {$\hat{K}_d$};
+
+\end{tikzpicture}%
+}% end \resizebox
+\caption{ESC block diagram: Technique 3.}
+\label{fig:control_technique_3}
+\end{figure}
+
+
+\section{Model Validation}
+The depth control device, named DiveSync, is designed for laboratory testing while remaining scalable to real underwater applications.
+A cylindrical enclosure achieves IP67-standard liquid-immersion safety using O-ring vacuum face sealing with a 10\% compression ratio.
+Small buckets are designed into the bottom portion to hold dead weights, allowing the device mass and weight balance to be adjusted so that the device is neutrally buoyant with no control input; the bucket geometry also permits the center of mass to be tuned by varying the mass distribution among the buckets.
+The enclosure is fabricated using a FormLabs Form~3 Stereolithography (SLA)~\cite{form3_printer} printer with Clear Resin material.
+The CAD design of the depth control device is shown in Fig.~\ref{fig:device_cad}, and the fabricated device is shown in Fig.~\ref{fig:device_photo}.
+
+\begin{figure}[t]
+\centering
+\begin{subfigure}[t]{0.48\columnwidth}
+    \centering
+    \includegraphics[width=\linewidth]{fig/DiveSyn_IsoView.JPG}
+    \caption{Isometric CAD view of DiveSync.}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\columnwidth}
+    \centering
+    \includegraphics[width=\linewidth]{fig/DiveSyn_SectionActuator.JPG}
+    \caption{Section CAD view showing actuator integration.}
+\end{subfigure}
+\caption{DiveSync CAD views used for device design documentation.}
+\label{fig:device_cad}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.95\columnwidth]{fig/bcd_hardware.png}
+\caption{Fabricated DiveSync device used in experiments.}
+\label{fig:device_photo}
+\end{figure}
+
+
+
+A waterproof cylinder-and-piston mechanism is designed and fabricated alongside the enclosure.
+The piston is actuated by an Actuonix Motion Devices L12 miniature linear actuator with integrated translational-potentiometer feedback~\cite{actuonix_l12}.
+The power source, application-level microcontroller, and motor-driving circuitry are all self-contained within the device to avoid disturbances from external harness routing.
+An ESP32-C3 microcontroller from Espressif Systems~\cite{esp32_c3} drives the linear actuator through a Texas Instruments motor-driver IC, and an LPS33HW water-pressure sensor from STMicroelectronics provides depth feedback.
+Communication between the device and the host computer is established over a USB serial COM port, with a Python-based host application handling real-time data logging, command generation, and visualization.
+
+\subsection{Open-Loop Validation of Dynamic Model}
+Because the actuator has built-in self-locking up to 50\,N of holding force, and the hydrostatic load remains below that threshold to a depth of 1\,m, the uncoupled model represents the system in this operating range. To validate the full coupled model, an open-loop experiment was conducted by applying a square-wave voltage input $u(t)$ to the linear actuator and simultaneously recording the actuator position $z_a(t)$ and the device depth $z_d(t)$. The measured responses are compared against the model-simulated outputs in Fig.~\ref{fig:open_loop_validation}. The actuator response shows close agreement with a root-mean-square error (RMSE) of 1.96\,mm, confirming the identified time constant and gain. The depth response reproduces the qualitative oscillatory behavior with an RMSE of 23.07\,mm; the residual error is attributed to unmodeled hydrodynamic drag variation and wall effects in the laboratory tank.
+
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig/open_loop_validation.pdf}
+\caption{Open-loop model validation: $u(t)$, $z_a(t)$, and $z_d(t)$; measurements (solid), model (dashed).}
+\label{fig:open_loop_validation}
+\end{figure}
+
+Applying a control technique, for example even PID, would capture the neutral buoyancy point because the controller adjusts the input to maintain the depth at the reference. However, open-loop validation requires a precise estimate of the neutral-buoyancy equilibrium point. In practice, that point is difficult to determine directly and is identified by repeating the simulation with different equilibrium values until the best fit is found. If the equilibrium point is not correctly identified, the simulated depth response will show a drift, which is not observed in the experimental data. This suggests that the equilibrium point is correctly identified and that the model captures the essential dynamics of the system.
+
+\section{Results and Discussion}
+After model validation, the control workflow is first verified on the actuator subsystem and then extended to the full coupled depth system. Techniques~2 and~3 rely on reliable actuator-side command tracking before depth-loop behavior can be evaluated.
+
+\subsection{Experimental Setup}
+The actuator-loop experiments are executed with an ESP32-based embedded node and a Python host interface running on the PC. The ESP32 streams telemetry over USB serial, while the host computes the actuator control action and transmits motor commands back to the embedded side. The host interface also provides live visualization and synchronized logging of actuator position, command activity, and depth/pressure telemetry.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.82\columnwidth]{fig/ActuatorControlGUI.png}
+\caption{Host-side interface used for actuator-loop experiments, parameter tuning, telemetry monitoring, and safety control.}
+\label{fig:actuator_control_gui}
+\end{figure}
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig/ActuatorControl_Result.pdf}
+\caption{Actuator-loop experiment: actuator tracking (top), sent/echoed command activity (middle), and measured depth response (bottom).}
+\label{fig:actuator_control_result}
+\end{figure}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.8\textwidth]{fig/DepthControlSim_ESCPD_O4_V1_sine_then_square.pdf}
+\caption{ESC-tuned PD depth-control simulation with sine-to-square reference switching, showing depth tracking, gain adaptation, control effort, piston motion, and ESC cost/gradient signals.}
+\label{fig:escpd_sine_square_result}
+\end{figure*}
+
+\begin{figure*}[ht]
+\centering
+\includegraphics[width=0.8\textwidth]{fig/DepthControlSim_ESCPD_O4_V1_20260508_140237.pdf}
+\caption{ESC-tuned PD simulation under the deadzone piston-position penalty \eqref{eqn:cost_esc3_deadzone} ($w_z=2.0$, $\delta_z=15$\,mm) with sine-to-square reference switching.  Compared with the velocity-penalty case (Fig.~\ref{fig:escpd_sine_square_result}), the piston remains more strictly within its stroke limits, demonstrating that the choice of ESC cost directly governs constraint-respecting behavior.}
+\label{fig:escpd_deadzone_result}
+\end{figure*}
+
+
+The actuator position is measured in ADC counts and converted to millimeters using
+\[
+    x_{a,\mathrm{mm}}=\frac{50}{4096}\,x_{a,\mathrm{raw}},
+\]
+and the motor command is mapped to equivalent drive voltage as
+\[
+    u_{\mathrm{V}}=\frac{12}{255}\,u_{\mathrm{cmd}}.
+\]
+
+\subsection{Actuator Control}
+The actuator experiment uses a single-loop position controller (not the cascaded depth controller). In closed-loop mode, the host computes error in actuator-count coordinates as
+\[
+    e_k=x_{a,k}-x_{a,\mathrm{ref},k},
+\]
+with deadband and integral limiting applied for robustness. A filtered-derivative PID form is used:
+\[
+    u_k^{\ast}=K_p e_k+K_i I_k+K_d d_k,
+\]
+where
+\[
+    d_k=\alpha\frac{e_k-e_{k-1}}{\Delta t_k}+(1-\alpha)d_{k-1}.
+\]
+The unsaturated control is then scaled to the command interface and clipped to hardware limits:
+\begin{equation}
+    u_{\mathrm{cmd},k}=\mathrm{sat}_{[-255,255]}\!\left(\frac{255}{4000}u_k^{\ast}\right).
+    \label{eqn:act_cmd_saturation}
+\end{equation}
+
+To reduce jitter from raw ADC measurements, two causal conditioning stages are available. First, a sliding-window median filter produces $x_{a,\mathrm{med},k}$. Second, an $\alpha$-$\beta$ estimator updates actuator position/velocity states by
+\begin{equation}
+    \hat{x}_{k|k-1}=\hat{x}_{k-1}+\Delta t_k\hat{v}_{k-1}, \qquad
+    r_k=x_{a,\mathrm{med},k}-\hat{x}_{k|k-1},
+    \label{eqn:ab_predict_residual}
+\end{equation}
+\begin{equation}
+    \hat{x}_k=\hat{x}_{k|k-1}+\alpha_{ab}r_k, \qquad
+    \hat{v}_k=\lambda_v\hat{v}_{k-1}+\frac{\beta_{ab}}{\Delta t_k}r_k.
+    \label{eqn:ab_update}
+\end{equation}
+The controller can use raw, median-filtered, or estimated actuator position as its feedback input source.
+
+Figure~\ref{fig:actuator_control_result} shows a representative actuator-loop experiment. The top panel indicates accurate command tracking across multiple setpoint changes, with the median signal closely following the target and with reduced oscillatory noise compared with raw telemetry. The middle panel shows that sent and echoed commands are consistent, while brief transients occur at direction reversals and large setpoint steps. The bottom panel reports depth telemetry during the same run; depth evolves with actuator motion as expected from buoyancy modulation, while the present experiment remains focused on actuator-loop validation rather than closed-loop depth regulation.
+
+These actuator-loop results also expose implementation effects omitted from the model, including motor dead zone, command saturation, and feedback fluctuations. In the experiment, those effects are handled explicitly so that the actuator remains suitable for the subsequent ESC studies.
+The host-side actuator loop therefore provides stable, repeatable position tracking and sufficiently smooth command behavior for subsequent cascaded experiments. In particular, the measurement-conditioning pipeline in \eqref{eqn:ab_predict_residual}--\eqref{eqn:ab_update} reduces control jitter without removing the dynamic response needed for outer-loop tuning.
+
+\subsection{ESC-tuned PD Controller}
+For the ESC-tuned PD study, the reference is intentionally switched from a sinusoid to a square wave in a single run to test both smooth and abrupt operating regimes under the same adaptation law.  Two cost formulations are evaluated in simulation.  In the first, the cost \eqref{eqn:cost_esc3} is implemented as the squared piston velocity, so ESC seeks gains that reduce overall actuator motion while maintaining acceptable depth tracking.  In the second, the deadzone penalty \eqref{eqn:cost_esc3_deadzone} replaces the velocity cost; here ESC specifically penalizes piston-position excursions beyond a safe band around the neutral stroke, directly discouraging operation near the hard stroke limits.
+
+\subsubsection{Velocity-penalty cost}
+Figure~\ref{fig:escpd_sine_square_result} shows the closed-loop behavior under cost \eqref{eqn:cost_esc3}. During the sinusoidal segment, depth tracking remains smooth with moderate gain adaptation. After the reference switches to square-wave motion, ESC increases and redistributes the effective PD gains to handle repeated transient events while attempting to keep actuator-motion cost low. The command plot confirms that voltage remains within the imposed $\pm 12$\,V bounds, and the piston trajectory remains within the prescribed stroke limits. The gradient/cost panel shows distinct adaptation bursts at transition instants, which is consistent with the nonsmooth reference and the motion-penalty objective.  However, because the cost does not directly penalize proximity to the stroke bounds, the piston occasionally approaches the hard limits at the onset of aggressive square-wave transients.
+
+\subsubsection{Deadzone piston-position penalty}
+Figure~\ref{fig:escpd_deadzone_result} shows the closed-loop behavior under the deadzone penalty \eqref{eqn:cost_esc3_deadzone} with parameters $w_z = 2.0$, $\delta_z = 15$\,mm, and $z_{a,\mathrm{eq}}$ set to the neutral stroke midpoint.  The key behavioral difference relative to the velocity-penalty case is that the piston now remains more tightly confined within the safe band.  Whenever a large-amplitude square-wave step drives the piston toward a hard limit, the deadzone cost activates and ESC adapts the gains to reduce the excursion, trading some transient depth-tracking aggressiveness for improved stroke-limit clearance.  Voltage commands still respect the $\pm 12$\,V input bound, and depth tracking quality is comparable to the velocity-penalty case, confirming that the deadzone penalty achieves better bound satisfaction without degrading the outer-loop depth-regulation objective.
+
+Comparing the two results, the deadzone penalty provides a more direct mechanism for constraint enforcement: the ESC gradient is nonzero only when the piston is outside the safe band, so adaptation effort is targeted precisely at bound-violation events.  The velocity penalty, by contrast, reduces overall actuator activity but does not distinguish between beneficial motion (depth correction) and undesirable motion (bound encroachment), resulting in occasional excursions near the limits.  These results are a preliminary validation of the proposed Technique~3 under mixed reference profiles and demonstrate that the choice of ESC objective directly shapes the constraint-respecting behavior of the closed-loop system.  
+
+\subsection{Experimental Validation of ESC-tuned PD Controller}
+
+Physical experiments introduce disturbances and nonlinearities that are absent from the simulation model. Two effects are particularly significant in this device. First, the linear actuator exhibits a pronounced dead zone: control voltages below a certain threshold produce no piston motion, because the motor torque is insufficient to overcome static friction and the transmission backlash. This nonlinearity means that small ESC corrections may be silently absorbed at the actuator, and the piston moves only once the command exceeds the threshold. Second, the sensor and tether cable, though neutrally buoyant by construction, is not perfectly limp. Cable tension and stiffness vary with the relative position of the device in the tank, imposing a slowly varying external force disturbance that cannot be modelled or anticipated. Together, these effects reduce the effective gain seen by the outer depth loop and introduce low-frequency drift that the ESC must compensate online.
+
+Given these challenges, several candidate cost formulations were evaluated over repeated trials. The composite cost
+\begin{equation}
+    J = \bigl(r - \hat{z}\bigr)^{2} + w_{z}\,\bigl[\max\!\bigl(0,\,|z_{a} - z_{a,\mathrm{eq}}| - \delta_{z}\bigr)\bigr]^{2}
+    \label{eqn:cost_exp}
+\end{equation}
+was found to provide the most reliable and safe closed-loop behavior. The first term is the primary depth-tracking objective: it drives the ESC gradient toward gains that reduce the squared depth error $(r - \hat{z})^2$. The second term is the deadzone piston-position penalty from \eqref{eqn:cost_esc3_deadzone}: it activates only when the piston strays beyond $\delta_z$ from the neutral stroke $z_{a,\mathrm{eq}}$, at which point it penalizes further excursion and steers the ESC adaptation away from gains that push the piston toward its hard limits. When the piston remains within the safe band the penalty is identically zero, so ESC focuses exclusively on depth-tracking improvement. This two-term formulation is preferred over a pure velocity penalty because it provides a direct coupling between the depth objective and constraint enforcement: gains are not reduced indiscriminately but only when tracking improvement would come at the cost of stroke-limit proximity. The derivative gain is not adapted independently; instead, the fixed ratio $K_d = T_D K_p$ with $T_D = 10$\,s is maintained throughout, so a single ESC channel tunes $\hat{K}_p$ and $K_d$ tracks proportionally.
+
+The experimental parameters are summarized in Table~\ref{tab:esc_exp_params}.
+
+\begin{table}[t]
+\centering
+\caption{ESC-tuned PD experimental parameters.}
+\label{tab:esc_exp_params}
+\begin{tabular}{lll}
+\hline
+\textbf{Parameter} & \textbf{Symbol} & \textbf{Value} \\
+\hline
+Derivative time constant        & $T_D$             & $10.0$\,s \\
+Initial proportional gain       & $K_{p,0}$         & $15.0$ \\
+Gain lower bound                & $K_{p,\min}$      & $1.0$ \\
+Gain upper bound                & $K_{p,\max}$      & $35.0$ \\
+ESC integration gain            & $\gamma$          & $5000.0$ \\
+Dither frequency                & $\omega_{\mathrm{ESC}}$ & $\pi$\,rad/s \\
+Dither amplitude                & $a$               & $1.0$ \\
+Demodulation gain               & $b$               & $2.0$ \\
+Demodulation phase offset       & $\phi$            & $90^{\circ}$ \\
+Piston deadzone weight          & $w_z$             & $2.0$ \\
+Piston deadzone half-width      & $\delta_z$        & $15$\,mm \\
+Piston equilibrium              & $z_{a,\mathrm{eq}}$ & $25$\,mm \\
+Piston stroke limits            & $[z_{a,\min},\,z_{a,\max}]$ & $[0,\;50]$\,mm \\
+Voltage limits                  & $[u_{\min},\,u_{\max}]$ & $[-12,\;+12]$\,V \\
+ESC update period               & $\Delta t_{\mathrm{ESC}}$ & $50$\,ms \\
+\hline
+\end{tabular}
+\end{table}
+
+Figure~\ref{fig:escpd_exp_result} presents the experimental results under a square-wave depth reference alternating between $z = 200$\,mm and $z = 500$\,mm. The four panels show depth tracking ($r$, raw depth $z$, and Kalman-estimated depth $\hat{z}$), gain evolution ($K_p$ dithered, its DC estimate $\hat{K}_p$, and $K_d = T_D \hat{K}_p$), control voltage $u$, and piston position $z_a$, respectively.
+
+The first reference period ($t \approx 0$--$50$\,s) is operated under a sinusoidal reference with the initial gain $K_{p,0} = 15$. This gain is intentionally chosen above the steady-state optimal to stress the adaptation law from the start. The depth response shows substantial oscillatory overshoot: the depth trajectory undershoots and overshoots the reference by several tens of millimetres, and the piston traverses most of its stroke range. The ESC cost \eqref{eqn:cost_exp} accumulates a persistent nonzero gradient because the depth error and occasional piston excursions beyond $\delta_z$ both contribute, and the adaptation law begins to reduce $\hat{K}_p$.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.88\textwidth]{fig/DepthControlExp_ESCPD_O420260513_164014_overview.pdf}
+\caption{ESC-tuned PD depth-control experiment showing depth tracking, gain adaptation, control voltage, and piston displacement. The controller maintains bounded voltage and piston motion while adapting the PD gains online.}
+\label{fig:escpd_exp_result}
+\end{figure*}
+
+
+At $t \approx 50$\,s the reference switches to a square wave. By this point the ESC has driven $\hat{K}_p$ noticeably below $K_{p,0}$. The step responses in subsequent cycles show progressively more damped behavior: overshoot is reduced, and the depth settles close to the reference within each half-period. From approximately $t = 100$\,s onward, the gain stabilizes at a lower value and the depth tracking is largely consistent from cycle to cycle, demonstrating that the ESC has found a locally improved operating point. The overall RMSE is $119.3$\,mm, dominated by the initial high-gain transients; the steady-state error after convergence is $16.5$\,mm.
+
+The control voltage (third panel) stays strictly within the $\pm 12$\,V bounds throughout the run. Brief saturation-like excursions near the bound occur at reference steps when the depth error is large, but the voltage returns within bounds as the error reduces. The actuator dead zone is visible as short intervals where $u$ is near zero but the piston does not move, most apparent in the transition plateaus between steps. The piston position (fourth panel) remains within $[0,\;50]$\,mm at all times. The deadzone penalty term in \eqref{eqn:cost_exp} prevents the piston from sustaining operation near the hard limits: whenever the piston moves beyond $z_{a,\mathrm{eq}} \pm \delta_z = 25 \pm 15$\,mm, the cost activates and the ESC immediately adjusts $\hat{K}_p$ to pull the piston back toward center stroke. The depth error term simultaneously ensures that this constraint enforcement does not cause the gain to collapse to the minimum bound, so the device retains tracking authority throughout.
+
+
+The experimental results confirm the main properties of the proposed controller. Depth tracking is achieved without a plant model, relying entirely on the measured cost signal to tune $\hat{K}_p$ online. Hard actuator constraints are respected: the voltage stays within $\pm 12$\,V and the piston stays within $[0,\;50]$\,mm despite the dead zone, cable disturbances, and step reference changes. The composite cost \eqref{eqn:cost_exp} is effective because its two terms are complementary: the depth-error term drives adaptation toward tracking improvement, while the deadzone penalty activates selectively to prevent constraint violation without unnecessarily suppressing gain. Compared with the simulation results, the experimental transients are longer and the residual steady-state error is larger, consistent with the unmodeled dead zone and cable-tension disturbance. Nevertheless, the ESC framework accommodates these effects through online adaptation and achieves stable, bounded depth regulation in hardware.
+
+
+
+This paper presented an extremum-seeking depth-control framework for a hard-bound unstable buoyancy control device intended for compact underwater robotic platforms. The study combined: (i) an updated hardware implementation of a piston-cylinder buoyancy module with linear actuation, (ii) a physics-based fourth-order dynamic model that captures depth-actuator coupling and practical loading effects, and (iii) a cascaded ESC-tuned PD controller that adapts gains online without requiring an exact plant model.
+
+The actuator-loop experiments verified that the host-side position controller achieves stable and repeatable tracking despite practical nonlinearities such as deadband, saturation, and measurement jitter. This inner-loop reliability enabled closed-loop ESC studies with mixed sine-to-square depth references. For the ESC layer, two objective designs were compared. The velocity-penalty objective reduced overall actuator activity and maintained bounded operation, but could still allow transient motion near stroke limits under aggressive reference changes. The deadzone piston-position penalty provided a more direct constraint-aware objective: adaptation was activated primarily when the piston approached unsafe regions, resulting in tighter bound satisfaction while preserving comparable depth-tracking performance and maintaining voltage limits.
+
+Overall, the results demonstrate that ESC can be effectively applied to this unstable, input-constrained buoyancy system, and that objective-function design is a key lever for balancing tracking performance and safety-margin preservation. In particular, penalties tied to bound proximity are more effective than generic motion penalties when strict constraint respect is the primary requirement.
+
+Future work will focus on extended experimental validation in water, robustness analysis under parametric uncertainty and disturbances, and systematic multi-objective ESC formulations that jointly weight depth error, control effort, and constraint margin. Additional directions include adaptive deadzone shaping, anti-windup/constraint-handling enhancements, and real-time implementation on embedded hardware for fully autonomous robotic-fish operation.
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}

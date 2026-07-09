@@ -1,5 +1,29 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {I.1}{\ignorespaces Example figure caption. Captions are single-spaced by class default.}}{1}{figure.caption.6}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {II.1}{\ignorespaces Standalone BCD pressure-boundary and actuator layout.}}{20}{figure.caption.24}%
+\contentsline {figure}{\numberline {II.2}{\ignorespaces Double-slider-crank tail mechanism at four crank positions.}}{23}{figure.caption.29}%
+\contentsline {figure}{\numberline {II.3}{\ignorespaces Tail-bias servo for redirecting DSC tail thrust.}}{24}{figure.caption.30}%
+\contentsline {figure}{\numberline {II.4}{\ignorespaces AquaNavigator exploded CAD layout and payload interfaces.}}{25}{figure.caption.32}%
+\contentsline {figure}{\numberline {II.5}{\ignorespaces BCD free-body model near neutral buoyancy.}}{26}{figure.caption.36}%
+\contentsline {figure}{\numberline {II.6}{\ignorespaces Piston-cylinder notation for BCD volume change.}}{27}{figure.caption.42}%
+\contentsline {figure}{\numberline {II.7}{\ignorespaces AquaNavigator frames for propulsion and planar dynamics.}}{30}{figure.caption.55}%
+\contentsline {figure}{\numberline {II.8}{\ignorespaces Fabricated standalone BCD for depth-control experiments.}}{37}{figure.caption.83}%
+\contentsline {figure}{\numberline {II.9}{\ignorespaces Fabricated AquaNavigator robotic fish experimental platform.}}{38}{figure.caption.84}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {III.1}{\ignorespaces MPC control structure for the BCD.}}{41}{figure.caption.90}%
+\contentsline {figure}{\numberline {III.2}{\ignorespaces ESC-tuned PD controller architecture for BCD.}}{43}{figure.caption.95}%
+\contentsline {figure}{\numberline {III.3}{\ignorespaces Pipeline-tracking visual servoing control scheme overview.}}{46}{figure.caption.102}%
+\contentsline {figure}{\numberline {III.4}{\ignorespaces Camera pipeline vectors for visual servoing control.}}{47}{figure.caption.103}%
+\contentsline {figure}{\numberline {III.5}{\ignorespaces Open-loop BCD validation with model comparison.}}{49}{figure.caption.107}%
+\contentsline {figure}{\numberline {III.6}{\ignorespaces MPC simulation response for BCD depth tracking.}}{50}{figure.caption.109}%
+\contentsline {figure}{\numberline {III.7}{\ignorespaces Experimental MPC response compared with simulation.}}{51}{figure.caption.110}%
+\contentsline {figure}{\numberline {III.8}{\ignorespaces Actuator-loop validation before ESC depth experiments.}}{52}{figure.caption.112}%
+\contentsline {figure}{\numberline {III.9}{\ignorespaces ESC simulation with velocity-penalty objective function.}}{53}{figure.caption.113}%
+\contentsline {figure}{\numberline {III.10}{\ignorespaces ESC simulation with deadzone piston-position penalty.}}{54}{figure.caption.114}%
+\contentsline {figure}{\numberline {III.11}{\ignorespaces ESC experiment with online gain adaptation.}}{55}{figure.caption.115}%
+\contentsline {figure}{\numberline {III.12}{\ignorespaces PBVS and IBVS simulator responses for pipeline tracking.}}{56}{figure.caption.117}%
+\contentsline {figure}{\numberline {III.13}{\ignorespaces Top-view sequence of pipeline tracking experiment.}}{56}{figure.caption.119}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

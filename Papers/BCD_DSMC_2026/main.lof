@@ -1,0 +1,17 @@
+\babel@toc {english}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces System architecture of the buoyancy control device.}}{3}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Cross-sectional schematic of the piston-cylinder assembly.}}{3}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Block diagrams of the three ESC-based control techniques.}}{5}{figure.3}%
+\contentsline {subfigure}{\numberline {(\textit {a})}{\ignorespaces Control Technique 1: Direct-Input ESC Baseline}}{5}{subfigure.3.1}%
+\contentsline {subfigure}{\numberline {(\textit {b})}{\ignorespaces Control Technique 2: ESC with Inner-Loop Actuator Stabilization}}{5}{subfigure.3.2}%
+\contentsline {subfigure}{\numberline {(\textit {c})}{\ignorespaces Control Technique 3: ESC-Tuned PD Depth Controller}}{5}{subfigure.3.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces DiveSync CAD views used for device design documentation.}}{7}{figure.4}%
+\contentsline {subfigure}{\numberline {(\textit {a})}{\ignorespaces Isometric CAD view of DiveSync.}}{7}{subfigure.4.1}%
+\contentsline {subfigure}{\numberline {(\textit {b})}{\ignorespaces Section CAD view showing actuator integration.}}{7}{subfigure.4.2}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Fabricated DiveSync device used in experiments.}}{7}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Open-loop model validation: $u(t)$, $z_a(t)$, and $z_d(t)$; measurements (solid), model (dashed).}}{7}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Host-side interface used for actuator-loop experiments, parameter tuning, telemetry monitoring, and safety control.}}{8}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Actuator-loop experiment: actuator tracking (top), sent/echoed command activity (middle), and measured depth response (bottom).}}{8}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces ESC-tuned PD depth-control simulation with sine-to-square reference switching, showing depth tracking, gain adaptation, control effort, piston motion, and ESC cost/gradient signals.}}{9}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces ESC-tuned PD simulation under the deadzone piston-position penalty \eqref {eqn:cost_esc3_deadzone} ($w_z=2.0$, $\delta _z=15$\,mm) with sine-to-square reference switching. Compared with the velocity-penalty case (Fig.~\ref {fig:escpd_sine_square_result}), the piston remains more strictly within its stroke limits, demonstrating that the choice of ESC cost directly governs constraint-respecting behavior.}}{10}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces ESC-tuned PD depth-control experiment showing depth tracking, gain adaptation, control voltage, and piston displacement. The controller maintains bounded voltage and piston motion while adapting the PD gains online.}}{11}{figure.11}%

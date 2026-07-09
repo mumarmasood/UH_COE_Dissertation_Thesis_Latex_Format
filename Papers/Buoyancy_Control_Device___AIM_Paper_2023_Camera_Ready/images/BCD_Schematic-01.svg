@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 792 612">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        opacity: .7;
+      }
+
+      .cls-3 {
+        fill: #c49a6c;
+        opacity: .3;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-11 {
+        stroke: #231f20;
+      }
+
+      .cls-4, .cls-12, .cls-5, .cls-6, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18 {
+        fill: #231f20;
+      }
+
+      .cls-12, .cls-5, .cls-6, .cls-13, .cls-14, .cls-15, .cls-16, .cls-18 {
+        font-family: jsMath-cmti10, jsMath-cmti10;
+      }
+
+      .cls-12, .cls-15 {
+        font-size: 19.46px;
+      }
+
+      .cls-5 {
+        font-size: 29.97px;
+      }
+
+      .cls-5, .cls-6 {
+        stroke-width: .5px;
+      }
+
+      .cls-6 {
+        font-size: 52.73px;
+      }
+
+      .cls-7 {
+        stroke-width: 2px;
+      }
+
+      .cls-7, .cls-9, .cls-11 {
+        fill: none;
+      }
+
+      .cls-13 {
+        font-size: 30.39px;
+      }
+
+      .cls-8 {
+        fill: #3c2415;
+      }
+
+      .cls-14, .cls-16 {
+        font-size: 16.3px;
+      }
+
+      .cls-9 {
+        stroke-dasharray: 0 0 11.57 11.57;
+      }
+
+      .cls-9, .cls-11 {
+        stroke-width: 4px;
+      }
+
+      .cls-10 {
+        fill: #c2b59b;
+        stroke: #be1e2d;
+        stroke-width: 3px;
+      }
+
+      .cls-15 {
+        letter-spacing: 0em;
+      }
+
+      .cls-16 {
+        letter-spacing: 0em;
+      }
+
+      .cls-19 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-20 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-21 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-18 {
+        font-size: 10.22px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="530.82" y1="100.41" x2="530.82" y2="547.24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".05" stop-color="#f1f9fd"/>
+      <stop offset=".38" stop-color="#9bd8f1"/>
+      <stop offset=".64" stop-color="#5cbfe8"/>
+      <stop offset=".84" stop-color="#35afe3"/>
+      <stop offset=".94" stop-color="#27aae1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="208.99" y1="100.41" x2="208.99" y2="547.24" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="703.07" y1="100.41" x2="703.07" y2="547.24" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="396" y1="100.41" x2="396" y2="547.24" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <path class="cls-20" d="m535.5,151.54c-2.59-.39-5.18-.77-7.76-1.14h-1.61c2.97.55,5.94,1.1,8.91,1.61.14-.17.3-.32.46-.47Z"/>
+    <path class="cls-1" d="m212.77,150.4h-7.7c2.62.33,5.24.71,7.86,1.11-.09-.36-.15-.73-.15-1.11Z"/>
+    <path class="cls-19" d="m699.08,150.4c-.49.82-1.28,1.47-2.34,1.84,4.22-.59,8.44-1.2,12.65-1.84h-10.31Z"/>
+    <path class="cls-21" d="m788.32,157.96c-14.65-.03-29.29-.73-43.94-.55-14.29.18-28.05,2.15-42.15,4.23-27.97,4.12-56.13,6.69-84.3,9-12.47,1.02-25.01,2.49-37.53,2.57-12.42.09-24.77-1.19-37.06-2.9-24.71-3.43-48.97-7.95-73.96-8.91-52.18-2.01-103.92,6.53-156.03,7.18-25.49.32-51.02-.79-76.35-3.71-12.32-1.42-24.54-3.95-36.88-5.08-11.99-1.1-23.18.17-34.84,2.93-11.67,2.76-23.21,6.29-35.15,7.74-11.87,1.44-23.59-.48-34.84-4.38-10.77-3.73-21.24-8.54-30.24-15.59-.36-.03-.73-.07-1.09-.1h-26.67c-3.47.41-6.95,1-10.45,1.84-9.28,2.23-18.21,5.55-26.87,9.49v450.26h792V156.33c-.8.98-2.03,1.64-3.68,1.63Z"/>
+  </g>
+  <g id="Layer_1" data-name="Layer 1">
+    <g>
+      <polygon class="cls-10" points="642.5 282.03 642.5 480.37 454.62 480.37 454.62 410.55 97.05 410.55 97.05 282.03 642.5 282.03"/>
+      <line class="cls-10" x1="454.62" y1="480.37" x2="97.05" y2="480.37"/>
+    </g>
+    <g>
+      <rect class="cls-4" x="412.4" y="411.43" width="40.51" height="68.94"/>
+      <rect class="cls-8" x="452.91" y="437.73" width="178.38" height="16.34"/>
+      <g>
+        <line class="cls-11" x1="475.69" y1="425.35" x2="481.69" y2="425.35"/>
+        <line class="cls-9" x1="493.26" y1="425.35" x2="603.21" y2="425.35"/>
+        <line class="cls-11" x1="608.99" y1="425.35" x2="614.99" y2="425.35"/>
+        <path class="cls-17" d="m479.28,425.35l4.38-7.21-.25-.16-11.75,4.67c-4.09.9-8.19,1.8-12.28,2.7,4.09.9,8.19,1.8,12.28,2.7l11.75,4.67.25-.12-4.38-7.25Z"/>
+        <path class="cls-17" d="m611.4,425.35l-4.38-7.21.25-.16,11.75,4.67c4.09.9,8.19,1.8,12.28,2.7-4.09.9-8.19,1.8-12.28,2.7l-11.75,4.67-.25-.12,4.38-7.25Z"/>
+      </g>
+    </g>
+    <g class="cls-2">
+      <rect class="cls-4" x="132.74" y="411.43" width="40.51" height="68.94"/>
+      <rect class="cls-8" x="173.26" y="437.73" width="178.38" height="16.34"/>
+    </g>
+    <rect class="cls-3" x="136" y="411.43" width="279.66" height="68.94"/>
+    <text class="cls-12" transform="translate(238.36 352.19)"><tspan x="0" y="0">Fixed Volume of the Device - V</tspan></text>
+    <text class="cls-15" transform="translate(468.56 358.67) scale(.58)"><tspan x="0" y="0">s</tspan></text>
+    <text class="cls-14" transform="translate(183.73 432.54)"><tspan x="0" y="0">Dynamically Changing</tspan><tspan x="0" y="36">Volume of the Device - V</tspan></text>
+    <text class="cls-16" transform="translate(337.54 473.97) scale(.58)"><tspan x="0" y="0">d</tspan></text>
+    <text class="cls-18" transform="translate(469.47 409.08)"><tspan x="0" y="0">Controlled Movement of Piston - u</tspan></text>
+    <g>
+      <line class="cls-7" x1="403.81" y1="216.86" x2="403.81" y2="284.99"/>
+      <path class="cls-17" d="m403.81,220.45l7.21,4.38.16-.25-4.67-11.75c-.9-4.09-1.8-8.19-2.7-12.28-.9,4.09-1.8,8.19-2.7,12.28l-4.67,11.75.12.25,7.25-4.38Z"/>
+    </g>
+    <g>
+      <line class="cls-7" x1="344.67" y1="542.59" x2="344.67" y2="480.37"/>
+      <path class="cls-17" d="m344.67,539l-7.21-4.38-.16.25,4.67,11.75c.9,4.09,1.8,8.19,2.7,12.28.9-4.09,1.8-8.19,2.7-12.28l4.67-11.75-.12-.25-7.25,4.38Z"/>
+    </g>
+    <g>
+      <line class="cls-7" x1="275.83" y1="216.86" x2="275.83" y2="284.99"/>
+      <path class="cls-17" d="m275.83,220.45l7.21,4.38.16-.25-4.67-11.75c-.9-4.09-1.8-8.19-2.7-12.28-.9,4.09-1.8,8.19-2.7,12.28l-4.67,11.75.12.25,7.25-4.38Z"/>
+    </g>
+    <text class="cls-13" transform="translate(367.15 537.86)"><tspan x="0" y="0">mg</tspan></text>
+    <g>
+      <g>
+        <line class="cls-11" x1="709.39" y1="313.88" x2="709.39" y2="151.52"/>
+        <path class="cls-17" d="m709.39,306.7l-14.41-8.77-.33.49,9.33,23.5c1.8,8.19,3.6,16.37,5.4,24.56,1.8-8.19,3.6-16.37,5.4-24.56l9.33-23.5-.25-.49-14.49,8.77Z"/>
+      </g>
+      <line class="cls-11" x1="672.06" y1="150.4" x2="741.51" y2="150.4"/>
+    </g>
+    <text class="cls-6" transform="translate(717.88 256.23)"><tspan x="0" y="0">x</tspan></text>
+    <g>
+      <g>
+        <line class="cls-7" x1="271.51" y1="391.13" x2="134.06" y2="391.13"/>
+        <path class="cls-17" d="m267.92,391.13l-4.38,7.21.25.16,11.75-4.67c4.09-.9,8.19-1.8,12.28-2.7-4.09-.9-8.19-1.8-12.28-2.7l-11.75-4.67-.25.12,4.38,7.25Z"/>
+      </g>
+      <line class="cls-7" x1="133.18" y1="403.68" x2="133.18" y2="380.33"/>
+    </g>
+    <text class="cls-5" transform="translate(200.16 380.33)"><tspan x="0" y="0">z</tspan></text>
+  </g>
+</svg>

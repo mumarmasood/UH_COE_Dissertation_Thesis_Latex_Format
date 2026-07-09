@@ -1,0 +1,77 @@
+\begin{thebibliography}{10}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\urlprefix\url{#1#2}}
+\providecommand{\hrefurl}[2][]{\href{#1}{#2}}
+
+\bibitem{Partan2007}
+Partan, J., Kurose, J., and Levine, B.~N., 2007, \enquote{A Survey of Practical Issues in Underwater Networks,} \hrefurl{https://doi.org/10.1145/1347364.1347372}{{ACM SIGMOBILE} Mobile Computing and Communications Review}, \textbf{11}(4), pp. 23--33.
+
+\bibitem{Palmeiro2011UnderwaterRF}
+Palmeiro, A., Martin, M., Crowther, I., and Rhodes, M., 2011, \enquote{Underwater Radio Frequency Communications,} \textit{OCEANS 2011 IEEE - Spain}, IEEE, Santander, Spain, June 6--9, 2011, pp. 1--8, \doi{10.1109/Oceans-Spain.2011.6003580}.
+
+\bibitem{Nguyen2019}
+Nguyen, T. L.~N. and Shin, Y., 2019, \enquote{An Efficient {RSS} Localization for Underwater Wireless Sensor Networks,} \hrefurl{https://doi.org/10.3390/s19143105}{Sensors}, \textbf{19}(14), p. 3105.
+
+\bibitem{Luo2021Review}
+Luo, J., Yang, Y., Wang, Z., and Chen, Y., 2021, \enquote{Localization Algorithm for Underwater Sensor Network: A Review,} \hrefurl{https://doi.org/10.1109/JIOT.2021.3081918}{{IEEE Internet of Things Journal}}, \textbf{8}(17), pp. 13126--13144.
+
+\bibitem{Rypkema2019piUSBL}
+Rypkema, N.~R. and Schmidt, H., 2019, \enquote{Passive Inverted Ultra-Short Baseline ({piUSBL}) Localization: An Experimental Evaluation of Accuracy,} \textit{2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, IEEE, Macau, China, November 3--8, 2019, pp. 7197--7204, \doi{10.1109/IROS40897.2019.8967800}.
+
+\bibitem{Wang2022PassiveIUSBL}
+Wang, Y., Huang, S.~H., Wang, Z., Hu, R., Feng, M., Du, P., Yang, W., and Chen, Y., 2022, \enquote{Design and Experimental Results of Passive {iUSBL} for Small {AUV} Navigation,} \hrefurl{https://doi.org/10.1016/j.oceaneng.2022.110812}{Ocean Engineering}, \textbf{248}, p. 110812.
+
+\bibitem{Hinduja2022MEMSAcoustic}
+Hinduja, A., Ohm, Y., Liao, J., Majidi, C., and Kaess, M., 2022, \enquote{Acoustic Localization and Communication Using a {MEMS} Microphone for Low-Cost and Low-Power Bio-Inspired Underwater Robots,} \textit{2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, IEEE, Kyoto, Japan, October 23--27, 2022, pp. 5470--5477, \doi{10.1109/IROS47612.2022.9981355}.
+
+\bibitem{Wang2014}
+Wang, W. and Xie, G., 2014, \enquote{{CPG}-Based Locomotion Controller Design for a Boxfish-Like Robot,} \hrefurl{https://doi.org/10.5772/58564}{International Journal of Advanced Robotic Systems}, \textbf{11}(6), p.~87.
+
+\bibitem{Zou2024}
+Zou, T., Jian, X., Al-Tamimi, M., Wu, X., and Wu, J., 2024, \enquote{Development of a Low-Cost Soft Robot Fish With Biomimetic Swimming Performance,} \hrefurl{https://doi.org/10.1115/1.4063037}{Journal of Mechanisms and Robotics}, \textbf{16}(6), p. 061004.
+
+\bibitem{Masood2025fish}
+Masood, M.~U. and Chen, Z., 2025, \enquote{Visual Servoing Control of Robotic Fish for Underwater Pipeline Tracking,} \hrefurl{https://doi.org/10.1007/s41315-025-00485-9}{International Journal of Intelligent Robotics and Applications}, \textbf{9}(3), pp. 907--924.
+
+\bibitem{zekavat2019handbook}
+Zekavat, R. and Buehrer, R.~M., 2019, \textit{\hrefurl{https://www.wiley.com/en-us/9781119434610}{Handbook of Position Location: Theory, Practice, and Advances}}, 2nd ed., John Wiley \& Sons, Hoboken, NJ.
+
+\bibitem{Tomic2019}
+Tomic, S., Beko, M., Camarinha-Matos, L.~M., and Oliveira, L.~B., 2019, \enquote{Distributed Localization With Complemented {RSS} and {AoA} Measurements: Theory and Methods,} \hrefurl{https://doi.org/10.3390/app10010272}{Applied Sciences}, \textbf{10}(1), p. 272.
+
+\bibitem{Ketabalian2020}
+Ketabalian, H., Biguesh, M., and Sheikhi, A., 2020, \enquote{A Closed-Form Solution for Localization Based on {RSS},} \hrefurl{https://doi.org/10.1109/TAES.2019.2929998}{{IEEE Transactions on Aerospace and Electronic Systems}}, \textbf{56}(2), pp. 912--923.
+
+\bibitem{Wu2024}
+Wu, H., Chen, Y., Yang, Q., Yan, B., and Yang, X., 2024, \enquote{A Review of Underwater Robot Localization in Confined Spaces,} \hrefurl{https://doi.org/10.3390/jmse12030428}{Journal of Marine Science and Engineering}, \textbf{12}(3), p. 428.
+
+\bibitem{Jiang2013}
+Jiang, J.~R., Lin, C.~M., Lin, F.~Y., and Huang, S.~T., 2013, \enquote{{ALRD}: {AoA} Localization With {RSSI} Differences of Directional Antennas for Wireless Sensor Networks,} \hrefurl{https://doi.org/10.1155/2013/529489}{International Journal of Distributed Sensor Networks}, \textbf{2013}, p. 529489.
+
+\bibitem{Wielandner2021}
+Wielandner, L., Leitinger, E., and Witrisal, K., 2021, \enquote{{RSS}-Based Cooperative Localization and Orientation Estimation Exploiting Antenna Directivity,} \hrefurl{https://doi.org/10.1109/ACCESS.2021.3070441}{{IEEE Access}}, \textbf{9}, pp. 53046--53060.
+
+\bibitem{Sathish2023}
+Sathish, K., Chinthaginjala, R., Kim, W., Rajesh, A., Corchado, J.~M., and Abbas, M., 2023, \enquote{Underwater Wireless Sensor Networks With {RSSI}-Based Advanced Efficiency-Driven Localization and Unprecedented Accuracy,} \hrefurl{https://doi.org/10.3390/s23156973}{Sensors}, \textbf{23}(15), p. 6973.
+
+\bibitem{Garcia2020}
+Garcia, J., Soto, S., Sultana, A., Leclerc, J., Pan, M., and Becker, A.~T., 2020, \enquote{Underwater Robot Localization Using Magnetic Induction: Noise Modeling and Hardware Validation,} \textit{Global Oceans 2020: Singapore--U.S. Gulf Coast}, IEEE, Singapore--U.S. Gulf Coast, October 5--30, 2020, pp. 1--5, \doi{10.1109/IEEECONF38699.2020.9389237}.
+
+\bibitem{Masood2025}
+Masood, M.~U. and Chen, Z., 2025, \enquote{Towards Underwater Swarm: A Relative Localization Framework,} \hrefurl{https://doi.org/10.1016/j.ifacol.2025.12.245}{{IFAC-PapersOnLine}}, \textbf{59}(30), pp. 251--256.
+
+\bibitem{Stutzman1998}
+Stutzman, W.~L., 1998, \enquote{Estimating Directivity and Gain of Antennas,} \hrefurl{https://doi.org/10.1109/74.730532}{{IEEE Antennas and Propagation Magazine}}, \textbf{40}(4), pp. 7--11.
+
+\bibitem{vk5br1987}
+VK5BR, L.~B., 1987, \enquote{Underwater radio communication,} \hrefurl{https://www.ahars.au/vk5br/UWComms/UwaterComms.pdf}{Originally published in Amateur Radio}, pp. 1--8.
+
+\bibitem{stutzman2012antenna}
+Stutzman, W.~L. and Thiele, G.~A., 2012, \textit{Antenna Theory and Design}, 3rd ed., John Wiley \& Sons, Hoboken, NJ.
+
+\end{thebibliography}

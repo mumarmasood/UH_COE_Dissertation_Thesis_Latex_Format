@@ -1,0 +1,110 @@
+\begin{thebibliography}{10}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\urlprefix\url{#1#2}}
+\providecommand{\hrefurl}[2][]{\href{#1}{#2}}
+
+\bibitem{ocean_ngs}
+\enquote{All About the Ocean,} National Geographic Society, accessed May 22, 2026, \urlprefix\url{https://education.nationalgeographic.org/resource/all-about-the-ocean/}
+
+\bibitem{noaa_ocean_exploration}
+{National Oceanic and Atmospheric Administration}, 2014, \enquote{How Much of the Ocean Have We Explored?} accessed Apr. 21, 2026, \urlprefix\url{http://oceanservice.noaa.gov/facts/exploration.html}
+
+\bibitem{masood2025visual}
+Masood, M.~U. and Chen, Z., 2025, \enquote{Visual servoing control of robotic fish for underwater pipeline tracking,} \hrefurl{https://doi.org/10.1007/s41315-025-00485-9}{International Journal of Intelligent Robotics and Applications}, \textbf{9}(3), pp. 907--924.
+
+\bibitem{tanakitkorn2017depth}
+Tanakitkorn, K., Wilson, P.~A., Turnock, S.~R., and Phillips, A.~B., 2017, \enquote{Depth control of an over-actuated, hover-capable autonomous underwater vehicle with experimental verification,} \hrefurl{https://doi.org/10.1016/j.mechatronics.2016.11.006}{Mechatronics}, \textbf{41}, pp. 67--81.
+
+\bibitem{silvestre2007infante}
+Silvestre, C. and Pascoal, A., 2007, \enquote{Depth control of the {INFANTE} {AUV} using gain-scheduled reduced order output feedback,} \hrefurl{https://doi.org/10.1016/j.conengprac.2006.05.005}{Control Engineering Practice}, \textbf{15}(7), pp. 883--895.
+
+\bibitem{hong2010starfish}
+Eng, Y.~H., Hong, G.~S., and Chitre, M., 2010, \enquote{Depth control of an autonomous underwater vehicle, {STARFISH},} \textit{OCEANS'10 IEEE Sydney}, Sydney, Australia, pp. 1--6, \doi{10.1109/OCEANSSYD.2010.5603566}.
+
+\bibitem{katzschmann2018sofi}
+Katzschmann, R.~K., DelPreto, J., MacCurley, R., and Rus, A., 2018, \enquote{Exploration of Underwater Life with an Acoustically Controlled Soft Robotic Fish,} \hrefurl{https://doi.org/10.1126/scirobotics.aar3449}{Science Robotics}, \textbf{3}(16).
+
+\bibitem{zhao2016hovering}
+Zhao, X., Liu, Y., Han, M., Wu, D., and Li, D., 2016, \enquote{Improving the performance of an {AUV} hovering system by introducing low-cost flow rate control into water hydraulic variable ballast system,} \hrefurl{https://doi.org/10.1016/j.oceaneng.2016.08.001}{Ocean Engineering}, \textbf{125}, pp. 155--169.
+
+\bibitem{tangirala2007vbs}
+Tangirala, S. and Dzielski, J., 2007, \enquote{A Variable Buoyancy Control System for a Large AUV,} \hrefurl{https://doi.org/10.1109/JOE.2007.911596}{IEEE Journal of Oceanic Engineering}, \textbf{32}(4), pp. 762--771.
+
+\bibitem{tiwari2020vbs}
+Tiwari, B.~K. and Sharma, R., 2020, \enquote{Design and Analysis of a Variable Buoyancy System for Efficient Hovering Control of Underwater Vehicles with State Feedback Controller,} \hrefurl{https://doi.org/10.3390/jmse8040263}{Journal of Marine Science and Engineering}, \textbf{8}(4), p. 263.
+
+\bibitem{carneiro2024depth}
+Carneiro, J.~F., Pinto, J.~B., de~Almeida, F.~G., and Cruz, N.~A., 2024, \enquote{Depth control of an underwater sensor platform: Comparison between variable buoyancy and propeller actuated devices,} \hrefurl{https://doi.org/10.3390/s24103050}{Sensors}, \textbf{24}(10), p. 3050.
+
+\bibitem{koc2025bcd}
+Koc, D., Zhu, Q., Ghorbel, F., and Chen, Z., 2025, \enquote{Experimental Validation of Underwater Depth and Orientation Control Using Reversible Fuel Cell Electrolysis,} \hrefurl{https://doi.org/10.1109/TMECH.2025.3579654}{IEEE/ASME transactions on mechatronics}, \textbf{30}(6), pp. 7649--7658.
+
+\bibitem{hou2020electrothermal}
+Hou, J., Zou, W., Li, Z., Gong, Y., Burnashev, V., and Ning, D., 2020, \enquote{Development and Experiments of an Electrothermal Driven Deep-Sea Buoyancy Control Module,} \hrefurl{https://doi.org/10.3390/mi11111017}{Micromachines}, \textbf{11}(11), p. 1017.
+
+\bibitem{zhang2007fish}
+Zhang, L., Zhao, W., Hu, Y., Zhang, D., and Wang, L., 2007, \enquote{Development and depth control of biomimetic robotic fish,} \textit{Proceedings of IEEE/RSJ IROS}, pp. 3560--3565, \doi{10.1109/IROS.2007.4398997}.
+
+\bibitem{islam2021anguilliform}
+Islam, M.~T. and Taravella, T., 2021, \enquote{Design of a Depth Control Mechanism for an Anguilliform Swimming Robot,} \hrefurl{https://doi.org/10.3390/biomimetics6020039}{Biomimetics}, \textbf{6}(2), p.~39.
+
+\bibitem{le2011bladder}
+Minh-Thuan, L., Truong-Thinh, N., and Ngoc-Phuong, N., 2011, \enquote{Study of Artificial Fish Bladder System for Robot Fish,} \textit{2011 IEEE International Conference on Robotics and Biomimetics (ROBIO)}, pp. 2126--2130, \doi{10.1109/ROBIO.2011.6181606}.
+
+\bibitem{keow2022fuelcell}
+Keow, A. L.~J., Zuo, W., Ghorbel, F., and Chen, Z., 2022, \enquote{Reversible fuel cell enabled underwater buoyancy control,} \hrefurl{https://doi.org/10.1016/j.mechatronics.2022.102865}{Mechatronics}, \textbf{86}, p. 102865.
+
+\bibitem{xia2024vbs}
+Xia, Y., Li, H., Sun, Z., and Liu, C., 2024, \enquote{Design and extensibility analysis of a variable buoyancy system for small autonomous underwater vehicles,} \hrefurl{https://doi.org/10.1108/IR-11-2023-0286}{Industrial Robot}, \textbf{51}(2), pp. 287--298.
+
+\bibitem{cao2023energy}
+Cao, J., Zhou, Z., Xu, L., and Zhang, G., 2023, \enquote{Energy optimal depth control for multimodal underwater vehicles with a high accuracy buoyancy actuated system,} \hrefurl{https://doi.org/10.1016/j.oceaneng.2023.115516}{Ocean Engineering}, \textbf{286}, p. 115516.
+
+\bibitem{krstic2000stability}
+Krstić, M. and Wang, H.-H., 2000, \enquote{Stability of extremum seeking feedback for general nonlinear dynamic systems,} \hrefurl{https://doi.org/10.1016/S0005-1098(99)00183-1}{Automatica}, \textbf{36}(4), pp. 595--601.
+
+\bibitem{scheinker2024survey}
+Scheinker, A., 2024, \enquote{100 years of extremum seeking: A survey,} \hrefurl{https://doi.org/10.1016/j.automatica.2023.111481}{Automatica}, \textbf{161}, p. 111481.
+
+\bibitem{zhang2007unstable}
+Zhang, C., Siranosian, A., and Krstić, M., 2007, \enquote{Extremum seeking for moderately unstable systems and for autonomous vehicle target tracking without position measurements,} \hrefurl{https://doi.org/10.1016/j.automatica.2007.03.009}{Automatica}, \textbf{43}(10), pp. 1832--1839.
+
+\bibitem{radenkovic2018adaptive}
+Radenković, M.~S. and Krstić, M., 2018, \enquote{Extremum seeking-based perfect adaptive tracking of non-PE references despite nonvanishing variance of perturbation,} \hrefurl{https://doi.org/10.1016/j.automatica.2018.03.068}{Automatica}, \textbf{93}, pp. 189--196.
+
+\bibitem{dehaan2005state}
+DeHaan, D. and Guay, M., 2005, \enquote{Extremum-seeking control of state-constrained nonlinear systems,} \hrefurl{https://doi.org/10.1016/j.automatica.2005.03.030}{Automatica}, \textbf{41}(9), pp. 1567--1574.
+
+\bibitem{tan2013constrained}
+Tan, Y., Li, Y., and Mareels, I. M.~Y., 2013, \enquote{Extremum seeking for constrained inputs,} \hrefurl{https://doi.org/10.1109/TAC.2013.2254638}{IEEE Transactions on Automatic Control}, \textbf{58}(9), pp. 2405--2410.
+
+\bibitem{guay2015constrained}
+Guay, M., Moshksar, E., and Dochain, D., 2015, \enquote{A constrained extremum-seeking control approach,} \hrefurl{https://doi.org/10.1002/rnc.3254}{International Journal of Robust and Nonlinear Control}, \textbf{25}(18), pp. 3632--3651.
+
+\bibitem{labar2019barrier}
+Labar, C., Garone, E., Kinnaert, M., and Ebenbauer, C., 2019, \enquote{Constrained Extremum Seeking: a Modified-Barrier Function Approach,} \hrefurl{https://doi.org/10.1016/j.ifacol.2019.12.043}{IFAC-PapersOnLine}, \textbf{52}(16), pp. 244--249.
+
+\bibitem{williams2024safe}
+Williams, A.~B., Scheinker, A., and Krstić, M., 2024, \enquote{Semiglobal Safety-Filtered Extremum Seeking With Unknown CBFs,} \hrefurl{https://doi.org/10.1109/TAC.2024.3469785}{IEEE Transactions on Automatic Control}, \textbf{70}(3), pp. 1698--1713.
+
+\bibitem{mayne2000constrained}
+Mayne, D.~Q., Rawlings, J.~B., Rao, C.~V., and Scokaert, P.~O., 2000, \enquote{Constrained model predictive control: Stability and optimality,} \hrefurl{https://doi.org/10.1016/S0005-1098(99)00214-9}{Automatica}, \textbf{36}(6), pp. 789--814.
+
+\bibitem{masood2023constrained}
+Masood, M.~U., Kaaya, T., and Chen, Z., 2023, \enquote{Constrained Model Predictive Control of Variable Buoyancy Device,} \textit{2023 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)}, IEEE, pp. 936--941, \doi{10.1109/AIM46323.2023.10196139}.
+
+\bibitem{form3_printer}
+\enquote{Form 3: Industrial-quality desktop SLA 3D printer,} accessed Apr. 21, 2026, \urlprefix\url{https://formlabs.com/eu/3d-printers/form-3/}
+
+\bibitem{actuonix_l12}
+\enquote{Actuonix L12-50-50-6-P,} accessed Apr. 21, 2026, \urlprefix\url{https://www.actuonix.com/l12-50-50-6-p}
+
+\bibitem{esp32_c3}
+\enquote{ESP32-C3,} accessed Apr. 21, 2026, \urlprefix\url{https://www.espressif.com/en/products/socs/esp32-c3}
+
+\end{thebibliography}

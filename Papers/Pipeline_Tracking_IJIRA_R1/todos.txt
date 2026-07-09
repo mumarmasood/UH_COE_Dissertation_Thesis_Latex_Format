@@ -1,0 +1,7 @@
+1. get image for the GUI
+2. get the images of the CAD
+3. results image top camera moving frames
+4. results image front camera moving frames
+5. control scheme vectors
+DSC operation figure
+frames figures

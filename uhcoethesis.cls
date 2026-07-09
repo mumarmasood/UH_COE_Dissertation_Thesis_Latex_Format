@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uhthesis}[2026/05/29 University of Houston thesis class]
+\ProvidesClass{uhcoethesis}[2026/05/29 University of Houston thesis class]
 
 \LoadClass[12pt,oneside,openany]{report}
 
@@ -71,6 +71,7 @@
 \newcommand{\@chair}{}
 \newcommand{\@cochair}{}
 \newcommand{\@committeelist}{}
+\newcommand{\@committeehonorific}{Dr.}
 \newcommand{\@submissiontype}{dissertation}
 
 \newcommand{\department}[1]{\gdef\@department{#1}}
@@ -80,8 +81,14 @@
 \newcommand{\degreedate}[1]{\gdef\@degreedate{#1}}
 \newcommand{\chair}[1]{\gdef\@chair{#1}}
 \newcommand{\cochair}[1]{\gdef\@cochair{#1}}
+\newcommand{\committeehonorific}[1]{\gdef\@committeehonorific{#1}}
 \newcommand{\submissiontype}[1]{\gdef\@submissiontype{#1}}
-\newcommand{\committeemember}[1]{\gappto\@committeelist{Committee Member: #1\par}}
+\newcommand{\@committeename}[1]{%
+  \ifdefempty{\@committeehonorific}{#1}{\@committeehonorific\ #1}%
+}
+\newcommand{\committeemember}[1]{%
+  \gappto\@committeelist{Committee Member: & \@committeename{#1}\\[0.10\baselineskip]}%
+}
 
 \newcommand{\frontmatter}{%
   \clearpage
@@ -100,27 +107,39 @@
 \newcommand{\maketitlepage}{%
   \begin{titlepage}
     \thispagestyle{empty}
+    \begingroup
+    \doublespacing
     \begin{center}
-      \vspace*{1.25in}
-      {\MakeUppercase{\@title}\par}
-      \vfill
+      \vspace*{0.25in}
+      {\Large
+      \begin{minipage}{0.82\textwidth}
+        \centering
+        \@title
+      \end{minipage}\par}
+      \vspace{0.35in}
       by\par
       \@author\par
-      \vfill
+      \vspace{0.60in}
       A \@submissiontype\ submitted to the \@department,\par
+      \vspace{0.10\baselineskip}
       \@college\par
+      \vspace{0.10\baselineskip}
       in partial fulfillment of the requirements for the degree of\par
-      \vspace{\baselineskip}
-      \MakeUppercase{\@degree}\par
+      \vspace{0.55\baselineskip}
+      \@degree\par
       in \@major\par
-      \vfill
-      Chair of Committee: \@chair\par
-      \ifstrempty{\@cochair}{}{Co-Chair of Committee: \@cochair\par}
-      \@committeelist
+      \vspace{0.45in}
+      \begin{tabular}{@{}r@{\ }l@{}}
+        Chair of Committee: & \@committeename{\@chair}\\[0.10\baselineskip]
+        \ifdefempty{\@cochair}{}{Co-Chair of Committee: & \@committeename{\@cochair}\\[0.10\baselineskip]}
+        \@committeelist
+      \end{tabular}\par
       \vfill
       University of Houston\par
       \@degreedate\par
+      \vspace*{0.25in}
     \end{center}
+    \endgroup
   \end{titlepage}
 }
 
