@@ -1,86 +1,108 @@
 \begin{thebibliography}{10}
 
-\bibitem{adegboye2019recent}
+\bibitem{Adegboye2019}
 Mutiu~Adesina Adegboye, Wai-Keung Fung, and Aditya Karnik.
 \newblock Recent advances in pipeline monitoring and oil leakage detection technologies: Principles and approaches.
 \newblock {\em Sensors}, 19(11):2548, 2019.
+\newblock \href {https://doi.org/10.3390/s19112548} {\path{doi:10.3390/s19112548}}.
 
 \bibitem{Albers1982}
 Peter~H. Albers and Martha~L. Gay.
 \newblock Effects of a chemical dispersant and crude oil on breeding ducks.
 \newblock {\em Bulletin of Environmental Contamination and Toxicology}, 29(4):404--411, 1982.
+\newblock \href {https://doi.org/10.1007/BF01605603} {\path{doi:10.1007/BF01605603}}.
 
 \bibitem{Almeda2014}
 Rodrigo Almeda, Sarah Baca, Cammie Hyatt, and Edward~J. Buskey.
 \newblock Ingestion and sublethal effects of physically and chemically dispersed crude oil on marine planktonic copepods.
 \newblock {\em Ecotoxicology}, 23(6):988--1003, 2014.
+\newblock \href {https://doi.org/10.1007/S10646-014-1242-6} {\path{doi:10.1007/S10646-014-1242-6}}.
 
 \bibitem{Aursand2016}
 E.~Aursand, S.~Dumoulin, M.~Hammer, H.~I. Lange, A.~Morin, S.~T. Munkejord, and H.~O. Nordhagen.
 \newblock Fracture propagation control in {CO2} pipelines: Validation of a coupled fluid-structure model.
 \newblock {\em Engineering Structures}, 123:192--212, 2016.
+\newblock \href {https://doi.org/10.1016/j.engstruct.2016.05.012} {\path{doi:10.1016/j.engstruct.2016.05.012}}.
 
-\bibitem{bin2011pressure}
+\bibitem{Akib2011}
 Afifi bin Md~Akib, Nordin bin Saad, and Vijanth Asirvadam.
 \newblock Pressure point analysis for early detection system.
 \newblock In {\em 2011 IEEE 7th International Colloquium on Signal Processing and its Applications}, pages 103--107, 2011.
+\newblock \href {https://doi.org/10.1109/CSPA.2011.5759852} {\path{doi:10.1109/CSPA.2011.5759852}}.
 
 \bibitem{Capocci2017}
 Romano Capocci, Gerard Dooly, Edin Omerdic, Joseph Coleman, Thomas Newe, and Daniel Toal.
 \newblock Inspection-class remotely operated vehicles---a review.
 \newblock {\em Journal of Marine Science and Engineering}, 5(1):13, 2017.
+\newblock \href {https://doi.org/10.3390/jmse5010013} {\path{doi:10.3390/jmse5010013}}.
 
-\bibitem{carneiro2023_bcd}
+\bibitem{Carneiro2023}
 J.~Falcao Carneiro, J.~Bravo Pinto, F.~Gomes de~Almeida, N.~A. Cruz, and R.~Frias.
 \newblock Model identification and control of a buoyancy change device.
 \newblock {\em Actuators}, 12(4):180, 2023.
+\newblock \href {https://doi.org/10.3390/act12040180} {\path{doi:10.3390/act12040180}}.
 
-\bibitem{Chen2017AMuscles}
+\bibitem{Chen2017}
 Zheng Chen.
 \newblock A review on robotic fish enabled by ionic polymer-metal composite artificial muscles.
 \newblock {\em Robotics and Biomimetics}, 4(1):1--13, 2017.
+\newblock \href {https://doi.org/10.1186/s40638-017-0081-3} {\path{doi:10.1186/s40638-017-0081-3}}.
 
-\bibitem{MahdiCHOYEKH2016}
+\bibitem{Chen2010}
+Zheng Chen, Stephan Shatara, and Xiaobo Tan.
+\newblock Modeling of biomimetic robotic fish propelled by an ionic polymer--metal composite caudal fin.
+\newblock {\em IEEE/ASME Transactions on Mechatronics}, 15(3):448--459, 2010.
+\newblock \href {https://doi.org/10.1109/TMECH.2009.2027812} {\path{doi:10.1109/TMECH.2009.2027812}}.
+
+\bibitem{Choyekh2016}
 Mahdi Choyekh, Naomi Kato, Ryan Dewantara, Hidetaka Senga, and Hajime Chiba.
 \newblock Depth and altitude control of an {AUV} using buoyancy control device.
 \newblock {\em Journal of Electrical Engineering}, 4(3), 2016.
+\newblock \href {https://doi.org/10.17265/2328-2223/2016.03.004} {\path{doi:10.17265/2328-2223/2016.03.004}}.
 
 \bibitem{Claus2012}
 Brian Claus, Ralf Bachmayer, and Lauren Cooney.
 \newblock Analysis and development of a buoyancy-pitch based depth control algorithm for a hybrid underwater glider.
 \newblock In {\em 2012 IEEE/OES Autonomous Underwater Vehicles}, 2012.
+\newblock \href {https://doi.org/10.1109/AUV.2012.6380742} {\path{doi:10.1109/AUV.2012.6380742}}.
 
 \bibitem{Connor2021}
 Jack Connor, Benjamin Champion, and Matthew~A. Joordens.
 \newblock Current algorithms, communication methods and designs for underwater swarm robotics: A review.
 \newblock {\em IEEE Sensors Journal}, 21(1):153--169, 2021.
+\newblock \href {https://doi.org/10.1109/JSEN.2020.3013265} {\path{doi:10.1109/JSEN.2020.3013265}}.
 
-\bibitem{CoshamAtkinsBoreas2009}
+\bibitem{Cosham2009}
 Andrew Cosham and Robert~J. Eiber.
 \newblock Fracture control in carbon dioxide pipelines: The effect of impurities.
 \newblock In {\em Proceedings of the 7th International Pipeline Conference}, volume~3, pages 229--240, 2009.
+\newblock \href {https://doi.org/10.1115/IPC2008-64346} {\path{doi:10.1115/IPC2008-64346}}.
 
-\bibitem{cramer2015}
+\bibitem{Cramer2015}
 Ron Cramer, David Shaw, Robert Tulalian, Pabs Angelo, and Maarten van Stuijvenberg.
 \newblock Detecting and correcting pipeline leaks before they become a big problem.
 \newblock {\em Marine Technology Society Journal}, 49(1):31--46, 2015.
+\newblock \href {https://doi.org/10.4031/MTSJ.49.1.1} {\path{doi:10.4031/MTSJ.49.1.1}}.
 
 \bibitem{Du2025}
 Hualong Du, Jing Zhao, Qifeng Zhang, and Shuo Li.
 \newblock Ultrasonic measurement of oil slick thickness using a remotely operated vehicle as a platform in various sea wave states.
 \newblock {\em Marine Pollution Bulletin}, 210:117306, 2025.
+\newblock \href {https://doi.org/10.1016/j.marpolbul.2024.117306} {\path{doi:10.1016/j.marpolbul.2024.117306}}.
 
-\bibitem{Duraisamy2019DesignReview}
+\bibitem{Duraisamy2019}
 Palmani Duraisamy, Rakesh Kumar~Sidharthan, and Manigandan Nagarajan~Santhanakrishnan.
 \newblock Design, modeling, and control of biomimetic fish robot: A review.
 \newblock {\em Journal of Bionic Engineering}, 16(6):967--993, 2019.
+\newblock \href {https://doi.org/10.1007/s42235-019-0111-7} {\path{doi:10.1007/s42235-019-0111-7}}.
 
 \bibitem{Filonchyk2024}
 Mikalai Filonchyk, Michael~P. Peterson, Lifeng Zhang, Volha Hurynovich, and Yi~He.
 \newblock Greenhouse gases emissions and global climate change: Examining the influence of {CO$_2$}, {CH$_4$}, and {N$_2$O}.
 \newblock {\em Science of the Total Environment}, 935:173359, 2024.
+\newblock \href {https://doi.org/10.1016/j.scitotenv.2024.173359} {\path{doi:10.1016/j.scitotenv.2024.173359}}.
 
-\bibitem{energyocean}
+\bibitem{HeinrichBoellStiftung2017}
 {Heinrich Boell Stiftung}.
 \newblock Energy from the ocean: Where does the future lie?
 \newblock \url{https://www.boell.de/en/2017/05/20/energy-ocean-where-does-future-lie}, 2017.
@@ -90,56 +112,79 @@ Mikalai Filonchyk, Michael~P. Peterson, Lifeng Zhang, Volha Hurynovich, and Yi~H
 Howard~J. Herzog.
 \newblock What future for carbon capture and sequestration?
 \newblock {\em Environmental Science \& Technology}, 35(7):148A--153A, 2001.
+\newblock \href {https://doi.org/10.1021/es012307j} {\path{doi:10.1021/es012307j}}.
 
-\bibitem{Hinduja2022MEMSAcoustic}
+\bibitem{Hinduja2022}
 Akshay Hinduja, Yunsik Ohm, Jiahe Liao, Carmel Majidi, and Michael Kaess.
 \newblock Acoustic localization and communication using a {MEMS} microphone for low-cost and low-power bio-inspired underwater robots.
 \newblock In {\em 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems}, pages 5470--5477, 2022.
+\newblock \href {https://doi.org/10.1109/IROS47612.2022.9981355} {\path{doi:10.1109/IROS47612.2022.9981355}}.
 
 \bibitem{Ho2020}
 Michael Ho, Sami El-Borgi, Devendra Patil, and Gangbing Song.
 \newblock Inspection and monitoring systems subsea pipelines: A review paper.
 \newblock {\em Structural Health Monitoring}, 19(2):606--645, 2020.
+\newblock \href {https://doi.org/10.1177/1475921719837718} {\path{doi:10.1177/1475921719837718}}.
 
-\bibitem{hou2013pipeline}
+\bibitem{Hou2013}
 Chun~Xia Hou and Er~Hua Zhang.
 \newblock Pipeline leak detection based on double sensor negative pressure wave.
 \newblock {\em Applied Mechanics and Materials}, 313:1225--1228, 2013.
+\newblock \href {https://doi.org/10.4028/www.scientific.net/AMM.313-314.1225} {\path{doi:10.4028/www.scientific.net/AMM.313-314.1225}}.
 
-\bibitem{Hou2020DevelopmentModule}
+\bibitem{Hou2020}
 Jiaoyi Hou, Weifeng Zou, Zihao Li, Yongjun Gong, Vitalii Burnashev, and Dayong Ning.
 \newblock Development and experiments of an electrothermal driven deep-sea buoyancy control module.
 \newblock {\em Micromachines}, 11(11):1--16, 2020.
+\newblock \href {https://doi.org/10.3390/mi11111017} {\path{doi:10.3390/mi11111017}}.
 
 \bibitem{Hu2022}
 Shuyu Hu, Ao~Feng, Jihao Shi, Junjie Li, Faisal Khan, Hongwei Zhu, Jian Chen, and Guoming Chen.
 \newblock Underwater gas leak detection using an autonomous underwater vehicle (robotic fish).
 \newblock {\em Process Safety and Environmental Protection}, 167:89--96, 2022.
+\newblock \href {https://doi.org/10.1016/j.psep.2022.09.002} {\path{doi:10.1016/j.psep.2022.09.002}}.
 
 \bibitem{Hu2009}
 Yonghui Hu, Wei Zhao, Guangming Xie, and Long Wang.
 \newblock Development and target following of vision-based autonomous robotic fish.
 \newblock {\em Robotica}, 27(7):1075--1089, 2009.
+\newblock \href {https://doi.org/10.1017/S0263574709005499} {\path{doi:10.1017/S0263574709005499}}.
 
-\bibitem{jasper2012oil}
+\bibitem{Imaizumi1995}
+Yoshiteru Imaizumi.
+\newblock Propulsion system with flexible/rigid oscillating fin.
+\newblock {\em IEEE Journal of Oceanic Engineering}, 20(1):23--30, 1995.
+\newblock \href {https://doi.org/10.1109/48.380249} {\path{doi:10.1109/48.380249}}.
+
+\bibitem{Jasper2012}
 Agbakwuru Jasper.
 \newblock Oil/gas pipeline leak inspection and repair in underwater poor visibility conditions: challenges and perspectives.
 \newblock {\em Journal of Environmental Protection}, 3(5):394--399, 2012.
+\newblock \href {https://doi.org/10.4236/jep.2012.35049} {\path{doi:10.4236/jep.2012.35049}}.
 
 \bibitem{Jiang2024}
 Qian Jiang, Tiezhu Qiao, Jian Wang, Zhengxing Wu, Huijie Dong, and Junzhi Yu.
 \newblock Hybrid-driven motion planning for a bionic underwater vehicle with gliding ability.
 \newblock {\em IEEE Transactions on Vehicular Technology}, pages 1--11, 2024.
+\newblock \href {https://doi.org/10.1109/TVT.2024.3411569} {\path{doi:10.1109/TVT.2024.3411569}}.
 
 \bibitem{Kabir2023}
 Muhammad Kabir, Um~E. Habiba, Wali Khan, Amin Shah, Sarvat Rahim, Patricio~R. de~los Rios-Escalante, Zia Ur~Rehman Farooqi, and Liaqat Ali.
 \newblock Climate change due to increasing concentration of carbon dioxide and its impacts on environment in 21st century: A mini review.
 \newblock {\em Journal of King Saud University - Science}, 35(5):102693, 2023.
+\newblock \href {https://doi.org/10.1016/j.jksus.2023.102693} {\path{doi:10.1016/j.jksus.2023.102693}}.
+
+\bibitem{Kato1996}
+Naomi Kato and Motonori Furushima.
+\newblock Pectoral fin model for maneuver of underwater vehicles.
+\newblock In {\em Proceedings of the IEEE Symposium on Autonomous Underwater Vehicle Technology}, pages 49--56, 1996.
+\newblock \href {https://doi.org/10.1109/AUV.1996.532400} {\path{doi:10.1109/AUV.1996.532400}}.
 
 \bibitem{Katzschmann2018}
 Robert~K. Katzschmann, Joseph DelPreto, Robert MacCurdy, and Daniela Rus.
 \newblock Exploration of underwater life with an acoustically controlled soft robotic fish.
 \newblock {\em Science Robotics}, 3(16):1--13, 2018.
+\newblock \href {https://doi.org/10.1126/scirobotics.aar3449} {\path{doi:10.1126/scirobotics.aar3449}}.
 
 \bibitem{Kobayashi2010}
 Taiyo Kobayashi, Kenichi Asakawa, Kazuhiro Watanabe, Tetsuro Ino, Ken~Ichi Amaike, Hiroshi Iwamiya, Michihiko Tachikawa, Nobuyuki Shikama, and Keisuke Mizuno.
@@ -150,166 +195,212 @@ Taiyo Kobayashi, Kenichi Asakawa, Kazuhiro Watanabe, Tetsuro Ino, Ken~Ichi Amaik
 Sijie Li, Zhengxing Wu, Jian Wang, Yukai Feng, Min Tan, and Junzhi Yu.
 \newblock Towards efficient intermittent-propulsion mode of a novel bioinspired underwater vehicle.
 \newblock {\em IEEE Transactions on Intelligent Vehicles}, pages 1--13, 2024.
+\newblock \href {https://doi.org/10.1109/TIV.2024.3412801} {\path{doi:10.1109/TIV.2024.3412801}}.
 
-\bibitem{lighthill1969hydromechanics}
+\bibitem{Lighthill1969}
 M.~J. Lighthill.
 \newblock Hydromechanics of aquatic animal propulsion.
 \newblock {\em Annual Review of Fluid Mechanics}, 1(1):413--446, 1969.
+\newblock \href {https://doi.org/10.1146/annurev.fl.01.010169.002213} {\path{doi:10.1146/annurev.fl.01.010169.002213}}.
 
 \bibitem{Lighthill1971}
 M.~J. Lighthill.
 \newblock Large-amplitude elongated-body theory of fish locomotion.
 \newblock {\em Proceedings of the Royal Society of London. Series B. Biological Sciences}, 179(1055):125--138, 1971.
+\newblock \href {https://doi.org/10.1098/RSPB.1971.0085} {\path{doi:10.1098/RSPB.1971.0085}}.
 
-\bibitem{lukonge2020leak}
+\bibitem{Liu2005}
+Jindong Liu, Ian Dukes, and Huosheng Hu.
+\newblock Novel mechatronics design for a robotic fish.
+\newblock In {\em Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems}, pages 807--812, 2005.
+\newblock \href {https://doi.org/10.1109/IROS.2005.1545283} {\path{doi:10.1109/IROS.2005.1545283}}.
+
+\bibitem{Low2006}
+Kin~Huat Low.
+\newblock Locomotion and depth control of robotic fish with modular undulating fins.
+\newblock {\em International Journal of Automation and Computing}, 3(4):348--357, 2006.
+\newblock \href {https://doi.org/10.1007/s11633-006-0348-6} {\path{doi:10.1007/s11633-006-0348-6}}.
+
+\bibitem{Lukonge2020}
 Anselemi~B. Lukonge and Xuewen Cao.
 \newblock Leak detection system for long-distance onshore and offshore gas pipeline using acoustic emission technology. a review.
 \newblock {\em Transactions of the Indian Institute of Metals}, 73(7):1715--1727, 2020.
+\newblock \href {https://doi.org/10.1007/s12666-020-02002-x} {\path{doi:10.1007/s12666-020-02002-x}}.
 
-\bibitem{Luo2021Review}
+\bibitem{Luo2021}
 Junhai Luo, Yang Yang, Zhiyan Wang, and Yanping Chen.
 \newblock Localization algorithm for underwater sensor network: A review.
 \newblock {\em IEEE Internet of Things Journal}, 8(17):13126--13144, 2021.
+\newblock \href {https://doi.org/10.1109/JIOT.2021.3081918} {\path{doi:10.1109/JIOT.2021.3081918}}.
 
 \bibitem{Marras2012}
 Stefano Marras and Maurizio Porfiri.
 \newblock Fish and robots swimming together: Attraction towards the robot demands biomimetic locomotion.
 \newblock {\em Journal of the Royal Society Interface}, 9(73):1856--1868, 2012.
+\newblock \href {https://doi.org/10.1098/rsif.2012.0084} {\path{doi:10.1098/rsif.2012.0084}}.
 
-\bibitem{martins2010assessment}
+\bibitem{Martins2010}
 Jaqueline~Costa Martins and Jr. Seleghim, Paulo.
 \newblock Assessment of the performance of acoustic and mass balance methods for leak detection in pipelines for transporting liquids.
 \newblock {\em Journal of Fluids Engineering}, 132(1):011401, 2010.
+\newblock \href {https://doi.org/10.1115/1.4000736} {\path{doi:10.1115/1.4000736}}.
+
+\bibitem{Mason2000}
+Richard Mason and Joel~W. Burdick.
+\newblock Experiments in carangiform robotic fish locomotion.
+\newblock In {\em Proceedings of the IEEE International Conference on Robotics and Automation}, volume~1, pages 428--435, 2000.
+\newblock \href {https://doi.org/10.1109/ROBOT.2000.844093} {\path{doi:10.1109/ROBOT.2000.844093}}.
 
 \bibitem{Masood2025Swarm}
 Muhammad~Umar Masood and Zheng Chen.
 \newblock Towards underwater swarm: A relative localization framework.
-\newblock Camera-ready manuscript for MECC 2025, 2025.
+\newblock {\em IFAC-PapersOnLine}, 59(30):251--256, 2025.
+\newblock \href {https://doi.org/10.1016/j.ifacol.2025.12.245} {\path{doi:10.1016/j.ifacol.2025.12.245}}.
 
 \bibitem{Masood2025Pipeline}
 Muhammad~Umar Masood and Zheng Chen.
 \newblock Visual servoing control of robotic fish for underwater pipeline tracking.
 \newblock {\em International Journal of Intelligent Robotics and Applications}, 9:907--924, 2025.
+\newblock \href {https://doi.org/10.1007/s41315-025-00485-9} {\path{doi:10.1007/s41315-025-00485-9}}.
 
 \bibitem{Masood2026ESCBCD}
 Muhammad~Umar Masood and Zheng Chen.
 \newblock Extremum seeking control for hard-bound unstable systems.
-\newblock Preprint for review, 2026.
+\newblock Under Review, 2026.
 
 \bibitem{Masood2026RSSI}
 Muhammad~Umar Masood and Zheng Chen.
 \newblock An underwater relative localization framework exploiting directivity of sub-{GHz} rf antennas.
-\newblock Preprint for review, 2026.
+\newblock Under Review, 2026.
 
-\bibitem{Masood2023MPCBCD}
+\bibitem{Masood2023}
 Muhammad~Umar Masood, Theophilus Kaaya, and Zheng Chen.
 \newblock Constrained model predictive control of variable buoyancy device.
-\newblock Manuscript, 2023.
+\newblock In {\em Proceedings of the 2023 IEEE/ASME International Conference on Advanced Intelligent Mechatronics}, pages 936--941, 2023.
+\newblock \href {https://doi.org/10.1109/AIM46323.2023.10196139} {\path{doi:10.1109/AIM46323.2023.10196139}}.
 
-\bibitem{Masood2025OilSpill}
+\bibitem{Masood2026OilSpill}
 Muhammad~Umar Masood, Navid Khiabani, Kianoosh Karimi, Wenyu Zuo, Sarah Adaryan, Erin~B. Porter, Haleh Ardebili, Rafael Verduzco, and Zheng Chen.
 \newblock Bio-inspired robotic fish enabled oil spillage monitoring.
-\newblock Manuscript submitted to IEEE Journal of Oceanic Engineering, 2025.
+\newblock {\em Engineering Research Express}, 8(13):135215, 2026.
+\newblock \href {https://doi.org/10.1088/2631-8695/ae7f70} {\path{doi:10.1088/2631-8695/ae7f70}}.
 
 \bibitem{Masood2025CO2}
 Muhammad~Umar Masood, Qiang Zhu, and Zheng Chen.
 \newblock Localization of subsea {CO2} leak source using bio-inspired robotic fish.
-\newblock Manuscript submitted to IEEE Journal of Oceanic Engineering, 2025.
+\newblock Under Review, 2025.
 
 \bibitem{Mcleod2012}
 Daniel Mcleod, John~R. Jacobson, and Sekhar Tangirala.
 \newblock Autonomous inspection of subsea facilities---{G}ulf of {M}exico trials.
 \newblock In {\em Offshore Technology Conference}, pages OTC--23512--MS, 2012.
+\newblock \href {https://doi.org/10.4043/23512-MS} {\path{doi:10.4043/23512-MS}}.
 
 \bibitem{Mortezaei2021}
 Kimia Mortezaei, Amin Amirlatifi, Ehsan Ghazanfari, and Farshid Vahedifard.
 \newblock Potential {CO$_2$} leakage from geological storage sites: advances and challenges.
 \newblock {\em Environmental Geotechnics}, 8(1):3--27, 2021.
+\newblock \href {https://doi.org/10.1680/jenge.18.00041} {\path{doi:10.1680/jenge.18.00041}}.
 
-\bibitem{ocean_ngs}
+\bibitem{NationalGeographic2024}
 {National Geographic Society}.
 \newblock All about the ocean.
 \newblock National Geographic Society. \url{https://education.nationalgeographic.org/resource/all-about-the-ocean/}, 2024.
 
-\bibitem{noaa_ocean_exploration}
+\bibitem{NOAA2026}
 {National Oceanic and Atmospheric Administration}.
-\newblock How much of the ocean have we explored?
-\newblock \url{http://oceanservice.noaa.gov/facts/exploration.html}, 2014.
+\newblock How much of the ocean has been explored?
+\newblock NOAA Ocean Exploration. \url{https://oceanexplorer.noaa.gov/ocean-fact/explored/}, 2026.
+\newblock Updated April 20, 2026.
 
 \bibitem{Nguyen2019}
 Thu L.~N. Nguyen and Yoan Shin.
 \newblock An efficient {RSS} localization for underwater wireless sensor networks.
 \newblock {\em Sensors}, 19(14):3105, 2019.
+\newblock \href {https://doi.org/10.3390/s19143105} {\path{doi:10.3390/s19143105}}.
 
 \bibitem{Osman2021}
 Ahmed~I. Osman, Mahmoud Hefny, M.~I.~A. Abdel~Maksoud, Ahmed~M. Elgarahy, and David~W. Rooney.
 \newblock Recent advances in carbon capture storage and utilisation technologies: a review.
 \newblock {\em Environmental Chemistry Letters}, 19(2):797--849, 2021.
+\newblock \href {https://doi.org/10.1007/s10311-020-01133-3} {\path{doi:10.1007/s10311-020-01133-3}}.
 
-\bibitem{ostapkowicz2016leak}
+\bibitem{Ostapkowicz2016}
 Pawel Ostapkowicz.
 \newblock Leak detection in liquid transmission pipelines using simplified pressure analysis techniques employing a minimum of standard and non-standard measuring devices.
 \newblock {\em Engineering Structures}, 113:194--205, 2016.
+\newblock \href {https://doi.org/10.1016/j.engstruct.2016.01.040} {\path{doi:10.1016/j.engstruct.2016.01.040}}.
 
-\bibitem{Palmeiro2011UnderwaterRF}
+\bibitem{Palmeiro2011}
 Alejandro Palmeiro, Manuel Martin, Ian Crowther, and Mark Rhodes.
 \newblock Underwater radio frequency communications.
 \newblock In {\em OCEANS 2011 IEEE - Spain}, pages 1--8, 2011.
+\newblock \href {https://doi.org/10.1109/Oceans-Spain.2011.6003580} {\path{doi:10.1109/Oceans-Spain.2011.6003580}}.
 
 \bibitem{Park2012}
 Yong~Jai Park, Useok Jeong, Jeongsu Lee, Seok~Ryung Kwon, Ho~Young Kim, and Kyu~Jin Cho.
 \newblock Kinematic condition for maximizing the thrust of a robotic fish using a compliant caudal fin.
 \newblock {\em IEEE Transactions on Robotics}, 28(6):1216--1227, 2012.
+\newblock \href {https://doi.org/10.1109/TRO.2012.2205490} {\path{doi:10.1109/TRO.2012.2205490}}.
 
 \bibitem{Partan2007}
 Jim Partan, Jim Kurose, and Brian~Neil Levine.
 \newblock A survey of practical issues in underwater networks.
 \newblock {\em ACM SIGMOBILE Mobile Computing and Communications Review}, 11(4):23--33, 2007.
+\newblock \href {https://doi.org/10.1145/1347364.1347372} {\path{doi:10.1145/1347364.1347372}}.
 
 \bibitem{Patel2024}
 Sahejad Patel, Fadl Abdellatif, Mohammed Alsheikh, Hassane Trigui, Ali Outa, Ayman Amer, Mohammed Sarraj, Ahmed {Al Brahim}, Yazeed Alnumay, Amjad Felemban, Ali Alrasheed, Abdulwahab Halawani, Hesham Jifri, Hassan Jaleel, and Jeff Shamma.
 \newblock Multi-robot system for inspection of underwater pipelines in shallow waters.
 \newblock {\em International Journal of Intelligent Robotics and Applications}, 8(1):14--38, 2024.
+\newblock \href {https://doi.org/10.1007/s41315-023-00309-8} {\path{doi:10.1007/s41315-023-00309-8}}.
 
 \bibitem{Pham2016}
 Loi Hoang Huy~Phuoc Pham, Risza Rusli, and Kok~Keong Lau.
 \newblock Consequence study of {CO2} leakage from ocean storage.
 \newblock {\em Procedia Engineering}, 148:1081--1088, 2016.
+\newblock \href {https://doi.org/10.1016/j.proeng.2016.06.597} {\path{doi:10.1016/j.proeng.2016.06.597}}.
 
 \bibitem{Pocwiardowski2021}
 Pawel Pocwiardowski.
 \newblock Spider: Spill detection and recognition system for {ROV} operations.
 \newblock {\em International Oil Spill Conference Proceedings}, 2021(1):1--22, 2021.
+\newblock \href {https://doi.org/10.7901/2169-3358-2021.1.686936} {\path{doi:10.7901/2169-3358-2021.1.686936}}.
 
 \bibitem{Polverino2013}
 Giovanni Polverino, Paul Phamduy, and Maurizio Porfiri.
 \newblock Fish and robots swimming together in a water tunnel: Robot color and tail-beat frequency influence fish behavior.
 \newblock {\em PLoS ONE}, 8(10):e77589, 2013.
+\newblock \href {https://doi.org/10.1371/journal.pone.0077589} {\path{doi:10.1371/journal.pone.0077589}}.
 
-\bibitem{porter2024detection}
+\bibitem{Porter2024}
 Erin~B. Porter, Sarah Adaryan, Haleh Ardebili, Sibani~Lisa Biswal, and Rafael Verduzco.
 \newblock Detection of crude oil in subsea environments using organic electrochemical transistors.
 \newblock {\em ACS Sensors}, 9(7):3633--3640, 2024.
+\newblock \href {https://doi.org/10.1021/acssensors.4c00700} {\path{doi:10.1021/acssensors.4c00700}}.
 
 \bibitem{Qasem2019}
 F.~Qasem, T.~B. Susilo, S.~Said, Z.~Alarbash, M.~Hasan, B.~Jabakhanji, T.~Beyrouthy, and S.~Alkork.
 \newblock Preliminary engineering implementation on multisensory underwater remotely operated vehicle ({ROV}) for oil spills surveillance.
 \newblock In {\em Proceedings of the 3rd International Conference on Bio-engineering for Smart Technologies}, pages 1--5, 2019.
+\newblock \href {https://doi.org/10.1109/BIOSMART.2019.8734217} {\path{doi:10.1109/BIOSMART.2019.8734217}}.
 
-\bibitem{queiros2014potential}
+\bibitem{Queiros2014}
 Ana~M. Queiros, Karl Norling, Teresa Amaro, Joana Nunes, Denise Cummings, Evgeny Yakushev, Kai Sorensen, Carolyn Harris, Malcom Woodward, and Roberto Danovaro.
 \newblock Potential impact of {CCS} leakage on marine communities.
 \newblock Technical report, Plymouth Marine Laboratory, 2014.
+\newblock \href {https://doi.org/10.3289/ECO2\_D4.1} {\path{doi:10.3289/ECO2\_D4.1}}.
 
-\bibitem{Rawlings}
+\bibitem{Rawlings2017}
 James~B. Rawlings, David~Q. Mayne, and Moritz Diehl.
 \newblock {\em Model Predictive Control: Theory, Computation, and Design}.
 \newblock Nob Hill Publishing, 2017.
 
-\bibitem{reda2024roadmap}
+\bibitem{Reda2024}
 Ahmed Reda, Ramy Magdy~A. Mahmoud, Mohamed~A. Shahin, Chiemela~Victor Amaechi, and Ibrahim~A. Sultan.
 \newblock Roadmap for recommended guidelines of leak detection of subsea pipelines.
 \newblock {\em Journal of Marine Science and Engineering}, 12(4):675, 2024.
+\newblock \href {https://doi.org/10.3390/jmse12040675} {\path{doi:10.3390/jmse12040675}}.
 
 \bibitem{Reynolds1999}
 Craig~W. Reynolds.
@@ -320,120 +411,178 @@ Craig~W. Reynolds.
 Samuel Ryecroft, Andrew Shaw, Paul Fergus, Patryk Kot, Khalid Hashim, Adam Moody, and Laura Conway.
 \newblock A first implementation of underwater communications in raw water using the 433 {MHz} frequency combined with a bowtie antenna.
 \newblock {\em Sensors}, 19(8):1813, 2019.
+\newblock \href {https://doi.org/10.3390/s19081813} {\path{doi:10.3390/s19081813}}.
 
-\bibitem{Rypkema2019piUSBL}
+\bibitem{Rypkema2019}
 Nicholas~R. Rypkema and Henrik Schmidt.
 \newblock Passive inverted ultra-short baseline ({piUSBL}) localization: An experimental evaluation of accuracy.
 \newblock In {\em 2019 IEEE/RSJ International Conference on Intelligent Robots and Systems}, pages 7197--7204, 2019.
+\newblock \href {https://doi.org/10.1109/IROS40897.2019.8967800} {\path{doi:10.1109/IROS40897.2019.8967800}}.
 
 \bibitem{Scokaert1998}
 Pierre O.~M. Scokaert and James~B. Rawlings.
 \newblock Constrained linear quadratic regulation.
 \newblock {\em IEEE Transactions on Automatic Control}, 43(8):1163--1169, 1998.
+\newblock \href {https://doi.org/10.1109/9.704994} {\path{doi:10.1109/9.704994}}.
+
+\bibitem{Sfakiotakis1999}
+Michael Sfakiotakis, David~M. Lane, and J.~Bruce~C. Davies.
+\newblock Review of fish swimming modes for aquatic locomotion.
+\newblock {\em IEEE Journal of Oceanic Engineering}, 24(2):237--252, 1999.
+\newblock \href {https://doi.org/10.1109/48.757275} {\path{doi:10.1109/48.757275}}.
+
+\bibitem{Shahinpoor1992}
+M.~Shahinpoor.
+\newblock Conceptual design, kinematics and dynamics of swimming robotic structures using ionic polymeric gel muscles.
+\newblock {\em Smart Materials and Structures}, 1(1):91, 1992.
+\newblock \href {https://doi.org/10.1088/0964-1726/1/1/014} {\path{doi:10.1088/0964-1726/1/1/014}}.
 
 \bibitem{Shukla2016}
 Amit Shukla and Hamad Karki.
 \newblock Application of robotics in offshore oil and gas industry---a review {Part II}.
 \newblock {\em Robotics and Autonomous Systems}, 75:508--524, 2016.
+\newblock \href {https://doi.org/10.1016/j.robot.2015.09.013} {\path{doi:10.1016/j.robot.2015.09.013}}.
 
 \bibitem{Su2020}
 Xin Su, Inam Ullah, Xiaofeng Liu, and Dongmin Choi.
 \newblock A review of underwater localization techniques, algorithms, and challenges.
 \newblock {\em Journal of Sensors}, 2020, 2020.
+\newblock \href {https://doi.org/10.1155/2020/6403161} {\path{doi:10.1155/2020/6403161}}.
 
 \bibitem{Sun2021}
 Kai Sun, Weicheng Cui, and Chi Chen.
 \newblock Review of underwater sensing technologies and applications.
 \newblock {\em Sensors}, 21(23):1--28, 2021.
+\newblock \href {https://doi.org/10.3390/s21237849} {\path{doi:10.3390/s21237849}}.
 
 \bibitem{Tan2011}
 Xiaobo Tan.
 \newblock Autonomous robotic fish as mobile sensor platforms: Challenges and potential solutions.
 \newblock {\em Marine Technology Society Journal}, 45(4):31--40, 2011.
+\newblock \href {https://doi.org/10.4031/MTSJ.45.4.2} {\path{doi:10.4031/MTSJ.45.4.2}}.
 
-\bibitem{Um2011AVehicles}
+\bibitem{Thomson1994}
+Elizabeth~A. Thomson.
+\newblock {RoboTuna} is first of new ``genetic'' line.
+\newblock MIT Tech Talk, 1994.
+
+\bibitem{Tolkoff1999}
+Samuel~William Tolkoff.
+\newblock {\em Robotics and power measurements of the {RoboTuna}}.
+\newblock PhD thesis, Massachusetts Institute of Technology, 1999.
+
+\bibitem{Um2011}
 Tae~I. Um, Zheng Chen, and Hilary Bart-Smith.
 \newblock A novel electroactive polymer buoyancy control device for bio-inspired underwater vehicles.
 \newblock In {\em Proceedings of the IEEE International Conference on Robotics and Automation}, pages 172--177, 2011.
+\newblock \href {https://doi.org/10.1109/ICRA.2011.5980181} {\path{doi:10.1109/ICRA.2011.5980181}}.
 
 \bibitem{Vasiljevic2019}
 Goran Vasiljevic, Barbara Arbanas, and Stjepan Bogdan.
 \newblock Ambient light based depth control of underwater robotic unit amussel.
 \newblock In {\em Proceedings of the IEEE International Conference on Robotics and Automation}, pages 4640--4645, 2019.
+\newblock \href {https://doi.org/10.1109/ICRA.2019.8794440} {\path{doi:10.1109/ICRA.2019.8794440}}.
 
-\bibitem{vitkovsky2007experimental}
+\bibitem{Vitkovsky2007}
 John~P. Vitkovsky, Martin~F. Lambert, Angus~R. Simpson, and James~A. Liggett.
 \newblock Experimental observation and analysis of inverse transients for pipeline leak detection.
 \newblock {\em Journal of Water Resources Planning and Management}, 133(6):519--530, 2007.
+\newblock \href {https://doi.org/10.1061/(ASCE)0733-9496(2007)133:6(519)} {\path{doi:10.1061/(ASCE)0733-9496(2007)133:6(519)}}.
 
 \bibitem{Wang2013}
 Jianxun Wang and Xiaobo Tan.
 \newblock A dynamic model for tail-actuated robotic fish with drag coefficient adaptation.
 \newblock {\em Mechatronics}, 23(6):659--668, 2013.
+\newblock \href {https://doi.org/10.1016/j.mechatronics.2013.07.005} {\path{doi:10.1016/j.mechatronics.2013.07.005}}.
 
 \bibitem{Wang2015}
 Wei Wang and Guangming Xie.
 \newblock Online high-precision probabilistic localization of robotic fish using visual and inertial cues.
 \newblock {\em IEEE Transactions on Industrial Electronics}, 62(2):1113--1124, 2015.
+\newblock \href {https://doi.org/10.1109/TIE.2014.2341593} {\path{doi:10.1109/TIE.2014.2341593}}.
 
-\bibitem{Wang2022PassiveIUSBL}
+\bibitem{Wang2022}
 Yingqiang Wang, S.~H. Huang, Zhikun Wang, Ruoyu Hu, Mingyue Feng, Peizhou Du, Wencheng Yang, and Ying Chen.
 \newblock Design and experimental results of passive {iUSBL} for small {AUV} navigation.
 \newblock {\em Ocean Engineering}, 248:110812, 2022.
+\newblock \href {https://doi.org/10.1016/j.oceaneng.2022.110812} {\path{doi:10.1016/j.oceaneng.2022.110812}}.
 
-\bibitem{Wood2015AutomatedCrawler}
+\bibitem{Wood2015}
 Stephen~L. Wood, Arne Hendricks, and Michael Corbet.
 \newblock Automated buoyancy control system for a remotely operated underwater crawler.
 \newblock In {\em MTS/IEEE OCEANS 2015 - Genova}, 2015.
+\newblock \href {https://doi.org/10.1109/OCEANS-Genova.2015.7271238} {\path{doi:10.1109/OCEANS-Genova.2015.7271238}}.
 
-\bibitem{Xie2021DesignsReview}
+\bibitem{Xie2021}
 Fengran Xie, Qiyang Zuo, Qinglong Chen, Haitao Fang, Kai He, Ruxu Du, Yong Zhong, and Zheng Li.
 \newblock Designs of the biomimetic robotic fishes performing body and/or caudal fin ({BCF}) swimming locomotion: A review.
 \newblock {\em Journal of Intelligent and Robotic Systems}, 102(1), 2021.
+\newblock \href {https://doi.org/10.1007/s10846-021-01379-1} {\path{doi:10.1007/s10846-021-01379-1}}.
 
 \bibitem{Yadav2022}
 Sujeet Yadav and S.~S. Mondal.
 \newblock A review on the progress and prospects of oxy-fuel carbon capture and sequestration ({CCS}) technology.
 \newblock {\em Fuel}, 308:122057, 2022.
+\newblock \href {https://doi.org/10.1016/j.fuel.2021.122057} {\path{doi:10.1016/j.fuel.2021.122057}}.
 
 \bibitem{Yao2024}
 Di~Yao, Hua~Long Du, Shuo Li, and Qi~Feng Zhang.
 \newblock Improving the ability of measuring the thickness of thin oil slick with ultrasound using the sparse optimization method.
 \newblock {\em IEEE Sensors Journal}, 24(21):35374--35385, 2024.
+\newblock \href {https://doi.org/10.1109/JSEN.2024.3416948} {\path{doi:10.1109/JSEN.2024.3416948}}.
 
-\bibitem{yazji2021buoyancy}
+\bibitem{Yazji2021}
 Jalal Yazji, Alicia Li~Jen Keow, Hamza Zaidi, Luke~T. Torres, Christopher Leroy, and Zheng Chen.
 \newblock Buoyancy control device enabled by reversible proton exchange membrane fuel cells for fine depth control.
 \newblock {\em Journal of Dynamic Systems, Measurement, and Control}, 143(3), 2021.
+\newblock \href {https://doi.org/10.1115/1.4048778} {\path{doi:10.1115/1.4048778}}.
 
 \bibitem{Yi2023}
 Xiongfeng Yi and Zheng Chen.
 \newblock Image-based visual servoing control of remotely operated vehicle for underwater pipeline inspection.
 \newblock {\em International Journal of Intelligent Robotics and Applications}, pages 1--13, 2023.
+\newblock \href {https://doi.org/10.1007/s41315-023-00301-2} {\path{doi:10.1007/s41315-023-00301-2}}.
+
+\bibitem{Yu2004}
+Junzhi Yu, Min Tan, Shuo Wang, and Erkui Chen.
+\newblock Development of a biomimetic robotic fish and its control algorithm.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics, Part B: Cybernetics}, 34(4):1798--1810, 2004.
+\newblock \href {https://doi.org/10.1109/TSMCB.2004.831151} {\path{doi:10.1109/TSMCB.2004.831151}}.
+
+\bibitem{Yu2005}
+Junzhi Yu, Shuo Wang, and Min Tan.
+\newblock A simplified propulsive model of bio-mimetic robot fish and its realization.
+\newblock {\em Robotica}, 23(1):101--107, 2005.
+\newblock \href {https://doi.org/10.1017/S0263574704000426} {\path{doi:10.1017/S0263574704000426}}.
 
 \bibitem{Yu2017}
 Junzhi Yu, Li~Wen, and Ziyu Ren.
 \newblock A survey on fabrication, control, and hydrodynamic function of biomimetic robotic fish.
 \newblock {\em Science China Technological Sciences}, 60(9):1365--1380, 2017.
+\newblock \href {https://doi.org/10.1007/s11431-016-9065-x} {\path{doi:10.1007/s11431-016-9065-x}}.
 
-\bibitem{zekavat2019handbook}
+\bibitem{Zekavat2019}
 Reza Zekavat and R.~Michael Buehrer.
 \newblock {\em Handbook of Position Location: Theory, Practice, and Advances}.
 \newblock John Wiley \& Sons, Hoboken, NJ, 2 edition, 2019.
+\newblock \href {https://doi.org/10.1002/9781119434610} {\path{doi:10.1002/9781119434610}}.
 
 \bibitem{Zhang2021}
 Hongwei Zhang, Shitong Zhang, Yanhui Wang, Yuhong Liu, Yanan Yang, Tian Zhou, and Hongyu Bian.
 \newblock Subsea pipeline leak inspection by autonomous underwater vehicle.
 \newblock {\em Applied Ocean Research}, 107:102321, 2021.
+\newblock \href {https://doi.org/10.1016/j.apor.2020.102321} {\path{doi:10.1016/j.apor.2020.102321}}.
 
 \bibitem{Zheng2021}
 Liange Zheng, Peter Nico, Nicolas Spycher, Jeremy Domen, and Anthony Credoz.
 \newblock Potential impacts of {CO$_2$} leakage on groundwater quality of overlying aquifer at geological carbon sequestration sites: a review and a proposed assessment procedure.
 \newblock {\em Greenhouse Gases: Science and Technology}, 11(5):1134--1166, 2021.
+\newblock \href {https://doi.org/10.1002/ghg.2104} {\path{doi:10.1002/ghg.2104}}.
 
 \bibitem{Zuo2021}
 Wenyu Zuo, Frank Fish, and Zheng Chen.
 \newblock Bio-inspired design, modeling, and control of robotic fish propelled by a double-slider-crank mechanism driven tail.
 \newblock {\em Journal of Dynamic Systems, Measurement and Control, Transactions of the ASME}, 143(12):1--10, 2021.
+\newblock \href {https://doi.org/10.1115/1.4051893} {\path{doi:10.1115/1.4051893}}.
 
 \end{thebibliography}

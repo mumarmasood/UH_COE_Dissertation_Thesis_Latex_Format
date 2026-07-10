@@ -36,15 +36,18 @@
 \renewcommand{\listtablename}{LIST OF TABLES}
 \renewcommand{\listfigurename}{LIST OF FIGURES}
 \renewcommand{\bibname}{REFERENCES}
-\renewcommand{\chaptername}{CHAPTER}
-\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\chaptername}{Chapter}
+\renewcommand{\thechapter}{\arabic{chapter}}
 \numberwithin{equation}{chapter}
+\setlength{\cftfignumwidth}{4em}
+\setlength{\cfttabnumwidth}{4em}
+\setlength{\cftbeforefigskip}{0pt}
 
 \titleformat{name=\chapter}[display]
-  {\normalfont\centering}
-  {\MakeUppercase{\chaptername\ \thechapter}}
+  {\normalfont\huge}
+  {\chaptername\ \thechapter}
   {0.75\baselineskip}
-  {\MakeUppercase}
+  {}
 
 \titleformat{name=\chapter,numberless}[display]
   {\normalfont\centering}
@@ -52,7 +55,7 @@
   {0pt}
   {\MakeUppercase}
 
-\titlespacing*{\chapter}{0pt}{0pt}{1.5\baselineskip}
+\titlespacing*{\chapter}{0pt}{-50pt}{1.5\baselineskip}
 
 \makeatletter
 \def\ps@plain{%
@@ -120,7 +123,7 @@
       by\par
       \@author\par
       \vspace{0.60in}
-      A \@submissiontype\ submitted to the \@department,\par
+      A \@submissiontype\ submitted to the \\ \@department,\par
       \vspace{0.10\baselineskip}
       \@college\par
       \vspace{0.10\baselineskip}
@@ -177,8 +180,8 @@
 
 \pretocmd{\tableofcontents}{\clearpage}{}{}
 \pretocmd{\listoftables}{\clearpage}{}{}
-\pretocmd{\listoffigures}{\clearpage}{}{}
+\pretocmd{\listoffigures}{\clearpage\begingroup\setstretch{1}}{}{}
 \apptocmd{\tableofcontents}{\clearpage}{}{}
 \apptocmd{\listoftables}{\clearpage}{}{}
-\apptocmd{\listoffigures}{\clearpage}{}{}
+\apptocmd{\listoffigures}{\endgroup\clearpage}{}{}
 \makeatother

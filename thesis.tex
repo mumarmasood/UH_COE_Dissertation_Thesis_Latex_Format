@@ -47,100 +47,103 @@ The proposed methods are validated through hardware development, benchtop testin
 \listoffigures
 
 \mainmatter
-
 \chapter{Introduction}
+Oceans cover approximately 70\% of the Earth's surface and form the planet's largest habitable environment. They regulate climate, support marine ecosystems and food resources, provide major routes for transportation and global communication, and contain resources relevant to energy production and scientific discovery \cite{NationalGeographic2024,NOAA2026}. Their importance is therefore environmental, economic, and infrastructural, extending well beyond the coastal regions that are most familiar and accessible to human activity.
 
-Oceans cover more than 70\% of the Earth's surface and support climate regulation, transportation, energy production, communication infrastructure, and marine ecosystems \cite{ocean_ngs,noaa_ocean_exploration}. They also host an expanding network of engineered assets, including subsea pipelines, offshore energy facilities, communication cables, and carbon-management infrastructure. These assets are difficult to observe directly because underwater environments impose limited visibility, high pressure, uncertain currents, strong attenuation of electromagnetic signals, and substantial operational cost for deployment and recovery. As a result, inspection and monitoring remain central problems in ocean engineering, offshore safety, and environmental protection \cite{Ho2020,Shukla2016,Mcleod2012,Patel2024}.
+Despite this importance, knowledge of the ocean remains incomplete and direct exploration remains extremely limited. Satellite-derived data provide a general map of the global seafloor, but only 28.7\% had been mapped using modern high-resolution technology as of April 2026. Direct visual exploration is even more limited: less than 0.001\% of the deep-ocean seafloor has been observed by explorers \cite{NOAA2026}. These measures describe different aspects of exploration and should not be combined into a single universal percentage, but they demonstrate the scale of what remains unknown. Human use of the ocean is similarly concentrated in comparatively accessible surface, coastal, and offshore regions, while much of the deep ocean remains outside routine scientific observation or sustained utilization.
 
-The monitoring problem is becoming broader rather than narrower. Traditional offshore oil and gas infrastructure still requires inspection for corrosion, mechanical damage, leakage, and environmental contamination. At the same time, carbon capture and storage (CCS) technologies are creating new subsea monitoring needs because captured \mbox{CO$_2$} must be transported and stored without uncontrolled release \cite{Herzog2001,Yadav2022,Osman2021}. Failures in these systems can release hydrocarbons or \mbox{CO$_2$} into aquatic environments, with consequences that include ecological toxicity, seawater acidification, and long-term disturbance to marine habitats \cite{Filonchyk2024,Kabir2023,Zheng2021,Mortezaei2021,queiros2014potential,Pham2016}. Reliable monitoring therefore requires not only leak detection, but also spatial inspection, mobile sensing, and the ability to collect measurements near the region of interest.
+The central barrier is access. Underwater operations must contend with limited visibility, increasing hydrostatic pressure, uncertain currents, low temperatures, corrosion, and severe communication and localization constraints. Reaching and observing underwater regions can require research vessels, specialized crews, pressure-tolerant equipment, and substantial deployment and recovery effort \cite{Shukla2016,Mcleod2012,Patel2024}. Underwater robotic systems extend the reach of human observation into these environments and provide a means to explore, measure, and interact with regions that cannot be accessed routinely by human operators.
 
-Conventional underwater monitoring is often built around large remotely operated vehicles (ROVs), autonomous underwater vehicles (AUVs), fixed instrumentation, or surface-vessel operations. These approaches are necessary for many industrial tasks, but they are not always suitable for low-cost, repeated, or low-disturbance inspection. They can require high-cost vessels, trained crews, heavy tethers, large acoustic systems, or significant mission-planning overhead \cite{Capocci2017,Shukla2016,Mcleod2012}. For sensitive environments, the propulsion and operational footprint of conventional systems can also disturb sediment or biological activity near the inspection site \cite{Marras2012,Polverino2013}. This motivates research into compact underwater robots that can operate as mobile sensing platforms with lower cost and lower environmental disturbance.
-
-This dissertation addresses this need through the development and use of a compact bio-inspired robotic fish platform. The thesis does not treat robotic-fish locomotion, buoyancy control, perception, chemical sensing, and localization as isolated topics. Instead, these topics are developed as connected capabilities required for a small underwater robot to inspect infrastructure, collect environmental measurements, regulate its position in three-dimensional water environments, and move toward cooperative monitoring. The introduction establishes the motivation and prior work across the four main technical directions of the dissertation: design and modeling of the underwater robot and buoyancy device, model validation and control design, safety inspection and monitoring of underwater infrastructure, and cooperative inspection through relative localization. Detailed hardware drawings, equations, controller synthesis, sensing algorithms, and experimental results are reserved for the corresponding technical chapters.
+This dissertation addresses this need through the development and use of a compact bio-inspired robotic fish platform. Robotic-fish locomotion, buoyancy control, perception, chemical sensing, and localization are developed as connected capabilities required for a small underwater robot to inspect infrastructure, collect environmental measurements, regulate its position in three-dimensional water environments, and move toward cooperative monitoring. The introduction establishes the motivation and prior work across the four main technical directions of the dissertation: design and modeling of the underwater robot and buoyancy device, model validation and control design, safety inspection and monitoring of underwater infrastructure, and cooperative inspection through relative localization. Detailed hardware drawings, equations, controller synthesis, sensing algorithms, and experimental results are reserved for the corresponding technical chapters.
 
 \section{Underwater Infrastructure Monitoring}
 
-Subsea infrastructure monitoring has long been a central activity in offshore oil and gas operations, where pipelines must be inspected for corrosion, impact damage, leakage, biofouling, and structural degradation \cite{Ho2020,Shukla2016}. The pipeline network is exposed to external loads, pressure cycling, seabed movement, corrosion, material defects, and accidental impact. For petroleum infrastructure, leakage can release crude oil or gas into the surrounding environment. For carbon-management infrastructure, leakage can release dense-phase or gaseous \mbox{CO$_2$} into seawater. Although the physical mechanisms differ, both cases require early detection, spatial localization, and follow-up inspection near the suspected leak region.
+Offshore oil and gas development is a prominent example of ocean utilization. It relies on an extensive network of subsea pipelines to transport petroleum products between offshore facilities and onshore processing infrastructure. Unlike land-based pipelines, these systems operate in a difficult-to-access environment and are exposed to hydrostatic pressure, low temperature, corrosive seawater, external loading, seabed movement, pressure cycling, material defects, and accidental impact. Regular inspection is therefore required to identify corrosion, mechanical damage, leakage, biofouling, and structural degradation before they lead to operational failure or environmental harm \cite{Ho2020,Shukla2016,Mcleod2012,Patel2024}.
 
-Pipeline leak detection is commonly divided into internal and external approaches. Internal approaches infer leakage from measurements inside the pipeline, including mass-volume balance, acoustic or pressure-wave methods, pressure point analysis, inverse transient analysis, and simplified pressure-analysis techniques \cite{martins2010assessment,hou2013pipeline,bin2011pressure,vitkovsky2007experimental,ostapkowicz2016leak}. These methods can support continuous surveillance and can often identify that an abnormal condition has occurred. However, they do not directly map the surrounding environment, measure contaminant spread, or inspect the external condition of the pipeline after a suspected event. They are also sensitive to instrumentation quality, flow conditions, and measurement noise, which can increase false alarms or uncertainty in leak localization \cite{reda2024roadmap}.
+The monitoring problem is also expanding beyond conventional petroleum infrastructure. Carbon capture and storage (CCS) creates additional subsea monitoring needs because captured \mbox{CO$_2$} must be transported and stored without uncontrolled release \cite{Herzog2001,Yadav2022,Osman2021}. Petroleum-system failures can release crude oil or gas, while carbon-management failures can release dense-phase or gaseous \mbox{CO$_2$} into seawater. The consequences can include ecological toxicity, seawater acidification, and long-term disturbance to marine habitats \cite{Filonchyk2024,Kabir2023,Zheng2021,Mortezaei2021,Queiros2014,Pham2016}. Although the release mechanisms differ, both cases require early detection, spatial localization, environmental measurement, and follow-up inspection near the suspected source.
 
-External approaches inspect the pipeline or the surrounding water directly. These include visual inspection, acoustic monitoring, fiber-optic sensing, fluorometric detection, capacitive sensing, chemical sensing, and robotic surveys \cite{Ho2020,jasper2012oil,lukonge2020leak,adegboye2019recent}. External approaches can provide more direct physical evidence of leakage or contamination, but their value depends on the platform that carries the sensor. Fixed sensors are useful only near their installation point. Surface and aerial systems can observe large-scale surface slicks but are less suitable for early detection near a submerged source. ROV- or AUV-mounted sensors can reach the subsea region, but deployment cost and operational complexity limit how frequently they can be used for small-scale or distributed monitoring.
+Pipeline leak detection is commonly divided into internal and external approaches. Internal approaches infer leakage from measurements inside the pipeline, including mass-volume balance, acoustic or pressure-wave methods, pressure point analysis, inverse transient analysis, and simplified pressure-analysis techniques \cite{Martins2010,Hou2013,Akib2011,Vitkovsky2007,Ostapkowicz2016}. These methods can support continuous surveillance and can often identify that an abnormal condition has occurred. External inspection and environmental sensing are still needed to map the surrounding region, measure contaminant spread, and inspect the external condition of the pipeline after a suspected event. Internal methods are also sensitive to instrumentation quality, flow conditions, and measurement noise, which can increase false alarms or uncertainty in leak localization \cite{Reda2024}.
 
-CCS monitoring adds distinct engineering and environmental constraints. \mbox{CO$_2$} pipelines may experience fracture and decompression behavior influenced by pressure, phase transition, and impurities in the transported stream \cite{Aursand2016,CoshamAtkinsBoreas2009}. If \mbox{CO$_2$} escapes into seawater, it can dissolve and form carbonic acid, locally changing pH and potentially affecting benthic organisms, fish larvae, and other marine communities \cite{Zheng2021,Mortezaei2021,queiros2014potential,Pham2016}. Monitoring therefore must not be limited to the mechanical condition of a pipe. It must also include environmental measurements that can indicate where the leaked substance has moved after release.
+External approaches inspect the pipeline or the surrounding water directly. These include visual inspection, acoustic monitoring, fiber-optic sensing, fluorometric detection, capacitive sensing, chemical sensing, and robotic surveys \cite{Ho2020,Jasper2012,Lukonge2020,Adegboye2019}. External approaches can provide more direct physical evidence of leakage or contamination, but their value depends on the platform that carries the sensor. Fixed sensors are useful only near their installation point. Surface and aerial systems can observe large-scale surface slicks but are less suitable for early detection near a submerged source. ROV- or AUV-mounted sensors can reach the subsea region, but deployment cost and operational complexity limit how frequently they can be used for small-scale or distributed monitoring.
 
-Prior work has investigated mobile robotic platforms for related inspection problems. Zhang et al.~\cite{Zhang2021} studied AUV-based subsea pipeline leak inspection. Qasem et al.~\cite{Qasem2019} developed a multisensor ROV for oil-spill surveillance. Hu et al.~\cite{Hu2022} investigated robotic-fish-based underwater gas leak detection using onboard camera data. These studies show that mobile underwater sensing can provide information that fixed instrumentation alone cannot. They also motivate the central systems question of this dissertation: how can a compact bio-inspired robotic fish be designed, controlled, and instrumented so that inspection, environmental sensing, and relative localization can be studied on a common platform?
+CCS monitoring adds distinct engineering and environmental constraints. \mbox{CO$_2$} pipelines may experience fracture and decompression behavior influenced by pressure, phase transition, and impurities in the transported stream \cite{Aursand2016,Cosham2009}. If \mbox{CO$_2$} escapes into seawater, it can dissolve and form carbonic acid, locally changing pH and potentially affecting benthic organisms, fish larvae, and other marine communities \cite{Zheng2021,Mortezaei2021,Queiros2014,Pham2016}. Monitoring therefore includes both mechanical pipe condition and environmental measurements that indicate where the leaked substance has moved after release.
+
+Prior work has investigated mobile robotic platforms for related inspection problems. Zhang et al.~\cite{Zhang2021} studied AUV-based subsea pipeline leak inspection. Qasem et al.~\cite{Qasem2019} developed a multisensor ROV for oil-spill surveillance. Hu et al.~\cite{Hu2022} investigated robotic-fish-based underwater gas leak detection using onboard camera data. These studies show that mobile underwater sensing can add spatial information beyond fixed instrumentation. They also motivate the central systems question of this dissertation: how can a compact bio-inspired robotic fish be designed, controlled, and instrumented so that inspection, environmental sensing, and relative localization can be studied on a common platform?
 
 \section{Limitations of Conventional Platforms}
 
 ROVs and AUVs remain the dominant platforms for subsea inspection. ROVs can carry large payloads and provide real-time operator feedback, but they are tethered systems that require surface vessels, skilled operators, and substantial deployment cost \cite{Capocci2017,Shukla2016}. AUVs reduce tether dependence and can execute preplanned missions, but many are still large, expensive vehicles designed for broad survey tasks rather than compact inspection near confined pipeline corridors or environmentally sensitive regions \cite{Mcleod2012,Patel2024}. In high-value industrial inspection, these costs can be justified because the infrastructure being inspected is expensive and failure can be catastrophic. For repeated environmental monitoring, laboratory-scale method development, distributed coverage, or operation in smaller water bodies, the same cost and logistical requirements become limiting.
 
-The propulsion and sensing footprint of conventional vehicles is another limitation. Many inspection-class vehicles rely on propellers or thrusters to generate maneuvering forces. These devices are effective and controllable, but they can introduce local turbulence, disturb sediment, alter the local sensing environment, and affect marine life in ways that are undesirable for ecological monitoring \cite{Marras2012,Polverino2013}. For chemical sensing, this disturbance can also change the local concentration field by mixing the water near the sensor. For visual inspection, sediment disturbance can reduce visibility and degrade image-based feature extraction. These issues motivate low-speed, low-disturbance vehicle designs when the monitoring task does not require high-speed transit or heavy payload transport.
+The propulsion and sensing footprint of conventional vehicles is another limitation. Many inspection-class vehicles rely on propellers or thrusters to generate maneuvering forces. These devices are effective and controllable, but they can introduce local turbulence, disturb sediment, alter the local sensing environment, and affect marine life in ways that are undesirable for ecological monitoring \cite{Marras2012,Polverino2013}. For chemical sensing, this disturbance can also change the local concentration field by mixing the water near the sensor. For visual inspection, sediment disturbance can reduce visibility and degrade image-based feature extraction. These issues motivate low-speed, low-disturbance vehicle designs for local monitoring tasks with modest transit-speed and payload requirements.
 
-Navigation and localization impose additional constraints. Global positioning system (GPS) signals do not penetrate seawater, so underwater vehicles commonly rely on acoustic long-baseline (LBL), short-baseline (SBL), or ultra-short-baseline (USBL) systems, sometimes combined with Doppler velocity logs (DVLs) and inertial sensors \cite{Luo2021Review,Su2020,zekavat2019handbook}. These systems can provide high accuracy, but the supporting acoustic hardware, deployment infrastructure, power consumption, and cost are difficult to scale down to small robotic fish or multi-robot groups. Recent acoustic work has sought more compact solutions, including passive inverted ultra-short baseline (piUSBL), passive iUSBL for small AUVs, and MEMS-microphone-based acoustic localization and communication \cite{Rypkema2019piUSBL,Wang2022PassiveIUSBL,Hinduja2022MEMSAcoustic}. These efforts are important, but they do not remove the need for complementary low-cost relative-localization methods that can support compact cooperative monitoring platforms.
+Navigation and localization impose additional constraints. Because GPS signals attenuate rapidly in seawater, underwater vehicles commonly rely on acoustic long-baseline (LBL), short-baseline (SBL), or ultra-short-baseline (USBL) systems, sometimes combined with Doppler velocity logs (DVLs) and inertial sensors \cite{Luo2021,Su2020,Zekavat2019}. These systems can provide high accuracy, but the supporting acoustic hardware, deployment infrastructure, power consumption, and cost are difficult to scale down to small robotic fish or multi-robot groups. Recent acoustic work has sought more compact solutions, including passive inverted ultra-short baseline (piUSBL), passive iUSBL for small AUVs, and MEMS-microphone-based acoustic localization and communication \cite{Rypkema2019,Wang2022,Hinduja2022}. These efforts motivate complementary low-cost relative-localization methods for compact cooperative monitoring platforms.
 
-The same issue appears in sensing. High-end sonars, Doppler instruments, acoustic positioning systems, and large chemical payloads can be appropriate for full-scale AUVs, but they are not always compatible with small robotic fish. Compact robots require sensors that are lightweight, low-power, waterproof, and compatible with limited onboard processing and communication. The design problem is therefore not only to select a robot body or a sensor independently. The platform, power system, actuator configuration, sensor interfaces, waterproofing, communication pathway, and software must be treated together. This system-level requirement is one of the motivations for developing AquaNavigator as a common experimental platform rather than using unrelated hardware for each monitoring task.
+The same issue appears in sensing. High-end sonars, Doppler instruments, acoustic positioning systems, and large chemical payloads can be appropriate for full-scale AUVs, while compact robotic fish require sensors that are lightweight, low-power, waterproof, and compatible with limited onboard processing and communication. The design problem is therefore a system problem involving the platform, power system, actuator configuration, sensor interfaces, waterproofing, communication pathway, and software. This system-level requirement is one of the motivations for developing AquaNavigator as a common experimental platform across the monitoring tasks.
 
 \section{Bio-Inspired Robotic Fish}
+Bio-inspired underwater robots offer an alternative class of underwater platform for medium speed with low-disturbance monitoring. Fish-like propulsion is grounded in classical models of aquatic animal locomotion, including Lighthill's elongated-body and large-amplitude elongated-body theories \cite{Lighthill1969,Lighthill1971}. Robotic-fish research has since expanded into design, fabrication, hydrodynamics, control, and sensing, with survey work summarizing the state of biomimetic fish robots and body and/or caudal fin swimming mechanisms \cite{Yu2017,Duraisamy2019,Xie2021}. Because robotic fish can be compact and can move with oscillatory body or tail motion, they received attention from researchers as mobile sensor platforms for underwater environments \cite{Tan2011}. Their wake and motion can also be less disruptive to ocean echosystem than mainstream propeller-based ROV platforms in most conditions \cite{Marras2012,Polverino2013}.
 
-Bio-inspired robotic fish offer an alternative class of underwater platform for low-speed, low-disturbance monitoring. Fish-like propulsion is grounded in classical models of aquatic animal locomotion, including Lighthill's elongated-body and large-amplitude elongated-body theories \cite{lighthill1969hydromechanics,Lighthill1971}. Robotic-fish research has since expanded into design, fabrication, hydrodynamics, control, and sensing, with survey work summarizing the state of biomimetic fish robots and body and/or caudal fin swimming mechanisms \cite{Yu2017,Duraisamy2019DesignReview,Xie2021DesignsReview}. Because robotic fish can be compact and can move with oscillatory body or tail motion, they are attractive as mobile sensor platforms for aquatic environments \cite{Tan2011}. Their wake and motion can also be less disruptive to aquatic organisms than rigid propeller-driven platforms in some settings \cite{Marras2012,Polverino2013}.
+Early robotic-fish research emerged during the 1990s from efforts to reproduce biological swimming using mechanically and materially inspired actuation. Shahinpoor proposed swimming robotic structures actuated by ionic polymeric gel muscles in 1992 \cite{Shahinpoor1992}. MIT's RoboTuna, first demonstrated in 1994, subsequently provided a platform for experimentally studying fish-like body and caudal-fin propulsion and the hydrodynamics of articulated swimming \cite{Thomson1994,Tolkoff1999}. Research during the latter half of the decade broadened the design space to include pectoral-fin mechanisms and flexible or oscillating foils for underwater propulsion and maneuvering \cite{Imaizumi1995,Kato1996}. These early systems established the feasibility of mechanically reproducing fish-like propulsion while exposing practical challenges involving joint coordination, traveling-wave generation, actuator packaging, and underwater implementation.
 
-Prior robotic-fish platforms have demonstrated vision-based target following, visual-inertial localization, soft robotic swimming near coral reefs, and increasingly sophisticated bio-inspired propulsion and motion planning \cite{Hu2009,Wang2015,Katzschmann2018,Li2024,Jiang2024}. Other work has studied dynamic modeling of tail-actuated robotic fish and the relationship between caudal-fin kinematics, thrust, drag, and body motion \cite{Wang2013,Park2012}. Zuo et al.~\cite{Zuo2021} developed a double-slider-crank mechanism for carangiform robotic-fish propulsion, providing a compact mechanical basis for efficient tail-driven swimming. Taken together, these studies establish robotic fish as a credible class of underwater robot for compact locomotion and sensing.
+During the 2000s, robotic-fish research made progress from propulsion feasibility toward actively controlled bio-inspired platforms. Mason and Burdick investigated carangiform locomotion using a three-link experimental robot, while Yu et al. developed multijoint robotic fish with controlled swimming speed and orientation \cite{Mason2000,Yu2004,Yu2005}. Subsequent systems demonstrated compact three-dimensional swimming, modular undulating fins, and alternative soft or smart-material actuators \cite{Liu2005,Low2006,Chen2010}. From the 2010s onward, the research focus expanded beyond propulsion to include robotic fish as mobile sensor platforms, vision-based target following, visual-inertial localization, soft robotic exploration near marine ecosystem, energy-aware propulsion, and increasingly sophisticated motion planning \cite{Tan2011,Hu2009,Wang2015,Katzschmann2018,Li2024,Jiang2024}. Other work also developed dynamic models connecting caudal-fin kinematics with thrust, drag, and body motion \cite{Wang2013,Park2012}. This progression reflects a broader transition from reproducing fish-like motion toward using robotic fish as integrated platforms for perception, sensing, control, and underwater monitoring.
 
-However, the literature also shows a gap between robotic-fish locomotion research and complete monitoring systems. Many robotic fish are developed to demonstrate swimming performance, maneuverability, locomotion efficiency, or tracking of visual targets. Fewer studies integrate the full chain required for underwater monitoring: a physical platform, three-dimensional positioning capability, onboard perception, environmental sensing payloads, and a path toward cooperative operation. For subsea infrastructure monitoring, the robot must not only swim. It must move in a controlled way near a feature, carry sensors without destabilizing the vehicle, regulate its vertical position, collect meaningful measurements, and communicate or localize relative to other agents.
+Across these developments, biological swimming modes provide a common framework for selecting a robotic propulsion architecture. Fish locomotion is broadly classified into body and/or caudal fin (BCF) propulsion and median and/or paired fin (MPF) propulsion, with individual modes employing oscillatory or undulatory motion \cite{Sfakiotakis1999}. BCF locomotion includes anguilliform, subcarangiform, carangiform, thunniform, and ostraciiform patterns, distinguished primarily by how lateral motion is distributed along the body. This classification is directly relevant to AquaNavigator. Its carangiform-inspired arrangement concentrates motion toward the posterior body and caudal fin, making a wave-like propulsion to be approximated using a compact, mechanically coupled tail without independently actuating each tail joint \cite{Xie2021,Zuo2021}. The detailed double-slider-crank mechanism and its kinematic implications are presented in the platform-design chapter.
 
-The AquaNavigator platform used in this dissertation is developed within this broader need. It uses bio-inspired tail-driven propulsion as the mobility foundation, but the platform is treated as more than a locomotion prototype. It is the common experimental base through which buoyancy control, pipeline tracking, \mbox{CO$_2$} sensing, oil-spill detection, and relative localization are connected \cite{Masood2025Pipeline,Masood2025CO2,Masood2025OilSpill}. This framing is important for the dissertation: the thesis contribution is not a single sensor or one controller in isolation, but the development of a coherent robotic fish system for underwater monitoring research.
+However, the literature also shows a gap between robotic-fish locomotion research and complete monitoring systems. Many robotic fish are developed to demonstrate swimming performance, maneuverability, locomotion efficiency, or tracking of visual targets. Fewer studies integrate the full chain required for underwater monitoring: a physical platform, three-dimensional positioning capability, onboard perception, environmental sensing payloads, and a path toward cooperative operation. For subsea infrastructure monitoring, the robot must move in a controlled way near a feature, carry sensors while maintaining stability, regulate its vertical position, collect meaningful measurements, and communicate or localize relative to other agents.
+
+The AquaNavigator platform used in this dissertation is developed within this broader need. It uses bio-inspired tail-driven propulsion as the mobility foundation and serves as the common experimental base through which buoyancy control, pipeline tracking, \mbox{CO$_2$} sensing, oil-spill detection, and relative localization are connected \cite{Masood2025Pipeline,Masood2025CO2,Masood2026OilSpill}. This framing is important for the dissertation: the thesis contribution combines platform development, modeling, control, sensing, and localization into a coherent robotic fish system for underwater monitoring research.
 
 \section{3D Motion and Buoyancy Control}
 
-Many robotic-fish studies focus primarily on planar swimming, where speed and heading are the dominant controlled variables. Infrastructure inspection and environmental sensing often require more than planar motion: the robot must reach a depth, hold a vertical position, profile through the water column, or position a sensor near a leak source. Variable buoyancy is a natural approach for compact, low-speed underwater robots because it changes the net buoyant force by changing displaced volume or effective density, rather than requiring continuous vertical thrust. This matters for monitoring because a chemical sensor, camera, or localization device is useful only if the robot can position it in the relevant part of the water column. For example, a pipeline-following mission may require the robot to remain near the pipeline height, while dissolved \mbox{CO$_2$} sensing may require spatial sampling through a concentration field. Without depth regulation, the monitoring capability remains largely planar.
+Many robotic-fish studies focus primarily on planar swimming, where speed and heading are the dominant controlled variables. Infrastructure inspection and environmental sensing often require more than planar motion: the robot must reach a depth, hold a vertical position, profile through the water column, or position a sensor near a leak source. Variable buoyancy is a natural approach for compact, low-speed underwater robots because it changes the net buoyant force by changing displaced volume or effective density, rather than requiring continuous vertical thrust. This matters for monitoring because a chemical sensor, camera, or localization device is useful when the robot can position it in the relevant part of the water column. For example, a pipeline-following mission may require the robot to remain near the pipeline height, while dissolved \mbox{CO$_2$} sensing may require spatial sampling through a concentration field. Depth regulation therefore expands the monitoring capability from planar motion toward three-dimensional operation.
 
-Variable buoyancy mechanisms have been developed using seawater transfer, gas generation, compressed air, electroactive polymers, electrochemical systems, and electrothermal expansion \cite{Kobayashi2010,Vasiljevic2019,Um2011AVehicles,Chen2017AMuscles,yazji2021buoyancy,Wood2015AutomatedCrawler,Hou2020DevelopmentModule}. Depth-control work has also been reported for buoyancy-driven AUVs, underwater units, gliders, and buoyancy change devices \cite{MahdiCHOYEKH2016,Claus2012,carneiro2023_bcd}. These mechanisms show that buoyancy control can be implemented in many ways, but the design tradeoffs are different for a compact robotic fish than for a large glider or profiling float. A robotic fish has limited internal volume, limited power, tight waterproofing constraints, and a body geometry that is already shaped by hydrodynamic and payload requirements. The buoyancy device must therefore be compact, waterproof, mechanically simple, responsive enough for short-range depth regulation, and compatible with the robot's payload and electronics. The piston-cylinder buoyancy device considered in this dissertation introduces hard actuator stroke and voltage limits, pressure-dependent behavior, and nonlinearities that must be considered in the control design. This motivates model-based and constraint-aware approaches, including constrained model predictive control and extremum seeking control, rather than treating depth regulation as a simple open-loop actuator command \cite{Rawlings,Scokaert1998,Masood2023MPCBCD,Masood2026ESCBCD}.
+Variable buoyancy mechanisms have been developed using seawater transfer, gas generation, compressed air, electroactive polymers, electrochemical systems, and electrothermal expansion \cite{Kobayashi2010,Vasiljevic2019,Um2011,Chen2017,Yazji2021,Wood2015,Hou2020}. Depth-control work has also been reported for buoyancy-driven AUVs, underwater units, gliders, and buoyancy change devices \cite{Choyekh2016,Claus2012,Carneiro2023}. These mechanisms show that buoyancy control can be implemented in many ways, but the design tradeoffs are different for a compact robotic fish than for a large glider or profiling float. A robotic fish has limited internal volume, limited power, tight waterproofing constraints, and a body geometry that is already shaped by hydrodynamic and payload requirements. The buoyancy device must therefore be compact, waterproof, mechanically simple, responsive enough for short-range depth regulation, and compatible with the robot's payload and electronics. The piston-cylinder buoyancy device considered in this dissertation introduces hard actuator stroke and voltage limits, pressure-dependent behavior, and nonlinearities that must be considered in the control design. This motivates model-based and constraint-aware approaches, including constrained model predictive control and extremum seeking control \cite{Rawlings2017,Scokaert1998,Masood2023,Masood2026ESCBCD}.
 
-The control challenge is not only the presence of nonlinearities. The device operates around a buoyancy equilibrium that can be sensitive to small changes in volume, added mass, trapped air, leakage, and sensor noise. The actuator has finite stroke, finite speed, and voltage limits. If these limits are ignored, a controller may request physically impossible commands or push the system into undesirable operating regions. Constrained model predictive control is therefore relevant because it can represent actuator limits explicitly in the control problem \cite{Rawlings,Scokaert1998}. At the same time, model uncertainty motivates a complementary controller that can work with less dependence on an exact plant model. This is why the dissertation treats model validation and control design as a chapter-level topic rather than presenting the buoyancy device only as a mechanical component.
+The control challenge includes nonlinear buoyancy dynamics and tight actuation constraints. The device operates around a buoyancy equilibrium that can be sensitive to small changes in volume, added mass, trapped air, leakage, and sensor noise. The actuator has finite stroke, finite speed, and voltage limits. If these limits are ignored, a controller may request physically impossible commands or push the system into undesirable operating regions. Constrained model predictive control is therefore relevant because it can represent actuator limits explicitly in the control problem \cite{Rawlings2017,Scokaert1998}. At the same time, model uncertainty motivates a complementary controller that can work with less dependence on an exact plant model. This is why the dissertation treats model validation and control design as a chapter-level topic rather than presenting the buoyancy device only as a mechanical component.
 
 \section{Perception and Environmental Sensing}
 
-The monitoring value of a robotic fish depends on its ability to collect useful information, not only on its ability to swim. This dissertation treats perception and environmental sensing as one connected chapter theme: the same underwater platform is used for vision-based pipeline tracking, \mbox{CO$_2$} leak-source localization, and oil-spill detection. These tasks differ in sensing modality, but they are linked by the requirement that the robot move through an underwater environment while producing interpretable measurements about infrastructure or environmental state. The chapter later in the thesis treats these tasks together because they represent a common system role: AquaNavigator acts as a mobile carrier that positions a sensor, collects data, and links the measurement to the robot's motion. The following subsections introduce the motivation for each sensing direction.
+The monitoring value of a robotic fish depends on its ability to collect useful information while swimming. This dissertation treats perception and environmental sensing as one connected thesis theme: the same underwater platform is used for vision-based pipeline tracking, \mbox{CO$_2$} leak-source localization, and oil-spill detection. These tasks differ in sensing modality, but they are linked by the requirement that the robot move through an underwater environment while producing interpretable measurements about infrastructure or environmental state. The technical chapters separate the control aspects from the environmental-sensing payloads, while keeping the system role consistent: AquaNavigator acts as a mobile carrier that positions a sensor, collects data, and links the measurement to the robot's motion. The following subsections introduce the motivation for each sensing direction.
 
 \subsection{Vision-Based Pipeline Tracking}
 
 Pipeline inspection requires a robot to detect a pipeline-like feature and regulate its motion relative to that feature. Vision-based inspection has been studied for ROVs and underwater vehicles, including image-based visual servoing approaches for underwater pipeline inspection \cite{Yi2023}. Image-based visual servoing (IBVS) is attractive because control errors are computed directly from image-space measurements, reducing dependence on full three-dimensional reconstruction or global localization \cite{Reynolds1999}. For a small robotic fish, this is particularly useful because accurate global underwater localization is difficult, while a camera can provide immediate information about the pipeline's apparent orientation and location in the image.
 
-The pipeline-tracking task also exposes an important platform-level challenge. The robotic fish is underactuated and moves through oscillatory tail propulsion rather than independent surge, sway, and yaw thrusters. The image-processing output must therefore be converted into steering and propulsion commands that are compatible with the vehicle dynamics. The pipeline may also appear with changing contrast, lighting, partial occlusion, and perspective effects. The sensing and control problem is therefore not only to detect a line in an image, but to close the loop between image-space error and a bio-inspired underwater vehicle.
+The pipeline-tracking task also exposes an important platform-level challenge. The robotic fish is underactuated and moves through oscillatory tail propulsion rather than independent surge, sway, and yaw thrusters. The image-processing output must therefore be converted into steering and propulsion commands that are compatible with the vehicle dynamics. The pipeline may also appear with changing contrast, lighting, partial occlusion, and perspective effects. The sensing and control problem therefore closes the loop between image-space error and a bio-inspired underwater vehicle.
 
-In this dissertation, the pipeline-tracking work develops an IBVS framework for the underactuated AquaNavigator robotic fish using onboard camera feedback and Hough-transform pipeline detection \cite{Masood2025Pipeline}. At the introduction level, this work demonstrates the perception layer of the thesis: the robotic fish can use onboard visual information to regulate motion relative to an infrastructure feature. The detailed image-processing pipeline, error variables, controller implementation, and pool-validation results are presented later in the infrastructure monitoring chapter.
+In this dissertation, the pipeline-tracking work develops an IBVS framework for the underactuated AquaNavigator robotic fish using onboard camera feedback and Hough-transform pipeline detection \cite{Masood2025Pipeline}. At the introduction level, this work demonstrates the perception layer of the thesis: the robotic fish can use onboard visual information to regulate motion relative to an infrastructure feature. The detailed image-processing pipeline, error variables, controller implementation, and pool-validation results are presented in the model-validation and control chapter.
 
 \subsection[CO2 Leak-Source Localization]{\mbox{CO$_2$} Leak-Source Localization}
 
-CCS monitoring requires sensing methods that can identify whether stored or transported \mbox{CO$_2$} remains contained. The motivation begins with the broader climate context: increasing atmospheric \mbox{CO$_2$} concentration is a major driver of climate change, and CCS is one proposed strategy for reducing emissions from industrial sources \cite{Filonchyk2024,Kabir2023,Herzog2001,Yadav2022,Osman2021}. Once \mbox{CO$_2$} is captured, however, the monitoring problem does not disappear. The captured gas must be transported, injected, and stored in a way that prevents release into the surrounding environment.
+CCS monitoring requires sensing methods that can identify whether stored or transported \mbox{CO$_2$} remains contained. The motivation begins with the broader climate context: increasing atmospheric \mbox{CO$_2$} concentration is a major driver of climate change, and CCS is one proposed strategy for reducing emissions from industrial sources \cite{Filonchyk2024,Kabir2023,Herzog2001,Yadav2022,Osman2021}. After capture, the monitoring problem continues through transport, injection, and storage, where releases into the surrounding environment must be detected.
 
-Prior work has discussed the environmental risk of \mbox{CO$_2$} leakage, ocean-storage consequences, and the need for monitoring near subsea pipelines and storage sites \cite{Zheng2021,Mortezaei2021,queiros2014potential,Pham2016}. Mobile robots can support this task by collecting spatially distributed measurements instead of relying on fixed sensors alone. This is important because a leak does not necessarily produce a single point measurement that is easy to interpret. The released \mbox{CO$_2$} may dissolve, rise, diffuse, advect with water motion, or form a spatial concentration pattern that must be sampled over an area. Thus, a mobile sensing platform can provide information about both the presence of \mbox{CO$_2$} and the spatial structure of the concentration field.
+Prior work has discussed the environmental risk of \mbox{CO$_2$} leakage, ocean-storage consequences, and the need for monitoring near subsea pipelines and storage sites \cite{Zheng2021,Mortezaei2021,Queiros2014,Pham2016}. Mobile robots can support this task by collecting spatially distributed measurements instead of relying on fixed sensors alone. A release may dissolve, rise, diffuse, advect with water motion, or form a spatial concentration pattern that must be sampled over an area. Thus, a mobile sensing platform can provide information about both the presence of \mbox{CO$_2$} and the spatial structure of the concentration field.
 
 Prior robotic inspection work has addressed gas leaks using visual bubble detection, sonar-based inspection, or multisensor ROV systems \cite{Zhang2021,Qasem2019,Hu2022}. These methods are useful, but \mbox{CO$_2$} source localization also benefits from chemical concentration measurements when visible bubbles are weak, intermittent, or absent. The robotic fish provides a way to investigate this sensing problem in a compact platform whose motion and payload can be controlled in a laboratory water environment.
 
-This dissertation uses the robotic fish as a carrier for near-infrared dissolved \mbox{CO$_2$} sensing and leak-source localization in controlled water experiments \cite{Masood2025CO2}. The chapter-level treatment focuses on the sensing setup, spatial data processing, source estimation, and the limitations of controlled-environment validation. The introduction frames the work as one part of the broader thesis argument: a robotic fish can serve not only as a swimming machine, but as a mobile environmental sensing platform for energy-transition infrastructure.
+This dissertation uses the robotic fish as a carrier for near-infrared dissolved \mbox{CO$_2$} sensing and leak-source localization in controlled water experiments \cite{Masood2025CO2}. The chapter-level treatment focuses on the sensing setup, spatial data processing, source estimation, and the limitations of controlled-environment validation. The introduction frames the work as one part of the broader thesis argument: a robotic fish can serve as a mobile environmental sensing platform for energy-transition infrastructure.
 
 \subsection{Oil-Spill Detection}
 
-Oil-spill monitoring includes both pipeline-oriented leak detection and environmental contamination assessment. Offshore drilling and subsea transport remain major parts of the global energy system \cite{energyocean}. Crude oil is valuable as an energy resource, but uncontrolled release into aquatic environments can harm marine organisms, seabirds, coastal ecosystems, and human activities that depend on marine resources \cite{Almeda2014,Albers1982}. Oil-spill response therefore depends on early detection, localization of the release region, and monitoring of how contamination changes with time.
+Oil-spill monitoring includes both pipeline-oriented leak detection and environmental contamination assessment. Offshore drilling and subsea transport remain major parts of the global energy system \cite{HeinrichBoellStiftung2017}. Crude oil is valuable as an energy resource, but uncontrolled release into aquatic environments can harm marine organisms, seabirds, coastal ecosystems, and human activities that depend on marine resources \cite{Almeda2014,Albers1982}. Oil-spill response therefore depends on early detection, localization of the release region, and monitoring of how contamination changes with time.
 
-Internal pipeline methods can indicate that a leak has occurred, while external methods provide more direct information near the leak or contaminated region. Internal methods include mass-balance monitoring, pressure-wave analysis, pressure point analysis, inverse transient methods, and related model-based or signal-processing techniques \cite{martins2010assessment,hou2013pipeline,bin2011pressure,vitkovsky2007experimental,ostapkowicz2016leak,reda2024roadmap}. These methods are valuable because they can run continuously and can be integrated into pipeline operations. However, they generally infer leakage indirectly from internal measurements and may not describe where oil has moved after release into the surrounding water.
+Internal pipeline methods can indicate that a leak has occurred, while external methods provide more direct information near the leak or contaminated region. Internal methods include mass-balance monitoring, pressure-wave analysis, pressure point analysis, inverse transient methods, and related model-based or signal-processing techniques \cite{Martins2010,Hou2013,Akib2011,Vitkovsky2007,Ostapkowicz2016,Reda2024}. These methods are valuable because they can run continuously and can be integrated into pipeline operations. Because they generally infer leakage indirectly from internal measurements, external sensing is needed to describe where oil has moved after release into the surrounding water.
 
-External methods inspect the surrounding environment using direct sensing or imaging. Acoustic, optical, fluorometric, fiber-optic, capacitive, and chemical sensing approaches have all been investigated for pipeline leak detection and oil-spill monitoring \cite{jasper2012oil,lukonge2020leak,adegboye2019recent,Yao2024,Du2025}. ROV-based oil-spill recognition systems and multisensor underwater vehicles show the value of deploying sensors close to the leak region \cite{Qasem2019,Pocwiardowski2021}. The limitation is that many of these systems remain tied to relatively large platforms, expensive deployments, or sensors that are not easily integrated into a compact mobile robot.
+External methods inspect the surrounding environment using direct sensing or imaging. Acoustic, optical, fluorometric, fiber-optic, capacitive, and chemical sensing approaches have all been investigated for pipeline leak detection and oil-spill monitoring \cite{Jasper2012,Lukonge2020,Adegboye2019,Yao2024,Du2025}. ROV-based oil-spill recognition systems and multisensor underwater vehicles show the value of deploying sensors close to the leak region \cite{Qasem2019,Pocwiardowski2021}. Many of these systems remain tied to relatively large platforms, expensive deployments, or sensors whose size and support requirements are difficult to integrate into a compact mobile robot.
 
-Organic electrochemical transistor (OECT) sensors have recently been demonstrated for crude oil detection in subsea environments \cite{porter2024detection}. This sensing direction is important because it moves beyond using a camera alone to infer contamination visually. An OECT can respond to contact with oil through changes in the electrical behavior of the device, allowing chemical detection to be considered as a robotic payload. However, a laboratory sensor is not automatically a robotic sensing system. The sensor must be packaged, waterproofed, powered, read out through a compact circuit, mounted in a position that can contact the contaminant, and interpreted during robot motion.
+Organic electrochemical transistor (OECT) sensors have recently been demonstrated for crude oil detection in subsea environments \cite{Porter2024}. This sensing direction is important because it moves beyond using a camera alone to infer contamination visually. An OECT can respond to contact with oil through changes in the electrical behavior of the device, allowing chemical detection to be considered as a robotic payload. Robotic use then requires packaging, waterproofing, power, compact readout circuitry, sensor placement that can contact the contaminant, and interpretation during robot motion.
 
-This dissertation integrates an OECT sensing module with AquaNavigator so that chemical oil detection can be evaluated on a moving robotic fish during pipeline-following experiments \cite{Masood2025OilSpill}. The contribution is not simply the sensor alone, but the integration of sensing, packaging, signal conditioning, robot motion, and real-time detection in a controlled pool environment. This work is therefore placed in the same chapter as pipeline tracking and \mbox{CO$_2$} monitoring: all three studies examine how a bio-inspired robotic fish can carry sensing payloads and collect useful information near underwater infrastructure.
+This dissertation integrates an OECT sensing module with AquaNavigator so that chemical oil detection can be evaluated on a moving robotic fish during pipeline-following experiments \cite{Masood2026OilSpill}. The contribution combines sensing, packaging, signal conditioning, robot motion, and real-time detection in a controlled pool environment. This work is therefore presented with the \mbox{CO$_2$} monitoring study in the environmental-sensing chapter, while the pipeline-tracking controller that supports the oil-spill experiment is developed in the preceding control chapter.
 
 \section{Cooperative Inspection and Relative Localization}
 
 A single robotic fish can inspect only a limited spatial region during a mission. For larger underwater assets or distributed environmental monitoring, cooperative groups of small robots can potentially increase coverage, reduce inspection time, and provide redundancy. Underwater swarm robotics remains difficult because communication, localization, and sensing are strongly constrained by the medium \cite{Connor2021}. Acoustic communication and localization are widely used, but size, power, bandwidth, and multi-user interference become important barriers for small robotic fish. Optical methods can provide high data rates over short distances, but they are sensitive to turbidity, scattering, and alignment \cite{Partan2007}.
 
-Localization is central to cooperation. In terrestrial robotics, robots can often combine GPS, wheel odometry, cameras, lidar, or radio-based positioning. Underwater robots cannot rely on GPS after submergence, and visual localization is strongly affected by turbidity, illumination, suspended particles, and feature availability. Acoustic localization methods are mature and widely used, but they usually require specialized transducers, timing, synchronization, and deployment geometry \cite{Luo2021Review,Su2020}. For small robotic fish, the size, cost, and power requirements of these systems are a major constraint.
+Localization is central to cooperation. In terrestrial robotics, robots can often combine GPS, wheel odometry, cameras, lidar, or radio-based positioning. Underwater localization uses different sensing modalities because GPS signals attenuate after submergence, and visual localization is strongly affected by turbidity, illumination, suspended particles, and feature availability. Acoustic localization methods are mature and widely used, but they usually require specialized transducers, timing, synchronization, and deployment geometry \cite{Luo2021,Su2020}. For small robotic fish, the size, cost, and power requirements of these systems are a major constraint.
 
-Radio-frequency (RF) methods are usually limited underwater, especially at high frequencies, but lower-frequency RF has been investigated for short-range underwater communication and localization \cite{Palmeiro2011UnderwaterRF,Nguyen2019,Ryecroft2019}. The RSS-based localization literature also provides a basis for estimating range or position from received signal strength when the propagation model and hardware characteristics are understood \cite{zekavat2019handbook,Nguyen2019}. RF is not presented here as a universal replacement for acoustic localization. Rather, it is investigated as a complementary short-range sensing modality for compact robots, especially in controlled or freshwater environments where low-frequency RF communication may remain measurable over useful distances. The difficulty is that underwater RF propagation is strongly affected by frequency, conductivity, antenna geometry, enclosure effects, multipath, and robot orientation. These effects make a simple path-loss inversion insufficient for reliable relative localization.
+Radio-frequency (RF) methods are usually limited underwater, especially at high frequencies, but lower-frequency RF has been investigated for short-range underwater communication and localization \cite{Palmeiro2011,Nguyen2019,Ryecroft2019}. The RSS-based localization literature also provides a basis for estimating range or position from received signal strength when the propagation model and hardware characteristics are understood \cite{Zekavat2019,Nguyen2019}. In this dissertation, RF is investigated as a complementary short-range sensing modality for compact robots, especially in controlled or freshwater environments where low-frequency RF communication may remain measurable over useful distances. The difficulty is that underwater RF propagation is strongly affected by frequency, conductivity, antenna geometry, enclosure effects, multipath, and robot orientation. These effects make a simple path-loss inversion insufficient for reliable relative localization.
 
-In this dissertation, the cooperative-inspection direction is framed as relative localization rather than as a completed underwater swarm. The work develops and evaluates sub-GHz RSSI-based relative localization with directional antennas, inertial/magnetic sensing, and data-driven compensation for practical hardware and water-tank effects \cite{Masood2026RSSI,Masood2025Swarm}. This provides a step toward cooperative robotic-fish monitoring while keeping the claim limited to the demonstrated relative-localization framework. The connection to the rest of the thesis is system-level: after a single robotic fish can move, regulate depth, and collect sensor data, relative localization becomes one of the requirements for future multi-robot inspection. The localization chapter therefore extends the dissertation from a single-platform monitoring system toward cooperative inspection without claiming that a complete underwater swarm has already been built.
+In this dissertation, the cooperative-inspection direction is developed through relative localization. The work develops and evaluates sub-GHz RSSI-based relative localization with directional antennas, inertial/magnetic sensing, and data-driven compensation for practical hardware and water-tank effects \cite{Masood2026RSSI,Masood2025Swarm}. This provides a step toward cooperative robotic-fish monitoring through the demonstrated relative-localization framework. The connection to the rest of the thesis is system-level: after a single robotic fish can move, regulate depth, and collect sensor data, relative localization becomes one of the requirements for future multi-robot inspection. The localization chapter therefore extends the dissertation from a single-platform monitoring system toward cooperative inspection.
 
 \section{Research Objectives}
 
@@ -150,9 +153,9 @@ These objectives lead to the following specific research tasks:
 
 \begin{enumerate}
 \item Design and model a bio-inspired underwater robotic fish platform with a double-slider-crank tail mechanism, steering capability, embedded electronics, sensor interfaces, and a piston-cylinder variable buoyancy device.
-\item Develop and validate dynamic models for the robotic fish and buoyancy device, and design depth-control methods that account for actuator saturation, unstable buoyancy dynamics, and practical implementation constraints \cite{Masood2023MPCBCD,Masood2026ESCBCD}.
+\item Develop and validate dynamic models for the robotic fish and buoyancy device, and design depth-control methods that account for actuator saturation, unstable buoyancy dynamics, and practical implementation constraints \cite{Masood2023,Masood2026ESCBCD}.
 \item Develop a vision-based pipeline tracking framework and evaluate it as a safety inspection capability for underwater infrastructure \cite{Masood2025Pipeline}.
-\item Integrate and evaluate environmental sensing payloads for \mbox{CO$_2$} leak-source localization and OECT-based oil-spill detection in controlled water experiments \cite{Masood2025CO2,Masood2025OilSpill}.
+\item Integrate and evaluate environmental sensing payloads for \mbox{CO$_2$} leak-source localization and OECT-based oil-spill detection in controlled water experiments \cite{Masood2025CO2,Masood2026OilSpill}.
 \item Develop and experimentally evaluate an underwater relative-localization framework using sub-GHz RSSI, directional antennas, and inertial/magnetic sensing for cooperative inspection scenarios \cite{Masood2026RSSI,Masood2025Swarm}.
 \end{enumerate}
 
@@ -162,9 +165,9 @@ The main contributions of this dissertation are:
 
 \begin{itemize}
 \item \textbf{Robotic fish and buoyancy-device platform:} A compact bio-inspired underwater robotic fish platform is developed as a reusable experimental base for three-dimensional motion, sensing, and inspection-oriented research.
-\item \textbf{Model validation and control design:} Dynamic modeling and validation of the buoyancy device are connected to constrained MPC and constraint-aware ESC approaches for depth regulation \cite{Masood2023MPCBCD,Masood2026ESCBCD}.
+\item \textbf{Model validation and control design:} Dynamic modeling and validation of the buoyancy device are connected to constrained MPC and constraint-aware ESC approaches for depth regulation \cite{Masood2023,Masood2026ESCBCD}.
 \item \textbf{Infrastructure perception:} A camera-based pipeline tracking framework is developed for the underactuated robotic fish and evaluated in water tank experiments \cite{Masood2025Pipeline}.
-\item \textbf{Environmental monitoring payload integration:} The robotic fish is used as a carrier for \mbox{CO$_2$} leak-source localization and OECT-based oil-spill detection, demonstrating how multiple sensing modalities can be integrated on the same underwater platform \cite{Masood2025CO2,Masood2025OilSpill}.
+\item \textbf{Environmental monitoring payload integration:} The robotic fish is used as a carrier for \mbox{CO$_2$} leak-source localization and OECT-based oil-spill detection, demonstrating how multiple sensing modalities can be integrated on the same underwater platform \cite{Masood2025CO2,Masood2026OilSpill}.
 \item \textbf{Relative localization toward cooperative inspection:} A compact sub-GHz RSSI and inertial/magnetic sensing framework is developed for relative localization in leader-follower underwater monitoring scenarios \cite{Masood2026RSSI,Masood2025Swarm}.
 \end{itemize}
 
@@ -176,7 +179,7 @@ The remainder of this dissertation follows the four main technical chapters and 
 
 \textbf{Chapter~3, Model Validation and Control Design,} presents model validation and control design for the variable buoyancy system, including the constrained MPC and constraint-aware ESC approaches. The chapter includes the associated experimental results, discussion, and chapter conclusion.
 
-\textbf{Chapter~4, Safety, Inspection, and Monitoring of Underwater Infrastructure,} presents the pipeline tracking, \mbox{CO$_2$} monitoring, and oil-spill sensing work as inspection and environmental-monitoring capabilities of the robotic fish. The chapter includes method-specific results, discussion, and chapter conclusion.
+\textbf{Chapter~4, Safety, Inspection, and Monitoring of Underwater Infrastructure,} presents the \mbox{CO$_2$} monitoring and oil-spill sensing work as environmental-monitoring capabilities of the robotic fish. The chapter includes method-specific laboratory testing, experimental setup, results, discussion, and chapter conclusion.
 
 \textbf{Chapter~5, Cooperative Inspection: Relative Localization Framework,} presents the sub-GHz RSSI, directional-antenna, and inertial/magnetic sensing framework for underwater relative localization. The chapter is framed as a step toward cooperative inspection, with its own validation results, discussion, and conclusion.
 
@@ -184,7 +187,7 @@ The remainder of this dissertation follows the four main technical chapters and 
 
 \chapter{Design and Modeling of the Buoyancy Control Device and Robotic Fish}
 
-This chapter presents the physical design and modeling foundation of the dissertation. Two hardware systems are treated together: the buoyancy control device (BCD), which enables vertical motion through volume change, and AquaNavigator, the bio-inspired robotic fish that integrates propulsion, steering, electronics, sensing, and buoyancy hardware into one experimental platform. The chapter focuses on design and modeling only. Controller synthesis, model validation, and closed-loop experimental performance are treated in Chapter~3.
+This chapter presents the physical design methodology and modeling foundation of the underlying hardware designed for this research. Two hardware systems are treated together: the buoyancy control device (BCD), which enables vertical motion through volume change, and AquaNavigator, the bio-inspired robotic fish that integrates propulsion, steering, electronics, sensing, and buoyancy hardware into one experimental platform. The chapter focuses on design and modeling only. Controller synthesis, model validation, and closed-loop experimental performance are treated in Chapter~3.
 
 The chapter begins with the design of the BCD because vertical motion is the key hardware requirement for three-dimensional operation. It then presents the design methodology of AquaNavigator. The fish design is introduced from the locomotion concept and tail mechanism, then extended to the enclosure, buoyancy device, electronics, sensor placement, and passive body covers. The modeling section then develops the BCD model and the AquaNavigator dynamic model. The chapter closes with fabrication of the standalone BCD and the robotic fish platform.
 
@@ -219,7 +222,7 @@ AquaNavigator is designed as a bio-inspired robotic fish for underwater inspecti
 
 \subsection{Tail Propulsion and Steering}
 
-The propulsion design is inspired by undulatory fish locomotion. The lateral displacement of a swimming body can be described using a traveling wave \cite{lighthill1969hydromechanics,Lighthill1971},
+The propulsion design is inspired by undulatory fish locomotion. The lateral displacement of a swimming body can be described using a traveling wave \cite{Lighthill1969,Lighthill1971},
 \begin{equation}
     y(x,t) = (c_1x+c_2x^2)\sin(kx+\omega t),
     \label{eq:ch2_design_wave}
@@ -245,7 +248,7 @@ The mechanism is shown in Fig.~\ref{fig:ch2_dsc_action}. The motor drives two sl
     \label{fig:ch2_dsc_action}
 \end{figure}
 
-Steering is achieved by rotating the complete tail-thrust module with a servo motor, as shown in Fig.~\ref{fig:ch2_tail_servo}. The servo changes the tail-bias angle, which changes the direction of the average thrust generated by the DSC mechanism. This creates yaw motion and allows the robot to track visual or mission-level commands. The same design also explains why the platform is underactuated: lateral motion is not directly commanded by a separate thruster, but appears through hydrodynamic coupling and tail-generated yaw.
+Steering is achieved by rotating the complete tail-thrust module with a servo motor, as shown in Fig.~\ref{fig:ch2_tail_servo}. The servo changes the tail-bias angle, which changes the direction of the average thrust generated by the DSC mechanism. This creates yaw motion and allows the robot to track visual or mission-level commands. The same design also explains why the platform is underactuated: lateral motion appears through hydrodynamic coupling and tail-generated yaw rather than through a separate lateral thruster.
 
 \begin{figure}[t]
     \centering
@@ -256,7 +259,7 @@ Steering is achieved by rotating the complete tail-thrust module with a servo mo
 
 \subsection{Electronics, Sensing, and Enclosure Integration}
 
-The electronics enclosure is the main integration volume of AquaNavigator. It houses the microcontroller, power distribution, battery connection, motor interfaces, camera connection, sensor interfaces, and buoyancy hardware. The depth-control mechanism is based on the piston-cylinder BCD concept described in the previous section. The linear actuator is placed inside the watertight enclosure so that the actuator body does not require a separate ingress-protection design.
+The electronics enclosure is the main integration volume of AquaNavigator. It houses the microcontroller, power distribution, battery connection, motor interfaces, camera connection, sensor interfaces, and buoyancy hardware. The depth-control mechanism is based on the piston-cylinder BCD concept described in the previous section. The linear actuator is placed inside the watertight enclosure, which keeps the actuator protected by the main pressure boundary.
 
 The camera is mounted near the front of the robot and tilted downward from the horizontal direction so that pipeline-like features can appear in the field of view during swimming. The passive head cover includes an optical opening for the camera. The enclosure uses O-ring sealing and waterproof penetrators for wiring. The externally exposed servo motor and tail DC motor are individually sealed for operation in water. The body covers are shaped to give the robot a fish-like profile and to reduce drag relative to an exposed mechanical frame.
 
@@ -350,7 +353,7 @@ This equation captures the main physical effect of the BCD: piston displacement 
 
 \subsection{Pressure-Coupled Actuator Model}
 
-The BCD model treats the piston actuator as part of the plant rather than as an ideal position source \cite{Masood2026ESCBCD}. This is important because the actuator is not only moving a piston in air. It is coupled to hydrostatic pressure, internal chamber pressure, friction, backlash, dead-zone behavior, and voltage limits. The motor-side electrical model can be written as
+The BCD model treats the piston actuator as part of the plant rather than as an ideal position source \cite{Masood2026ESCBCD}. This is important because piston motion is coupled to hydrostatic pressure, internal chamber pressure, friction, backlash, dead-zone behavior, and voltage limits. The motor-side electrical model can be written as
 \begin{equation}
     R_a i_a + L_a \dot{i}_a + K_b'\dot{x}_p = u_a ,
     \label{eq:ch2_actuator_electrical}
@@ -425,7 +428,7 @@ The model in Eq.~\eqref{eq:ch2_bcd_statespace} is the main BCD model used by thi
 
 \subsection{AquaNavigator Dynamic Model}
 
-The robotic-fish dynamic model is derived in two steps. First, the force generated by the flapping DSC tail is estimated. Second, the planar rigid-body dynamics of the robot are written using surge, sway, and yaw motion. The model is not intended to represent every fluid-structure interaction around the fish. It provides a tractable representation for simulation, controller design, and interpretation of the experimental behavior.
+The robotic-fish dynamic model is derived in two steps. First, the force generated by the flapping DSC tail is estimated. Second, the planar rigid-body dynamics of the robot are written using surge, sway, and yaw motion. The model represents the dominant propulsion and planar-motion effects needed for simulation, controller design, and interpretation of the experimental behavior.
 
 The coordinate frames used for the planar model are shown in Fig.~\ref{fig:ch2_robot_frames}:
 \begin{itemize}
@@ -447,7 +450,7 @@ The world frame is placed on the water-surface plane, with its $z$-axis pointing
 The following assumptions are used in the planar model:
 \begin{enumerate}
 \item Roll and pitch motion are assumed to be negligible because the robot is balanced so that it remains upright during nominal swimming.
-\item The robotic fish is treated as an underactuated nonholonomic system. It does not generate independent lateral thrust; sway appears through hydrodynamic coupling.
+\item The robotic fish is treated as an underactuated nonholonomic system. Sway appears through hydrodynamic coupling rather than independent lateral thrust.
 \item The body-fixed frame is located at the center of mass, with surge velocity $u$, sway velocity $v$, and yaw rate $r$.
 \item The surrounding fluid is treated using a simplified hydrodynamic approximation, so the model focuses on dominant inertial and drag effects rather than full CFD.
 \item The caudal-fin force is estimated using an elongated-body-theory approximation, with the tail treated as a stiff, low-frequency oscillating structure.
@@ -463,7 +466,7 @@ Let $\alpha_1$ and $\alpha_2$ denote the angular positions of the two effective 
     \end{aligned}
     \label{eq:ch2_dsc_angles}
 \end{equation}
-where $A_1$ and $A_2$ are link angular amplitudes and $\phi_{dsc}$ is the fixed phase difference set by the mechanism geometry. The phase difference is not an online control input in the present prototype. The main propulsion command is the tail oscillation frequency $\omega$, while the steering command is the tail-bias angle $\delta$. Following the DSC mechanism design, $\phi_{dsc}$ is taken as a fixed phase difference.
+where $A_1$ and $A_2$ are link angular amplitudes and $\phi_{dsc}$ is the fixed phase difference set by the mechanism geometry. The main propulsion command is the tail oscillation frequency $\omega$, while the steering command is the tail-bias angle $\delta$. Following the DSC mechanism design, $\phi_{dsc}$ is taken as a fixed phase difference.
 
 If the quarter-chord point of the caudal fin is used as the force-evaluation point, its position in the DSC frame can be approximated as
 \begin{equation}
@@ -601,7 +604,7 @@ is the ellipsoid eccentricity. The ellipsoid approximation is chosen so that the
     I = \frac{4}{15}\pi\rho_wab^2(a^2+b^2).
     \label{eq:ch2_ellipsoid_mass_inertia}
 \end{equation}
-For AquaNavigator, this approximation requires care because some body cavities and passive covers can fill with water during operation. The effective submerged geometry, not only the dry mass, determines the added-mass approximation.
+For AquaNavigator, this approximation requires care because some body cavities and passive covers can fill with water during operation. The added-mass approximation depends on the effective submerged geometry together with the dry mass.
 
 The damping matrix is written as
 \begin{equation}
@@ -683,7 +686,7 @@ The resulting model is the basis for the simulation environment used in the pipe
     \end{tabular}
 \end{table}
 
-The model highlights the key design tradeoff of AquaNavigator. The DSC tail gives a compact propulsion system with a small actuator count, but the resulting motion is coupled and underactuated. Changing $\omega$ changes the magnitude and temporal structure of the thrust. Changing $\delta$ redirects the thrust and creates yaw. Sway motion is not directly actuated, and the robot body also experiences oscillatory motion because the propulsion mechanism is itself oscillatory. These modeling features are important for the later pipeline-tracking chapter, where visual measurements must be interpreted in the presence of tail-induced image motion and underactuated vehicle dynamics.
+The model highlights the key design tradeoff of AquaNavigator. The DSC tail gives a compact propulsion system with a small actuator count, but the resulting motion is coupled and underactuated. Changing $\omega$ changes the magnitude and temporal structure of the thrust. Changing $\delta$ redirects the thrust and creates yaw. Sway motion appears through hydrodynamic coupling, and the robot body also experiences oscillatory motion because the propulsion mechanism is itself oscillatory. These modeling features are important for the later pipeline-tracking chapter, where visual measurements must be interpreted in the presence of tail-induced image motion and underactuated vehicle dynamics.
 
 \section{Fabrication of the BCD and AquaNavigator}
 
@@ -715,15 +718,15 @@ The chapter is organized in the same order as the control development. First, th
 
 \section{Model Validation of the BCD}
 
-The BCD model in Chapter~2 couples vertical motion with piston-actuator dynamics. Before using that model for controller design, its dominant behavior must be checked against hardware measurements. The validation procedure uses an open-loop experiment with the standalone BCD \cite{Masood2026ESCBCD}. The goal is not to prove that the model captures every nonlinear effect. Instead, the goal is to verify that the model reproduces the main actuator response and the resulting depth response well enough to support controller design and to identify where unmodeled effects remain.
+The BCD model in Chapter~2 couples vertical motion with piston-actuator dynamics. Before using that model for controller design, its dominant behavior must be checked against hardware measurements. The validation procedure uses an open-loop experiment with the standalone BCD \cite{Masood2026ESCBCD}. The validation evaluates whether the model reproduces the main actuator response and the resulting depth response well enough to support controller design and to identify where unmodeled effects remain.
 
-The validation experiment is performed on the standalone BCD, also referred to as DiveSync. The actuator has built-in self-locking up to approximately $50$~N of holding force. For the tested depth range, the hydrostatic load is below this threshold, so the actuator can be treated as holding its position when it is not actively driven. This makes an open-loop validation meaningful over the tested operating range.
+The validation experiment is performed on the standalone BCD, also referred to as DiveSync. The actuator has built-in self-locking up to approximately $50$~N of holding force. For the tested depth range, the hydrostatic load is below this threshold, so the actuator holds its position between drive commands. This makes an open-loop validation meaningful over the tested operating range.
 
 In the experiment, a square-wave voltage input $u(t)$ is applied to the linear actuator. The actuator position $z_a(t)$ and the device depth $z_d(t)$ are recorded simultaneously. The same input is then applied to the model, and the simulated actuator and depth responses are compared with the measured responses. The comparison is later shown in the results section. This validation method is useful because it separates two parts of the model: the actuator subsystem is checked through $z_a(t)$, while the buoyancy/depth subsystem is checked through $z_d(t)$.
 
 \section{MPC-Based BCD Control Design}
 
-The first closed-loop BCD controller considered in this dissertation is a constrained model predictive controller (MPC) \cite{Masood2023MPCBCD}. MPC is appropriate for the BCD because actuator motion is physically bounded. If a controller commands piston motion beyond the available stroke, the device cannot produce the requested buoyancy change. Near neutral buoyancy, this loss of control authority can cause persistent drift or unstable depth behavior. The MPC formulation addresses this by optimizing depth tracking while explicitly respecting the piston-position constraint.
+The first closed-loop BCD controller considered in this dissertation is a constrained model predictive controller (MPC) \cite{Masood2023}. MPC is appropriate for the BCD because actuator motion is physically bounded. A command beyond the available stroke saturates the piston and limits the achievable buoyancy change. Near neutral buoyancy, this loss of control authority can cause persistent drift or unstable depth behavior. The MPC formulation addresses this by optimizing depth tracking while explicitly respecting the piston-position constraint.
 
 The MPC objective is written as a finite-horizon quadratic cost,
 \begin{equation}
@@ -778,7 +781,7 @@ For the implemented controller, the plant is discretized with a sampling time of
 
 The MPC design explicitly handles constraints, but its performance depends on the accuracy of the plant model. The fabricated BCD includes actuator dead zone, backlash, friction, direction-dependent behavior, pressure loading, sensor noise, and disturbances from cable tension and tank-wall effects. These effects are difficult to capture exactly in a fixed model. The ESC-based BCD controller therefore uses extremum seeking control (ESC) as an online adaptation layer for depth regulation \cite{Masood2026ESCBCD}.
 
-The BCD has four main dynamic states: depth, depth velocity, piston position, and piston velocity. Depth and piston position are measured directly, while the velocity states are estimated. The control input is actuator voltage, and both voltage and piston stroke are bounded. A depth-only PID controller is not sufficient for this system because it can reduce depth error while unknowingly driving the piston toward a stroke limit. The ESC design therefore treats controller tuning as an online optimization problem shaped by physical constraints.
+The BCD has four main dynamic states: depth, depth velocity, piston position, and piston velocity. Depth and piston position are measured directly, while the velocity states are estimated. The control input is actuator voltage, and both voltage and piston stroke are bounded. A depth-only PID controller can reduce depth error while still driving the piston toward a stroke limit. The ESC design therefore treats controller tuning as an online optimization problem shaped by physical constraints.
 
 Classical ESC can be understood locally by considering an unknown static map $y=f(\theta)$ near an extremum $\theta^\ast$:
 \begin{equation}
@@ -788,9 +791,9 @@ Classical ESC can be understood locally by considering an unknown static map $y=
     + \frac{1}{2}f''(\theta^\ast)(\theta-\theta^\ast)^2 .
     \label{eq:ch3_esc_static_map}
 \end{equation}
-A sinusoidal perturbation is added to the decision variable, and the measured response is high-pass filtered, demodulated, low-pass filtered, and integrated to update the estimate of the improving parameter. The BCD does not satisfy the ideal static-map setting exactly because the depth response is dynamic and trajectory-dependent. For that reason, three ESC structures were considered.
+A sinusoidal perturbation is added to the decision variable, and the measured response is high-pass filtered, demodulated, low-pass filtered, and integrated to update the estimate of the improving parameter. The BCD depth response is dynamic and trajectory-dependent, so three ESC structures were considered.
 
-The first structure applies ESC directly to the actuator voltage. This is useful as a baseline, but voltage does not directly determine depth; it first changes piston motion, and the unstable depth dynamics then evolve from the resulting buoyancy change. The second structure adds an inner actuator-position loop. This improves actuator behavior, but it still does not stabilize the depth state by itself. The third structure is the one used for the main ESC results: an ESC-tuned PD depth controller. Its inner depth-control law is
+The first structure applies ESC directly to the actuator voltage. This is useful as a baseline because voltage first changes piston motion and the depth dynamics then evolve from the resulting buoyancy change. The second structure adds an inner actuator-position loop. This improves actuator behavior, while the third structure adds the depth stabilization used for the main ESC results: an ESC-tuned PD depth controller. Its inner depth-control law is
 \begin{equation}
     u = K_p(r-z) - K_d \dot{z},
     \label{eq:ch3_esc_pd_law}
@@ -809,7 +812,7 @@ Two cost functions are important. The first penalizes actuator motion:
     J = \dot{x}^2 ,
     \label{eq:ch3_esc_velocity_cost}
 \end{equation}
-where $x$ is piston displacement. This encourages reduced actuator activity, but it does not directly distinguish useful piston motion from unsafe piston motion near the stroke limits. The second cost adds a deadzone penalty around the neutral piston position:
+where $x$ is piston displacement. This encourages reduced actuator activity. The second cost adds a deadzone penalty around the neutral piston position so that piston motion near the stroke limits is penalized more strongly:
 \begin{equation}
     J_z =
     w_z
@@ -863,7 +866,7 @@ The first term improves depth tracking, the second term protects the piston stro
 
 \section{Pipeline Tracking Control of AquaNavigator}
 
-The pipeline-tracking controller uses AquaNavigator as a camera-guided planar swimming robot \cite{Masood2025Pipeline}. In this chapter, pipeline tracking is treated as a control-design problem for the robotic fish. The sensing and inspection interpretation is developed later in the infrastructure-monitoring chapter. The control objective is to align the fish with a pipeline-like feature detected in the camera image and reduce the lateral image-space error. Depth control is not active in these pipeline-tracking experiments.
+The pipeline-tracking controller uses AquaNavigator as a camera-guided planar swimming robot \cite{Masood2025Pipeline}. In this chapter, pipeline tracking is treated as a control-design problem for the robotic fish. Its inspection relevance carries into the next chapter through the oil-spill experiment, where pipeline tracking provides the path-following behavior for mobile sensing. The control objective is to align the fish with a pipeline-like feature detected in the camera image and reduce the lateral image-space error. These experiments evaluate planar pipeline tracking, while depth regulation is handled separately by the BCD work.
 
 The onboard camera is mounted near the front of the robot and tilted downward. The image stream is sent to a host computer where OpenCV-based processing converts the frame to grayscale, applies edge detection, and uses a Hough-transform pipeline to identify the dominant line corresponding to the pipeline. The detected pipeline is represented as an image-space vector $\vec{P}$. The robot heading is represented by a heading vector $\vec{h}$ fixed in the image frame because the camera is fixed relative to the robot body. The tracking error is an angle $\psi_e$ formed from these vectors. The controller drives $\psi_e$ toward zero so the robot becomes aligned with the detected pipeline.
 
@@ -895,18 +898,54 @@ The tail-beat frequency is held constant during the tracking experiment, while $
 \end{figure}
 
 \section{Robotic Fish Simulator}
+\label{sec:ch3_robotic_fish_simulator}
 
 The simulator is used to test the robotic-fish model and visual-servo control before pool experiments. It numerically integrates the planar dynamic model from Chapter~2 using a fixed time step and represents the water tank, pipeline, and robotic fish as modular components. The simulator stores state and control histories so that controller gains, tracking errors, and trajectory behavior can be evaluated before operating the physical robot.
 
 For the pipeline-tracking experiment, the simulated tank is $10$~m long and $5$~m wide, with a pipeline placed on the bottom surface. The robot is initialized $0.5$~m away from the pipeline, and the tail-beat frequency is set to $11$~rad/s. The simulation is run for $35$~s with a time step of $0.05$~s. Because tail-driven propulsion produces head and body oscillation, the raw image-space tracking angle contains high-frequency motion. A moving-average filter with a $15$-sample window is applied to $\psi_e$. At a sampling frequency of $20$~Hz, this corresponds to a smoothing window of $0.75$~s and an approximate cutoff frequency of $0.67$~Hz.
 
-Both position-based visual servoing (PBVS) and image-based visual servoing (IBVS) are tested in the simulator. PBVS uses world-frame position and orientation information, which is available in simulation but not directly available on the physical robotic fish. IBVS uses image-space quantities, which better matches the physical experiment because the robot relies on its onboard camera rather than an underwater global localization system. For this reason, IBVS is the preferred implementation for the pool experiment.
+Both position-based visual servoing (PBVS) and image-based visual servoing (IBVS) are tested in the simulator. PBVS uses world-frame position and orientation information available in simulation. IBVS uses image-space quantities, which better matches the physical experiment because the robot relies on its onboard camera for feedback. For this reason, IBVS is the preferred implementation for the pool experiment.
+
+\section{Experimental Setup}
+\label{sec:ch3_experimental_setup}
+
+The physical experiments in this chapter use two controlled laboratory platforms. The BCD experiments use the standalone piston-cylinder buoyancy device shown in Fig.~\ref{fig:ch2_bcd_fabricated}, with the internal piston and buoyancy mechanism described in Figs.~\ref{fig:ch2_bcd_schematic} and~\ref{fig:ch2_bcd_piston}. The robotic-fish experiments use AquaNavigator, shown in Fig.~\ref{fig:ch2_aquanavigator_real}, operating in an indoor water tank. The simulator described in Sec.~\ref{sec:ch3_robotic_fish_simulator} is used as a design and controller-tuning tool before the pool tests.
+
+\subsection{BCD Model-Validation Setup}
+\label{sec:ch3_bcd_validation_setup}
+
+The BCD model-validation experiment uses the standalone buoyancy device rather than the full robotic fish. The piston-cylinder assembly is driven by an Actuonix L12 miniature linear actuator with integrated position feedback. An ESP32-C3 embedded controller drives the actuator through a motor-driver circuit, and an LPS33HW pressure sensor provides depth feedback. Communication with the host computer is through a USB serial connection, with a Python host program used for command generation, telemetry visualization, and synchronized logging of actuator position, command activity, and depth/pressure data.
+
+For open-loop validation, the device is tested in a laboratory water tank. A square-wave voltage input is applied to the linear actuator while the actuator position $z_a(t)$ and device depth $z_d(t)$ are recorded. The purpose of this experiment is to compare the measured actuator and depth responses against the BCD model from Chapter~2.
+
+\subsection{MPC Depth-Control Setup}
+\label{sec:ch3_mpc_experimental_setup}
+
+The MPC experiment uses the same class of standalone buoyancy-control hardware, but with the controller implemented through a MATLAB host computer. Before the depth-control run, the device is sealed, checked for water ingress at $50$~cm depth for three minutes, adjusted to neutral buoyancy with dead weights, and balanced so that it remains vertically oriented. The onboard ESP32-C3 controller, motor driver, pressure sensor, and self-contained power electronics remain inside the device, while the host computer communicates with the device over a wireless UDP link.
+
+In this setup, the depth sensor provides the measured output to the host-side MPC. MATLAB implements the Kalman estimator and state observer, computes the constrained control action, and transmits the command back to the embedded controller. The plant discretization and controller update use a fixed sampling time of $0.1$~s. The MPC experiment uses the same controller settings as the simulation in this chapter, including $Q=1$, $R=40$, a prediction horizon of $80$ steps, and a control horizon of $20$ steps. The physical validation uses a $35$~mm depth step command.
+
+\subsection{ESC Depth-Control Setup}
+\label{sec:ch3_esc_experimental_setup}
+
+The ESC experiments use the updated BCD test setup with USB serial telemetry and the Python host interface. The embedded controller streams actuator position, pressure/depth data, and command feedback to the host computer. The host interface logs the data, displays the experiment in real time, and sends actuator commands back to the embedded controller. This arrangement is used first to check the actuator-position loop before closing the outer depth-control loop.
+
+Two hardware stages are therefore distinguished. The actuator-loop validation stage commands piston-position changes and checks whether the actuator can track the requested setpoints repeatably despite dead zone, backlash, and measurement jitter. The depth-loop ESC stage then uses the measured depth response to adapt the PD gains online. During the depth experiment, the voltage command is constrained within $\pm 12$~V and the piston is required to remain within its $[0,50]$~mm physical stroke. Cable tension, actuator dead zone, and tank-wall effects are treated as experimental disturbances rather than modeled inputs.
+
+\subsection{Pipeline-Tracking Pool Setup}
+\label{sec:ch3_pipeline_experimental_setup}
+
+The pipeline-tracking experiment uses AquaNavigator in an indoor portable water tank that is $10$~m long and $5$~m wide. A pipeline-like feature is placed on the bottom of the tank. A roof-mounted camera records the robot motion from the top view for post-experiment analysis. Feedback control relies on the onboard forward-facing camera mounted inside the robot enclosure, with the camera tilted $30^\circ$ downward from the horizon \cite{Masood2025Pipeline}.
+
+The robot is connected to a host computer through USB. An onboard USB hub separates the camera and microcontroller connections, while the custom PCB integrates power distribution, motor drivers, the microcontroller interface, and connector routing. The robot is powered by a $1500$~mAh 3S LiPo battery. The embedded controller handles low-level actuation, safety behavior, and actuator commands, while the host computer runs the Python GUI used to configure manual operation and pipeline-tracking missions. During these pool experiments, depth control is inactive; only the planar pipeline-tracking controller is evaluated.
+
+The host-side Python program receives the onboard camera stream and processes each frame using OpenCV. The image is converted to grayscale, filtered through Canny edge detection, and processed with a Hough-transform line detector. The dominant detected line is treated as the pipeline. The program computes the image-space heading error $\psi_e$ and lateral error $y$, then sends the corresponding tail-bias command to the microcontroller. For each trial, the software logs the experiment identifier, timestamp, $\psi_e$, and $y$ to a \texttt{.csv} file for post-processing. The camera-vector definition used in this setup is shown in Fig.~\ref{fig:ch3_pipeline_camera_vectors}, and the pool result is summarized in Fig.~\ref{fig:ch3_pipeline_top_view} and Table~\ref{tab:ch3_pipeline_results}.
 
 \section{Results and Discussion}
 
 \subsection{BCD Open-Loop Model Validation}
 
-The open-loop validation result is shown in Fig.~\ref{fig:ch3_bcd_open_loop_validation}. The actuator position predicted by the model follows the measured actuator response with an RMSE of $1.96$~mm. This confirms that the identified actuator time constant and gain capture the main piston motion over the tested range. The depth response has an RMSE of $23.07$~mm. The model reproduces the qualitative oscillatory behavior of the device, but the remaining error indicates that tank-wall effects, depth-dependent drag variation, and neutral-buoyancy offsets are not fully captured.
+Using the model-validation setup described in Sec.~\ref{sec:ch3_bcd_validation_setup}, the open-loop validation result is shown in Fig.~\ref{fig:ch3_bcd_open_loop_validation}. The actuator position predicted by the model follows the measured actuator response with an RMSE of $1.96$~mm. This confirms that the identified actuator time constant and gain capture the main piston motion over the tested range. The depth response has an RMSE of $23.07$~mm. The model reproduces the qualitative oscillatory behavior of the device, with the remaining error consistent with tank-wall effects, depth-dependent drag variation, and neutral-buoyancy offsets.
 
 \begin{figure}[t]
     \centering
@@ -921,38 +960,38 @@ The validation result supports using the model for controller design, but it als
 
 Figure~\ref{fig:ch3_mpc_simulation} shows the MPC simulation response for the selected $Q=1$, $R=40$ tuning. The relatively large input penalty causes the controller to trade response speed for reduced control effort. This is appropriate for an actuator-limited buoyancy device because unnecessarily aggressive piston commands can push the system toward saturation.
 
-\begin{figure}[t]
+\begin{figure}[!htb]
     \centering
-    \includegraphics[width=0.62\textwidth]{Fig/ch3_mpc_simulation.png}
+    \includegraphics[width=0.7\textwidth]{Fig/ch3_mpc_simulation.png}
     \caption{MPC simulation response for BCD depth tracking.}
     \label{fig:ch3_mpc_simulation}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[!htb]
     \centering
-    \includegraphics[width=0.68\textwidth]{Fig/ch3_mpc_experiment.png}
+    \includegraphics[width=0.7\textwidth]{Fig/ch3_mpc_experiment.png}
     \caption{Experimental MPC response compared with simulation.}
     \label{fig:ch3_mpc_experiment}
 \end{figure}
 
-The experimental MPC result is shown in Fig.~\ref{fig:ch3_mpc_experiment}. The experiment is performed with a $35$~mm step command and compared against the simulated plant output. The response shows acceptable steady-state behavior, while the transient contains vibration and mismatch that are attributed to nonlinear physical effects not included in the simplified model. The MPC experiment reported steady-state tracking within approximately two percent error bounds \cite{Masood2023MPCBCD}.
+Using the MPC depth-control setup described in Sec.~\ref{sec:ch3_mpc_experimental_setup}, the experimental MPC result is shown in Fig.~\ref{fig:ch3_mpc_experiment}. The experiment is performed with a $35$~mm step command and compared against the simulated plant output. The response shows acceptable steady-state behavior, while the transient contains vibration and mismatch attributed to nonlinear physical effects outside the simplified model. The MPC experiment reported steady-state tracking within approximately two percent error bounds \cite{Masood2023}.
 
 \subsection{ESC Depth-Control Results}
 
-Before the depth-loop ESC experiments, the actuator loop is checked independently. Figure~\ref{fig:ch3_bcd_actuator_loop_result} shows representative actuator-position tracking, command activity, and depth telemetry. The position loop tracks commanded setpoints while reducing measurement jitter using median filtering and an $\alpha$-$\beta$ estimator. This actuator-loop behavior is important because the ESC experiments assume that piston-position commands can be executed repeatably enough for outer-loop adaptation.
+Using the ESC setup described in Sec.~\ref{sec:ch3_esc_experimental_setup}, the actuator loop is checked independently before the depth-loop ESC experiments. Figure~\ref{fig:ch3_bcd_actuator_loop_result} shows representative actuator-position tracking, command activity, and depth telemetry. The position loop tracks commanded setpoints while reducing measurement jitter using median filtering and an $\alpha$-$\beta$ estimator. This actuator-loop behavior is important because the ESC experiments assume that piston-position commands can be executed repeatably enough for outer-loop adaptation.
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=0.6\textwidth]{Fig/ch3_bcd_actuator_loop_result.pdf}
+    \includegraphics[width=0.8\textwidth]{Fig/ch3_bcd_actuator_loop_result.pdf}
     \caption{Actuator-loop validation before ESC depth experiments.}
     \label{fig:ch3_bcd_actuator_loop_result}
 \end{figure}
 
-The ESC-tuned PD controller is evaluated first in simulation with a reference that switches from sinusoidal depth motion to square-wave depth commands. Figure~\ref{fig:ch3_esc_velocity_penalty_sim} shows the velocity-penalty objective. Depth tracking is maintained, the voltage remains within $\pm 12$~V, and the piston remains within its stroke limits. However, because the cost penalizes actuator velocity rather than proximity to stroke limits, the piston can approach the bounds during aggressive square-wave transients.
+The ESC-tuned PD controller is evaluated first in simulation with a reference that switches from sinusoidal depth motion to square-wave depth commands. Figure~\ref{fig:ch3_esc_velocity_penalty_sim} shows the velocity-penalty objective. Depth tracking is maintained, the voltage remains within $\pm 12$~V, and the piston remains within its stroke limits. Because the cost penalizes actuator velocity rather than proximity to stroke limits, the piston can approach the bounds during aggressive square-wave transients.
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=0.65\textwidth]{Fig/ch3_esc_velocity_penalty_sim.pdf}
+    \includegraphics[width=0.8\textwidth]{Fig/ch3_esc_velocity_penalty_sim.pdf}
     \caption{ESC simulation with velocity-penalty objective function.}
     \label{fig:ch3_esc_velocity_penalty_sim}
 \end{figure}
@@ -961,7 +1000,7 @@ Figure~\ref{fig:ch3_esc_deadzone_penalty_sim} shows the simulation with the dead
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=0.65\textwidth]{Fig/ch3_esc_deadzone_penalty_sim.pdf}
+    \includegraphics[width=0.8\textwidth]{Fig/ch3_esc_deadzone_penalty_sim.pdf}
     \caption{ESC simulation with deadzone piston-position penalty.}
     \label{fig:ch3_esc_deadzone_penalty_sim}
 \end{figure}
@@ -970,7 +1009,7 @@ The hardware ESC experiment is shown in Fig.~\ref{fig:ch3_esc_experiment}. The r
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=0.65\textwidth]{Fig/ch3_esc_experiment.pdf}
+    \includegraphics[width=0.8\textwidth]{Fig/ch3_esc_experiment.pdf}
     \caption{ESC experiment with online gain adaptation.}
     \label{fig:ch3_esc_experiment}
 \end{figure}
@@ -979,7 +1018,7 @@ These results show the tradeoff between MPC and ESC. MPC gives a structured way 
 
 \subsection{Simulator Results}
 
-The simulator is used to compare PBVS and IBVS before implementing the real system. Figure~\ref{fig:ch3_simulator_responses} shows that both approaches can converge the visual-servoing error in simulation. The gains are not directly interchangeable because $\psi_e$ has a different physical meaning in each case. In PBVS, the error is formed from world-frame geometry. In IBVS, the error is formed from image-space features.
+Using the simulator described in Sec.~\ref{sec:ch3_robotic_fish_simulator}, PBVS and IBVS are compared before implementing the real system. Figure~\ref{fig:ch3_simulator_responses} shows that both approaches can converge the visual-servoing error in simulation. The gains are tuned separately because $\psi_e$ has a different physical meaning in each case. In PBVS, the error is formed from world-frame geometry. In IBVS, the error is formed from image-space features.
 
 \begin{figure}[t]
     \centering
@@ -996,11 +1035,11 @@ The simulator is used to compare PBVS and IBVS before implementing the real syst
     \label{fig:ch3_simulator_responses}
 \end{figure}
 
-The simulator supports controller tuning because it captures the underactuated planar dynamics and the oscillatory behavior introduced by tail propulsion. However, the physical experiment remains necessary because image noise, communication dropouts, lighting, water motion, and mechanical vibration are difficult to reproduce exactly. For AquaNavigator, the simulator is therefore used as a controller-development tool rather than as a substitute for pool validation.
+The simulator supports controller tuning because it captures the underactuated planar dynamics and the oscillatory behavior introduced by tail propulsion. The physical experiment then evaluates the controller under image noise, communication dropouts, lighting variation, water motion, and mechanical vibration. For AquaNavigator, the simulator is therefore used as a controller-development tool before pool validation.
 
 \subsection{Pipeline Tracking Results}
 
-The pipeline-tracking pool experiment evaluates whether the robotic fish can reduce the image-space heading error $\psi_e$ and move toward the detected pipeline. The experiment begins with the robot away from the pipeline, producing an initial $\psi_e$ of approximately $25^\circ$. As the controller redirects the tail-bias angle, $\psi_e$ converges toward zero and the robot continues along the pipeline. The control input reaches the $\pm 20^\circ$ saturation limit during parts of the transient.
+Using the pool setup described in Sec.~\ref{sec:ch3_pipeline_experimental_setup}, the pipeline-tracking experiment evaluates whether the robotic fish can reduce the image-space heading error $\psi_e$ and move toward the detected pipeline. The experiment begins with the robot away from the pipeline, producing an initial $\psi_e$ of approximately $25^\circ$. As the controller redirects the tail-bias angle, $\psi_e$ converges toward zero and the robot continues along the pipeline. The control input reaches the $\pm 20^\circ$ saturation limit during parts of the transient.
 
 The top-view sequence in Fig.~\ref{fig:ch3_pipeline_top_view} shows the pipeline-tracking experiment spatially. The fish moves toward the pipeline, aligns with it, and then continues along it with a steady heading.
 
@@ -1029,33 +1068,811 @@ The top-view sequence in Fig.~\ref{fig:ch3_pipeline_top_view} shows the pipeline
     \end{tabular}
 \end{table}
 
-Across the listed pool experiments, the robot converges to within $\psi_e=\pm 5^\circ$ of the pipeline. The settling time depends on the initial orientation and lateral offset. The result demonstrates pipeline following in a controlled indoor pool, not open-water industrial inspection. The visual signal is not perfectly smooth because the tail mechanism introduces body and camera oscillation. This is a real limitation of camera-guided robotic-fish control and must be considered when designing onboard perception and control.
+Across the listed pool experiments, the robot converges to within $\psi_e=\pm 5^\circ$ of the pipeline. The settling time depends on the initial orientation and lateral offset. The result demonstrates pipeline following in a controlled indoor pool. The visual signal contains oscillations introduced by the tail mechanism and body motion, which are important design considerations for onboard perception and control.
 
 \section{Conclusion}
 The open-loop BCD validation gave an actuator-position RMSE of $1.96$~mm and a depth-response RMSE of $23.07$~mm, showing that the identified actuator dynamics were captured more tightly than the coupled depth response. The remaining depth error is consistent with unmodeled drag variation, tank-wall effects, and small neutral-buoyancy offsets in the laboratory setup. First an MPC controller was developed that used the model to enforce piston constraints and produced acceptable depth regulation while respecting actuator limits, but its performance depended on model fidelity. The ESC-tuned PD controller addressed this limitation by adapting gains online from measured performance while respecting voltage and stroke limits.
 
-For the robotic fish, image-based visual servoing was used to track a pipeline-like feature by commanding the tail-bias angle, with the simulator supporting PBVS and IBVS comparison and gain tuning before pool experiments. The results show that the BCD and AquaNavigator can be controlled in constrained laboratory and pool settings, but they also show the limitations that motivate the next chapter. Pipeline tracking is a first inspection behavior, and depth regulation is a prerequisite for three-dimensional operation.
+For the robotic fish, image-based visual servoing was used to track a pipeline-like feature by commanding the tail-bias angle, with the simulator supporting PBVS and IBVS comparison and gain tuning before pool experiments. The results show that the BCD and AquaNavigator can be controlled in constrained laboratory and pool settings. Pipeline tracking is a first inspection behavior, and depth regulation is a prerequisite for three-dimensional operation.
 
 \chapter{Safety, Inspection, and Monitoring of Underwater Infrastructure}
-% TODO: Add chapter introduction, pipeline tracking, CO2 monitoring,
-% oil-spill sensing, results/discussion, and chapter conclusion.
 
-\chapter{Cooperative Inspection: Relative Localization Framework}
-% TODO: Add chapter introduction, relative-localization framework,
-% validation results/discussion, and chapter conclusion.
+The previous chapters established the physical platform, the buoyancy-control model, and the control methods needed for depth regulation and pipeline-following motion. Infrastructure monitoring also requires sensors, mobile data acquisition, and methods that convert measurements into interpretable information about the surrounding environment. This chapter therefore shifts from robot design and control to environmental sensing with AquaNavigator.
+
+Subsea monitoring includes path following, depth regulation, and measurement of environmental changes around infrastructure. A leak, spill, or chemical release can move away from its source, mix with water, appear intermittently, or produce a spatial pattern that depends on flow, depth, sensor response time, and robot trajectory. Fixed sensors can provide long-term measurements at selected locations, while a mobile robotic platform can sample across a region of interest and connect each measurement to the robot's position or path.
+
+Two sensing studies are presented in this chapter. The first uses a near-infrared \mbox{CO$_2$} sensor and position-tagged measurements to estimate the source of a controlled underwater \mbox{CO$_2$} leak \cite{Masood2025CO2}. The second integrates an organic electrochemical transistor (OECT) sensor with AquaNavigator for crude-oil detection during pipeline-following experiments \cite{Masood2026OilSpill}. The \mbox{CO$_2$} study emphasizes spatial source localization, while the oil-spill study emphasizes chemical-sensor packaging, signal conditioning, and detection feasibility on a moving robotic fish.
+
+\section{AquaNavigator as a Mobile Sensing Platform}
+
+AquaNavigator is used in this chapter as a common mobile sensing platform for underwater environmental monitoring. Rather than treating each experiment as a separate robotic system, the platform is considered as a reusable carrier that can support different sensing payloads, data-acquisition requirements, and operating conditions. Its sealed enclosure, onboard electronics, modular payload space, and tail-driven mobility allow the robot to carry sensors through a controlled water environment and collect measurements at different locations.
+
+The common idea across the sensing studies is spatial sampling. A sensor payload is mounted on the robotic fish and operated while the platform interacts with the surrounding water. In the \mbox{CO$_2$} experiment, the objective is to measure dissolved carbon dioxide concentration and associate the measurements with the robot's position in the tank. In the oil-spill experiment, the objective is to measure the OECT drain-source current response as the sensor encounters clean and contaminated water conditions. Although the two sensing mechanisms are different, both experiments use the robotic fish as a mobile platform for collecting environmental information.
+
+The same practical constraints apply to both studies. Sensor response time, position-estimation accuracy, and tank-scale disturbances define how the measurements are interpreted. The goal of this chapter is therefore to evaluate AquaNavigator as a modular underwater sensing platform and to identify the technical steps needed before extending the approach to field-scale monitoring.
+
+\section[CO2 Leak Source Localization]{CO$_2$ Leak Source Localization}
+
+\subsection{Motivation and Sensing Strategy}
+
+Carbon capture and storage creates a monitoring problem after \mbox{CO$_2$} has been captured and transported. A subsea \mbox{CO$_2$} leak may dissolve into seawater, form carbonic acid, lower pH, and affect nearby marine organisms \cite{Herzog2001,Filonchyk2024,Kabir2023,Zheng2021,Pham2016}. For this reason, monitoring combines mechanical pipeline inspection with chemical measurements of the surrounding water.
+
+The sensing strategy is to use AquaNavigator as a mobile carrier for a near-infrared \mbox{CO$_2$} sensor. The sensor reports \mbox{CO$_2$} concentration while the host computer associates each measurement with a planar position in the water tank. Because GPS is unavailable underwater and the experiment is indoors, an overhead RGB camera provides the laboratory position reference for evaluating source estimation with position-tagged measurements.
+
+\subsection{Experimental Setup and Data Collection}
+
+Two \mbox{CO$_2$} experiments are used. First, a diffusion test is performed in a 1.2~m $\times$ 1.2~m $\times$ 1.2~m tank using a \mbox{CO$_2$} cylinder, regulator, flow meter, and submerged pipe with a small hole at the bottom. Fig.~\ref{fig:ch4_co2_diffusion_setup} shows this setup. The leak flow rate is set to 1~LPM. The sensor baseline is recorded before the leak is turned on, and measurements are taken after 5~min stabilization intervals over a total duration of 30~min. The measurements are collected at depths from 0.1~m to 0.4~m below the water surface and horizontal offsets from 0~m to 0.3~m from the leak point.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.50\textwidth]{Fig/ch4_co2_diffusion_setup.png}
+    \caption{CO$_2$ diffusion test setup in water.}
+    \label{fig:ch4_co2_diffusion_setup}
+\end{figure}
+
+Second, the robotic source-localization experiment is conducted in a 10~m $\times$ 5~m $\times$ 2~m indoor water tank filled to about 70\% of its height with fresh water. An overhead RGB camera covers approximately 8~m $\times$ 6~m of the tank. A \mbox{CO$_2$} cylinder and regulator feed a submerged 2~in pipe with a small hole at the bottom to simulate a leak source. The actual source location used for evaluation is $(3.0,3.5)$~m in the tank coordinate frame. Fig.~\ref{fig:ch4_co2_experimental_setup} shows the complete tank setup.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.62\textwidth]{Fig/ch4_co2_experimental_setup.png}
+    \caption{CO$_2$ leak-source experiment in the tank.}
+    \label{fig:ch4_co2_experimental_setup}
+\end{figure}
+
+During the robotic experiment, AquaNavigator is manually operated through the host software while the \mbox{CO$_2$} sensor streams concentration measurements. The overhead camera initially detects the robot with human assistance, and the host software then tracks its position using optical-flow-based tracking. Each concentration sample is tagged with the corresponding tank-plane position and timestamp. The resulting position-tagged measurements are analyzed in Sec.~\ref{sec:ch4_results_discussion}.
+
+\subsection{Localization Method}
+
+The raw dataset is represented as $(x_n,y_n,C_n)$, where $(x_n,y_n)$ is the planar position of the robot and $C_n$ is the measured \mbox{CO$_2$} concentration. Although the data are collected over time at approximately 0.1~s intervals, the sensor response time is on the order of 60~s. The analysis therefore treats the measurements over short windows as quasi-steady spatial samples for source estimation.
+
+The first representation is a binned heatmap. For a grid cell centered at $(x_i,y_j)$, the mean concentration is computed as
+\begin{equation}
+    \bar{C}(x_i,y_j) = \frac{\sum_{n=1}^{N} C_n \delta_{ij}(x_n,y_n)}{\sum_{n=1}^{N} \delta_{ij}(x_n,y_n)}.
+    \label{eq:ch4_co2_binned_heatmap}
+\end{equation}
+Here, $\delta_{ij}$ assigns a sample to the grid cell when the sample position lies inside that cell. The same measurements are also interpolated onto a regular grid. Linear interpolation is used inside the convex hull of measured points, and nearest-neighbor filling is used outside the hull. An RBF field is then computed as
+\begin{equation}
+    C_r(x_i,y_j) = \sum_{n=1}^{N} w_n \phi\left(\left\|(x_i,y_j)-(x_n,y_n)\right\|\right),
+    \label{eq:ch4_co2_rbf}
+\end{equation}
+where the Gaussian basis is
+\begin{equation}
+    \phi(r) = \exp\left[-\left(\frac{r}{\epsilon}\right)^2\right].
+    \label{eq:ch4_co2_gaussian_rbf}
+\end{equation}
+Local maxima in the interpolated field are treated as candidate leak locations. The highest three peaks are averaged to estimate the source. The same source-estimation process is repeated over cumulative 75~s windows to evaluate how the estimate changes as more measurements are collected.
+
+\section{Oil Spill Detection}
+
+\subsection{Motivation and OECT Sensing Principle}
+
+Oil-spill monitoring includes both leak detection near subsea infrastructure and environmental contamination assessment after oil enters the surrounding water. Offshore production and subsea transport remain important parts of the energy system \cite{HeinrichBoellStiftung2017}. Crude-oil release can harm marine organisms, seabirds, coastal ecosystems, and human activity near affected regions \cite{Almeda2014,Albers1982}. A mobile robot can support this problem by carrying a sensor close to the suspected leak path instead of relying only on remote imagery or internal pipeline measurements.
+
+The sensing element used here is an OECT sensor previously demonstrated for crude-oil detection in aqueous environments \cite{Porter2024}. The device uses a PEDOT:PSS channel coated with a hydrophobic polystyrene layer. When oil contacts the coated channel, the ionic permeability of the channel changes, increasing impedance and reducing the source-drain current. In the reported laboratory characterization, the sensor can detect oil at concentrations down to 10~$\mu$g and can operate in water-based media, including seawater.
+
+\subsection{Signal Conditioning and Platform Integration}
+
+Laboratory source-measurement equipment is too large and power-demanding for robotic use, so a compact signal-conditioning circuit is used for the OECT payload. The circuit supplies the gate excitation, maintains the drain-source bias, measures the drain-source current, and communicates with the host computer. The final circuit provides a variable gate-voltage output, a fixed drain-voltage supply, and a current-sensing input. Fig.~\ref{fig:ch4_oect_circuit} shows the circuit architecture.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.72\textwidth]{Fig/ch4_oect_circuit.png}
+    \caption{OECT signal-conditioning circuit for oil detection.}
+    \label{fig:ch4_oect_circuit}
+\end{figure}
+
+The circuit and sensor are packaged in a waterproof enclosure with sealed cable ports, an O-ring interface, and a sensor-facing cap, shown in Fig.~\ref{fig:ch4_oect_enclosure}. Because crude oil is hydrophobic and less dense than water, it tends to rise and accumulate near the air-water interface. The OECT module is therefore mounted on top of AquaNavigator to increase the likelihood of contact with surface-level oil contamination.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.66\textwidth]{Fig/ch4_oect_enclosure.png}
+    \caption{Waterproof OECT enclosure for robotic integration.}
+    \label{fig:ch4_oect_enclosure}
+\end{figure}
+
+\subsection{Experimental Setup and Detection Method}
+
+The oil experiments have two stages. The first stage characterizes the OECT sensor in the laboratory using both source-measurement equipment and the compact signal-conditioning circuit. The gate-voltage window is selected from $-0.6$~V to $+0.6$~V to obtain a measurable response while limiting water electrolysis, and a constant drain-source bias of $-0.6$~V is applied. The sensor is tested in pool water, seawater, direct oil exposure, and oil-contaminated water.
+
+The second stage integrates the OECT sensor with AquaNavigator in an indoor water tank. The tank is approximately 10~m long, 5~m wide, and 1.5~m deep, and a black pipeline-like feature is placed along the bottom. The robotic fish follows the pipeline using the camera-based tracking behavior described in Chapter~3 while the host computer records the OECT response. Fig.~\ref{fig:ch4_oil_fish_pool} shows the integrated robotic setup.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.58\textwidth]{Fig/ch4_oil_fish_pool.png}
+    \caption{Oil-sensing AquaNavigator during pipeline pool experiments.}
+    \label{fig:ch4_oil_fish_pool}
+\end{figure}
+
+Oil detection is based on attenuation of the square-wave pulse response. For each gate-voltage pulse window, the current amplitude is computed as
+\begin{equation}
+    A_k = I_{\mathrm{high},k} - I_{\mathrm{low},k}.
+    \label{eq:ch4_oil_pulse_amplitude}
+\end{equation}
+The average pulse response over $N$ windows is compared with the clean-water baseline amplitude $A_0$ using
+\begin{equation}
+    S = 1 - \frac{1}{A_0}\left(\frac{1}{N}\sum_{k=1}^{N} A_k\right).
+    \label{eq:ch4_oil_attenuation}
+\end{equation}
+When $S$ exceeds a selected threshold, the host-side routine classifies the measurement as oil-contaminated. The experimental results from the laboratory and robotic tests are analyzed in Sec.~\ref{sec:ch4_results_discussion}.
+
+\section{Results and Discussion}
+\label{sec:ch4_results_discussion}
+
+\subsection[CO2 Leak Localization Results]{CO$_2$ Leak Localization Results}
+
+The small-tank diffusion test shows that the measured \mbox{CO$_2$} field is spatially nonuniform. With the leak flow set to 1~LPM and measurements taken after 5~min stabilization intervals, the measured response varies with both horizontal offset and depth, as shown in Fig.~\ref{fig:ch4_co2_diffusion_results}. Rising bubbles, dissolution, and sensor response time affect where elevated concentration is measured, motivating the spatial source-estimation approach used in the robotic tank experiment.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.62\textwidth]{Fig/ch4_co2_diffusion_results.png}
+    \caption{Measured CO$_2$ diffusion across depth and offset.}
+    \label{fig:ch4_co2_diffusion_results}
+\end{figure}
+
+The robotic tank data are first inspected as position-tagged concentration samples. Fig.~\ref{fig:ch4_co2_raw_scatter} shows the collected \mbox{CO$_2$} measurements in the tank coordinate frame. This plot is useful because it shows the measured concentration together with the spatial coverage of the robotic fish trajectory. The raw data are then binned into a 0.4~m $\times$ 0.4~m grid, producing the heatmap in Fig.~\ref{fig:ch4_co2_heatmap}. The heatmap provides the fastest spatial summary and indicates the high-concentration region, but it is limited by grid resolution and sampling density.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.62\textwidth]{Fig/ch4_co2_raw_scatter.png}
+    \caption{Raw position-tagged CO$_2$ measurements in tank.}
+    \label{fig:ch4_co2_raw_scatter}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.62\textwidth]{Fig/ch4_co2_heatmap.png}
+    \caption{Binned CO$_2$ concentration heatmap from robotic measurements.}
+    \label{fig:ch4_co2_heatmap}
+\end{figure}
+
+Linear interpolation with nearest-neighbor filling is shown in Fig.~\ref{fig:ch4_co2_linear_interpolation}. This representation gives a continuous field on the grid while preserving the influence of measured samples. The RBF interpolation in Fig.~\ref{fig:ch4_co2_rbf_surface} provides a smoother concentration field and is used to support peak detection. These interpolation results are data-driven spatial summaries used for source estimation.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.62\textwidth]{Fig/ch4_co2_linear_interpolation.png}
+    \caption{Linear CO$_2$ interpolation with nearest-neighbor filling.}
+    \label{fig:ch4_co2_linear_interpolation}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.62\textwidth]{Fig/ch4_co2_rbf_surface.png}
+    \caption{RBF-interpolated CO$_2$ concentration surface for source estimation.}
+    \label{fig:ch4_co2_rbf_surface}
+\end{figure}
+
+Peak detection is applied to the interpolated field. Fig.~\ref{fig:ch4_co2_peak_map} shows local maxima, the three highest candidate peaks, and the averaged source estimate. The actual source is at $(3.0,3.5)$~m. The peak-based estimate lies close to that location, showing that the concentration field contains enough spatial information to estimate the leak region in this controlled tank experiment.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.64\textwidth]{Fig/ch4_co2_peak_map.png}
+    \caption{Peak-based CO$_2$ leak-source estimate in tank.}
+    \label{fig:ch4_co2_peak_map}
+\end{figure}
+
+The time-windowed analysis evaluates whether the estimate improves as more data are collected. The data are processed in cumulative 75~s windows at 75~s, 151~s, 226~s, 301~s, 376~s, 452~s, 527~s, 602~s, and 678~s. Fig.~\ref{fig:ch4_co2_time_windows} shows the corresponding concentration maps and source estimates. The localization error decreases from 2.43~m after 75~s to 1.50~m after 151~s and reaches 0.69~m after 527~s. Fig.~\ref{fig:ch4_co2_error_over_time} shows the same decreasing trend as a scalar error plot.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.94\textwidth]{Fig/ch4_co2_time_windows.png}
+    \caption{Time-windowed CO$_2$ source-localization maps during sensing.}
+    \label{fig:ch4_co2_time_windows}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.54\textwidth]{Fig/ch4_co2_error_over_time.png}
+    \caption{CO$_2$ localization error during data collection.}
+    \label{fig:ch4_co2_error_over_time}
+\end{figure}
+
+The \mbox{CO$_2$} results show that a single robotic fish can collect spatially distributed concentration data and estimate a leak-source region in a controlled tank. The result supports spatial sensing and data-driven localization, with future development focused on underwater localization, sensor-lag compensation, and testing under currents and field-scale mixing.
+
+\subsection{Oil Spill Detection Results}
+
+The OECT laboratory characterization first compares the sensor response across different liquids. Fig.~\ref{fig:ch4_oil_multi_solution} shows the time response under triangular excitation for water, soda, seawater, and oil samples. Aqueous samples produce higher current responses because of their ionic conductivity, while oil samples produce current levels below 0.2~mA. Fig.~\ref{fig:ch4_oil_response_distribution} summarizes the same separation as a current-distribution plot, showing the current decrease when the sensor is exposed to oil-based samples.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.72\textwidth]{Fig/ch4_oil_multi_solution.png}
+    \caption{OECT responses across water and oil samples.}
+    \label{fig:ch4_oil_multi_solution}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.64\textwidth]{Fig/ch4_oil_response_distribution.png}
+    \caption{OECT current distributions across tested liquid samples.}
+    \label{fig:ch4_oil_response_distribution}
+\end{figure}
+
+The circuit-based tests then evaluate the payload electronics used for robotic integration. Pool-water and seawater responses are each repeated three times, and the seawater current is more than double the pool-water current because of the higher salt content. In the direct-contact test, a $10~\mu$L crude-oil droplet is injected into the OECT channel before immersion in seawater. The response to gate excitation becomes nearly zero in all three trials, as shown in Fig.~\ref{fig:ch4_oect_oil_channel}. This verifies that direct oil contact strongly attenuates the transistor response.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.64\textwidth]{Fig/ch4_oect_oil_channel.jpg}
+    \caption{OECT response after direct oil-channel exposure.}
+    \label{fig:ch4_oect_oil_channel}
+\end{figure}
+
+The more realistic laboratory test adds crude oil to seawater at 4~g/L and 8~g/L, with each condition repeated three times. Fig.~\ref{fig:ch4_oect_oily_water} shows that the square-wave response decreases as oil concentration increases. This result extends the direct-contact test to dispersed oil-contaminated water.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Fig/ch4_oect_oily_water.jpg}
+    \caption{OECT response for oil-contaminated water samples.}
+    \label{fig:ch4_oect_oily_water}
+\end{figure}
+
+The integrated robotic experiment compares stationary clean-water, moving clean-water, and oil-contaminated cases while AquaNavigator follows the pipeline. The clean-water stationary and moving measurements are each repeated three times and provide the baseline for judging whether robot motion alone changes the sensor response. After the baseline is established, an oil leak is introduced at a defined pipeline location using a peristaltic dosing pump at 5~ml/min. Fig.~\ref{fig:ch4_oil_pool_response} shows that the contaminated-region response decreases relative to the clean-water cases. The signal change appears with an approximately 60~s delay after the robot enters the contaminated zone, consistent with oil absorption time in the OECT channel. Repeated measurements after 15~min and 30~min of exposure show further response reduction as the local oil contamination increases.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Fig/ch4_oil_pool_response.jpg}
+    \caption{Robotic oil-detection response during pipeline tracking.}
+    \label{fig:ch4_oil_pool_response}
+\end{figure}
+
+The oil results show that the sensor response is separable across clean, direct-oil, oil-contaminated, and robotic pool conditions. They also show the integration limits. The experiment demonstrates detection feasibility on AquaNavigator, while the response time means that the robot path and residence time in the contaminated region affect localization accuracy. Wave, current, sediment-resuspension, biological-fouling, and debris cases remain important future validation conditions.
+
+\subsection{System-Level Discussion}
+
+The \mbox{CO$_2$} and oil-spill studies use different sensing principles. The \mbox{CO$_2$} work uses a concentration sensor and spatial data processing to estimate a source region. The oil work uses an OECT chemical sensor and current attenuation to detect direct or local contact with oil contamination. Despite the difference in sensor physics, both studies use the same system idea: AquaNavigator carries a payload, moves through a controlled underwater environment, and connects sensor data to robot motion.
+
+The two studies also emphasize different parts of the environmental-monitoring problem. The \mbox{CO$_2$} experiment emphasizes source localization from spatially distributed measurements. Its main result is the reduction of source-estimation error to 0.69~m in the controlled tank dataset. The oil experiment emphasizes integration of a laboratory chemical sensor into a robotic payload. Its main result is the separation between clean-water and contaminated-water responses during pipeline-following experiments, including the observed 60~s response delay and the stronger attenuation after longer exposure.
+
+The shared limitations define the next technical steps. Both studies are controlled tank or pool experiments with host-side computation and laboratory localization support. The \mbox{CO$_2$} analysis treats short windows as quasi-steady, so future work should include current, bubble-dynamics, and sensor-lag modeling. The oil experiment should also be extended to waves, sediment, fouling, and debris. Together, these needs motivate improved onboard localization, stronger onboard autonomy, sensor-response compensation, and testing under more realistic underwater disturbances.
+
+\section{Conclusion}
+
+This chapter presented AquaNavigator as a mobile sensing platform for subsea environmental monitoring. The \mbox{CO$_2$} study showed how position-tagged concentration measurements can be processed through heatmaps, interpolation, peak detection, and time-windowed analysis to localize a controlled leak source. The oil-spill study showed how an OECT sensor can be packaged, conditioned, integrated with the robotic fish, and used to detect oil contamination during pipeline-following experiments. Together, the two studies extend the thesis from robot design and control toward robotic environmental monitoring. Chapter~5 builds on this direction by addressing relative localization, which is needed for future cooperative monitoring by multiple underwater robots.
+\chapter{RSS-Based Relative Localization for Underwater Robotic Swarms}
+
+The previous chapters considered a single robotic fish as a platform for underwater motion, pipeline tracking, and environmental sensing. A single robot can inspect a local region and collect useful measurements, while larger monitoring tasks require coordination across multiple agents. Cooperative inspection is useful when an infrastructure corridor, leak region, or environmental plume covers an area larger than one robot can sample efficiently during one mission. In that setting, each robot needs some estimate of where nearby robots are located so that the group can maintain spacing, avoid redundant sampling, and follow a shared inspection path.
+
+Underwater localization is difficult because GPS is attenuated after submergence, visual sensing depends on lighting and turbidity, and acoustic localization hardware can become large, expensive, and power-demanding for compact robotic fish. The relative-localization work in this chapter therefore investigates a short-range sensing approach based on received signal strength (RSS) from sub-GHz RF links, directional antennas, and inertial/magnetic measurements \cite{Masood2025Swarm,Masood2026RSSI}. The goal is to estimate relative distance and bearing between an underwater leader node and a follower node, which is the information needed for leader-follower coordination.
+
+This chapter combines two related developments. First, a leader-follower simulation framework is used to connect RSS-based relative localization with robotic-fish motion and formation keeping. Second, an experimental RSSI localization device is designed and evaluated in water-tank tests using four directional RF antenna channels, an IMU, and vision-based ground truth. The simulation establishes how the localization estimate would be used by robotic fish, while the experiment evaluates the sensing hardware and data-driven localization method.
+
+\section{Relative Localization Model}
+
+\subsection{Leader-Follower Configuration}
+
+The relative-localization problem is written for a leader-follower pair. The leader represents a better-instrumented vehicle or reference node that can follow a pipeline, communicate with a surface system, or provide a reference signal for nearby followers. The follower carries a lower-cost localization unit and estimates its position relative to the leader using RSS measurements and inertial/magnetic sensing. This configuration is shown conceptually in Fig.~\ref{fig:ch5_swarm_schematic}.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.68\textwidth]{Fig/ch5_swarm_schematic.png}
+    \caption{Leader-follower concept for RSS-based relative localization.}
+    \label{fig:ch5_swarm_schematic}
+\end{figure}
+
+Let the leader position be $(x_\ell,y_\ell)$ and the follower position be $(x_f,y_f)$ in the world frame. The follower yaw angle is $\psi_f$. The relative range from follower to leader is
+\begin{equation}
+    d = \sqrt{(x_\ell-x_f)^2 + (y_\ell-y_f)^2}.
+    \label{eq:ch5_relative_distance}
+\end{equation}
+The relative bearing in the follower body frame is
+\begin{equation}
+    \theta = \operatorname{atan2}(y_\ell-y_f,x_\ell-x_f)-\psi_f.
+    \label{eq:ch5_relative_bearing}
+\end{equation}
+The localization task is to estimate $d$ and $\theta$, and then reconstruct the relative Cartesian position of the follower with respect to the leader.
+
+\subsection{Relative Motion Model}
+
+For the leader-follower simulator, the follower state is written as
+\begin{equation}
+    \mathbf{x}_k =
+    \begin{bmatrix}
+        x_k & y_k & \psi_k & u_k & v_k & r_k & \dot{u}_k & \dot{v}_k
+    \end{bmatrix}^{T}.
+    \label{eq:ch5_sim_state}
+\end{equation}
+Here, $(x_k,y_k)$ and $\psi_k$ are the planar position and yaw angle, $u_k$, $v_k$, and $r_k$ are surge velocity, sway velocity, and yaw rate, and $\dot{u}_k$ and $\dot{v}_k$ are body-frame accelerations. With time step $\Delta t$, the propagated state used in the EKF simulation is
+\begin{equation}
+    \hat{\mathbf{x}}_{k+1} =
+    \begin{bmatrix}
+    \hat{x}_k + \hat{u}_k \cos\hat{\psi}_k \Delta t - \hat{v}_k \sin\hat{\psi}_k \Delta t \\
+    \hat{y}_k + \hat{u}_k \sin\hat{\psi}_k \Delta t + \hat{v}_k \cos\hat{\psi}_k \Delta t \\
+    \hat{\psi}_k + \hat{r}_k \Delta t \\
+    \hat{u}_k + \hat{\dot{u}}_k \Delta t \\
+    \hat{v}_k + \hat{\dot{v}}_k \Delta t \\
+    r_{m,k} \\
+    \dot{u}_{m,k} \\
+    \dot{v}_{m,k}
+    \end{bmatrix}.
+    \label{eq:ch5_motion_model}
+\end{equation}
+This state model provides the inertial propagation used in the simulation framework. In the experimental RSSI work, the inertial and magnetic measurements are used mainly for heading estimation and temporal correction of the RSSI-based bearing estimate.
+
+\subsection{RSS-Based Measurement Model}
+
+The RF unit uses multiple directional antennas to infer both range and direction from received signal strength. In the simulation and hardware design, four antennas are placed around the horizontal plane with known angular spacing. Fig.~\ref{fig:ch5_swarm_rss_unit} shows the RSS unit geometry used in the leader-follower simulation.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.56\textwidth]{Fig/ch5_swarm_rss_unit.png}
+    \caption{Directional RSS unit geometry in the simulator.}
+    \label{fig:ch5_swarm_rss_unit}
+\end{figure}
+
+The received power at an antenna is modeled as
+\begin{equation}
+    P_r = P_t + G_t + G_r(\theta) - L(d),
+    \label{eq:ch5_received_power}
+\end{equation}
+where $P_t$ is the transmitted power, $G_t$ is the transmitter gain, $G_r(\theta)$ is the directional receive gain, and $L(d)$ is the distance-dependent path loss. For the low-frequency RF model used in the papers, the attenuation is written as
+\begin{equation}
+    L(d)=\alpha_w d,
+    \label{eq:ch5_path_loss}
+\end{equation}
+with
+\begin{equation}
+    \alpha_w = 0.0173\sqrt{f_{rf}\sigma},
+    \label{eq:ch5_water_attenuation}
+\end{equation}
+where $f_{rf}$ is RF frequency and $\sigma$ is water conductivity. The receiving antenna pattern is approximated as
+\begin{equation}
+    G_r(\theta)=G_{\max}-12\left(\frac{\theta}{\alpha_b}\right)^2,
+    \label{eq:ch5_directional_gain}
+\end{equation}
+where $\alpha_b$ is the beam-width parameter. In the analytical RSS model, the strongest antenna and its adjacent antenna are used to estimate the local angle of arrival. If $S_{\mathrm{ref}}$ is the strongest RSS value and $S_{\mathrm{adj}}$ is the adjacent-channel RSS value, the RSS ratio is
+\begin{equation}
+    S_{\mathrm{ratio}} = 10\log_{10}\left(\frac{S_{\mathrm{adj}}}{S_{\mathrm{ref}}}\right).
+    \label{eq:ch5_rss_ratio}
+\end{equation}
+The local relative angle used in the simulation model is
+\begin{equation}
+    \theta_{\mathrm{rel}} =
+    -\frac{1}{2}
+    \left(
+        90^\circ + \frac{\alpha_b^2}{90^\circ}\frac{S_{\mathrm{ratio}}}{12}
+    \right),
+    \label{eq:ch5_theta_rel}
+\end{equation}
+and the angle of arrival is
+\begin{equation}
+    \theta_{\mathrm{AoA}}=\theta_{\mathrm{ref}}+\theta_{\mathrm{rel}}(\mathrm{ref}-\mathrm{adj}).
+    \label{eq:ch5_aoa}
+\end{equation}
+The corresponding RSS-based range estimate is
+\begin{equation}
+    d_{\mathrm{RSS}} =
+    \left\lVert
+    \frac{(P_t)_{\mathrm{dB}} + (G(\theta_{\mathrm{rel}}))_{\mathrm{dB}} - (S_{\mathrm{ref}})_{\mathrm{dB}}}
+    {0.0173\sqrt{f_{rf}\sigma}}
+    \right\rVert.
+    \label{eq:ch5_rss_distance}
+\end{equation}
+
+\subsection{IMU-Based State Propagation}
+
+The IMU provides acceleration and yaw-rate measurements for short-term motion propagation. In the simulator, the measured accelerations and yaw rate are represented as
+\begin{equation}
+    \begin{aligned}
+    \ddot{x}_{m,k} &= \ddot{x}_k+\eta_{\mathrm{acc},k}+\nu_{\mathrm{acc},k},\\
+    \ddot{y}_{m,k} &= \ddot{y}_k+\eta_{\mathrm{acc},k}+\nu_{\mathrm{acc},k},\\
+    \dot{\psi}_{m,k} &= \dot{\psi}_k+\eta_{\mathrm{gyro},k}+\nu_{\mathrm{gyro},k},
+    \end{aligned}
+    \label{eq:ch5_imu_measurement}
+\end{equation}
+where $\eta$ terms represent white noise and $\nu$ terms represent drift. The experimental device uses a 9-axis IMU, including accelerometer, gyroscope, and magnetometer channels. The magnetometer gives an absolute heading cue, while the gyroscope provides short-horizon rotational information.
+
+\subsection{Sensor Fusion Framework}
+
+The simulation uses an EKF with two measurement updates: one update from the IMU and one update from the RSS-based relative-position estimate. The IMU measurement model is
+\begin{equation}
+    \mathbf{z}_{\mathrm{IMU},k} =
+    \begin{bmatrix}
+        \dot{u}_{m,k} & \dot{v}_{m,k} & r_{m,k}
+    \end{bmatrix}^{T},
+    \label{eq:ch5_imu_vector}
+\end{equation}
+and the RSS update supplies a position or relative-position correction derived from $d_{\mathrm{RSS}}$ and $\theta_{\mathrm{AoA}}$.
+
+The experimental RSSI framework uses a physics-aware learning layer before fusion. The RSSI vector
+\begin{equation}
+    \mathbf{S}_k =
+    \begin{bmatrix}
+    S_{1,k} & S_{2,k} & S_{3,k} & S_{4,k}
+    \end{bmatrix}^{T}
+    \label{eq:ch5_rssi_vector}
+\end{equation}
+is combined with magnetometer and short-horizon gyroscope features to estimate distance, bearing, and yaw. The relative Cartesian position of the receiver with respect to the transmitter is then reconstructed as
+\begin{equation}
+    \begin{bmatrix}
+    \hat{x}_{\mathrm{rel},k}\\
+    \hat{y}_{\mathrm{rel},k}
+    \end{bmatrix}
+    =
+    -\hat{d}_k
+    \begin{bmatrix}
+    \cos(\hat{\psi}_k+\hat{\theta}_k)\\
+    \sin(\hat{\psi}_k+\hat{\theta}_k)
+    \end{bmatrix}.
+    \label{eq:ch5_relative_position}
+\end{equation}
+
+\section[Simulation Framework for Leader-Follower Robotic Fish]{Simulation Framework for Leader-Follower\\ Robotic Fish}
+
+\subsection{Simulator Architecture}
+
+The simulation framework from the swarm paper is built around a water-tank environment containing a leader robotic fish, a follower robotic fish, a pipeline feature on the tank bottom, RF/RSS sensing, and IMU sensing \cite{Masood2025Swarm}. The environment maintains the robot states, updates the RF signal-strength field, computes simulated sensor outputs, and logs localization and formation-control variables. The simulator is used to test how RSS and IMU estimates support leader-follower formation before the physical RF localization device is evaluated experimentally.
+
+\subsection{Robotic Fish Dynamic Model}
+
+Both simulated robots are bio-inspired robotic fish using the planar robotic-fish model described in Chapter~2 and used for pipeline-tracking control in Chapter~3 \cite{Masood2025Pipeline}. The leader uses camera-based pipeline tracking to follow the line feature in the tank. The follower uses relative localization to estimate the leader position and adjust its tail actuation. This keeps the simulation connected to the AquaNavigator modeling work rather than treating the localization problem as a point-mass abstraction alone.
+
+\subsection{Leader and Follower Trajectories}
+
+The leader represents the better-instrumented robot. In the simulation, it carries the sensing and control capabilities needed to track the pipeline. The follower carries an RSS unit and IMU and estimates its relative position with respect to the leader. The formation-control objective is to maintain a desired inter-agent distance while following the leader path. In the reported simulation, the desired distance is
+\begin{equation}
+    d_{\mathrm{ref}} = 1~\mathrm{m}.
+    \label{eq:ch5_dref}
+\end{equation}
+The follower control law regulates tail propulsion and steering using
+\begin{equation}
+u_{\mathrm{tail}} =
+\begin{cases}
+k_p(d_{\mathrm{Fused}}-d_{\mathrm{ref}}), & d_{\mathrm{Fused}}>d_{\mathrm{ref}},\\
+0, & d_{\mathrm{Fused}}\leq d_{\mathrm{ref}},
+\end{cases}
+\label{eq:ch5_tail_speed_control}
+\end{equation}
+and
+\begin{equation}
+    \delta_{\mathrm{tail}}=k_{\delta}\theta_{\mathrm{AoA}},
+    \label{eq:ch5_tail_steering_control}
+\end{equation}
+where $d_{\mathrm{Fused}}$ is the fused relative-distance estimate and $\theta_{\mathrm{AoA}}$ is the estimated bearing.
+
+\subsection{Simulated RSS and IMU Measurements}
+
+The simulated RF field uses the attenuation model and directional antenna model defined earlier in this chapter. Each RSS unit has a transmitter and a receiver with four directional antennas. The receiver computes one RSS value per antenna channel, and the RSS pattern is converted into an angle-of-arrival and range estimate. The IMU model adds white noise and drift to acceleration and yaw-rate measurements. These two sensing streams are then fused in the EKF.
+
+\subsection{Data Logging and Evaluation Metrics}
+
+The simulator logs ground-truth leader and follower states, IMU-only estimates, RSS-only estimates, fused EKF estimates, relative distance, bearing, and formation errors. The main simulation metrics are the localization error between the estimated and ground-truth follower positions and the formation errors
+\begin{equation}
+    e_d = d_{\mathrm{RSS}} - \sqrt{(x_f-x_\ell)^2+(y_f-y_\ell)^2},
+    \label{eq:ch5_sim_distance_error}
+\end{equation}
+and
+\begin{equation}
+    e_{\theta} = \theta_{\mathrm{AoA}}-(\psi_f-\psi_\ell).
+    \label{eq:ch5_sim_bearing_error}
+\end{equation}
+These quantities are used in Sec.~\ref{sec:ch5_results_discussion} to compare IMU-only, RSS-only, and fused localization behavior.
+
+\section{Design of the RSS Localization Device}
+
+\subsection{Sub-GHz RF Localization Concept}
+
+The experimental localization device uses sub-GHz RF because lower RF frequencies attenuate less severely in freshwater than common 2.4~GHz radio links. The device uses a $433.92$~MHz carrier and measures RSSI from multiple antenna channels. At this frequency, the wavelength is approximately $0.69$~m, so phase-based direction-of-arrival would require antenna spacing that is large relative to a small robotic fish. The device therefore uses directional antenna response and RSSI differences as the practical basis for bearing estimation.
+
+\subsection{Directional Antenna Arrangement}
+
+The localization device uses four flat antenna elements placed at $90^\circ$ angular spacing around the body frame. The antenna design is shaped to create directional sensitivity in the horizontal plane. The paper reports a compact antenna modification using RF absorber material and an asymmetric ground-plane approach to obtain at least a 10~dB front-to-back difference in the azimuth plane \cite{Masood2026RSSI}. This directional behavior is central to the RSSI bearing estimate because the received signal pattern across channels changes with arrival direction.
+
+\subsection{Mechanical Base and Sensor Layout}
+
+The mechanical device is designed as a compact waterproof localization module. Fig.~\ref{fig:ch5_rssi_device_description} shows the four antenna channels and the internal sensor layout. The reported package size is approximately $15~\mathrm{cm}\times15~\mathrm{cm}\times8~\mathrm{cm}$. The enclosure is fabricated as a watertight body with flange sealing and penetrators for wired connections. This form factor is intended for small underwater platforms where localization hardware must be replicated across several agents.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Fig/ch5_rssi_device_description.png}
+    \caption{Compact RSSI localization device and sensor layout.}
+    \label{fig:ch5_rssi_device_description}
+\end{figure}
+
+\subsection{Electronics and Data-Acquisition System}
+
+The electronics include a Texas Instruments CC1101 sub-GHz radio module, a custom interface PCB, and a TDK InvenSense ICM-20948 9-axis IMU. The microcontroller receives RF packets, records RSSI values from the antenna channels, polls the IMU synchronously with RF reception events, and sends data to the host computer through USB. Table~\ref{tab:ch5_rf_parameters} summarizes the RF communication and localization parameters used in the experimental work.
+
+\begin{table}[t]
+    \centering
+    \caption{RF localization hardware parameters.}
+    \label{tab:ch5_rf_parameters}
+    \begin{tabular}{lll}
+        \hline
+        Parameter & Symbol & Value \\
+        \hline
+        Carrier frequency & $f_c$ & $433.92~\mathrm{MHz}$ \\
+        Modulation & -- & GFSK \\
+        Nominal data rate & $R_b$ & $1.2~\mathrm{kBaud}$ \\
+        Transmit power & $P_t$ & $+10~\mathrm{dBm}$ \\
+        Receiver sensitivity & $S_{\min}$ & approx. $-112~\mathrm{dBm}$ \\
+        Packet airtime & $T_{\mathrm{air}}$ & approx. $93~\mathrm{ms}$ \\
+        Tested reception distance & $r_{\mathrm{comm}}$ & $10~\mathrm{m}$ at $0.5~\mathrm{m}$ depth \\
+        Evaluated localization range & $r_{\mathrm{loc}}$ & up to $6~\mathrm{m}$ \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Coordinate Frames and Measurement Channels}
+
+The receiver body frame is attached to the localization unit. The four RF channels measure RSSI values $\{S_1,S_2,S_3,S_4\}$ at known azimuth directions. The IMU provides acceleration, angular-rate, and magnetometer measurements in the device frame. The ground-truth frame is defined by the overhead vision system during experimental data collection. The learning problem maps synchronized RSSI and IMU-derived features to the relative quantities $d$, $\theta$, and $\psi$.
+
+\section{Experimental Setup and Data Collection}
+
+\subsection{Water-Tank Experimental Setup}
+
+The experimental validation is performed in a controlled water-tank environment. Before localization data collection, the RF link is tested independently in the tank to verify packet reception. The receiver recorded signal strength at a distance of 10~m when the transmitter and receiver were held at a depth of 0.5~m. For localization data collection, the device is mounted on a BlueROV, as shown in Fig.~\ref{fig:ch5_rssi_hardware_mounted}, while a transmitter is placed at a fixed location.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Fig/ch5_rssi_hardware_mounted.png}
+    \caption{RSSI localization device mounted on BlueROV.}
+    \label{fig:ch5_rssi_hardware_mounted}
+\end{figure}
+
+\subsection{Ground-Truth Measurement System}
+
+An AprilTag is attached to the moving platform, and an overhead camera provides ground-truth position and orientation. This produces the reference quantities needed to train and evaluate the learned localization models. The ground-truth data are synchronized with the RSSI and IMU recordings through host-side logging.
+
+\subsection{RSS and IMU Data Collection}
+
+Each sample contains the RSSI vector from four antennas, accelerometer data, gyroscope data, magnetometer data, ground-truth position, ground-truth yaw, and timestamps from the device and computer. Two main datasets are reported: one covering 0.5--3~m range and a second covering 0.5--6~m range. The antenna depth is controlled during collection because the water surface and tank boundaries affect multipath and RSSI patterns.
+
+\subsection{Dataset Construction and Preprocessing}
+
+The dataset is constructed by aligning each RSSI and IMU sample with its corresponding ground-truth pose. Angular targets are represented with sine and cosine components to avoid discontinuity at the wrap-around boundary. Magnetometer features include the planar components, magnitude, and direct heading representation. RSSI features include raw or normalized antenna-channel values. The resulting feature sets are used to train separate estimators for yaw, distance, and bearing.
+
+\section{Learning-Based Localization Method}
+
+\subsection{Feature Representation}
+
+The learning method is physics-aware in the sense that it keeps the geometry and periodic structure of the localization problem in the feature representation. For yaw estimation, the planar magnetometer feature vector is
+\begin{equation}
+    \mathbf{x}^{(m)}_k =
+    \begin{bmatrix}
+    m_{x,k} & m_{y,k} & r_k & \cos\varphi_k & \sin\varphi_k
+    \end{bmatrix}^{T},
+    \label{eq:ch5_mag_features}
+\end{equation}
+where
+\begin{equation}
+    r_k=\sqrt{m_{x,k}^2+m_{y,k}^2}, \qquad
+    \varphi_k=\operatorname{atan2}(m_{y,k},m_{x,k}).
+    \label{eq:ch5_mag_radius_heading}
+\end{equation}
+For distance estimation, the feature vector is
+\begin{equation}
+    \mathbf{x}^{(d)}_k =
+    \begin{bmatrix}
+    \mathbf{S}_k^{T} & m_{x,k} & m_{y,k} & \|\mathbf{m}_{xy,k}\|_2 & \cos\varphi_k & \sin\varphi_k
+    \end{bmatrix}^{T}.
+    \label{eq:ch5_distance_features}
+\end{equation}
+For angular predictions, the target is represented as $(\cos\alpha,\sin\alpha)$ and recovered by $\operatorname{atan2}(\sin\alpha,\cos\alpha)$.
+
+\subsection{RF-Only Localization}
+
+The RF-only localization case uses RSSI measurements to estimate distance and bearing. In the experimental data, the relation between RSSI and distance is affected by directional antenna gain, tank reflections, radiation-lobe behavior, and receiver orientation. For this reason, the experimental method learns the measurement-to-state relationship from data rather than relying only on the analytical path-loss inversion. The RF-only case is still important because it shows how much localization information is contained in the antenna-channel RSSI pattern itself.
+
+\subsection{RF-IMU Fusion}
+
+The RF-IMU method uses magnetometer and gyroscope information to improve heading and bearing consistency. The short-horizon gyroscope feature is built from the bias-corrected yaw-rate increment
+\begin{equation}
+    \delta\psi_k=(\omega_k-b_g)\Delta t_k,
+    \label{eq:ch5_delta_psi}
+\end{equation}
+and the accumulated short-horizon increment
+\begin{equation}
+    \Delta\psi_k^{(L)}
+    =
+    \sum_{i=\max(0,k-L+1)}^{k}\delta\psi_i.
+    \label{eq:ch5_short_horizon_gyro}
+\end{equation}
+This gives the gyroscope feature vector
+\begin{equation}
+    \mathbf{x}^{(g)}_k =
+    \begin{bmatrix}
+    \cos(\Delta\psi_k^{(L)}) &
+    \sin(\Delta\psi_k^{(L)}) &
+    \Delta\psi_k^{(L)}
+    \end{bmatrix}^{T}.
+    \label{eq:ch5_gyro_features}
+\end{equation}
+For bearing correction, the raw RSSI-based bearing estimate $\hat{\theta}_k^{(\mathrm{RSSI})}$ is filtered using a yaw-guided Kalman correction. The prediction step is
+\begin{equation}
+    \hat{\theta}_k^{-}
+    =
+    \hat{\theta}_{k-1}^{+}
+    -
+    \Delta\hat{\psi}_k,
+    \label{eq:ch5_theta_prediction}
+\end{equation}
+and the measurement is
+\begin{equation}
+    z_k=\hat{\theta}_k^{(\mathrm{RSSI})}.
+    \label{eq:ch5_theta_measurement}
+\end{equation}
+The update uses the wrapped angular innovation
+\begin{equation}
+    \tilde{y}_k =
+    \operatorname{wrap}(z_k-\hat{\theta}_k^{-}).
+    \label{eq:ch5_wrapped_innovation}
+\end{equation}
+
+\subsection{Training and Testing Procedure}
+
+Multiple regression methods are trained and compared using the same feature representation. The tested models include Extra Trees, Lasso regression, K-nearest neighbors, decision tree, neural network, gradient boosting, support vector regression, random forest, and ridge regression. The models are evaluated using mean absolute error (MAE) and the coefficient of determination $R^2$. Table~\ref{tab:ch5_model_comparison} summarizes the main comparison reported for orientation, distance, and bearing.
+
+\begin{table}[t]
+    \centering
+    \caption{Learning-model comparison for RSSI localization.}
+    \label{tab:ch5_model_comparison}
+    \scriptsize
+    \setlength{\tabcolsep}{5pt}
+    \begin{tabular}{lcccc}
+        \hline
+        Model & Yaw MAE & RSSI dist. MAE & RSSI+mag dist. MAE & Bearing MAE \\
+        \hline
+        Extra Trees & $10.12^\circ$ & $0.64$ m & $0.41$ m & $30.23^\circ$ \\
+        KNN & $8.86^\circ$ & $0.78$ m & $0.65$ m & $43.20^\circ$ \\
+        Neural net & $8.43^\circ$ & $0.69$ m & $0.44$ m & $36.58^\circ$ \\
+        Random forest & $9.79^\circ$ & $0.66$ m & $0.48$ m & $32.21^\circ$ \\
+        SVR & $8.42^\circ$ & $0.74$ m & $0.56$ m & $65.95^\circ$ \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Evaluation Metrics}
+
+The main experimental metrics are yaw MAE, distance MAE, bearing MAE, Euclidean position error, and the distribution of Cartesian position errors. For the leader-follower simulation, the evaluation also includes the time history of IMU-only, RSS-only, and fused EKF position estimates, plus distance and bearing errors during formation keeping.
+
+\section{Results and Discussion}
+\label{sec:ch5_results_discussion}
+
+\subsection{Experimental RF-Only Localization Results}
+
+The RF-only distance result shows the difficulty of using RSSI magnitude alone. In the 6~m dataset, Extra Trees gives a distance MAE of $0.64$~m using RSSI-only features, while the same model gives $0.41$~m when magnetometer-derived orientation features are included. This difference shows that receiver orientation and antenna directivity are strongly coupled with RSSI magnitude in the tank experiment. The RF-only channel still provides useful distance information, but the learned model performs better when heading-related features are included.
+
+\subsection{Experimental RF-IMU Localization Results}
+
+Fig.~\ref{fig:ch5_psi_unwrapped_timeseries} shows yaw estimates from gyroscope, magnetometer, and fused heading features. Fig.~\ref{fig:ch5_psi_absolute_error_timeseries} shows the corresponding absolute yaw error. The gyroscope-only estimate drifts over time, while the magnetometer-based and fused estimates remain aligned with the ground-truth yaw over the test sequence. In the model comparison, several yaw estimators achieve approximately 8--10$^\circ$ MAE, with support vector regression at $8.42^\circ$, neural network at $8.43^\circ$, and Lasso regression at $8.39^\circ$.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.78\textwidth]{Fig/ch5_psi_unwrapped_timeseries.png}
+    \caption{Yaw estimation from magnetometer and gyroscope features.}
+    \label{fig:ch5_psi_unwrapped_timeseries}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.78\textwidth]{Fig/ch5_psi_absolute_error_timeseries.png}
+    \caption{Yaw absolute error across the test sequence.}
+    \label{fig:ch5_psi_absolute_error_timeseries}
+\end{figure}
+
+Fig.~\ref{fig:ch5_theta_kf_comparison} compares the raw RSSI-based bearing estimate with the yaw-guided Kalman-corrected estimate. The correction improves temporal consistency and reduces bearing MAE from about $36^\circ$ to about $30^\circ$ in the reported test. This improvement matters because bearing error directly affects the reconstructed relative position.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.58\textwidth]{Fig/ch5_theta_kf_comparison.png}
+    \caption{Kalman correction of RSSI-based bearing estimates.}
+    \label{fig:ch5_theta_kf_comparison}
+\end{figure}
+
+The combined learning framework reconstructs relative position from the estimated distance, bearing, and yaw. The reported mean absolute localization error is $0.24$~m over the 3~m range and $0.64$~m over the 6~m range \cite{Masood2026RSSI}. Figs.~\ref{fig:ch5_position_error_histogram} and~\ref{fig:ch5_position_error_scatter} show the error distribution and Cartesian error scatter for the 3~m-range dataset. Fig.~\ref{fig:ch5_position_error_histogram_6m} shows the 6~m-range error distribution; the paper reports that more than 80\% of the estimates have error below 0.6~m in this longer-range dataset.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.58\textwidth]{Fig/ch5_position_error_histogram.png}
+    \caption{Three-meter position-error distribution for learned localization.}
+    \label{fig:ch5_position_error_histogram}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.58\textwidth]{Fig/ch5_position_error_scatter.png}
+    \caption{Cartesian position-error scatter for learned localization.}
+    \label{fig:ch5_position_error_scatter}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.58\textwidth]{Fig/ch5_position_error_histogram_6m.png}
+    \caption{Six-meter position-error distribution for learned localization.}
+    \label{fig:ch5_position_error_histogram_6m}
+\end{figure}
+
+\subsection{Leader-Follower Simulation Results}
+
+The leader-follower simulation compares IMU-only, RSS-only, and fused EKF localization. Fig.~\ref{fig:ch5_swarm_imu_localization} shows that the IMU-only estimate accumulates drift, the RSS-only estimate remains bounded but has higher fluctuations, and the fused estimate follows the ground-truth trajectory more closely. This result supports the use of RSS as a stabilizing external measurement for inertial propagation in short-range leader-follower operation.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.62\textwidth]{Fig/ch5_swarm_imu_localization.png}
+    \caption{Simulated IMU, RSS, and fused localization.}
+    \label{fig:ch5_swarm_imu_localization}
+\end{figure}
+
+Fig.~\ref{fig:ch5_swarm_formation_pool} shows the simulated formation-control scenario in the tank environment. The leader follows the pipeline-like path, and the follower maintains a relative position using the fused RSS-IMU estimate. Fig.~\ref{fig:ch5_swarm_formation_errors} shows the estimated and ground-truth distance and bearing quantities during the run. The simulation demonstrates how the relative-localization estimate can be used directly by the follower's tail-frequency and steering commands.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.62\textwidth]{Fig/ch5_swarm_formation_pool.png}
+    \caption{Leader-follower formation control in the tank simulator.}
+    \label{fig:ch5_swarm_formation_pool}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.62\textwidth]{Fig/ch5_swarm_formation_errors.png}
+    \caption{Formation-distance and bearing errors in simulation.}
+    \label{fig:ch5_swarm_formation_errors}
+\end{figure}
+
+\subsection{Discussion}
+
+The simulation and experiment address different parts of the same thesis problem. The simulation shows how a follower robotic fish can use relative distance and bearing estimates to maintain formation with a leader during pipeline-oriented motion. The experiment shows how compact sub-GHz RF hardware, directional antenna channels, and IMU/magnetometer sensing can estimate relative position in a controlled water-tank setting. Together, they provide a path from a single AquaNavigator-style platform toward cooperative underwater monitoring.
+
+The experimental results also show why the localization method needs a data-driven component. RSSI depends on distance, arrival direction, antenna response, enclosure effects, water-tank reflections, and sensor orientation. The analytical model explains the structure of the problem, while the learning model captures the nonlinear mapping observed in the physical data. The strongest result is the reported $0.24$~m mean absolute position error over 3~m and $0.64$~m over 6~m. The remaining challenge is robustness across different tanks, depths, water conductivities, antenna mounting conditions, and multi-agent geometries.
+
+\section{Future Work}
+
+Future work should first integrate the experimental RSSI localization device with AquaNavigator so that the relative-localization estimator can be evaluated on the same robotic-fish platform used for pipeline tracking and environmental sensing. The next step is onboard implementation of the learning and fusion pipeline, including real-time packet handling, feature computation, and relative-position estimation on embedded hardware. The current experimental workflow uses host-side processing, while a cooperative robotic-fish system needs onboard estimation and communication.
+
+The second direction is multi-agent validation. The present experimental evaluation uses one transmitter and one moving receiver, while cooperative monitoring requires multiple followers, changing relative geometry, packet scheduling, and collision-safe coordination. Additional work is also needed to test different water conductivities, depths, antenna orientations, enclosure materials, and environmental disturbances. These studies would make the learned RF model more transferable across operating conditions.
+
+\section{Conclusion}
+
+This chapter presented an RSS-based relative-localization framework for underwater robotic swarms. The leader-follower simulation showed how RSS and IMU measurements can be fused for relative localization and used for formation control of robotic fish. The experimental work developed a compact $433.92$~MHz RSSI localization device with four directional antenna channels and a 9-axis IMU. The learning-based localization method used RSSI, magnetometer, and gyroscope-derived features to estimate relative distance, bearing, yaw, and position. The reported results achieved mean absolute localization errors of $0.24$~m over a 3~m range and $0.64$~m over a 6~m range. This chapter extends the dissertation from single-robot inspection and environmental sensing toward cooperative underwater monitoring.
 
 \chapter{Conclusions and Future Work}
-% TODO: Add final conclusions and future-work directions.
+
+This dissertation developed a bio-inspired robotic fish system for underwater inspection and environmental monitoring. The work began from the need for compact underwater robots that can operate near infrastructure, carry sensing payloads, regulate depth, and provide a path toward cooperative monitoring. The main thesis argument is that a robotic fish should be treated as an integrated system: the mechanical platform, buoyancy device, dynamic model, control algorithms, sensing payloads, and localization framework must work together for underwater monitoring tasks.
+
+The first part of the dissertation developed the physical platform. AquaNavigator was designed as a tail-actuated robotic fish with a double-slider-crank caudal-fin mechanism, a steerable tail module, a watertight electronics enclosure, onboard camera feedback, embedded control electronics, and space for payload integration. A piston-cylinder buoyancy control device was also developed to support vertical motion by changing displaced volume. The platform design established the hardware basis for the later control, inspection, environmental-sensing, and relative-localization studies.
+
+The second part of the dissertation modeled and controlled the buoyancy and swimming behavior. The BCD model coupled piston motion, hydrostatic loading, pressure effects, actuator dynamics, and vertical motion. The open-loop validation showed an actuator-position RMSE of $1.96$~mm and a depth-response RMSE of $23.07$~mm. These results showed that the actuator dynamics were captured more tightly than the full depth response, where drag variation, tank-wall effects, and neutral-buoyancy offsets remained important. The MPC controller used the model to regulate depth while respecting piston constraints, and the experimental MPC result reported steady-state tracking within approximately two percent error bounds. The ESC-tuned PD controller then addressed model dependence by adapting controller gains from measured performance while respecting actuator voltage and stroke limits.
+
+The planar robotic-fish model and visual-servoing work connected the platform to infrastructure inspection. The pipeline-tracking controller used image-space pipeline features to command the tail-bias angle. In pool experiments, the robotic fish reduced the image-space heading error and converged to within $\psi_e=\pm 5^\circ$ of the pipeline across the listed tests. This result established pipeline following as a first inspection behavior for the platform and provided the motion behavior later used in the oil-sensing experiment.
+
+The third part of the dissertation extended the platform from motion control to environmental sensing. In the \mbox{CO$_2$} leak-localization study, AquaNavigator carried a near-infrared \mbox{CO$_2$} sensor and collected position-tagged concentration measurements in a controlled tank. The data were processed through heatmaps, interpolation, peak detection, and cumulative time-window analysis. The source-estimation error decreased from 2.43~m after 75~s to 1.50~m after 151~s and reached 0.69~m after 527~s. This demonstrated that the robotic fish can collect spatially distributed chemical measurements and support data-driven source estimation in a controlled underwater setting.
+
+The oil-spill sensing study integrated an OECT sensor with AquaNavigator. The work included compact signal conditioning, waterproof packaging, sensor placement on the robotic fish, laboratory characterization, and robotic pool testing during pipeline following. The OECT response separated clean-water, direct-oil, oil-contaminated-water, and robotic pool conditions. In the integrated robotic test, an oil leak introduced at 5~ml/min produced a delayed sensor response of approximately 60~s, consistent with oil absorption time in the OECT channel. Longer exposure at 15~min and 30~min produced stronger response reduction. This demonstrated the feasibility of using AquaNavigator as a mobile carrier for chemical oil detection during an inspection-like task.
+
+The final technical part of the dissertation addressed relative localization for cooperative inspection. A leader-follower simulation showed how RSS and IMU measurements can be fused for formation control of robotic fish. The experimental localization device used a $433.92$~MHz RF link, four directional antenna channels, and a 9-axis IMU. The hardware test reported packet reception at 10~m distance and 0.5~m depth, and the learned RF-IMU localization framework achieved mean absolute position errors of 0.24~m over a 3~m range and 0.64~m over a 6~m range. This work connected the single-robot monitoring platform to the longer-term problem of cooperative robotic-fish inspection.
+
+Taken together, the dissertation shows a progression from platform development to controlled motion, from controlled motion to sensing, and from single-robot sensing to relative localization for cooperation. The main contribution is the integrated development of a robotic fish platform and supporting methods for underwater monitoring: a compact bio-inspired vehicle, a variable buoyancy system for depth regulation, model-based and adaptive control methods, camera-guided pipeline tracking, chemical sensing payloads for \mbox{CO$_2$} and oil monitoring, and an RSS-based relative-localization framework for cooperative operation.
+
+\section{Main Findings}
+
+Several system-level findings emerge from the work. First, compact robotic fish design requires co-design of mechanics, waterproofing, sensing, and control. The tail mechanism, enclosure, camera placement, buoyancy hardware, and payload integration all affect the behavior of the same vehicle. Treating each subsystem independently would miss important interactions such as tail-induced image oscillation, payload placement effects, actuator limits, and waterproofing constraints.
+
+Second, depth regulation with a piston-based BCD is a constrained control problem. The buoyancy mechanism provides a compact route to vertical motion, but its useful behavior depends on actuator stroke, voltage bounds, pressure coupling, friction, and neutral-buoyancy balance. The BCD results show the value of combining physical modeling, open-loop validation, model-based constrained control, and adaptive tuning.
+
+Third, inspection and environmental sensing require more than robot locomotion. Pipeline tracking, \mbox{CO$_2$} source localization, and oil-spill detection all require the robot to connect sensor measurements to motion. In this dissertation, the camera provides image-space guidance for pipeline following, the \mbox{CO$_2$} sensor provides spatial concentration measurements for source estimation, and the OECT sensor provides chemical response during robotic motion. The common role of AquaNavigator is to carry the sensing payload through a controlled underwater environment and generate interpretable measurements.
+
+Fourth, cooperative monitoring requires relative localization methods that are compatible with small underwater platforms. The RSSI work shows that sub-GHz RF measurements contain useful short-range localization information in controlled freshwater conditions, especially when directional antennas and IMU/magnetometer features are used together. The same results also show that antenna directivity, multipath, enclosure effects, and water-tank geometry shape the measurement model, which motivates data-driven compensation.
+
+\section{Future Work}
+
+The next stage of this research is to move from component-level demonstrations toward an integrated autonomous monitoring system. The work presented in this dissertation developed the main building blocks of such a system: a bio-inspired robotic fish platform, a buoyancy-based depth-control mechanism, pipeline-tracking control, environmental sensing payloads, and an RSS-based relative-localization framework. Future work should focus on combining these capabilities into a coordinated three-dimensional robotic platform that can navigate near underwater infrastructure, regulate its depth, collect environmental measurements, and communicate or localize relative to nearby agents.
+
+A major direction is full three-dimensional experimental integration of AquaNavigator. The current demonstrations evaluate horizontal motion, vertical buoyancy control, sensing, and localization in separate or partially connected settings. A future integrated experiment should combine tail-driven propulsion, BCD-based depth regulation, visual pipeline tracking, and environmental sensing in one closed-loop mission. This would allow the robot to regulate its position relative to an underwater structure while simultaneously collecting chemical or visual measurements. Such experiments would also reveal coupling effects that are not fully captured when subsystems are tested independently, such as the influence of body motion on sensor response, the effect of depth changes on perception, and the interaction between buoyancy control and forward swimming.
+
+The hardware platform should also be improved for longer and more reliable operation. Important directions include better neutral-buoyancy calibration, reduced actuator backlash, improved sealing, more robust cable and connector management, and modular payload interfaces for different sensors. The buoyancy-control device should be tested under a wider range of depths and disturbance conditions, while the controller implementation should include stronger sensor-noise filtering and more systematic model identification. These improvements would make the platform more repeatable and would reduce the gap between controlled laboratory demonstrations and field-relevant operation.
+
+The perception and sensing capabilities should be extended to more realistic underwater conditions. Pipeline tracking should be tested under varying lighting, turbidity, partial occlusion, curved paths, and cluttered backgrounds. The image-processing and control pipeline should also be moved toward embedded or real-time implementation to reduce dependence on a host computer. For environmental sensing, future work should account for sensor response time, water flow, diffusion, advection, and motion-induced measurement delay. In the \mbox{CO$_2$} case, different leak rates, flow conditions, and robot trajectories should be tested. In the oil-spill case, the OECT sensing module should be evaluated for repeatability, recovery behavior, concentration sensitivity, fouling, debris, and response-time compensation during robot motion.
+
+The relative-localization framework should be developed into a practical cooperative-monitoring capability. The RSS localization device should be miniaturized and integrated with AquaNavigator or a similar compact underwater robot. Future datasets should include different water conductivities, antenna depths, antenna placements, enclosure materials, robot orientations, and tank or pool geometries. A more systematic characterization of underwater antenna directivity is also needed, since the localization performance depends strongly on installation geometry and environmental conditions. The learning and fusion framework should be evaluated in real time, with uncertainty estimation and robustness testing across independently collected datasets.
+
+At the mission level, future work should connect autonomy, sensing, and cooperation. A practical monitoring system would require mission planning, onboard state estimation, power management, health monitoring, fault handling, and data logging. Multiple robotic fish could then be deployed in leader-follower or cooperative formations to monitor larger regions around subsea pipelines or storage sites. In such a system, one robot may follow an infrastructure feature while others maintain relative position, collect complementary environmental measurements, and adapt their paths based on detected concentration gradients or contamination cues. This would extend the present work from a set of validated robotic subsystems toward a scalable bio-inspired platform for autonomous subsea infrastructure and environmental monitoring.
+
+\section{Closing Remarks}
+
+This dissertation contributes a system-level step toward compact robotic fish for underwater monitoring. The work developed the AquaNavigator platform, modeled and controlled its buoyancy and swimming behavior, demonstrated pipeline tracking and chemical sensing tasks, and introduced RSS-based relative localization for cooperative inspection. The results are grounded in laboratory and pool experiments, supported by simulation where appropriate, and organized around a consistent thesis direction: bio-inspired robotic fish can serve as mobile sensing platforms for underwater infrastructure and environmental monitoring, with future extension toward coordinated multi-robot operation.
 
 \backmatter
 
 \addcontentsline{toc}{chapter}{REFERENCES} \nocite{*}
-\bibliographystyle{plain}
+\bibliographystyle{plainurl}
 \bibliography{references}
-
-\appendix
-
-\chapter{Appendix Title}
-Appendices continue the main Arabic page numbering sequence.
 
 \end{document}

@@ -1,12 +1,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {II.1}{\ignorespaces Prototype AquaNavigator specifications for thesis experiments.}}{24}{table.caption.33}%
-\contentsline {table}{\numberline {II.2}{\ignorespaces AquaNavigator model parameters and calculated coefficients.}}{36}{table.caption.81}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Prototype AquaNavigator specifications for thesis experiments.}}{26}{table.caption.33}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces AquaNavigator model parameters and calculated coefficients.}}{38}{table.caption.81}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {III.1}{\ignorespaces MPC simulation and experiment design parameters.}}{42}{table.caption.91}%
-\contentsline {table}{\numberline {III.2}{\ignorespaces ESC-tuned PD experimental parameter value summary.}}{45}{table.caption.99}%
-\contentsline {table}{\numberline {III.3}{\ignorespaces Pipeline tracking pool experiment result summary.}}{53}{table.caption.120}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces MPC simulation and experiment design parameters.}}{43}{table.caption.91}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces ESC-tuned PD experimental parameter value summary.}}{46}{table.caption.99}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Pipeline tracking pool experiment result summary.}}{60}{table.caption.125}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces RF localization hardware parameters.}}{90}{table.caption.207}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Learning-model comparison for RSSI localization.}}{95}{table.caption.229}%
 \addvspace {10\p@ }
