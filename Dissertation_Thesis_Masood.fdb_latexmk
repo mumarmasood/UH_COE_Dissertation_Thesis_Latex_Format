@@ -1,20 +1,20 @@
 # Fdb version 4
-["bibtex Dissertation_Thesis_Masood"] 1784057643.90622 "Dissertation_Thesis_Masood.aux" "Dissertation_Thesis_Masood.bbl" "Dissertation_Thesis_Masood" 1784057697.3268 0
+["bibtex Dissertation_Thesis_Masood"] 1784648036.80092 "Dissertation_Thesis_Masood.aux" "Dissertation_Thesis_Masood.bbl" "Dissertation_Thesis_Masood" 1784648037.53329 2
   "./references.bib" 1783714036 35701 c862456c801bae21cf7b5bcdaf327294 ""
-  "Dissertation_Thesis_Masood.aux" 1784057681 447444 e7b518dbc1a4f0c10d5223233336e3b8 "pdflatex"
+  "Dissertation_Thesis_Masood.aux" 1784648028 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
   "c:/texlive/2026/texmf-dist/bibtex/bst/urlbst/unsrturl.bst" 1783975440 30912 2cfc330ae0a68bbf7dc64e1666bbb15c ""
   (generated)
   "Dissertation_Thesis_Masood.bbl"
   "Dissertation_Thesis_Masood.blg"
   (rewritten before read)
-["pdflatex"] 1784057644.68284 "Dissertation_Thesis_Masood.tex" "Dissertation_Thesis_Masood.pdf" "Dissertation_Thesis_Masood" 1784057697.3292 0
+["pdflatex"] 1784647980.14376 "c:/Users/mmasood5/OneDrive - University Of Houston/UoH/Dr Chen/PhD Stuff/Dissertation_Thesis_Masood/Dissertation_Thesis_Masood.tex" "Dissertation_Thesis_Masood.pdf" "Dissertation_Thesis_Masood" 1784648035.6692 2
   "Dissertation_Thesis_Masood-luamml-mathml.html" 1784045411 217810 b0991e4629b735d983aa309aabb12ab6 ""
-  "Dissertation_Thesis_Masood.aux" 1784057681 447444 e7b518dbc1a4f0c10d5223233336e3b8 "pdflatex"
-  "Dissertation_Thesis_Masood.bbl" 1784057644 33101 c75a1be2c1fda4ee7d39de3aee4ccc9d "bibtex Dissertation_Thesis_Masood"
-  "Dissertation_Thesis_Masood.lof" 1784057695 8843 21b7c1f6c20666396dda057446c686c0 "pdflatex"
-  "Dissertation_Thesis_Masood.lot" 1784057695 1203 09291d6a13936d0ce7f6d028de3c16d3 "pdflatex"
+  "Dissertation_Thesis_Masood.aux" 1784648028 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "Dissertation_Thesis_Masood.bbl" 1784648037 0 d41d8cd98f00b204e9800998ecf8427e "bibtex Dissertation_Thesis_Masood"
+  "Dissertation_Thesis_Masood.lof" 0 -1 0 "pdflatex"
+  "Dissertation_Thesis_Masood.lot" 0 -1 0 "pdflatex"
   "Dissertation_Thesis_Masood.tex" 1784055681 201031 4ab64add1d28f50eb2532cabae9ff2f9 ""
-  "Dissertation_Thesis_Masood.toc" 1784057695 10513 8c62f58884bf5e641cac5d1f762f5f42 "pdflatex"
+  "Dissertation_Thesis_Masood.toc" 0 -1 0 "pdflatex"
   "Fig/ch2_aquanavigator_cad.png" 1780940730 3601384 55dfcfc1b82af9330fcf244b7a81edaf ""
   "Fig/ch2_aquanavigator_real.jpg" 1780940730 36472 c0690977b3f49e04c3b7e09f255505c5 ""
   "Fig/ch2_bcd_cad_isometric.png" 1783370604 226698 4cfec2ea95be492c717428e3b88b4741 ""
@@ -77,6 +77,7 @@
   "Fig/ch5_swarm_rss_unit.png" 1780940719 47484 8f863d6311d9eff0a17cef814c71039c ""
   "Fig/ch5_swarm_schematic.png" 1780940719 21843 f758d77f7688bb391c3f086db6791c85 ""
   "Fig/ch5_theta_kf_comparison.png" 1783101818 783258 db3a0b42dcfb3ab02bbda1dd40cbf32c ""
+  "c:/Users/mmasood5/OneDrive - University Of Houston/UoH/Dr Chen/PhD Stuff/Dissertation_Thesis_Masood/Dissertation_Thesis_Masood.tex" 1784055681 201031 4ab64add1d28f50eb2532cabae9ff2f9 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1783967114 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1783967114 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1783968797 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -84,6 +85,7 @@
   "c:/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1783968100 3584 13049b61b922a28b158a38aeff75ee9b ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm" 1783968100 3584 ad49a18d8515beef6d92d4d3f197d0fd ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx2488.tfm" 1783968100 3584 0181dbc4d429c3ba4e30feba37b5df96 ""
+  "c:/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm" 1783968100 3584 49064b465390a8e316a3c8417a050403 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1783968100 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm" 1783968100 3584 3169d30142b88a27d4ab0e3468e963a2 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm" 1783968100 3584 3c76ccb63eda935a68ba65ba9da29f1a ""
@@ -133,6 +135,7 @@
   "c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb" 1783967114 135942 aecb5af344df420d6ec421db27dedf62 ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb" 1783967114 139826 3796482349bae544f13f54da58f9706d ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb" 1783967114 135938 1a19ff976dd71ec9a67855cdbfd83710 ""
+  "c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb" 1783967115 164227 41439fae96b3b30186924e9dd2fcff30 ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb" 1783967115 136101 b18d10b3436f8cb0cd04046deb340fe7 ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb" 1783967115 131078 3adc08bf3d7686c3b3220602214807d7 ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb" 1783967115 131438 c8884c67ccd7382f731c139fbb34a6cb ""
@@ -311,7 +314,7 @@
   "c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1783976260 5619402 ad1310ccf7f36101ef3e8f014a173c46 ""
   "c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1783976628 3656598 5b4a6d7852a9d23818d20286ba807a47 ""
   "c:/texlive/2026/texmf.cnf" 1783976201 713 e69b156964470283e0530f5060668171 ""
-  "uhcoethesis.cls" 1784057459 8261 7046bb523f02182efe9d1d5326022249 ""
+  "uhcoethesis.cls" 1784647977 14626 bbe0d152c7d1477db6a276a2cf6ae4e6 ""
   (generated)
   "Dissertation_Thesis_Masood.aux"
   "Dissertation_Thesis_Masood.lof"
