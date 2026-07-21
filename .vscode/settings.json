@@ -1,0 +1,31 @@
+// {
+//     "latex-workshop.latex.tools": [
+//         {
+//             "name": "latexmk-lualatex-2026",
+//             "command": "C:/texlive/2026/bin/windows/latexmk.exe",
+//             "args": [
+//                 "-lualatex",
+//                 "-synctex=1",
+//                 "-interaction=nonstopmode",
+//                 "-file-line-error",
+//                 "-outdir=%OUTDIR%",
+//                 "%DOC%"
+//             ],
+//             "env": {
+//                 "PATH": "C:\\texlive\\2026\\bin\\windows;${env:PATH}"
+//             }
+//         }
+//     ],
+//     "latex-workshop.latex.recipes": [
+//         {
+//             "name": "LuaLaTeX — TeX Live 2026",
+//             "tools": [
+//                 "latexmk-lualatex-2026"
+//             ]
+//         }
+//     ],
+//     "latex-workshop.latex.recipe.default": "LuaLaTeX — TeX Live 2026",
+//     "terminal.integrated.env.windows": {
+//         "PATH": "C:\\texlive\\2026\\bin\\windows;${env:PATH}"
+//     }
+// }

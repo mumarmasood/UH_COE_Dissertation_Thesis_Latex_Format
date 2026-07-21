@@ -1,0 +1,2621 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.13)  14 JUL 2026 10:11
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**Dissertation_Thesis_Masood.tex
+(./Dissertation_Thesis_Masood.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-06-18>
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/documentmetadata-support.ltx
+(c:/texlive/2026/texmf-dist/tex/latex/pdfmanagement/pdfmanagement-init.sty
+Package: pdfmanagement-init 2026-05-26 v0.97c LaTeX PDF management bundle
+
+(c:/texlive/2026/texmf-dist/tex/latex/tagpdf/tagpdf-base.sty
+Package: tagpdf-base 2026-05-17 v1.0c part of tagpdf - provide base, no-op vers
+ions of the user commands 
+\c@g__tag_MCID_abs_int=\count276
+\c@g__tag_struct_abs_int=\count277
+)
+(c:/texlive/2026/texmf-dist/tex/latex/pdfmanagement/pdfmanagement.ltx
+File: pdfmanagement.ltx 2026-05-26 v0.97c PDF management code
+\g__pdfmanagement_EmbeddedFiles_int=\count278
+\l__pdfmeta_xmp_indent_int=\count279
+\g_pdffile_embed_pdfa_int=\count280
+\g_pdffile_embed_nonpdfa_int=\count281
+\l_pdfoutline_open_int=\count282
+\g__pdfoutline_id_int=\count283
+\g__pdfoutline_current_level_int=\count284
+)))
+(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count285
+)
+(c:/texlive/2026/texmf-dist/tex/latex/pdfmanagement/l3backend-testphase-pdftex.
+def
+File: l3backend-pdf-pdftex.def 2026-05-26 v0.97c LaTeX PDF management bundle ba
+ckend support: PDF output (pdfTeX)
+\l__pdf_backend_tmpa_box=\box53
+\l__pdf_backend_tmpb_box=\box54
+\g__pdf_backend_resourceid_int=\count286
+\g__pdf_backend_name_int=\count287
+\g__pdf_backend_page_int=\count288
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-latest.sty
+Package: latex-lab-testphase-latest 2026-05-02 v0.1g latex-lab modules
+
+(c:/texlive/2026/texmf-dist/tex/latex/tagpdf/tagpdf.sty
+Package: tagpdf 2026-05-17 v1.0c  LaTeX kernel code for PDF tagging 
+\l__tag_tmpa_int=\count289
+\l__tag_tmpa_box=\box55
+\l__tag_tmpb_box=\box56
+\l__tag_loglevel_int=\count290
+\g__tag_unique_cnt_int=\count291
+\l__tag_tag_stop_int=\count292
+
+(c:/texlive/2026/texmf-dist/tex/latex/tagpdf/tagpdf-mc-code-generic.sty
+Package: tagpdf-mc-code-generic 2026-05-17 v1.0c part of tagpdf - code related 
+to marking chunks - generic mode
+\g__tag_mc_marks=\marks4
+)
+\g__tag_tree_id_pad_int=\count293
+\c@g__tag_parenttree_obj_int=\count294
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-pdf.def
+
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-pdf2.def
+
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-mathml.def
+
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-latex-book.def
+
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-latex.def
+
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-latex-lab.def
+
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-pdf.def
+
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-pdf2.def
+
+\g__tag_struct_AFobj_int=\count295
+\g__tag_para_begin_int=\count296
+\g__tag_para_end_int=\count297
+\g__tag_para_main_begin_int=\count298
+\g__tag_para_main_end_int=\count299
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-names.sty
+Package: latex-lab-testphase-names 2026-04-28 v0.8k Code related to the names o
+f tags
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-new-or-2.st
+y
+Package: latex-lab-testphase-new-or-2 2026-01-16 v0.86d Changes to the output r
+outine
+ (c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-footnotes.ltx
+File: latex-lab-footnotes.ltx 2026-04-28 v0.8p changes to the footnote interfac
+es
+\footnotemargin=\dimen150
+\g_fnote_id_int=\count300
+))
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-block.sty
+Package: latex-lab-testphase-block 2026-06-10 v1.0c blockenv implementation
+
+LaTeX template Info: Declaring template type 'blockenv' taking 4 argument(s)
+(template)           on line 195.
+
+
+LaTeX template Info: Declaring template type 'list' taking 4 argument(s) on
+(template)           line 196.
+
+
+LaTeX template Info: Declaring template type 'captionedtext' taking 4
+(template)           argument(s) on line 197.
+
+
+LaTeX template Info: Declaring template type 'thmstyle' taking 4 argument(s)
+(template)           on line 198.
+
+
+LaTeX template Info: Declaring template type 'block' taking 1 argument(s) on
+(template)           line 199.
+
+
+LaTeX template Info: Declaring template type 'item' taking 1 argument(s) on
+(template)           line 200.
+
+
+LaTeX template Info: Declaring template type 'para' taking 1 argument(s) on
+(template)           line 201.
+
+\c@maxblocklevels=\count301
+\l_para_begin_skip=\skip49
+\l__block_unchained_skip=\skip50
+\l__block_botsep_skip=\skip51
+\l__block_parbotsep_skip=\skip52
+\l__block_parindent_dim=\dimen151
+\l__block_counter_start_int=\count302
+\l__block_one_label_box=\box57
+\g__block_labels_box=\box58
+\l__block_tmpa_skip=\skip53
+\l__block_effective_top_skip=\skip54
+\l__block_effective_bot_skip=\skip55
+\l__block_caption_before_skip=\skip56
+\l__block_caption_after_skip=\skip57
+
+LaTeX template Info: Declaring instance 'flushleft' of type blockenv on line
+(template)           1489.
+
+
+LaTeX template Info: Declaring instance 'flushright' of type blockenv on line
+(template)           1493.
+
+\@descriptiondepth=\count303
+
+LaTeX template Info: Declaring instance 'remark' of type thmstyle on line
+(template)           1791.
+
+
+LaTeX template Info: Declaring instance 'definition' of type thmstyle on line
+(template)           1796.
+
+
+LaTeX template Info: Declaring instance 'legacy2e' of type thmstyle on line
+(template)           1798.
+
+LaTeX Info: Redefining \centering on input line 1894.
+LaTeX Info: Redefining \raggedleft on input line 1895.
+LaTeX Info: Redefining \raggedright on input line 1896.
+LaTeX Info: Redefining \qed on input line 2238.
+
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-enumitem.sty
+Package: latex-lab-enumitem 2026-04-21 v0.80f Emulating enumitem
+))
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-context.sty
+Package: latex-lab-testphase-context 2026-05-26 v0.6a Providing context for ins
+tance, etc.
+) (c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-kernel-changes.sty
+Package: latex-lab-kernel-changes 2026-04-27 v0.85j General kernel and class ch
+anges
+) (c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-sec.sty
+Package: latex-lab-testphase-sec 2026-04-28 v0.84o Code related to the tagging 
+of heading commands
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-sec-templat
+e.sty
+Package: latex-lab-testphase-sec-template 2026-05-25 v0.9g heading implementati
+on
+
+LaTeX template Info: Declaring template type 'heading' taking 9 argument(s) on
+(template)           line 177.
+
+
+LaTeX template Info: Declaring template type 'headformat' taking 6 argument(s)
+(template)           on line 178.
+
+\l__head_level_int=\count304
+\l__head_before_skip=\skip58
+\l__head_penalty_int=\count305
+\l__head_after_penalty_skip=\skip59
+\l__head_after_skip=\skip60
+\l__head_heading_indent_dim=\dimen152
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-toc.sty
+Package: latex-lab-testphase-toc 2026-04-28 v0.85k  Code related to the tagging
+ of toc-like lists
+\g__tag_toc_level_int=\count306
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-minipage.st
+y
+Package: latex-lab-testphase-minipage 2026-04-24 v0.81k Code related to the tag
+ging of minipages and parboxes
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-graphic.sty
+Package: latex-lab-testphase-graphic 2026-04-28 v0.80i Code related to the tagg
+ing of graphics
+\g__tag_graphic_int=\count307
+) (c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-float.sty
+Package: latex-lab-testphase-float 2026-04-24 v0.81n Code related to the taggin
+g of floats
+\g__tag_float_int=\count308
+) (c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-bib.sty
+Package: latex-lab-testphase-bib 2026-05-28 v0.81f Code related to the tagging 
+of bibliography and cite command
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-text.sty
+Package: latex-lab-testphase-text 2026-04-27 v0.85g Code related to the tagging
+ of various small text commands
+LaTeX Info: Redefining \mbox on input line 108.
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-marginpar.s
+ty
+Package: latex-lab-testphase-marginpar 2026-04-24 v0.85i Changes related to the
+ tagging of the margin notes
+\g__kernel_marginpar_int=\count309
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-title.sty
+Package: latex-lab-testphase-title 2026-05-27 v0.85g Changes related to the tag
+ging of the title
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-table.sty
+Package: latex-lab-testphase-table 2026-04-28 v0.85t Code related to the taggin
+g of tables
+
+(c:/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
+\col@sep=\dimen153
+\ar@mcellbox=\box59
+\extrarowheight=\dimen154
+\NC@list=\toks17
+\extratabsurround=\skip61
+\backup@length=\skip62
+\ar@cellbox=\box60
+))
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-math.sty
+Package: latex-lab-testphase-math 2025-03-10 v0.8d code related to the math tag
+ging
+
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-math.ltx
+File: latex-lab-math.ltx 2026-05-27 v0.7e Grab all the math(s) and tag it
+\l__math_tmpa_skip=\skip63
+\g__math_mathml_total_int=\count310
+\g__math_mathml_int=\count311
+\g__math_math_total_int=\count312
+\g__math_mathml_AF_found_int=\count313
+\g__math_mathml_AF_attached_int=\count314
+\l__math_tmpa_box=\box61
+\l__math_mathstyle_int=\count315
+\g__math_mathchoice_int=\count316
+\l__math_grab_env_int=\count317
+\g__math_postdisplaypenalty_int=\count318
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-mathpkg.ltx
+File: latex-lab-mathpkg.ltx 2026-05-11 v0.1e mathpkg adaptions
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-mathintent.ltx
+File: latex-lab-mathintent.ltx 2026-01-16 v0.1c MathML intent attributes
+))
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-firstaid.st
+y
+Package: latex-lab-testphase-firstaid 2026-06-08 v0.85x Temporary patches to ex
+ternal packages needed for the tagging project
+) (c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-tikz.sty
+Package: latex-lab-testphase-tikz 2026-05-12 v0.80i Code related to the tagging
+ of tikz pictures
+))
+(c:/texlive/2026/texmf-dist/tex/latex/pdfmanagement/pdfmanagement-firstaid.sty
+Package: pdfmanagement-firstaid 2026-05-26 v0.97c LaTeX PDF management bundle /
+ firstaid-patches
+
+Package pdfmanagement Info: loading pdfmanagement firstaid code for pgf
+
+) (./uhcoethesis.cls
+Document Class: uhcoethesis 2026/05/29 University of Houston thesis class
+(c:/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(c:/texlive/2026/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count319
+\c@chapter=\count320
+\c@section=\count321
+\c@subsection=\count322
+\c@subsubsection=\count323
+\c@paragraph=\count324
+\c@subparagraph=\count325
+\c@figure=\count326
+\c@table=\count327
+\abovecaptionskip=\skip64
+\belowcaptionskip=\skip65
+\bibindent=\dimen155
+)
+(c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count328
+\Gm@cntv=\count329
+\c@Gm@tempcnt=\count330
+\Gm@bindingoffset=\dimen156
+\Gm@wd@mp=\dimen157
+\Gm@odd@mp=\dimen158
+\Gm@even@mp=\dimen159
+\Gm@layoutwidth=\dimen160
+\Gm@layoutheight=\dimen161
+\Gm@layouthoffset=\dimen162
+\Gm@layoutvoffset=\dimen163
+\Gm@dimlist=\toks19
+)
+(c:/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count331
+)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2026/05/19 v2.18d AMS math features
+\@mathmargin=\skip66
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen164
+))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen165
+)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count332
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count333
+\leftroot@=\count334
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count335
+\DOTSCASE@=\count336
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box62
+\strutbox@=\box63
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen166
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count337
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count338
+\dotsspace@=\muskip17
+\c@parentequation=\count339
+\dspbrk@lvl=\count340
+\tag@help=\toks21
+\row@=\count341
+\column@=\count342
+\maxfields@=\count343
+\andhelp@=\toks22
+\eqnshift@=\dimen167
+\alignsep@=\dimen168
+\tagshift@=\dimen169
+\tagwidth@=\dimen170
+\totwidth@=\dimen171
+\lineht@=\dimen172
+\@envbody=\toks23
+\multlinegap=\skip67
+\multlinetaggap=\skip68
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2965.
+LaTeX Info: Redefining \] on input line 2966.
+)
+(c:/texlive/2026/texmf-dist/tex/latex/latex-lab/latex-lab-amsmath.ltx
+File: latex-lab-amsmath.ltx 2026-04-25 v0.1j amsmath adaptions
+LaTeX Info: Redefining \eqref on input line 58.
+\l__luamml_struct_tmpa_int=\count344
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen173
+\Gin@req@width=\dimen174
+)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2026-06-17 v7.01r Hypertext links for LaTeX
+
+(c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(c:/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+
+(c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count345
+)
+(c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen175
+\Hy@linkcounter=\count346
+\Hy@pagecounter=\count347
+
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2026-06-17 v7.01r Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count348
+
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2026-06-17 v7.01r Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `hypertexnames' set `false' on input line 4070.
+Package hyperref Info: Hyper figures OFF on input line 4199.
+Package hyperref Info: Link nesting OFF on input line 4204.
+Package hyperref Info: Hyper index ON on input line 4207.
+Package hyperref Info: Plain pages OFF on input line 4214.
+Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4466.
+\c@Hy@tempcnt=\count349
+
+(c:/texlive/2026/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4805.
+\XeTeXLinkMargin=\dimen176
+
+(c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count350
+\Field@Width=\dimen177
+\Fld@charsize=\dimen178
+Package hyperref Info: Hyper figures OFF on input line 6091.
+Package hyperref Info: Link nesting OFF on input line 6096.
+Package hyperref Info: Hyper index ON on input line 6099.
+Package hyperref Info: backreferencing OFF on input line 6106.
+Package hyperref Info: Link coloring OFF on input line 6111.
+Package hyperref Info: Link coloring with OCG OFF on input line 6116.
+Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Hy@abspage=\count351
+\c@Item=\count352
+)
+Package hyperref Info: Driver (custom): hgeneric-testphase.
+
+(c:/texlive/2026/texmf-dist/tex/latex/pdfmanagement/hgeneric-testphase.def
+File: hgeneric-testphase.def 2026-05-26 v0.97c generic Hyperref driver for the 
+LaTeX PDF management bundle
+
+(c:/texlive/2026/texmf-dist/tex/latex/pdfmanagement/hyperref-colorschemes.def)
+LaTeX Info: Redefining \href on input line 262.
+LaTeX Info: Redefining \url on input line 348.
+
+(c:/texlive/2026/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2026-05-21 v1.32 PDF bookmarks (HO)
+
+(c:/texlive/2026/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2026-05-21 v1.32 bookmark driver for pdfTeX (HO)
+\BKM@id=\count353
+))
+\l__hyp_tmpa_box=\box64
+\l__hyp_tmpa_int=\count354
+\l__hyp_dest_box=\box65
+\g__hyp_linknestlevel_int=\count355
+\HyAnn@Count=\count356
+\Fld@listcount=\count357
+\Hy@SectionHShift=\skip69
+))
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks25
+\pgfutil@tempdima=\dimen179
+\pgfutil@tempdimb=\dimen180
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box66
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks26
+\pgfkeys@temptoks=\toks27
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.co
+de.tex
+\pgfkeys@tmptoks=\toks28
+))
+\pgf@x=\dimen181
+\pgf@y=\dimen182
+\pgf@xa=\dimen183
+\pgf@ya=\dimen184
+\pgf@xb=\dimen185
+\pgf@yb=\dimen186
+\pgf@xc=\dimen187
+\pgf@yc=\dimen188
+\pgf@xd=\dimen189
+\pgf@yd=\dimen190
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count358
+\c@pgf@countb=\count359
+\c@pgf@countc=\count360
+\c@pgf@countd=\count361
+\t@pgf@toka=\toks29
+\t@pgf@tokb=\toks30
+\t@pgf@tokc=\toks31
+\pgf@sys@id@count=\count362
+ (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count363
+\pgfsyssoftpath@bigbuffer@items=\count364
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(c:/texlive/2026/texmf-dist/tex/latex/pdfmanagement/xcolor-patches-tmp-ltx.sty
+Package: xcolor-patches-tmp-ltx 2026-05-26 v0.97c patch xcolor for l3color
+) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen191
+\pgfmath@count=\count365
+\pgfmath@box=\box67
+\pgfmath@toks=\toks32
+\pgfmath@stack@operand=\toks33
+\pgfmath@stack@operation=\toks34
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
+x)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
+.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
+ex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
+de.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
+x)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
+etics.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count366
+))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen192
+\pgf@picmaxx=\dimen193
+\pgf@picminy=\dimen194
+\pgf@picmaxy=\dimen195
+\pgf@pathminx=\dimen196
+\pgf@pathmaxx=\dimen197
+\pgf@pathminy=\dimen198
+\pgf@pathmaxy=\dimen199
+\pgf@xx=\dimen256
+\pgf@xy=\dimen257
+\pgf@yx=\dimen258
+\pgf@yy=\dimen259
+\pgf@zx=\dimen260
+\pgf@zy=\dimen261
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
+e.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen262
+\pgf@path@lasty=\dimen263
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
+x
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen264
+\pgf@shorten@start@additional=\dimen265
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box68
+\pgf@hbox=\box69
+\pgf@layerbox@main=\box70
+\pgf@picture@serial@count=\count367
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
+.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen266
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
+ode.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen267
+\pgf@pt@y=\dimen268
+\pgf@pt@temp=\dimen269
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
+de.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen270
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen271
+\pgf@sys@shading@range@num=\count368
+\pgf@shadingcount=\count369
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box71
+) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
+.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.te
+x
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box72
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+y
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen272
+\pgf@nodesepend=\dimen273
+)
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+y
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+)) (c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen274
+\pgffor@skip=\dimen275
+\pgffor@stack=\toks35
+\pgffor@toks=\toks36
+))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
+de.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count370
+\pgfplotmarksize=\dimen276
+)
+\tikz@lastx=\dimen277
+\tikz@lasty=\dimen278
+\tikz@lastxsaved=\dimen279
+\tikz@lastysaved=\dimen280
+\tikz@lastmovetox=\dimen281
+\tikz@lastmovetoy=\dimen282
+\tikzleveldistance=\dimen283
+\tikzsiblingdistance=\dimen284
+\tikz@figbox=\box73
+\tikz@figbox@bg=\box74
+\tikz@tempbox=\box75
+\tikz@tempbox@bg=\box76
+\tikztreelevel=\count371
+\tikznumberofchildren=\count372
+\tikznumberofcurrentchild=\count373
+\tikz@fig@count=\count374
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count375
+\pgfmatrixcurrentcolumn=\count376
+\pgf@matrix@numberofcolumns=\count377
+)
+\tikz@expandcount=\count378
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.cod
+e.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen285
+\pgfarrowlength=\dimen286
+\pgfarrowwidth=\dimen287
+\pgfarrowlinewidth=\dimen288
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryfit.code.tex
+File: tikzlibraryfit.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (tmp/pdflatex-check/Dissertation_Thesis_Masood.aux)
+\openout1 = `Dissertation_Thesis_Masood.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+
+Info: mathml file Dissertation_Thesis_Masood-mathml does not exist
+Info: reading mathml file Dissertation_Thesis_Masood-luamml-mathml
+(./Dissertation_Thesis_Masood-luamml-mathml.html)
+Info: Activating mathml support
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(108.405pt, 433.62001pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=433.62001pt
+* \textheight=650.43001pt
+* \oddsidemargin=36.13501pt
+* \evensidemargin=36.13501pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=36.135pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count379
+\scratchdimen=\dimen289
+\scratchbox=\box77
+\nofMPsegments=\count380
+\nofMParguments=\count381
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count382
+\MPscratchDim=\dimen290
+\MPnumerator=\count383
+\makeMPintoPDFobject=\count384
+\everyMPtoPDFconversion=\toks38
+) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 58.
+ [1
+
+
+{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/
+texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [1
+
+] [2
+
+
+] [3
+
+
+] [4
+
+
+] [5]
+No file Dissertation_Thesis_Masood.toc.
+\tf@toc=\write4
+\openout4 = `Dissertation_Thesis_Masood.toc'.
+
+[6
+
+
+
+]
+No file Dissertation_Thesis_Masood.lot.
+\tf@lot=\write5
+\openout5 = `Dissertation_Thesis_Masood.lot'.
+
+[7
+
+
+
+]
+No file Dissertation_Thesis_Masood.lof.
+\tf@lof=\write6
+\openout6 = `Dissertation_Thesis_Masood.lof'.
+
+[8
+
+
+
+]
+
+LaTeX Warning: Citation `NationalGeographic2024' on page 1 undefined on input l
+ine 93.
+
+
+LaTeX Warning: Citation `NOAA2026' on page 1 undefined on input line 93.
+
+
+LaTeX Warning: Citation `NOAA2026' on page 1 undefined on input line 95.
+
+
+LaTeX Warning: Citation `Shukla2016' on page 1 undefined on input line 97.
+
+
+LaTeX Warning: Citation `Mcleod2012' on page 1 undefined on input line 97.
+
+
+LaTeX Warning: Citation `Patel2024' on page 1 undefined on input line 97.
+
+[1
+
+
+
+]
+
+LaTeX Warning: Citation `Ho2020' on page 2 undefined on input line 103.
+
+
+LaTeX Warning: Citation `Shukla2016' on page 2 undefined on input line 103.
+
+
+LaTeX Warning: Citation `Mcleod2012' on page 2 undefined on input line 103.
+
+
+LaTeX Warning: Citation `Patel2024' on page 2 undefined on input line 103.
+
+[2]
+
+LaTeX Warning: Citation `Herzog2001' on page 3 undefined on input line 105.
+
+
+LaTeX Warning: Citation `Yadav2022' on page 3 undefined on input line 105.
+
+
+LaTeX Warning: Citation `Osman2021' on page 3 undefined on input line 105.
+
+
+LaTeX Warning: Citation `Filonchyk2024' on page 3 undefined on input line 105.
+
+
+LaTeX Warning: Citation `Kabir2023' on page 3 undefined on input line 105.
+
+
+LaTeX Warning: Citation `Zheng2021' on page 3 undefined on input line 105.
+
+
+LaTeX Warning: Citation `Mortezaei2021' on page 3 undefined on input line 105.
+
+
+LaTeX Warning: Citation `Queiros2014' on page 3 undefined on input line 105.
+
+
+LaTeX Warning: Citation `Pham2016' on page 3 undefined on input line 105.
+
+
+LaTeX Warning: Citation `Martins2010' on page 3 undefined on input line 107.
+
+
+LaTeX Warning: Citation `Hou2013' on page 3 undefined on input line 107.
+
+
+LaTeX Warning: Citation `Akib2011' on page 3 undefined on input line 107.
+
+
+LaTeX Warning: Citation `Vitkovsky2007' on page 3 undefined on input line 107.
+
+
+LaTeX Warning: Citation `Ostapkowicz2016' on page 3 undefined on input line 107
+.
+
+
+LaTeX Warning: Citation `Reda2024' on page 3 undefined on input line 107.
+
+
+LaTeX Warning: Citation `Ho2020' on page 3 undefined on input line 109.
+
+
+LaTeX Warning: Citation `Jasper2012' on page 3 undefined on input line 109.
+
+
+LaTeX Warning: Citation `Lukonge2020' on page 3 undefined on input line 109.
+
+
+LaTeX Warning: Citation `Adegboye2019' on page 3 undefined on input line 109.
+
+[3]
+
+LaTeX Warning: Citation `Aursand2016' on page 4 undefined on input line 111.
+
+
+LaTeX Warning: Citation `Cosham2009' on page 4 undefined on input line 111.
+
+
+LaTeX Warning: Citation `Zheng2021' on page 4 undefined on input line 111.
+
+
+LaTeX Warning: Citation `Mortezaei2021' on page 4 undefined on input line 111.
+
+
+LaTeX Warning: Citation `Queiros2014' on page 4 undefined on input line 111.
+
+
+LaTeX Warning: Citation `Pham2016' on page 4 undefined on input line 111.
+
+
+LaTeX Warning: Citation `Zhang2021' on page 4 undefined on input line 113.
+
+
+LaTeX Warning: Citation `Qasem2019' on page 4 undefined on input line 113.
+
+
+LaTeX Warning: Citation `Hu2022' on page 4 undefined on input line 113.
+
+
+LaTeX Warning: Citation `Capocci2017' on page 4 undefined on input line 117.
+
+
+LaTeX Warning: Citation `Shukla2016' on page 4 undefined on input line 117.
+
+
+LaTeX Warning: Citation `Mcleod2012' on page 4 undefined on input line 117.
+
+
+LaTeX Warning: Citation `Patel2024' on page 4 undefined on input line 117.
+
+[4]
+
+LaTeX Warning: Citation `Marras2012' on page 5 undefined on input line 119.
+
+
+LaTeX Warning: Citation `Polverino2013' on page 5 undefined on input line 119.
+
+
+LaTeX Warning: Citation `Luo2021' on page 5 undefined on input line 121.
+
+
+LaTeX Warning: Citation `Su2020' on page 5 undefined on input line 121.
+
+
+LaTeX Warning: Citation `Zekavat2019' on page 5 undefined on input line 121.
+
+
+LaTeX Warning: Citation `Rypkema2019' on page 5 undefined on input line 121.
+
+
+LaTeX Warning: Citation `Wang2022' on page 5 undefined on input line 121.
+
+
+LaTeX Warning: Citation `Hinduja2022' on page 5 undefined on input line 121.
+
+[5] [6]
+
+LaTeX Warning: Citation `Lighthill1969' on page 7 undefined on input line 130.
+
+
+LaTeX Warning: Citation `Lighthill1971' on page 7 undefined on input line 130.
+
+
+LaTeX Warning: Citation `Yu2017' on page 7 undefined on input line 130.
+
+
+LaTeX Warning: Citation `Duraisamy2019' on page 7 undefined on input line 130.
+
+
+LaTeX Warning: Citation `Xie2021' on page 7 undefined on input line 130.
+
+
+LaTeX Warning: Citation `Tan2011' on page 7 undefined on input line 130.
+
+
+LaTeX Warning: Citation `Marras2012' on page 7 undefined on input line 130.
+
+
+LaTeX Warning: Citation `Polverino2013' on page 7 undefined on input line 130.
+
+
+LaTeX Warning: Citation `Shahinpoor1992' on page 7 undefined on input line 132.
+
+
+
+LaTeX Warning: Citation `Thomson1994' on page 7 undefined on input line 132.
+
+
+LaTeX Warning: Citation `Tolkoff1999' on page 7 undefined on input line 132.
+
+
+LaTeX Warning: Citation `Imaizumi1995' on page 7 undefined on input line 132.
+
+
+LaTeX Warning: Citation `Kato1996' on page 7 undefined on input line 132.
+
+[7]
+
+LaTeX Warning: Citation `Mason2000' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Yu2004' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Yu2005' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Liu2005' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Low2006' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Chen2010' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Tan2011' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Hu2009' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Wang2015' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Katzschmann2018' on page 8 undefined on input line 134
+.
+
+
+LaTeX Warning: Citation `Li2024' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Jiang2024' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Wang2013' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Park2012' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Sfakiotakis1999' on page 8 undefined on input line 136
+.
+
+
+LaTeX Warning: Citation `Xie2021' on page 8 undefined on input line 136.
+
+
+LaTeX Warning: Citation `Zuo2021' on page 8 undefined on input line 136.
+
+[8]
+
+LaTeX Warning: Citation `Masood2025Pipeline' on page 9 undefined on input line 
+140.
+
+
+LaTeX Warning: Citation `Masood2025CO2' on page 9 undefined on input line 140.
+
+
+LaTeX Warning: Citation `Masood2026OilSpill' on page 9 undefined on input line 
+140.
+
+[9]
+
+LaTeX Warning: Citation `Kobayashi2010' on page 10 undefined on input line 146.
+
+
+
+LaTeX Warning: Citation `Vasiljevic2019' on page 10 undefined on input line 146
+.
+
+
+LaTeX Warning: Citation `Um2011' on page 10 undefined on input line 146.
+
+
+LaTeX Warning: Citation `Chen2017' on page 10 undefined on input line 146.
+
+
+LaTeX Warning: Citation `Yazji2021' on page 10 undefined on input line 146.
+
+
+LaTeX Warning: Citation `Wood2015' on page 10 undefined on input line 146.
+
+
+LaTeX Warning: Citation `Hou2020' on page 10 undefined on input line 146.
+
+
+LaTeX Warning: Citation `Choyekh2016' on page 10 undefined on input line 146.
+
+
+LaTeX Warning: Citation `Claus2012' on page 10 undefined on input line 146.
+
+
+LaTeX Warning: Citation `Carneiro2023' on page 10 undefined on input line 146.
+
+
+LaTeX Warning: Citation `Rawlings2017' on page 10 undefined on input line 146.
+
+
+LaTeX Warning: Citation `Scokaert1998' on page 10 undefined on input line 146.
+
+
+LaTeX Warning: Citation `Masood2023' on page 10 undefined on input line 146.
+
+
+LaTeX Warning: Citation `Masood2026ESCBCD' on page 10 undefined on input line 1
+46.
+
+
+LaTeX Warning: Citation `Rawlings2017' on page 10 undefined on input line 148.
+
+
+LaTeX Warning: Citation `Scokaert1998' on page 10 undefined on input line 148.
+
+[10]
+
+LaTeX Warning: Citation `Yi2023' on page 11 undefined on input line 156.
+
+
+LaTeX Warning: Citation `Reynolds1999' on page 11 undefined on input line 156.
+
+[11]
+
+LaTeX Warning: Citation `Masood2025Pipeline' on page 12 undefined on input line
+ 160.
+
+
+LaTeX Warning: Citation `Filonchyk2024' on page 12 undefined on input line 164.
+
+
+
+LaTeX Warning: Citation `Kabir2023' on page 12 undefined on input line 164.
+
+
+LaTeX Warning: Citation `Herzog2001' on page 12 undefined on input line 164.
+
+
+LaTeX Warning: Citation `Yadav2022' on page 12 undefined on input line 164.
+
+
+LaTeX Warning: Citation `Osman2021' on page 12 undefined on input line 164.
+
+[12]
+
+LaTeX Warning: Citation `Zheng2021' on page 13 undefined on input line 166.
+
+
+LaTeX Warning: Citation `Mortezaei2021' on page 13 undefined on input line 166.
+
+
+
+LaTeX Warning: Citation `Queiros2014' on page 13 undefined on input line 166.
+
+
+LaTeX Warning: Citation `Pham2016' on page 13 undefined on input line 166.
+
+
+LaTeX Warning: Citation `Zhang2021' on page 13 undefined on input line 168.
+
+
+LaTeX Warning: Citation `Qasem2019' on page 13 undefined on input line 168.
+
+
+LaTeX Warning: Citation `Hu2022' on page 13 undefined on input line 168.
+
+
+LaTeX Warning: Citation `Masood2025CO2' on page 13 undefined on input line 170.
+
+
+
+LaTeX Warning: Citation `HeinrichBoellStiftung2017' on page 13 undefined on inp
+ut line 174.
+
+
+LaTeX Warning: Citation `Almeda2014' on page 13 undefined on input line 174.
+
+
+LaTeX Warning: Citation `Albers1982' on page 13 undefined on input line 174.
+
+[13]
+
+LaTeX Warning: Citation `Martins2010' on page 14 undefined on input line 176.
+
+
+LaTeX Warning: Citation `Hou2013' on page 14 undefined on input line 176.
+
+
+LaTeX Warning: Citation `Akib2011' on page 14 undefined on input line 176.
+
+
+LaTeX Warning: Citation `Vitkovsky2007' on page 14 undefined on input line 176.
+
+
+
+LaTeX Warning: Citation `Ostapkowicz2016' on page 14 undefined on input line 17
+6.
+
+
+LaTeX Warning: Citation `Reda2024' on page 14 undefined on input line 176.
+
+
+LaTeX Warning: Citation `Jasper2012' on page 14 undefined on input line 178.
+
+
+LaTeX Warning: Citation `Lukonge2020' on page 14 undefined on input line 178.
+
+
+LaTeX Warning: Citation `Adegboye2019' on page 14 undefined on input line 178.
+
+
+LaTeX Warning: Citation `Yao2024' on page 14 undefined on input line 178.
+
+
+LaTeX Warning: Citation `Du2025' on page 14 undefined on input line 178.
+
+
+LaTeX Warning: Citation `Qasem2019' on page 14 undefined on input line 178.
+
+
+LaTeX Warning: Citation `Pocwiardowski2021' on page 14 undefined on input line 
+178.
+
+
+LaTeX Warning: Citation `Porter2024' on page 14 undefined on input line 180.
+
+[14]
+
+LaTeX Warning: Citation `Masood2026OilSpill' on page 15 undefined on input line
+ 182.
+
+
+LaTeX Warning: Citation `Connor2021' on page 15 undefined on input line 186.
+
+
+LaTeX Warning: Citation `Partan2007' on page 15 undefined on input line 186.
+
+
+LaTeX Warning: Citation `Luo2021' on page 15 undefined on input line 188.
+
+
+LaTeX Warning: Citation `Su2020' on page 15 undefined on input line 188.
+
+[15]
+
+LaTeX Warning: Citation `Palmeiro2011' on page 16 undefined on input line 190.
+
+
+LaTeX Warning: Citation `Nguyen2019' on page 16 undefined on input line 190.
+
+
+LaTeX Warning: Citation `Ryecroft2019' on page 16 undefined on input line 190.
+
+
+LaTeX Warning: Citation `Zekavat2019' on page 16 undefined on input line 190.
+
+
+LaTeX Warning: Citation `Nguyen2019' on page 16 undefined on input line 190.
+
+
+LaTeX Warning: Citation `Masood2026RSSI' on page 16 undefined on input line 192
+.
+
+
+LaTeX Warning: Citation `Masood2025Swarm' on page 16 undefined on input line 19
+2.
+
+[16]
+
+LaTeX Warning: Citation `Masood2023' on page 17 undefined on input line 202.
+
+
+LaTeX Warning: Citation `Masood2026ESCBCD' on page 17 undefined on input line 2
+02.
+
+
+LaTeX Warning: Citation `Masood2025Pipeline' on page 17 undefined on input line
+ 203.
+
+
+LaTeX Warning: Citation `Masood2025CO2' on page 17 undefined on input line 204.
+
+
+
+LaTeX Warning: Citation `Masood2026OilSpill' on page 17 undefined on input line
+ 204.
+
+
+LaTeX Warning: Citation `Masood2026RSSI' on page 17 undefined on input line 205
+.
+
+
+LaTeX Warning: Citation `Masood2025Swarm' on page 17 undefined on input line 20
+5.
+
+[17]
+
+LaTeX Warning: Citation `Masood2023' on page 18 undefined on input line 214.
+
+
+LaTeX Warning: Citation `Masood2026ESCBCD' on page 18 undefined on input line 2
+14.
+
+
+LaTeX Warning: Citation `Masood2025Pipeline' on page 18 undefined on input line
+ 215.
+
+
+LaTeX Warning: Citation `Masood2025CO2' on page 18 undefined on input line 216.
+
+
+
+LaTeX Warning: Citation `Masood2026OilSpill' on page 18 undefined on input line
+ 216.
+
+
+LaTeX Warning: Citation `Masood2026RSSI' on page 18 undefined on input line 217
+.
+
+
+LaTeX Warning: Citation `Masood2025Swarm' on page 18 undefined on input line 21
+7.
+
+[18{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[19] [20
+
+]
+
+LaTeX Warning: Reference `fig:ch2_bcd_cad' on page 21 undefined on input line 2
+48.
+
+Floatstructure:292
+<Fig/ch2_bcd_cad_isometric.png, id=1167, 446.66875pt x 893.3375pt>
+File: Fig/ch2_bcd_cad_isometric.png Graphic file (type png)
+<use Fig/ch2_bcd_cad_isometric.png>
+Package pdftex.def Info: Fig/ch2_bcd_cad_isometric.png  used on input line 254.
+
+(pdftex.def)             Requested size: 112.0145pt x 224.03743pt.
+<Fig/ch2_bcd_cad_section.png, id=1174, 377.41pt x 792.9625pt>
+File: Fig/ch2_bcd_cad_section.png Graphic file (type png)
+<use Fig/ch2_bcd_cad_section.png>
+Package pdftex.def Info: Fig/ch2_bcd_cad_section.png  used on input line 259.
+(pdftex.def)             Requested size: 106.63004pt x 224.03743pt.
+[21]
+
+LaTeX Warning: Citation `Lighthill1969' on page 22 undefined on input line 273.
+
+
+
+LaTeX Warning: Citation `Lighthill1971' on page 22 undefined on input line 273.
+
+
+[22 <./Fig/ch2_bcd_cad_isometric.png (PNG copy)> <./Fig/ch2_bcd_cad_section.png
+ (PNG copy)>]
+
+LaTeX Warning: Citation `Zuo2021' on page 23 undefined on input line 288.
+
+
+LaTeX Warning: Citation `Masood2025Pipeline' on page 23 undefined on input line
+ 288.
+
+
+LaTeX Warning: Reference `fig:ch2_dsc_action' on page 23 undefined on input lin
+e 290.
+
+Floatstructure:337
+<Fig/ch2_dsc_action.png, id=1237, 776.9025pt x 542.025pt>
+File: Fig/ch2_dsc_action.png Graphic file (type png)
+<use Fig/ch2_dsc_action.png>
+Package pdftex.def Info: Fig/ch2_dsc_action.png  used on input line 294.
+(pdftex.def)             Requested size: 372.91347pt x 260.1773pt.
+
+LaTeX Warning: Reference `fig:ch2_tail_servo' on page 23 undefined on input lin
+e 299.
+
+Floatstructure:346
+<Fig/ch2_tail_servo.png, id=1249, 461.5644pt x 402.7848pt>
+File: Fig/ch2_tail_servo.png Graphic file (type png)
+<use Fig/ch2_tail_servo.png>
+Package pdftex.def Info: Fig/ch2_tail_servo.png  used on input line 303.
+(pdftex.def)             Requested size: 268.84229pt x 234.60484pt.
+[23] [24 <./Fig/ch2_dsc_action.png>]
+
+LaTeX Warning: Reference `fig:ch2_aquanavigator_cad' on page 25 undefined on in
+put line 314.
+
+Floatstructure:362
+<Fig/ch2_aquanavigator_cad.png, id=1287, 963.6pt x 447.855pt>
+File: Fig/ch2_aquanavigator_cad.png Graphic file (type png)
+<use Fig/ch2_aquanavigator_cad.png>
+Package pdftex.def Info: Fig/ch2_aquanavigator_cad.png  used on input line 318.
+
+(pdftex.def)             Requested size: 433.62001pt x 201.53288pt.
+
+LaTeX Warning: Reference `tab:ch2_aquanavigator_specs' on page 25 undefined on 
+input line 323.
+
+Floatstructure:371
+
+LaTeX Warning: Citation `Masood2023' on page 25 undefined on input line 348.
+
+
+LaTeX Warning: Citation `Masood2026ESCBCD' on page 25 undefined on input line 3
+48.
+
+[25 <./Fig/ch2_tail_servo.png>]
+
+LaTeX Warning: Citation `Masood2023' on page 26 undefined on input line 350.
+
+
+LaTeX Warning: Citation `Masood2026ESCBCD' on page 26 undefined on input line 3
+50.
+
+[26 <./Fig/ch2_aquanavigator_cad.png>]
+
+LaTeX Warning: Citation `Masood2023' on page 27 undefined on input line 352.
+
+
+LaTeX Warning: Citation `Masood2023' on page 27 undefined on input line 354.
+
+
+LaTeX Warning: Citation `Masood2026ESCBCD' on page 27 undefined on input line 3
+54.
+
+
+LaTeX Warning: Reference `fig:ch2_bcd_fabricated' on page 27 undefined on input
+ line 354.
+
+Floatstructure:392
+<Fig/ch2_bcd_fabricated.png, id=1341, 2427.0675pt x 1643.13875pt>
+File: Fig/ch2_bcd_fabricated.png Graphic file (type png)
+<use Fig/ch2_bcd_fabricated.png>
+Package pdftex.def Info: Fig/ch2_bcd_fabricated.png  used on input line 358.
+(pdftex.def)             Requested size: 312.20692pt x 211.35904pt.
+
+LaTeX Warning: Citation `Masood2025Pipeline' on page 27 undefined on input line
+ 365.
+
+
+LaTeX Warning: Citation `Masood2026OilSpill' on page 27 undefined on input line
+ 365.
+
+[27]
+
+LaTeX Warning: Citation `Masood2025Pipeline' on page 28 undefined on input line
+ 367.
+
+
+LaTeX Warning: Citation `Masood2026OilSpill' on page 28 undefined on input line
+ 367.
+
+[28 <./Fig/ch2_bcd_fabricated.png (PNG copy)>]
+
+LaTeX Warning: Citation `Masood2025Pipeline' on page 29 undefined on input line
+ 369.
+
+
+LaTeX Warning: Reference `fig:ch2_aquanavigator_real' on page 29 undefined on i
+nput line 371.
+
+Floatstructure:410
+<Fig/ch2_aquanavigator_real.jpg, id=1376, 579.66562pt x 316.93407pt>
+File: Fig/ch2_aquanavigator_real.jpg Graphic file (type jpg)
+<use Fig/ch2_aquanavigator_real.jpg>
+Package pdftex.def Info: Fig/ch2_aquanavigator_real.jpg  used on input line 375
+.
+(pdftex.def)             Requested size: 303.53267pt x 165.95763pt.
+[29] [30 <./Fig/ch2_aquanavigator_real.jpg>]
+
+LaTeX Warning: Reference `fig:ch2_bcd_schematic' on page 31 undefined on input 
+line 392.
+
+[31
+
+]
+Floatstructure:442
+<Fig/ch2_bcd_schematic.pdf, id=1431, 794.97pt x 465.74pt>
+File: Fig/ch2_bcd_schematic.pdf Graphic file (type pdf)
+<use Fig/ch2_bcd_schematic.pdf>
+Package pdftex.def Info: Fig/ch2_bcd_schematic.pdf  used on input line 396.
+(pdftex.def)             Requested size: 338.22307pt x 198.15363pt.
+[32 <./Fig/ch2_bcd_schematic.pdf>]
+
+LaTeX Warning: Reference `eq:ch2_bcd_neutral' on page 33 undefined on input lin
+e 416.
+
+
+LaTeX Warning: Reference `fig:ch2_bcd_piston' on page 33 undefined on input lin
+e 427.
+
+Floatstructure:470
+<Fig/ch2_bcd_piston.pdf, id=1517, 440.64626pt x 316.18124pt>
+File: Fig/ch2_bcd_piston.pdf Graphic file (type pdf)
+<use Fig/ch2_bcd_piston.pdf>
+Package pdftex.def Info: Fig/ch2_bcd_piston.pdf  used on input line 431.
+(pdftex.def)             Requested size: 208.13574pt x 149.34335pt.
+
+LaTeX Warning: Reference `eq:ch2_bcd_piston_volume' on page 33 undefined on inp
+ut line 436.
+
+
+LaTeX Warning: Reference `eq:ch2_bcd_depth_vd' on page 33 undefined on input li
+ne 436.
+
+[33 <./Fig/ch2_bcd_piston.pdf>]
+
+LaTeX Warning: Citation `Masood2026ESCBCD' on page 34 undefined on input line 4
+46.
+
+
+LaTeX Warning: Reference `eq:ch2_actuator_current' on page 34 undefined on inpu
+t line 462.
+
+
+LaTeX Warning: Reference `eq:ch2_piston_force' on page 34 undefined on input li
+ne 462.
+
+[34]
+
+LaTeX Warning: Reference `eq:ch2_bcd_depth_xp' on page 35 undefined on input li
+ne 492.
+
+
+LaTeX Warning: Reference `eq:ch2_pressure_coupled_actuator' on page 35 undefine
+d on input line 492.
+
+[35]
+
+LaTeX Warning: Reference `eq:ch2_bcd_statespace' on page 36 undefined on input 
+line 517.
+
+
+LaTeX Warning: Reference `fig:ch2_robot_frames' on page 36 undefined on input l
+ine 523.
+
+Floatstructure:561
+<Fig/ch2_robot_frames.png, id=1664, 491.436pt x 154.4169pt>
+File: Fig/ch2_robot_frames.png Graphic file (type png)
+<use Fig/ch2_robot_frames.png>
+Package pdftex.def Info: Fig/ch2_robot_frames.png  used on input line 533.
+(pdftex.def)             Requested size: 433.62001pt x 136.2572pt.
+[36] [37 <./Fig/ch2_robot_frames.png>]
+
+LaTeX Warning: Citation `Wang2013' on page 38 undefined on input line 581.
+
+
+LaTeX Warning: Citation `Lighthill1971' on page 38 undefined on input line 581.
+
+
+
+LaTeX Warning: Citation `Masood2025Pipeline' on page 38 undefined on input line
+ 581.
+
+[38] [39] [40] [41]
+
+LaTeX Warning: Citation `Masood2025Pipeline' on page 42 undefined on input line
+ 736.
+
+
+LaTeX Warning: Reference `tab:ch2_fish_model_parameters' on page 42 undefined o
+n input line 736.
+
+Floatstructure:718
+
+LaTeX Warning: Citation `Masood2026ESCBCD' on page 42 undefined on input line 7
+83.
+
+[42] [43]
+
+LaTeX Warning: Reference `sec:ch3_bcd_validation_setup' on page 44 undefined on
+ input line 798.
+
+
+LaTeX Warning: Reference `fig:ch3_bcd_open_loop_validation' on page 44 undefine
+d on input line 798.
+
+[44]
+Floatstructure:781
+<Fig/ch3_bcd_open_loop_validation.pdf, id=2007, 483.60487pt x 452.83492pt>
+File: Fig/ch3_bcd_open_loop_validation.pdf Graphic file (type pdf)
+<use Fig/ch3_bcd_open_loop_validation.pdf>
+Package pdftex.def Info: Fig/ch3_bcd_open_loop_validation.pdf  used on input li
+ne 802.
+(pdftex.def)             Requested size: 381.58772pt x 357.31416pt.
+[45 <./Fig/ch3_bcd_open_loop_validation.pdf>] [46]
+
+LaTeX Warning: Citation `Masood2023' on page 47 undefined on input line 821.
+
+[47
+
+]
+
+LaTeX Warning: Reference `fig:ch3_mpc_control_scheme' on page 48 undefined on i
+nput line 843.
+
+Floatstructure:832
+<Fig/ch3_mpc_control_scheme.png, id=2162, 722.7pt x 270.5307pt>
+File: Fig/ch3_mpc_control_scheme.png Graphic file (type png)
+<use Fig/ch3_mpc_control_scheme.png>
+Package pdftex.def Info: Fig/ch3_mpc_control_scheme.png  used on input line 847
+.
+(pdftex.def)             Requested size: 355.57158pt x 133.10196pt.
+Floatstructure:839
+
+LaTeX Warning: Citation `Masood2026ESCBCD' on page 48 undefined on input line 8
+74.
+
+[48] [49 <./Fig/ch3_mpc_control_scheme.png>]
+
+LaTeX Warning: Reference `fig:ch3_esc_tuned_pd_scheme' on page 50 undefined on 
+input line 893.
+
+Floatstructure:869
+<Fig/ch3_esc_tuned_pd_scheme.png, id=2222, 521.22pt x 126.144pt>
+File: Fig/ch3_esc_tuned_pd_scheme.png Graphic file (type png)
+<use Fig/ch3_esc_tuned_pd_scheme.png>
+Package pdftex.def Info: Fig/ch3_esc_tuned_pd_scheme.png  used on input line 89
+7.
+(pdftex.def)             Requested size: 364.23921pt x 88.15582pt.
+[50]
+Floatstructure:897
+
+LaTeX Warning: Citation `Masood2025Pipeline' on page 51 undefined on input line
+ 961.
+
+[51 <./Fig/ch3_esc_tuned_pd_scheme.png>] [52]
+
+LaTeX Warning: Reference `fig:ch3_pipeline_control_scheme' on page 53 undefined
+ on input line 965.
+
+Floatstructure:939
+<Fig/ch3_pipeline_control_scheme.png, id=2327, 4015.0803pt x 3011.25pt>
+File: Fig/ch3_pipeline_control_scheme.png Graphic file (type png)
+<use Fig/ch3_pipeline_control_scheme.png>
+Package pdftex.def Info: Fig/ch3_pipeline_control_scheme.png  used on input lin
+e 980.
+(pdftex.def)             Requested size: 355.57158pt x 266.63576pt.
+Floatstructure:946
+<Fig/ch3_pipeline_camera_vectors.png, id=2336, 361.35pt x 289.08pt>
+File: Fig/ch3_pipeline_camera_vectors.png Graphic file (type png)
+<use Fig/ch3_pipeline_camera_vectors.png>
+Package pdftex.def Info: Fig/ch3_pipeline_camera_vectors.png  used on input lin
+e 987.
+(pdftex.def)             Requested size: 355.57158pt x 284.46095pt.
+[53 <./Fig/ch3_pipeline_control_scheme.png>] [54 <./Fig/ch3_pipeline_camera_vec
+tors.png>]
+
+LaTeX Warning: Reference `fig:ch2_bcd_fabricated' on page 55 undefined on input
+ line 1004.
+
+
+LaTeX Warning: Reference `fig:ch2_bcd_schematic' on page 55 undefined on input 
+line 1004.
+
+
+LaTeX Warning: Reference `fig:ch2_bcd_piston' on page 55 undefined on input lin
+e 1004.
+
+
+LaTeX Warning: Reference `fig:ch2_aquanavigator_real' on page 55 undefined on i
+nput line 1004.
+
+
+LaTeX Warning: Reference `sec:ch3_robotic_fish_simulator' on page 55 undefined 
+on input line 1004.
+
+
+LaTeX Warning: Reference `fig:ch3_bcd_depth_control_setup' on page 55 undefined
+ on input line 1004.
+
+Floatstructure:978
+<Fig/ch3_bcd_depth_control_setup.jpg, id=2389, 1505.625pt x 772.38562pt>
+File: Fig/ch3_bcd_depth_control_setup.jpg Graphic file (type jpg)
+<use Fig/ch3_bcd_depth_control_setup.jpg>
+Package pdftex.def Info: Fig/ch3_bcd_depth_control_setup.jpg  used on input lin
+e 1008.
+(pdftex.def)             Requested size: 398.92961pt x 204.64586pt.
+[55]
+
+LaTeX Warning: Reference `fig:ch3_esc_actuator_control_gui' on page 56 undefine
+d on input line 1023.
+
+[56 <./Fig/ch3_bcd_depth_control_setup.jpg>]
+Floatstructure:1004
+<Fig/ch3_esc_actuator_control_gui.png, id=2435, 398.99063pt x 185.94469pt>
+File: Fig/ch3_esc_actuator_control_gui.png Graphic file (type png)
+<use Fig/ch3_esc_actuator_control_gui.png>
+Package pdftex.def Info: Fig/ch3_esc_actuator_control_gui.png  used on input li
+ne 1027.
+(pdftex.def)             Requested size: 312.20692pt x 145.50725pt.
+
+LaTeX Warning: Citation `Masood2025Pipeline' on page 57 undefined on input line
+ 1037.
+
+[57 <./Fig/ch3_esc_actuator_control_gui.png>]
+
+LaTeX Warning: Reference `fig:ch3_pipeline_camera_vectors' on page 58 undefined
+ on input line 1041.
+
+
+LaTeX Warning: Reference `fig:ch3_pipeline_top_view' on page 58 undefined on in
+put line 1041.
+
+
+LaTeX Warning: Reference `tab:ch3_pipeline_results' on page 58 undefined on inp
+ut line 1041.
+
+
+LaTeX Warning: Reference `fig:ch3_mpc_simulation' on page 58 undefined on input
+ line 1047.
+
+Floatstructure:1042
+<Fig/ch3_mpc_simulation.png, id=2486, 421.575pt x 316.18124pt>
+File: Fig/ch3_mpc_simulation.png Graphic file (type png)
+<use Fig/ch3_mpc_simulation.png>
+Package pdftex.def Info: Fig/ch3_mpc_simulation.png  used on input line 1051.
+(pdftex.def)             Requested size: 303.53267pt x 227.65514pt.
+[58]
+Floatstructure:1049
+<Fig/ch3_mpc_experiment.png, id=2506, 843.15pt x 632.3625pt>
+File: Fig/ch3_mpc_experiment.png Graphic file (type png)
+<use Fig/ch3_mpc_experiment.png>
+Package pdftex.def Info: Fig/ch3_mpc_experiment.png  used on input line 1058.
+(pdftex.def)             Requested size: 303.53267pt x 227.65033pt.
+
+LaTeX Warning: Reference `sec:ch3_mpc_experimental_setup' on page 59 undefined 
+on input line 1063.
+
+
+LaTeX Warning: Reference `fig:ch3_mpc_experiment' on page 59 undefined on input
+ line 1063.
+
+
+LaTeX Warning: Citation `Masood2023' on page 59 undefined on input line 1063.
+
+[59 <./Fig/ch3_mpc_simulation.png (PNG copy)> <./Fig/ch3_mpc_experiment.png (PN
+G copy)>]
+
+LaTeX Warning: Reference `sec:ch3_esc_experimental_setup' on page 60 undefined 
+on input line 1067.
+
+
+LaTeX Warning: Reference `fig:ch3_bcd_actuator_loop_result' on page 60 undefine
+d on input line 1067.
+
+Floatstructure:1066
+<Fig/ch3_bcd_actuator_loop_result.pdf, id=2534, 498.50052pt x 384.53975pt>
+File: Fig/ch3_bcd_actuator_loop_result.pdf Graphic file (type pdf)
+<use Fig/ch3_bcd_actuator_loop_result.pdf>
+Package pdftex.def Info: Fig/ch3_bcd_actuator_loop_result.pdf  used on input li
+ne 1071.
+(pdftex.def)             Requested size: 346.89732pt x 267.60933pt.
+
+LaTeX Warning: Reference `fig:ch3_esc_velocity_penalty_sim' on page 60 undefine
+d on input line 1076.
+
+[60 <./Fig/ch3_bcd_actuator_loop_result.pdf>]
+Floatstructure:1076
+<Fig/ch3_esc_velocity_penalty_sim.pdf, id=2624, 593.23634pt x 529.80246pt>
+File: Fig/ch3_esc_velocity_penalty_sim.pdf Graphic file (type pdf)
+<use Fig/ch3_esc_velocity_penalty_sim.pdf>
+Package pdftex.def Info: Fig/ch3_esc_velocity_penalty_sim.pdf  used on input li
+ne 1080.
+(pdftex.def)             Requested size: 346.89732pt x 309.80788pt.
+
+LaTeX Warning: Reference `fig:ch3_esc_deadzone_penalty_sim' on page 61 undefine
+d on input line 1085.
+
+Floatstructure:1087
+<Fig/ch3_esc_deadzone_penalty_sim.pdf, id=2637, 593.23634pt x 529.80246pt>
+File: Fig/ch3_esc_deadzone_penalty_sim.pdf Graphic file (type pdf)
+<use Fig/ch3_esc_deadzone_penalty_sim.pdf>
+Package pdftex.def Info: Fig/ch3_esc_deadzone_penalty_sim.pdf  used on input li
+ne 1089.
+(pdftex.def)             Requested size: 346.89732pt x 309.80788pt.
+
+LaTeX Warning: Reference `fig:ch3_esc_experiment' on page 61 undefined on input
+ line 1094.
+
+[61 <./Fig/ch3_esc_velocity_penalty_sim.pdf>]
+Floatstructure:1102
+<Fig/ch3_esc_experiment.pdf, id=2742, 841.78302pt x 768.30281pt>
+File: Fig/ch3_esc_experiment.pdf Graphic file (type pdf)
+<use Fig/ch3_esc_experiment.pdf>
+Package pdftex.def Info: Fig/ch3_esc_experiment.pdf  used on input line 1098.
+(pdftex.def)             Requested size: 346.89732pt x 316.62401pt.
+[62 <./Fig/ch3_esc_deadzone_penalty_sim.pdf>]
+
+LaTeX Warning: Reference `sec:ch3_robotic_fish_simulator' on page 63 undefined 
+on input line 1107.
+
+
+LaTeX Warning: Reference `fig:ch3_simulator_responses' on page 63 undefined on 
+input line 1107.
+
+Floatstructure:1117
+<Fig/ch3_pbvs_simulation.png, id=2848, 867.24pt x 578.16pt>
+File: Fig/ch3_pbvs_simulation.png Graphic file (type png)
+<use Fig/ch3_pbvs_simulation.png>
+Package pdftex.def Info: Fig/ch3_pbvs_simulation.png  used on input line 1113.
+(pdftex.def)             Requested size: 281.85036pt x 187.89977pt.
+<Fig/ch3_ibvs_simulation.png, id=2857, 867.24pt x 578.16pt>
+File: Fig/ch3_ibvs_simulation.png Graphic file (type png)
+<use Fig/ch3_ibvs_simulation.png>
+Package pdftex.def Info: Fig/ch3_ibvs_simulation.png  used on input line 1118.
+(pdftex.def)             Requested size: 281.85036pt x 187.89977pt.
+[63 <./Fig/ch3_esc_experiment.pdf>]
+
+LaTeX Warning: Reference `sec:ch3_pipeline_experimental_setup' on page 64 undef
+ined on input line 1128.
+
+[64 <./Fig/ch3_pbvs_simulation.png> <./Fig/ch3_ibvs_simulation.png>]
+
+LaTeX Warning: Reference `fig:ch3_pipeline_top_view' on page 65 undefined on in
+put line 1130.
+
+Floatstructure:1149
+<Fig/ch3_pipeline_top_view.jpg, id=2972, 4625.28pt x 1626.075pt>
+File: Fig/ch3_pipeline_top_view.jpg Graphic file (type jpg)
+<use Fig/ch3_pipeline_top_view.jpg>
+Package pdftex.def Info: Fig/ch3_pipeline_top_view.jpg  used on input line 1134
+.
+(pdftex.def)             Requested size: 407.60387pt x 143.28857pt.
+Floatstructure:1156
+[65 <./Fig/ch3_pipeline_top_view.jpg>] [66]
+
+LaTeX Warning: Citation `Masood2025Swarm' on page 67 undefined on input line 11
+68.
+
+
+LaTeX Warning: Citation `Masood2026RSSI' on page 67 undefined on input line 116
+8.
+
+[67
+
+]
+
+LaTeX Warning: Reference `fig:ch5_cooperative_swarm_concept' on page 68 undefin
+ed on input line 1170.
+
+Floatstructure:1185
+<Fig/ch5_cooperative_swarm_concept.png, id=3033, 812.928pt x 542.025pt>
+File: Fig/ch5_cooperative_swarm_concept.png Graphic file (type png)
+<use Fig/ch5_cooperative_swarm_concept.png>
+Package pdftex.def Info: Fig/ch5_cooperative_swarm_concept.png  used on input l
+ine 1174.
+(pdftex.def)             Requested size: 381.58772pt x 254.42923pt.
+
+LaTeX Warning: Reference `fig:ch5_swarm_schematic' on page 68 undefined on inpu
+t line 1183.
+
+[68 <./Fig/ch5_cooperative_swarm_concept.png>]
+Floatstructure:1200
+<Fig/ch5_swarm_schematic.png, id=3058, 807.7678pt x 271.0125pt>
+File: Fig/ch5_swarm_schematic.png Graphic file (type png)
+<use Fig/ch5_swarm_schematic.png>
+Package pdftex.def Info: Fig/ch5_swarm_schematic.png  used on input line 1187.
+(pdftex.def)             Requested size: 294.85843pt x 98.92906pt.
+[69 <./Fig/ch5_swarm_schematic.png>]
+
+LaTeX Warning: Reference `fig:ch5_swarm_rss_unit' on page 70 undefined on input
+ line 1233.
+
+Floatstructure:1244
+<Fig/ch5_swarm_rss_unit.png, id=3120, 540.51938pt x 389.20406pt>
+File: Fig/ch5_swarm_rss_unit.png Graphic file (type png)
+<use Fig/ch5_swarm_rss_unit.png>
+Package pdftex.def Info: Fig/ch5_swarm_rss_unit.png  used on input line 1237.
+(pdftex.def)             Requested size: 242.82614pt x 174.84326pt.
+[70] [71 <./Fig/ch5_swarm_rss_unit.png>] [72]
+
+LaTeX Warning: Citation `Masood2025Swarm' on page 73 undefined on input line 13
+43.
+
+[73]
+
+LaTeX Warning: Citation `Masood2025Pipeline' on page 74 undefined on input line
+ 1347.
+
+[74]
+
+LaTeX Warning: Reference `sec:ch5_results_discussion' on page 75 undefined on i
+nput line 1388.
+
+[75]
+
+LaTeX Warning: Citation `Masood2026RSSI' on page 76 undefined on input line 139
+8.
+
+
+LaTeX Warning: Reference `fig:ch5_rssi_device_description' on page 76 undefined
+ on input line 1402.
+
+Floatstructure:1379
+<Fig/ch5_rssi_device_description.png, id=3350, 894.177pt x 499.977pt>
+File: Fig/ch5_rssi_device_description.png Graphic file (type png)
+<use Fig/ch5_rssi_device_description.png>
+Package pdftex.def Info: Fig/ch5_rssi_device_description.png  used on input lin
+e 1406.
+(pdftex.def)             Requested size: 390.25536pt x 218.21298pt.
+
+LaTeX Warning: Reference `tab:ch5_rf_parameters' on page 76 undefined on input 
+line 1413.
+
+[76]
+Floatstructure:1391
+[77 <./Fig/ch5_rssi_device_description.png>]
+
+LaTeX Warning: Reference `fig:ch5_rssi_hardware_mounted' on page 78 undefined o
+n input line 1443.
+
+Floatstructure:1429
+<Fig/ch5_rssi_hardware_mounted.png, id=3428, 931.626pt x 346.458pt>
+File: Fig/ch5_rssi_hardware_mounted.png Graphic file (type png)
+<use Fig/ch5_rssi_hardware_mounted.png>
+Package pdftex.def Info: Fig/ch5_rssi_hardware_mounted.png  used on input line 
+1447.
+(pdftex.def)             Requested size: 390.25536pt x 145.13072pt.
+[78 <./Fig/ch5_rssi_hardware_mounted.png>] [79] [80]
+
+LaTeX Warning: Reference `fig:ch5_rf_imu_localization_pipeline' on page 81 unde
+fined on input line 1500.
+
+Floatstructure:1482
+[81]
+
+LaTeX Warning: Reference `tab:ch5_model_comparison' on page 82 undefined on inp
+ut line 1676.
+
+Floatstructure:1515
+[82]
+
+LaTeX Warning: Reference `fig:ch5_psi_unwrapped_timeseries' on page 83 undefine
+d on input line 1711.
+
+
+LaTeX Warning: Reference `fig:ch5_psi_absolute_error_timeseries' on page 83 und
+efined on input line 1711.
+
+Floatstructure:1565
+<Fig/ch5_psi_unwrapped_timeseries.png, id=3642, 867.24pt x 289.08pt>
+File: Fig/ch5_psi_unwrapped_timeseries.png Graphic file (type png)
+<use Fig/ch5_psi_unwrapped_timeseries.png>
+Package pdftex.def Info: Fig/ch5_psi_unwrapped_timeseries.png  used on input li
+ne 1715.
+(pdftex.def)             Requested size: 338.22307pt x 112.74074pt.
+[83]
+Floatstructure:1572
+<Fig/ch5_psi_absolute_error_timeseries.png, id=3664, 867.24pt x 216.81pt>
+File: Fig/ch5_psi_absolute_error_timeseries.png Graphic file (type png)
+<use Fig/ch5_psi_absolute_error_timeseries.png>
+Package pdftex.def Info: Fig/ch5_psi_absolute_error_timeseries.png  used on inp
+ut line 1722.
+(pdftex.def)             Requested size: 338.22307pt x 84.55556pt.
+
+LaTeX Warning: Reference `fig:ch5_theta_kf_comparison' on page 84 undefined on 
+input line 1727.
+
+Floatstructure:1583
+<Fig/ch5_theta_kf_comparison.png, id=3677, 850.377pt x 507.5763pt>
+File: Fig/ch5_theta_kf_comparison.png Graphic file (type png)
+<use Fig/ch5_theta_kf_comparison.png>
+Package pdftex.def Info: Fig/ch5_theta_kf_comparison.png  used on input line 17
+31.
+(pdftex.def)             Requested size: 251.5004pt x 150.1132pt.
+
+LaTeX Warning: Citation `Masood2026RSSI' on page 84 undefined on input line 173
+6.
+
+
+LaTeX Warning: Reference `fig:ch5_position_error_histogram' on page 84 undefine
+d on input line 1736.
+
+
+LaTeX Warning: Reference `fig:ch5_position_error_scatter' on page 84 undefined 
+on input line 1736.
+
+
+LaTeX Warning: Reference `fig:ch5_position_error_histogram_6m' on page 84 undef
+ined on input line 1736.
+
+Floatstructure:1594
+<Fig/ch5_position_error_histogram.png, id=3690, 505.89pt x 361.35pt>
+File: Fig/ch5_position_error_histogram.png Graphic file (type png)
+<use Fig/ch5_position_error_histogram.png>
+Package pdftex.def Info: Fig/ch5_position_error_histogram.png  used on input li
+ne 1740.
+(pdftex.def)             Requested size: 251.5004pt x 179.64348pt.
+Floatstructure:1601
+<Fig/ch5_position_error_scatter.png, id=3699, 505.89pt x 361.35pt>
+File: Fig/ch5_position_error_scatter.png Graphic file (type png)
+<use Fig/ch5_position_error_scatter.png>
+Package pdftex.def Info: Fig/ch5_position_error_scatter.png  used on input line
+ 1747.
+(pdftex.def)             Requested size: 251.5004pt x 179.64348pt.
+Floatstructure:1608
+<Fig/ch5_position_error_histogram_6m.png, id=3708, 505.89pt x 361.35pt>
+File: Fig/ch5_position_error_histogram_6m.png Graphic file (type png)
+<use Fig/ch5_position_error_histogram_6m.png>
+Package pdftex.def Info: Fig/ch5_position_error_histogram_6m.png  used on input
+ line 1754.
+(pdftex.def)             Requested size: 251.5004pt x 179.64348pt.
+
+LaTeX Warning: Reference `fig:ch5_simulated_raw_imu_values' on page 84 undefine
+d on input line 1761.
+
+[84 <./Fig/ch5_psi_unwrapped_timeseries.png> <./Fig/ch5_psi_absolute_error_time
+series.png>]
+Floatstructure:1620
+<Fig/ch5_simulated_raw_imu_values.png, id=3733, 701.7417pt x 413.3844pt>
+File: Fig/ch5_simulated_raw_imu_values.png Graphic file (type png)
+<use Fig/ch5_simulated_raw_imu_values.png>
+Package pdftex.def Info: Fig/ch5_simulated_raw_imu_values.png  used on input li
+ne 1765.
+(pdftex.def)             Requested size: 355.57158pt x 209.46709pt.
+
+LaTeX Warning: Reference `fig:ch5_swarm_imu_localization' on page 85 undefined 
+on input line 1770.
+
+[85 <./Fig/ch5_theta_kf_comparison.png> <./Fig/ch5_position_error_histogram.png
+>]
+Floatstructure:1629
+<Fig/ch5_swarm_imu_localization.png, id=3757, 847.0044pt x 557.9244pt>
+File: Fig/ch5_swarm_imu_localization.png Graphic file (type png)
+<use Fig/ch5_swarm_imu_localization.png>
+Package pdftex.def Info: Fig/ch5_swarm_imu_localization.png  used on input line
+ 1774.
+(pdftex.def)             Requested size: 268.84229pt x 177.08368pt.
+
+LaTeX Warning: Reference `fig:ch5_swarm_formation_pool' on page 86 undefined on
+ input line 1779.
+
+
+LaTeX Warning: Reference `fig:ch5_swarm_formation_errors' on page 86 undefined 
+on input line 1779.
+
+Floatstructure:1638
+<Fig/ch5_swarm_formation_pool.png, id=3768, 920.238pt x 466.689pt>
+File: Fig/ch5_swarm_formation_pool.png Graphic file (type png)
+<use Fig/ch5_swarm_formation_pool.png>
+Package pdftex.def Info: Fig/ch5_swarm_formation_pool.png  used on input line 1
+783.
+(pdftex.def)             Requested size: 268.84229pt x 136.34041pt.
+[86 <./Fig/ch5_position_error_scatter.png> <./Fig/ch5_position_error_histogram_
+6m.png>]
+Floatstructure:1645
+<Fig/ch5_swarm_formation_errors.png, id=3788, 722.7pt x 433.62pt>
+File: Fig/ch5_swarm_formation_errors.png Graphic file (type png)
+<use Fig/ch5_swarm_formation_errors.png>
+Package pdftex.def Info: Fig/ch5_swarm_formation_errors.png  used on input line
+ 1790.
+(pdftex.def)             Requested size: 268.84229pt x 161.30365pt.
+[87 <./Fig/ch5_simulated_raw_imu_values.png>] [88 <./Fig/ch5_swarm_imu_localiza
+tion.png> <./Fig/ch5_swarm_formation_pool.png>] [89 <./Fig/ch5_swarm_formation_
+errors.png>] [90]
+
+LaTeX Warning: Citation `Masood2025CO2' on page 91 undefined on input line 1817
+.
+
+
+LaTeX Warning: Citation `Masood2026OilSpill' on page 91 undefined on input line
+ 1817.
+
+[91
+
+] [92]
+
+LaTeX Warning: Citation `Herzog2001' on page 93 undefined on input line 1831.
+
+
+LaTeX Warning: Citation `Filonchyk2024' on page 93 undefined on input line 1831
+.
+
+
+LaTeX Warning: Citation `Kabir2023' on page 93 undefined on input line 1831.
+
+
+LaTeX Warning: Citation `Zheng2021' on page 93 undefined on input line 1831.
+
+
+LaTeX Warning: Citation `Pham2016' on page 93 undefined on input line 1831.
+
+
+LaTeX Warning: Reference `fig:ch4_co2_diffusion_setup' on page 93 undefined on 
+input line 1837.
+
+Floatstructure:1723
+<Fig/ch4_co2_diffusion_setup.png, id=3922, 298.497pt x 420.48pt>
+File: Fig/ch4_co2_diffusion_setup.png Graphic file (type png)
+<use Fig/ch4_co2_diffusion_setup.png>
+Package pdftex.def Info: Fig/ch4_co2_diffusion_setup.png  used on input line 18
+41.
+(pdftex.def)             Requested size: 216.81pt x 305.42082pt.
+[93]
+
+LaTeX Warning: Reference `fig:ch4_co2_experimental_setup' on page 94 undefined 
+on input line 1846.
+
+Floatstructure:1738
+<Fig/ch4_co2_experimental_setup.png, id=3950, 627.435pt x 354.123pt>
+File: Fig/ch4_co2_experimental_setup.png Graphic file (type png)
+<use Fig/ch4_co2_experimental_setup.png>
+Package pdftex.def Info: Fig/ch4_co2_experimental_setup.png  used on input line
+ 1850.
+(pdftex.def)             Requested size: 268.84229pt x 151.74037pt.
+
+LaTeX Warning: Reference `fig:ch4_co2_leak_source' on page 94 undefined on inpu
+t line 1855.
+
+Floatstructure:1749
+<Fig/ch4_co2_leak_source.jpg, id=3963, 1427.3325pt x 1069.9975pt>
+File: Fig/ch4_co2_leak_source.jpg Graphic file (type jpg)
+<use Fig/ch4_co2_leak_source.jpg>
+Package pdftex.def Info: Fig/ch4_co2_leak_source.jpg  used on input line 1859.
+(pdftex.def)             Requested size: 251.5004pt x 188.52585pt.
+[94 <./Fig/ch4_co2_diffusion_setup.png>]
+
+LaTeX Warning: Reference `fig:ch4_co2_control_monitoring_gui' on page 95 undefi
+ned on input line 1864.
+
+
+LaTeX Warning: Reference `sec:ch4_results_discussion' on page 95 undefined on i
+nput line 1864.
+
+Floatstructure:1760
+<Fig/ch4_co2_control_monitoring_gui.png, id=3985, 1319.68031pt x 848.4197pt>
+File: Fig/ch4_co2_control_monitoring_gui.png Graphic file (type png)
+<use Fig/ch4_co2_control_monitoring_gui.png>
+Package pdftex.def Info: Fig/ch4_co2_control_monitoring_gui.png  used on input 
+line 1868.
+(pdftex.def)             Requested size: 407.60387pt x 262.0494pt.
+[95 <./Fig/ch4_co2_experimental_setup.png> <./Fig/ch4_co2_leak_source.jpg>]
+[96 <./Fig/ch4_co2_control_monitoring_gui.png>]
+
+LaTeX Warning: Citation `HeinrichBoellStiftung2017' on page 97 undefined on inp
+ut line 1898.
+
+
+LaTeX Warning: Citation `Almeda2014' on page 97 undefined on input line 1898.
+
+
+LaTeX Warning: Citation `Albers1982' on page 97 undefined on input line 1898.
+
+
+LaTeX Warning: Citation `Porter2024' on page 97 undefined on input line 1900.
+
+[97]
+
+LaTeX Warning: Reference `fig:ch4_oect_circuit' on page 98 undefined on input l
+ine 1904.
+
+Floatstructure:1806
+<Fig/ch4_oect_circuit.png, id=4068, 548.80031pt x 296.60812pt>
+File: Fig/ch4_oect_circuit.png Graphic file (type png)
+<use Fig/ch4_oect_circuit.png>
+Package pdftex.def Info: Fig/ch4_oect_circuit.png  used on input line 1908.
+(pdftex.def)             Requested size: 312.20692pt x 168.74251pt.
+
+LaTeX Warning: Reference `fig:ch4_oect_enclosure' on page 98 undefined on input
+ line 1913.
+
+Floatstructure:1815
+<Fig/ch4_oect_enclosure.png, id=4079, 558.669pt x 463.185pt>
+File: Fig/ch4_oect_enclosure.png Graphic file (type png)
+<use Fig/ch4_oect_enclosure.png>
+Package pdftex.def Info: Fig/ch4_oect_enclosure.png  used on input line 1917.
+(pdftex.def)             Requested size: 286.19078pt x 237.28136pt.
+[98 <./Fig/ch4_oect_circuit.png>]
+
+LaTeX Warning: Reference `fig:ch4_oect_smu_setup' on page 99 undefined on input
+ line 1924.
+
+Floatstructure:1830
+<Fig/ch4_oect_smu_setup.png, id=4106, 343.5234pt x 119.0046pt>
+File: Fig/ch4_oect_smu_setup.png Graphic file (type png)
+<use Fig/ch4_oect_smu_setup.png>
+Package pdftex.def Info: Fig/ch4_oect_smu_setup.png  used on input line 1928.
+(pdftex.def)             Requested size: 338.22307pt x 117.1757pt.
+
+LaTeX Warning: Reference `fig:ch4_oil_fish_pool' on page 99 undefined on input 
+line 1933.
+
+[99 <./Fig/ch4_oect_enclosure.png>]
+Floatstructure:1839
+<Fig/ch4_oil_fish_pool.png, id=4127, 1124.2pt x 785.93625pt>
+File: Fig/ch4_oil_fish_pool.png Graphic file (type png)
+<use Fig/ch4_oil_fish_pool.png>
+Package pdftex.def Info: Fig/ch4_oil_fish_pool.png  used on input line 1937.
+(pdftex.def)             Requested size: 251.5004pt x 175.82066pt.
+[100 <./Fig/ch4_oect_smu_setup.png> <./Fig/ch4_oil_fish_pool.png>]
+
+LaTeX Warning: Reference `sec:ch4_results_discussion' on page 101 undefined on 
+input line 1952.
+
+
+LaTeX Warning: Reference `fig:ch4_co2_diffusion_results' on page 101 undefined 
+on input line 1959.
+
+Floatstructure:1867
+<Fig/ch4_co2_diffusion_results.png, id=4172, 261.22594pt x 196.48407pt>
+File: Fig/ch4_co2_diffusion_results.png Graphic file (type png)
+<use Fig/ch4_co2_diffusion_results.png>
+Package pdftex.def Info: Fig/ch4_co2_diffusion_results.png  used on input line 
+1963.
+(pdftex.def)             Requested size: 268.84229pt x 202.21594pt.
+
+LaTeX Warning: Reference `fig:ch4_co2_raw_scatter' on page 101 undefined on inp
+ut line 1968.
+
+
+LaTeX Warning: Reference `fig:ch4_co2_heatmap' on page 101 undefined on input l
+ine 1968.
+
+[101 <./Fig/ch4_co2_diffusion_results.png>]
+Floatstructure:1879
+<Fig/ch4_co2_raw_scatter.png, id=4200, 549.9747pt x 419.6478pt>
+File: Fig/ch4_co2_raw_scatter.png Graphic file (type png)
+<use Fig/ch4_co2_raw_scatter.png>
+Package pdftex.def Info: Fig/ch4_co2_raw_scatter.png  used on input line 1972.
+(pdftex.def)             Requested size: 268.84229pt x 205.13617pt.
+Floatstructure:1887
+<Fig/ch4_co2_heatmap.png, id=4210, 500.5902pt x 384.9582pt>
+File: Fig/ch4_co2_heatmap.png Graphic file (type png)
+<use Fig/ch4_co2_heatmap.png>
+Package pdftex.def Info: Fig/ch4_co2_heatmap.png  used on input line 1979.
+(pdftex.def)             Requested size: 268.84229pt x 206.7524pt.
+
+LaTeX Warning: Reference `fig:ch4_co2_linear_interpolation' on page 102 undefin
+ed on input line 1984.
+
+
+LaTeX Warning: Reference `fig:ch4_co2_rbf_surface' on page 102 undefined on inp
+ut line 1984.
+
+Floatstructure:1897
+<Fig/ch4_co2_linear_interpolation.png, id=4222, 550.6974pt x 377.4903pt>
+File: Fig/ch4_co2_linear_interpolation.png Graphic file (type png)
+<use Fig/ch4_co2_linear_interpolation.png>
+Package pdftex.def Info: Fig/ch4_co2_linear_interpolation.png  used on input li
+ne 1988.
+(pdftex.def)             Requested size: 268.84229pt x 184.2864pt.
+Floatstructure:1905
+<Fig/ch4_co2_rbf_surface.png, id=4232, 502.5174pt x 419.6478pt>
+File: Fig/ch4_co2_rbf_surface.png Graphic file (type png)
+<use Fig/ch4_co2_rbf_surface.png>
+Package pdftex.def Info: Fig/ch4_co2_rbf_surface.png  used on input line 1995.
+(pdftex.def)             Requested size: 268.84229pt x 224.51256pt.
+
+LaTeX Warning: Reference `fig:ch4_co2_peak_map' on page 102 undefined on input 
+line 2000.
+
+Floatstructure:1916
+<Fig/ch4_co2_peak_map.png, id=4245, 549.252pt x 377.4903pt>
+File: Fig/ch4_co2_peak_map.png Graphic file (type png)
+<use Fig/ch4_co2_peak_map.png>
+Package pdftex.def Info: Fig/ch4_co2_peak_map.png  used on input line 2004.
+(pdftex.def)             Requested size: 277.51654pt x 190.73189pt.
+
+LaTeX Warning: Reference `fig:ch4_co2_time_windows' on page 102 undefined on in
+put line 2009.
+
+
+LaTeX Warning: Reference `fig:ch4_co2_error_over_time' on page 102 undefined on
+ input line 2009.
+
+[102 <./Fig/ch4_co2_raw_scatter.png>]
+Floatstructure:1926
+<Fig/ch4_co2_time_windows.png, id=4265, 1071.5232pt x 867.9627pt>
+File: Fig/ch4_co2_time_windows.png Graphic file (type png)
+<use Fig/ch4_co2_time_windows.png>
+Package pdftex.def Info: Fig/ch4_co2_time_windows.png  used on input line 2013.
+
+(pdftex.def)             Requested size: 407.60387pt x 330.1736pt.
+Floatstructure:1934
+<Fig/ch4_co2_error_over_time.png, id=4275, 552.6246pt x 407.3619pt>
+File: Fig/ch4_co2_error_over_time.png Graphic file (type png)
+<use Fig/ch4_co2_error_over_time.png>
+Package pdftex.def Info: Fig/ch4_co2_error_over_time.png  used on input line 20
+20.
+(pdftex.def)             Requested size: 234.15189pt x 172.60127pt.
+[103 <./Fig/ch4_co2_heatmap.png> <./Fig/ch4_co2_linear_interpolation.png>]
+
+LaTeX Warning: Reference `fig:ch4_oil_multi_solution' on page 104 undefined on 
+input line 2029.
+
+
+LaTeX Warning: Reference `fig:ch4_oil_response_distribution' on page 104 undefi
+ned on input line 2029.
+
+[104 <./Fig/ch4_co2_rbf_surface.png> <./Fig/ch4_co2_peak_map.png>] [105 <./Fig/
+ch4_co2_time_windows.png> <./Fig/ch4_co2_error_over_time.png>]
+Floatstructure:1950
+<Fig/ch4_oil_multi_solution.png, id=4328, 587.139pt x 339.231pt>
+File: Fig/ch4_oil_multi_solution.png Graphic file (type png)
+<use Fig/ch4_oil_multi_solution.png>
+Package pdftex.def Info: Fig/ch4_oil_multi_solution.png  used on input line 203
+3.
+(pdftex.def)             Requested size: 312.20692pt x 180.38683pt.
+Floatstructure:1957
+<Fig/ch4_oil_response_distribution.png, id=4337, 404.055pt x 329.376pt>
+File: Fig/ch4_oil_response_distribution.png Graphic file (type png)
+<use Fig/ch4_oil_response_distribution.png>
+Package pdftex.def Info: Fig/ch4_oil_response_distribution.png  used on input l
+ine 2040.
+(pdftex.def)             Requested size: 277.51654pt x 226.23434pt.
+
+LaTeX Warning: Reference `fig:ch4_oect_oil_channel' on page 106 undefined on in
+put line 2045.
+
+[106 <./Fig/ch4_oil_multi_solution.png> <./Fig/ch4_oil_response_distribution.pn
+g>]
+Floatstructure:1967
+<Fig/ch4_oect_oil_channel.jpg, id=4361, 6693.005pt x 3146.75626pt>
+File: Fig/ch4_oect_oil_channel.jpg Graphic file (type jpg)
+<use Fig/ch4_oect_oil_channel.jpg>
+Package pdftex.def Info: Fig/ch4_oect_oil_channel.jpg  used on input line 2049.
+
+(pdftex.def)             Requested size: 277.51654pt x 130.4583pt.
+
+LaTeX Warning: Reference `fig:ch4_oect_oily_water' on page 107 undefined on inp
+ut line 2054.
+
+Floatstructure:1976
+<Fig/ch4_oect_oily_water.jpg, id=4372, 7558.2375pt x 3196.94376pt>
+File: Fig/ch4_oect_oily_water.jpg Graphic file (type jpg)
+<use Fig/ch4_oect_oily_water.jpg>
+Package pdftex.def Info: Fig/ch4_oect_oily_water.jpg  used on input line 2058.
+(pdftex.def)             Requested size: 346.89732pt x 146.68558pt.
+
+LaTeX Warning: Reference `fig:ch4_oil_pool_response' on page 107 undefined on i
+nput line 2063.
+
+[107 <./Fig/ch4_oect_oil_channel.jpg> <./Fig/ch4_oect_oily_water.jpg>]
+Floatstructure:1985
+<Fig/ch4_oil_pool_response.jpg, id=4392, 5442.3325pt x 4071.21pt>
+File: Fig/ch4_oil_pool_response.jpg Graphic file (type jpg)
+<use Fig/ch4_oil_pool_response.jpg>
+Package pdftex.def Info: Fig/ch4_oil_pool_response.jpg  used on input line 2067
+.
+(pdftex.def)             Requested size: 368.57965pt x 275.69559pt.
+[108 <./Fig/ch4_oil_pool_response.jpg>] [109] [110] [111
+
+] [112] [113] [114]
+[115] [116] [117] (./Dissertation_Thesis_Masood.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [118
+
+
+]
+
+LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (1 not 127).
+               Rerun to correct this.
+
+<<latex-list-css.html>><<latex-align-css.html>>
+(tmp/pdflatex-check/Dissertation_Thesis_Masood.aux)
+ ***********
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-06-18>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+MathML statistic
+================
+==> 494 MathML fragments read
+==> 308 different MathML fragments
+==> 477 math fragments found
+==> 477 fitting MathML AF found
+==> 477 MathML AF attached
+
+Package tagpdf Info: Finalizing the tagging structure:
+(tagpdf)             Writing out ~2078 structure objects
+(tagpdf)             with ~2268 'MC' leaf nodes.
+(tagpdf)             Be patient if there are lots of objects!
+
+Package tagpdf Info: writing ParentTree
+Package tagpdf Info: writing IDTree
+Package tagpdf Info: writing RoleMap
+Package tagpdf Info: writing ClassMap
+Package tagpdf Info: writing NameSpaces
+Package tagpdf Info: writing StructElems
+Package tagpdf Info: writing Root
+ ) 
+Here is how much of TeX's memory you used:
+ 39254 strings out of 467168
+ 841824 string characters out of 5413699
+ 1906327 words of memory out of 5000000
+ 67233 multiletter control sequences out of 15000+600000
+ 664871 words of font info for 88 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 89i,11n,104p,1483b,2274s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
+live/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2026
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2026/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmib10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:
+/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/20
+26/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publ
+ic/pdftex/pdftexspace.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-sup
+er/sfbx1200.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx144
+0.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/
+texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/20
+26/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2026/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2026/texmf-dist/fonts/
+type1/public/cm-super/sfrm1728.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publ
+ic/cm-super/sftt1200.pfb>
+Output written on tmp/pdflatex-check/Dissertation_Thesis_Masood.pdf (127 pages,
+ 63012295 bytes).
+PDF statistics:
+ 5145 PDF objects out of 5155 (max. 8388607)
+ 4184 compressed objects within 42 object streams
+ 406 named destinations out of 1000 (max. 500000)
+ 12471 words of extra memory for PDF output out of 14400 (max. 10000000)
+

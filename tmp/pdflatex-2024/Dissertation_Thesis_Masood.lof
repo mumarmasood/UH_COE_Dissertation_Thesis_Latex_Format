@@ -1,0 +1,68 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Standalone BCD pressure-boundary and actuator layout.}}{22}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Double-slider-crank tail mechanism at four crank positions.}}{24}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Tail-bias servo for redirecting DSC tail thrust.}}{25}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces AquaNavigator exploded CAD layout and payload interfaces.}}{26}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Fabricated standalone BCD for depth-control experiments.}}{28}{figure.caption.39}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Fabricated AquaNavigator robotic fish experimental platform.}}{30}{figure.caption.41}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces BCD free-body model near neutral buoyancy.}}{32}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Piston-cylinder notation for BCD volume change.}}{33}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces AquaNavigator frames for propulsion and planar dynamics.}}{36}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Open-loop BCD validation with model comparison.}}{45}{figure.caption.94}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces MPC control structure for the BCD.}}{47}{figure.caption.100}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces ESC-tuned PD controller architecture for BCD.}}{49}{figure.caption.105}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Pipeline-tracking visual servoing control scheme overview.}}{52}{figure.caption.112}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Camera pipeline vectors for visual servoing control.}}{53}{figure.caption.113}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Common physical BCD test setup used for MPC and ESC depth-control experiments.}}{55}{figure.caption.116}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Host-side interface used for ESC actuator-loop experiments, parameter configuration, telemetry, and safety control.}}{56}{figure.caption.119}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces MPC simulation response for BCD depth tracking.}}{58}{figure.caption.123}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Experimental MPC response compared with simulation.}}{58}{figure.caption.124}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Actuator-loop validation before ESC depth experiments.}}{59}{figure.caption.126}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces ESC simulation with velocity-penalty objective function.}}{60}{figure.caption.127}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces ESC simulation with deadzone piston-position penalty.}}{61}{figure.caption.128}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces ESC experiment with online gain adaptation.}}{62}{figure.caption.129}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces PBVS and IBVS simulator responses for pipeline tracking.}}{63}{figure.caption.131}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Top-view sequence of pipeline tracking experiment.}}{64}{figure.caption.133}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Hierarchical concept for cooperative underwater monitoring using a surface reference, a leader vehicle, and smaller follower robots.}}{67}{figure.caption.137}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Leader-follower concept for RSS-based relative localization.}}{68}{figure.caption.140}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Directional RSS unit geometry in the simulator.}}{70}{figure.caption.147}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Compact RSSI localization device and sensor layout.}}{76}{figure.caption.177}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces RSSI localization device mounted on BlueROV.}}{77}{figure.caption.183}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Overview of the proposed RF--IMU relative localization pipeline.}}{80}{figure.caption.194}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Yaw estimation from magnetometer and gyroscope features.}}{83}{figure.caption.207}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Yaw absolute error across the test sequence.}}{83}{figure.caption.208}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Kalman correction of RSSI-based bearing estimates.}}{84}{figure.caption.209}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Three-meter position-error distribution for learned localization.}}{84}{figure.caption.210}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Cartesian position-error scatter for learned localization.}}{85}{figure.caption.211}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Six-meter position-error distribution for learned localization.}}{85}{figure.caption.212}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Simulated raw IMU measurements at rest, including acceleration and angular-rate channels.}}{86}{figure.caption.214}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Simulated IMU, RSS, and fused localization.}}{87}{figure.caption.215}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Leader-follower formation control in the tank simulator.}}{87}{figure.caption.216}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Formation-distance and bearing errors in simulation.}}{88}{figure.caption.217}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces CO$_2$ diffusion test setup in water.}}{93}{figure.caption.226}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces CO$_2$ leak-source experiment in the tank.}}{94}{figure.caption.227}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Submerged pipe outlet used as the controlled CO$_2$ leak source.}}{94}{figure.caption.228}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Host interface for AquaNavigator control, CO$_2$ monitoring, and position-tagged data collection.}}{95}{figure.caption.229}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces OECT signal-conditioning circuit for oil detection.}}{97}{figure.caption.237}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Waterproof OECT enclosure for robotic integration.}}{98}{figure.caption.238}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Laboratory source-measurement-unit setup for OECT sensor characterization.}}{98}{figure.caption.240}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Oil-sensing AquaNavigator during pipeline pool experiments.}}{99}{figure.caption.241}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Measured CO$_2$ diffusion across depth and offset.}}{100}{figure.caption.246}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Raw position-tagged CO$_2$ measurements in tank.}}{101}{figure.caption.247}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Binned CO$_2$ concentration heatmap from robotic measurements.}}{101}{figure.caption.248}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Linear CO$_2$ interpolation with nearest-neighbor filling.}}{102}{figure.caption.249}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces RBF-interpolated CO$_2$ concentration surface for source estimation.}}{103}{figure.caption.250}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Peak-based CO$_2$ leak-source estimate in tank.}}{103}{figure.caption.251}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Time-windowed CO$_2$ source-localization maps during sensing.}}{104}{figure.caption.252}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces CO$_2$ localization error during data collection.}}{104}{figure.caption.253}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces OECT responses across water and oil samples.}}{105}{figure.caption.255}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces OECT current distributions across tested liquid samples.}}{105}{figure.caption.256}%
+\contentsline {figure}{\numberline {6.19}{\ignorespaces OECT response after direct oil-channel exposure.}}{106}{figure.caption.257}%
+\contentsline {figure}{\numberline {6.20}{\ignorespaces OECT response for oil-contaminated water samples.}}{106}{figure.caption.258}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Robotic oil-detection response during pipeline tracking.}}{107}{figure.caption.259}%
+\addvspace {10\p@ }
