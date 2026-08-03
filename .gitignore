@@ -1,0 +1,61 @@
+# LaTeX auxiliary and build-state files
+*.aux
+*.bcf
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# Bibliography, index, glossary, and nomenclature intermediates
+*.bbl
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.nlo
+*.nls
+
+# LuaLaTeX accessibility and MathML intermediates
+*-luamml-mathml.html
+latex-*-css.html
+
+# Temporary TeX/editor files
+*.bak
+*.bak_*
+*.synctex(busy)
+*.synctex.gz(busy)
+*.tmp
+*~
+
+# Project-local scratch output
+/tmp/
+/build/
+/texmf-var/
+
+# Local Python environments and caches
+/.venv/
+__pycache__/
+*.py[cod]
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
